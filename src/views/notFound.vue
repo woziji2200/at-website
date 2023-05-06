@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        indexPage.vue
+        404 NotFound
     </div >
 </template>
 <script>
