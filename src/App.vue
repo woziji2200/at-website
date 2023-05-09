@@ -8,7 +8,7 @@
 export default {
     methods:{
         // async test(){
-        //     console.log(await this.$http.get("","")); 
+        //     console.log(await this.$http.post("/department/","")); 
         //     console.log("afterGet");
         // }
     },

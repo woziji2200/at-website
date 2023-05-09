@@ -5,7 +5,7 @@
                 <span><router-link :to="i.path">{{ i.name }}</router-link></span>
             </div>
         </div>
-        admin.vue
+        
         <router-view></router-view>
     </div>
 </template>

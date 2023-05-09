@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const requset = axios.create({
-    baseURL: 'http://v1.hitokoto.cn/'
+const request = axios.create({
+    baseURL: 'http://backstage.daoxuan.cc',
 })
 // requset.interceptors.request.use(function (config) {
 //     // 在发送请求之前做些什么
@@ -15,7 +15,7 @@ const requset = axios.create({
 export const get = (url, params) => {
     params = params || {};
     return new Promise((resolve, reject) => {
-        requset.get(url, params)
+        request.get(url, params)
             .then(res => {
                 resolve(res)
             })
@@ -28,7 +28,7 @@ export const get = (url, params) => {
 export const post = (url, params) => {
     params = params || {};
     return new Promise((resolve, reject) => {
-        requset.post(url, params)
+        request.post(url, params)
             .then(res => {
                 resolve(res)
             })
@@ -39,3 +39,14 @@ export const post = (url, params) => {
     })
 }
 
+// request.interceptors.request.use(
+//     (config) => {
+//       // 在请求发送之前对请求进行处理
+//     //   config.headers.Authorization = `Bearer ${localStorage.getItem('token')}`;
+//       return config;
+//     },
+//     (error) => {
+//       // 请求错误时的处理
+//       return Promise.reject(error);
+//     }
+//   );
