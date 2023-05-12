@@ -11,6 +11,7 @@ import admin from '../views/admin/admin.vue'
 import loginPage from '../views/admin/loginPage/loginPage.vue'
 import registrantPage from '../views/admin/registrantPage/registrantPage.vue'
 import itMemberPage from '../views/admin/itMemberPage/itMemberPage.vue'
+import commentsPage from '../views/admin/commentsPage/commentsPage.vue'
 // import HomeView from '../views/HomeView.vue'
 import notFound from '../views/notFound.vue'
 Vue.use(VueRouter)
@@ -57,6 +58,12 @@ const routes = [
                 path: '/admin/registrant',
                 name: 'registrantPage',
                 component: registrantPage,
+                meta: { "auth": true },
+            },
+            {
+                path: '/admin/comments',
+                name: 'registrantPage',
+                component: commentsPage,
                 meta: { "auth": true },
             },
             {
