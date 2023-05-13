@@ -9,7 +9,7 @@
             <button class="login-button" @click="login">登录</button>
         </div>
 
-        <button @click="test()">233</button>
+        <!-- <button @click="test()">233</button> -->
     </div>
 </template>
 <script>
@@ -20,30 +20,32 @@ export default {
             console.log(a.headers["set-cookie"]);
         },
         async login() {
-            let loginMsg = await this.$http.post("/login/", {
-                "username": this.username,
-                "password": this.password,
-                "remember": this.remember ? "strud" : "nostrud"
-            })
-            console.log(loginMsg, document.cookie);
-            if (loginMsg.status == 200) {
-                this.$message({
-                    message: '登录成功',
-                    type: 'success'
-                });
-                localStorage.setItem("login",loginMsg.data)
-                setTimeout(() => {
-                    
-                }, 2000)
-            } else if(loginMsg.response.status!=200) {
-                this.$message({
-                    message: '登录失败，错误码' + loginMsg.response.status,
-                    type: 'warning'
-                });
+            if (!this.isLogin) {
+                this.isLogin = true
+                let loginMsg = await this.$http.post("/login/", {
+                    "username": this.username,
+                    "password": this.password,
+                    "remember": this.remember ? "strud" : "nostrud"
+                })
+                console.log(loginMsg, document.cookie);
+                if (loginMsg.status == 200) {
+                    this.$message({
+                        message: '登录成功',
+                        type: 'success'
+                    });
+                    localStorage.setItem("login", JSON.stringify(loginMsg.data))
+                    setTimeout(() => {
+                        this.$router.push({ "path": "/admin/registrant/" })
+                    }, 2000)
+                } else if (loginMsg.response.status != 200) {
+                    this.$message({
+                        message: '登录失败，错误码' + loginMsg.response.status,
+                        type: 'warning'
+                    });
+                }
+                this.nowLogin = false;
             }
 
-            
-            
 
 
         }
@@ -52,7 +54,8 @@ export default {
         return {
             username: "",
             password: "",
-            remember: false
+            remember: false,
+            nowLogin: false
         }
     }
 }
