@@ -14,6 +14,8 @@ import itMemberPage from '../views/admin/itMemberPage/itMemberPage.vue'
 import commentsPage from '../views/admin/commentsPage/commentsPage.vue'
 // import HomeView from '../views/HomeView.vue'
 import notFound from '../views/notFound.vue'
+let Base64 = require('js-base64').Base64
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -96,18 +98,57 @@ const router = new VueRouter({
     base: process.env.BASE_URL,
     routes
 })
-router.beforeEach((to, from, next) => {
-    if (to.meta.auth == true) {
-        if (true) { // 有权限
-            if (to.fullPath == '/admin') {
-                next('/admin/registrant')
-            } else {
-                next()
-            }
-        } else {
-            next("/admin/login")
-        }
-    }
+router.beforeEach(async (to, from, next) => {
+    // feat: 新增功能
+    // fix： 修改bug
+    // if (to.meta.auth == true) {
+    //     let auth = false;
+    //     let loginMsg = JSON.parse(localStorage.getItem("login")) || {
+    //         "access": "1.eyJleHAiOiIxIn0=.1",
+    //         "refresh": "1.eyJleHAiOiIxIn0=.1"
+    //     }
+
+    //     console.log(loginMsg, JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp)
+    //     let timeNow = Date.now()
+    //     if (loginMsg != {}) {
+    //         if (JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp*1000 < timeNow) {
+    //             // access过期
+    //             console.log("access过期");
+    //             if (JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp*1000 < timeNow) {
+    //                 //refresh过期
+    //                 console.log("refresh过期");
+    //             } else {
+    //                 //access过期但refresh没过期
+    //                 let refreshMsg = await this.$http.post('/refresh/', {
+    //                     "refresh": loginMsg.refresh
+    //                 })
+    //                 console.log("access过期但是refresh没有");
+    //                 if (refreshMsg.status == 200) {
+    //                     localStorage.setItem(JSON.stringify(refreshMsg.data))
+    //                     console.log("login", JSON.parse(localStorage.getItem("login")));
+    //                     auth = true
+    //                 }
+    //             }
+    //         } else {
+    //             auth = true
+    //         }
+    //     }
+
+    //     if (false) { // 有权限
+    //         if (to.fullPath == '/admin') {
+    //             next('/admin/registrant')
+    //             return
+
+    //         } else {
+    //             next()
+    //             return
+
+    //         }
+    //     } else {
+    //         next("/admin/login")
+    //         return
+    //     }
+    // }
     next()
 })
 export default router
