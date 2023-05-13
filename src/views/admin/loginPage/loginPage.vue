@@ -19,20 +19,40 @@ export default {
             let a = await this.$http.get("/registrant/", "");
             console.log(a.headers["set-cookie"]);
         },
-        async login(){
-            console.log(await this.$http.post("login/login/", {
+        async login() {
+            let loginMsg = await this.$http.post("/login/", {
                 "username": this.username,
                 "password": this.password,
-                "remember": this.remember?"1":"0"
-            }))
-            console.log(document.cookie);
+                "remember": this.remember ? "strud" : "nostrud"
+            })
+            console.log(loginMsg, document.cookie);
+            if (loginMsg.status == 200) {
+                this.$message({
+                    message: '登录成功',
+                    type: 'success'
+                });
+                localStorage.setItem("login",loginMsg.data)
+                setTimeout(() => {
+                    
+                }, 2000)
+            } else if(loginMsg.response.status!=200) {
+                this.$message({
+                    message: '登录失败，错误码' + loginMsg.response.status,
+                    type: 'warning'
+                });
+            }
+
+            
+            
+
+
         }
     },
     data() {
         return {
-            username:"",
-            password:"",
-            remember:false
+            username: "",
+            password: "",
+            remember: false
         }
     }
 }
@@ -47,22 +67,25 @@ export default {
     justify-content: center;
     align-items: center;
 }
-.login{
+
+.login {
     width: 500px;
     height: 300px;
     background-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0px 0px 39px 10px rgba(62,66,66,0.22);
+    box-shadow: 0px 0px 39px 10px rgba(62, 66, 66, 0.22);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.login-title{
+
+.login-title {
     /* color: white; */
     font-size: 28px;
 }
-.login-input{
+
+.login-input {
     height: 30px;
     width: 60%;
     background-color: rgba(255, 255, 255, 0);
@@ -74,13 +97,16 @@ export default {
     transition: all 0.4s;
     margin-top: 20px;
 }
-.login-input:hover{
+
+.login-input:hover {
     border-bottom: solid 1px rgb(32, 95, 255);
 }
-.login-input:focus{
+
+.login-input:focus {
     border-bottom: solid 1px rgb(0, 67, 236);
 }
-.login-button{
+
+.login-button {
     font-size: 14px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
@@ -91,11 +117,14 @@ export default {
     letter-spacing: 6px;
     margin-top: 20px;
     transition: all 0.3s;
+    color: rgb(72, 72, 72);
 }
-.login-button:hover{
+
+.login-button:hover {
     background-color: rgba(255, 255, 255, 0.7);
 }
-.login-rem{
+
+.login-rem {
     margin-top: 20px;
 }
 </style>
