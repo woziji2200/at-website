@@ -99,56 +99,56 @@ const router = new VueRouter({
     routes
 })
 router.beforeEach(async (to, from, next) => {
-    // feat: 新增功能
-    // fix： 修改bug
-    // if (to.meta.auth == true) {
-    //     let auth = false;
-    //     let loginMsg = JSON.parse(localStorage.getItem("login")) || {
-    //         "access": "1.eyJleHAiOiIxIn0=.1",
-    //         "refresh": "1.eyJleHAiOiIxIn0=.1"
-    //     }
+    if (to.meta.auth == true) {
+        let auth = false;
+        let loginMsg = JSON.parse(localStorage.getItem("login")) || {
+            "access": "1.eyJleHAiOiIxIn0=.1",
+            "refresh": "1.eyJleHAiOiIxIn0=.1"
+        }
 
-    //     console.log(loginMsg, JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp)
-    //     let timeNow = Date.now()
-    //     if (loginMsg != {}) {
-    //         if (JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp*1000 < timeNow) {
-    //             // access过期
-    //             console.log("access过期");
-    //             if (JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp*1000 < timeNow) {
-    //                 //refresh过期
-    //                 console.log("refresh过期");
-    //             } else {
-    //                 //access过期但refresh没过期
-    //                 let refreshMsg = await this.$http.post('/refresh/', {
-    //                     "refresh": loginMsg.refresh
-    //                 })
-    //                 console.log("access过期但是refresh没有");
-    //                 if (refreshMsg.status == 200) {
-    //                     localStorage.setItem(JSON.stringify(refreshMsg.data))
-    //                     console.log("login", JSON.parse(localStorage.getItem("login")));
-    //                     auth = true
-    //                 }
-    //             }
-    //         } else {
-    //             auth = true
-    //         }
-    //     }
+        // console.log(loginMsg, JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp)
+        let timeNow = Date.now()
+        let accessExp = JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp * 1000
+        if (loginMsg != {}) {
+            if (accessExp < timeNow) {
+                // access过期
+                console.log("access过期");
+                let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp*1000;
+                if (refreshExp < timeNow) {
+                    //refresh过期
+                    console.log("refresh过期");
+                } else {
+                    //access过期但refresh没过期
+                    let refreshMsg = await this.$http.post('/refresh/', {
+                        "refresh": loginMsg.refresh
+                    })
+                    console.log("access过期但是refresh没有");
+                    if (refreshMsg.status == 200) {
+                        localStorage.setItem(JSON.stringify(refreshMsg.data))
+                        // console.log("login", JSON.parse(localStorage.getItem("login")));
+                        auth = true
+                    }
+                }
+            } else {
+                auth = true
+            }
+        }
 
-    //     if (false) { // 有权限
-    //         if (to.fullPath == '/admin') {
-    //             next('/admin/registrant')
-    //             return
+        if (auth) { // 有权限
+            if (to.fullPath == '/admin') {
+                next('/admin/registrant')
+                return
 
-    //         } else {
-    //             next()
-    //             return
+            } else {
+                next()
+                return
 
-    //         }
-    //     } else {
-    //         next("/admin/login")
-    //         return
-    //     }
-    // }
+            }
+        } else {
+            next("/admin/login")
+            return
+        }
+    }
     next()
 })
 export default router

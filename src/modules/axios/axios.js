@@ -38,33 +38,55 @@ export const post = (url, params) => {
 
     })
 }
-let authUrl = ["/login/", '/admin/']
+let authUrl = ["/admin/login/", '/admin/',"/registrant/"]
 request.interceptors.request.use(
     async (config) => {
-        // if (authUrl.indexOf(config.url) != -1) {
-        //     let loginMsg = JSON.parse(localStorage.getItem("login")) || {}
-        //     let timeNow = Date.now()
-        //     if (loginMsg != {}) {
-        //         if (Base64.decode(loginMsg.access.split(".")[1]).exp < timeNow) {
-        //             // access过期
-        //             console.log("access过期");
-        //             if (Base64.decode(loginMsg.refresh.split(".")[1]).exp < timeNow) {
-        //                 //refresh过期
-        //                 console.log("refresh过期");
-        //             } else {
-        //                 //access过期但refresh没过期
-        //                 let refreshMsg = await this.$http.post('/refresh/', {
-        //                     "refresh": loginMsg.refresh
-        //                 })
-        //                 console.log("access过期但是refresh没有");
-        //                 if (refreshMsg.status == 200) {
-        //                     localStorage.setItem(JSON.stringify(refreshMsg.data))
-        //                     console.log("login", JSON.parse(localStorage.getItem("login")));
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+        console.log(config);
+        if (authUrl.indexOf(config.url) != -1) {
+            console.log("需要验证的请求：");
+            let auth = false;
+            let loginMsg = JSON.parse(localStorage.getItem("login")) || {
+                "access": "1.eyJleHAiOiIxIn0=.1",
+                "refresh": "1.eyJleHAiOiIxIn0=.1"
+            }
+    
+            console.log(loginMsg, JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp)
+            let timeNow = Date.now()
+            let accessExp = JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp * 1000
+            if (loginMsg != {}) {
+                if (accessExp < timeNow) {
+                    // access过期
+                    console.log("access过期");
+                    let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp*1000;
+                    if (refreshExp < timeNow) {
+                        //refresh过期
+                        console.log("refresh过期");
+                    } else {
+                        //access过期但refresh没过期
+                        let refreshMsg = await this.$http.post('/refresh/', {
+                            "refresh": loginMsg.refresh
+                        })
+                        console.log("access过期但是refresh没有");
+                        if (refreshMsg.status == 200) {
+                            localStorage.setItem(JSON.stringify(refreshMsg.data))
+                            console.log("login", JSON.parse(localStorage.getItem("login")));
+                            auth = true
+                        }
+                    }
+                } else {
+                    auth = true
+                }
+            }
+    
+            if (auth) { // 有权限
+                config.headers.Authorization="Bearer "+localStorage.getItem("login").access
+                return config
+            } else {
+                // next("/admin/login")
+                this.$router.push({"path":"/admin/login/"})
+                return
+            }
+        }
         return config;
     },
     (error) => {

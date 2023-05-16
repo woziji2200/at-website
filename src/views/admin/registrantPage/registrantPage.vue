@@ -145,8 +145,16 @@ export default {
             this.dialogVisible = true
             this.newItemObj = obj
             console.log(obj);
+        },
+        async refreshDate(){
+            this.listNew=await this.$http.get("/registrant/",{})
         }
-    }
+    },
+    async mounted() {
+
+        await this.refreshDate()
+        console.log(this.$http);
+    },
 
 }
 </script>
