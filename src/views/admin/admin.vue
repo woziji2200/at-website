@@ -1,8 +1,5 @@
 <template>
     <div id="app" class="admin">
-        <div class="top">
-            <span>爱特展示网管理系统</span>
-        </div>
         <div class="menu">
             <el-menu background-color="#545c64" text-color="#fff" active-text-color="#fff" :default-active="'1'"
                 class="el-menu-vertical-demo menu-open" :collapse="isCollapse">
@@ -26,8 +23,12 @@
                     <span slot="title">回复评论</span>
                 </el-menu-item>
             </el-menu>
+            
         </div>
-        <router-view></router-view>
+        <div class="router">
+            <router-view></router-view>
+        </div>
+
     </div>
 </template>
 <script>
@@ -46,8 +47,8 @@ export default {
                 'path': '/admin/comments'
             }],
             isCollapse: false,
-            openCollapseLogo: "el-icon-arrow-left", 
-            
+            openCollapseLogo: "el-icon-arrow-left",
+
         }
     },
     methods: {
@@ -68,15 +69,26 @@ export default {
 </script>
 
 <style scoped>
-#app {
-    width: 100%;
+
+
+.router {
+    position: relative;
+    flex: 1;
+    /* width: auto; */
+    /* left: 200px; */
+    /* margin-left: 200px; */
 }
 
 .admin {
     display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* margin-right: 201px; */
+    margin: 0px;
+}
 
-    position: relative;
-    padding-top: 50px;
+.main {
+    display: flex;
 }
 
 .top {
@@ -103,6 +115,8 @@ export default {
 .menu {
     display: flex;
     flex-direction: column;
+    /* position: fixed; */
+    position: relative;
 }
 
 .menu-open {
@@ -111,5 +125,4 @@ export default {
 
 .menu-main {
     height: calc(100vh - 56px);
-}
-</style>
+}</style>

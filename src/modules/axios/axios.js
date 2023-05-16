@@ -15,8 +15,10 @@ const request = axios.create({
 export const get = (url, params) => {
     params = params || {};
     return new Promise((resolve, reject) => {
-        request.get(url, params)
-            .then(res => {
+
+        request.get(url, {
+            params
+        }).then(res => {
                 resolve(res)
             })
             .catch(err => {
@@ -38,7 +40,7 @@ export const post = (url, params) => {
 
     })
 }
-let authUrl = ["/admin/login/", '/admin/',"/registrant/"]
+let authUrl = ["/admin/login/", '/admin/', "/registrant/"]
 request.interceptors.request.use(
     async (config) => {
         console.log(config);
@@ -49,7 +51,7 @@ request.interceptors.request.use(
                 "access": "1.eyJleHAiOiIxIn0=.1",
                 "refresh": "1.eyJleHAiOiIxIn0=.1"
             }
-    
+
             console.log(loginMsg, JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp)
             let timeNow = Date.now()
             let accessExp = JSON.parse(Base64.decode(loginMsg.access.split(".")[1])).exp * 1000
@@ -57,7 +59,7 @@ request.interceptors.request.use(
                 if (accessExp < timeNow) {
                     // access过期
                     console.log("access过期");
-                    let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp*1000;
+                    let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp * 1000;
                     if (refreshExp < timeNow) {
                         //refresh过期
                         console.log("refresh过期");
@@ -77,13 +79,14 @@ request.interceptors.request.use(
                     auth = true
                 }
             }
-    
+
             if (auth) { // 有权限
-                config.headers.Authorization="Bearer "+localStorage.getItem("login").access
+                config.headers.Authorization = "Bearer " + JSON.parse(localStorage.getItem("login")).access
+                console.log(config);
                 return config
             } else {
-                // next("/admin/login")
-                this.$router.push({"path":"/admin/login/"})
+                // next("/admin/login") 
+                this.$router.push({ "path": "/admin/login/" })
                 return
             }
         }

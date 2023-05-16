@@ -9,10 +9,11 @@ import { get, post } from '@/modules/axios/axios'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+Vue.prototype.$http = { get, post }
 new Vue({
     router,
     store,
     render: h => h(App)
 }).$mount('#app')
-Vue.prototype.$http = { get, post }
+
 

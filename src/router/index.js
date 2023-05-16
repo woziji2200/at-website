@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { get , post} from '../modules/axios/axios'
 
 import index from '../views/index/index.vue'
 import indexPage from '../views/index/indexPage/indexPage.vue'
@@ -119,12 +120,14 @@ router.beforeEach(async (to, from, next) => {
                     console.log("refresh过期");
                 } else {
                     //access过期但refresh没过期
-                    let refreshMsg = await this.$http.post('/refresh/', {
+                    // console.log(this, Vue);
+                    let refreshMsg = await post('/refresh/', {
                         "refresh": loginMsg.refresh
                     })
                     console.log("access过期但是refresh没有");
                     if (refreshMsg.status == 200) {
-                        localStorage.setItem(JSON.stringify(refreshMsg.data))
+                        // console.log(refreshMsg.data,111);
+                        localStorage.setItem("login",JSON.stringify(refreshMsg.data))
                         // console.log("login", JSON.parse(localStorage.getItem("login")));
                         auth = true
                     }
