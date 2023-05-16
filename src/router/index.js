@@ -64,7 +64,7 @@ const routes = [
             },
             {
                 path: '/admin/comments',
-                name: 'registrantPage',
+                name: 'commentsPage',
                 component: commentsPage,
                 meta: { "auth": true },
             },
