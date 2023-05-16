@@ -64,7 +64,7 @@
                                 <span>{{ props.row.name }}</span>
                             </el-form-item>
                             <el-form-item label="性别">
-                                <span>{{ sexLists[props.row.sex] }}</span>
+                                <span>{{ props.row.sex }}</span>
                             </el-form-item>
                             <el-form-item label="专业">
                                 <span>{{ props.row.major }}</span>
@@ -73,7 +73,7 @@
                                 <span>{{ props.row.phone_number }}</span>
                             </el-form-item>
                             <el-form-item label="部门">
-                                <span>{{ departmentLists[props.row.department] }}</span>
+                                <span>{{ props.row.department }}</span>
                             </el-form-item>
                             <el-form-item label="状态">
                                 <span>{{ props.row.status }}</span>
@@ -182,7 +182,7 @@ export default {
             for (let i = 0; i < this.dataListNew.length; i++) {
                 if (typeof (this.dataListNew[i].department) === "number") {
                     console.log(typeof (this.dataListNew[i].department));
-                    this.dataListNew[i].department = this.departmentLists[this.dataListNew[i].department]
+                    this.dataListNew[i].department = this.departmentLists[this.dataListNew[i].department-1]
                     this.dataListNew[i].sex = this.sexLists[this.dataListNew[i].sex]
                     let status;
                     switch (this.dataListNew[i].status){
