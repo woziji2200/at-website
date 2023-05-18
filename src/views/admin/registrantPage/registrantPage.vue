@@ -9,10 +9,10 @@
                     <el-input v-model="newItemObj.name"></el-input>
                 </el-form-item>
                 <el-form-item label="性别">
-                    <el-select v-model="sexLists[newItemObj.sex]">
-                        <el-option label="男" value="0"></el-option>
-                        <el-option label="女" value="1"></el-option>
-                        <el-option label="未知" value="2"></el-option>
+                    <el-select v-model="newItemObj.sex">
+                        <el-option label="男" :value="0"></el-option>
+                        <el-option label="女" :value="1"></el-option>
+                        <el-option label="未知" :value="2"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="专业">
@@ -22,12 +22,24 @@
                     <el-input v-model="newItemObj.phone_number"></el-input>
                 </el-form-item>
                 <el-form-item label="部门">
-                    <el-select v-model="departmentLists[newItemObj.department]">
-                        <el-option label="APP开发" value="1"></el-option>
-                        <el-option label="Web开发" value="2"></el-option>
-                        <el-option label="程序开发" value="3"></el-option>
-                        <el-option label="游戏开发" value="4"></el-option>
-                        <el-option label="UI设计" value="5"></el-option>
+                    <el-select v-model="newItemObj.department">
+                        <el-option label="APP开发" :value="1"></el-option>
+                        <el-option label="Web开发" :value="2"></el-option>
+                        <el-option label="程序开发" :value="3"></el-option>
+                        <el-option label="游戏开发" :value="4"></el-option>
+                        <el-option label="UI设计" :value="5"></el-option>
+                    </el-select>
+                </el-form-item>
+                <el-form-item label="状态">
+                    <el-select v-model="newItemObj.status">
+                        <el-option label="已报名" :value="1"></el-option>
+                        <el-option label="初审中" :value="2"></el-option>
+                        <el-option label="面试中" :value="3"></el-option>
+                        <el-option label="成功录取" :value="5"></el-option>
+                        <el-option label="初审失败" :value="-1"></el-option>
+                        <el-option label="面试失败" :value="-2"></el-option>
+                        <el-option label="笔试失败" :value="-3"></el-option>
+                        <el-option label="未录取" :value="-5"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="期望">
@@ -36,7 +48,7 @@
             </el-form>
             <span slot="footer" class="dialog-footer">
                 <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+                <el-button type="primary" @click="changeProfile()">确 定</el-button>
             </span>
         </el-dialog>
 
@@ -174,6 +186,23 @@ export default {
         openDialog(obj) {
             this.dialogVisible = true
             this.newItemObj = obj
+            this.newItemObj.department = this.departmentLists.indexOf(obj.department)+1;
+            this.newItemObj.sex = this.sexLists.indexOf(obj.sex);
+            let status;
+            switch (this.newItemObj.status){
+                        case "尚未提交": status=0;break;
+                        case "已报名": status=1;break;
+                        case "初审中": status=2;break;
+                        case "面试中": status=3;break;
+                        case "成功录取": status=5;break;
+                        case "初审失败": status=-1;break;
+                        case "面试失败": status=-2;break;
+                        case "笔试失败": status=-3;break;
+                        case "未录取": status=5;break;
+                    }
+            this.newItemObj.status = status;
+            // console.log(obj.sex,this.sexLists.indexOf(obj.sex+1));
+            
             console.log(obj);
         },
 
@@ -213,6 +242,12 @@ export default {
             // console.log(dataList.data.data)
             this.dataList = dataList.data.data
             this.tableLoading = false
+        },
+        async changeProfile(){
+            this.dialogVisible = false
+            // let a = this.$http.post()
+            console.log(this.newItemObj);
+            
         }
     },
     async mounted() {
