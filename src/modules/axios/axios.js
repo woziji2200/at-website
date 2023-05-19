@@ -40,7 +40,7 @@ export const post = (url, params) => {
 
     })
 }
-let authUrl = ["/admin/login/", '/admin/', "/registrant/"]
+let authUrl = ["/admin/login/", '/admin/', "/registrant/","/registrant/delete/"]
 request.interceptors.request.use(
     async (config) => {
         console.log(config);
