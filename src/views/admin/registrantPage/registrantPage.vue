@@ -43,7 +43,7 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item label="期望">
-                    <el-input v-model="newItemObj.expectation"></el-input>
+                    <el-input type="textarea" v-model="newItemObj.expectation"></el-input>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
@@ -92,7 +92,7 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item label="期望">
-                    <el-input v-model="addRegistrantObj.expectation"></el-input>
+                    <el-input type="textarea" v-model="addRegistrantObj.expectation"></el-input>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
@@ -122,7 +122,7 @@
             <el-input v-model="dataListFilter.name" class="main-top-input" placeholder="输入姓名搜索"></el-input>
             <div class="main-top-button">
                 <el-button-group>
-                    <el-button type="primary" icon="el-icon-edit" @click="addDialogVisible = true">增加</el-button>
+                    <el-button type="primary" icon="el-icon-circle-plus-outline" @click="addDialogVisible = true">增加</el-button>
                     <!-- <el-button type="primary" icon="el-icon-share">搜索</el-button> -->
                 </el-button-group>
             </div>
@@ -282,7 +282,7 @@ export default {
                 case "初审失败": status = -1; break;
                 case "面试失败": status = -2; break;
                 case "笔试失败": status = -3; break;
-                case "未录取": status = 5; break;
+                case "未录取": status = -5; break;
             }
             this.newItemObj.status = status;
             // console.log(obj.sex,this.sexLists.indexOf(obj.sex+1));
