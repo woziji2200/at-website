@@ -34,16 +34,19 @@ export default {
                         type: 'success'
                     });
                     localStorage.setItem("login", JSON.stringify(loginMsg.data))
+                    this.nowLogin = false;
                     setTimeout(() => {
                         this.$router.push({ "path": "/admin/registrant/" })
                     }, 2000)
-                } else if (loginMsg.response.status != 200) {
+
+                } else {
                     this.$message({
                         message: '登录失败，错误码' + loginMsg.response.status,
                         type: 'warning'
                     });
+                    this.nowLogin = false;
                 }
-                this.nowLogin = false;
+                
             }
 
 

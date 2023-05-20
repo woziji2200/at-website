@@ -12,7 +12,7 @@
                     <el-select v-model="newItemObj.sex">
                         <el-option label="男" :value="0"></el-option>
                         <el-option label="女" :value="1"></el-option>
-                        <el-option label="未知" :value="2"></el-option>
+                        <el-option label="保密" :value="2"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="专业">
@@ -52,29 +52,26 @@
             </span>
         </el-dialog>
 
-        <!-- <el-dialog title="查找和筛选" :visible.sync="dialogVisible" width="50%">
-            <el-form ref="form" :model="newItemObj" label-width="80px">
-                <el-form-item label="id">
-                    <el-input v-model="newItemObj.id"></el-input>
-                </el-form-item>
+        <el-dialog title="新建" :visible.sync="addDialogVisible" width="50%">
+            <el-form ref="form" :model="addRegistrantObj" label-width="80px">
                 <el-form-item label="姓名">
-                    <el-input v-model="newItemObj.name"></el-input>
+                    <el-input v-model="addRegistrantObj.name"></el-input>
                 </el-form-item>
                 <el-form-item label="性别">
-                    <el-select v-model="newItemObj.sex">
+                    <el-select v-model="addRegistrantObj.sex">
                         <el-option label="男" :value="0"></el-option>
                         <el-option label="女" :value="1"></el-option>
-                        <el-option label="未知" :value="2"></el-option>
+                        <el-option label="保密" :value="2"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="专业">
-                    <el-input v-model="newItemObj.major"></el-input>
+                    <el-input v-model="addRegistrantObj.major"></el-input>
                 </el-form-item>
                 <el-form-item label="手机号">
-                    <el-input v-model="newItemObj.phone_number"></el-input>
+                    <el-input v-model="addRegistrantObj.phone_number"></el-input>
                 </el-form-item>
                 <el-form-item label="部门">
-                    <el-select v-model="newItemObj.department">
+                    <el-select v-model="addRegistrantObj.department">
                         <el-option label="APP开发" :value="1"></el-option>
                         <el-option label="Web开发" :value="2"></el-option>
                         <el-option label="程序开发" :value="3"></el-option>
@@ -83,7 +80,7 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item label="状态">
-                    <el-select v-model="newItemObj.status">
+                    <el-select v-model="addRegistrantObj.status">
                         <el-option label="已报名" :value="1"></el-option>
                         <el-option label="初审中" :value="2"></el-option>
                         <el-option label="面试中" :value="3"></el-option>
@@ -95,14 +92,14 @@
                     </el-select>
                 </el-form-item>
                 <el-form-item label="期望">
-                    <el-input v-model="newItemObj.expectation"></el-input>
+                    <el-input v-model="addRegistrantObj.expectation"></el-input>
                 </el-form-item>
             </el-form>
             <span slot="footer" class="dialog-footer">
-                <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="changeProfile()">确 定</el-button>
+                <el-button @click="addDialogVisible = false">取 消</el-button>
+                <el-button type="primary" @click="addRegistrant()">确 定</el-button>
             </span>
-        </el-dialog> -->
+        </el-dialog>
 
         <el-dialog title="提示" :visible.sync="deleteItemVisible" width="30%">
             <span>确定删除吗？</span>
@@ -125,8 +122,8 @@
             <el-input v-model="dataListFilter.name" class="main-top-input" placeholder="输入姓名搜索"></el-input>
             <div class="main-top-button">
                 <el-button-group>
-                    <el-button type="primary" icon="el-icon-edit">增加</el-button>
-                    <el-button type="primary" icon="el-icon-share">搜索</el-button>
+                    <el-button type="primary" icon="el-icon-edit" @click="addDialogVisible = true">增加</el-button>
+                    <!-- <el-button type="primary" icon="el-icon-share">搜索</el-button> -->
                 </el-button-group>
             </div>
         </div>
@@ -253,6 +250,16 @@ export default {
                 "expectation": 3,
                 "sex": 1
             },
+            addRegistrantObj: {
+                "name": "",
+                "major": "",
+                "phone_number": "",
+                "email": "",
+                "department": 1,
+                "expectation": "",
+                "sex": 0
+            },
+            addDialogVisible: false,
             currentPage: 1,
             tableLoading: true,
             deleteItemVisible: false,
@@ -287,7 +294,7 @@ export default {
             // console.log(this.departmentLists[this.dataListNew[3].department]);
             for (let i = 0; i < this.dataListShow.length; i++) {
                 if (typeof (this.dataListShow[i].department) === "number") {
-                    console.log(typeof (this.dataListShow[i].department));
+                    // console.log(typeof (this.dataListShow[i].department));
                     this.dataListShow[i].department = this.departmentLists[this.dataListShow[i].department - 1]
                     this.dataListShow[i].sex = this.sexLists[this.dataListShow[i].sex]
                     let status;
@@ -316,23 +323,27 @@ export default {
                 "phone_number": "",
                 "department": ""
             })
-            // console.log(dataList.data.data)
-            this.dataListAll = dataList.data.data
+            // console.err("我超", dataList)
+
+            if (dataList.status == 200) {
+                this.dataListAll = dataList.data.data
+            }
+            else {
+                this.$message({ message: '获取失败, code: ' + dataList.status + ", " + dataList.statusText, type: 'error' });
+
+            }
 
             this.tableLoading = false
         },
         async changeProfile() {
             this.dialogVisible = false
-            let changeProfileStatus = this.$http.post("/registrant/", this.newItemObj)
+            let changeProfileStatus = await this.$http.post("/registrant/", this.newItemObj)
             if (changeProfileStatus.status == 200) {
                 await this.refreshDate();
-                this.$message({
-                    message: '修改成功',
-                    type: 'success'
-                });
+                this.$message({ message: '修改成功', type: 'success' });
+            } else {
+                this.$message({ message: '修改失败, code: ' + changeProfileStatus.status + ", " + changeProfileStatus.statusText, type: 'error' });
             }
-            console.log(this.newItemObj);
-
         },
         deleteItemCancle() {
             this.deleteItemVisible = false
@@ -345,12 +356,12 @@ export default {
             })
             if (msg.status == 200) {
                 await this.refreshDate()
-                this.$message({
-                    message: '刷新成功',
-                    type: 'success'
-                });
+                this.$message({ message: '删除成功', type: 'success' });
+            } else {
+                this.$message({ message: '删除失败, code: ' + msg.status + ", " + msg.statusText, type: 'error' });
+                // console.log();
             }
-            console.log(this.deleteItemId);
+            console.log("被删除的id", this.deleteItemId);
         },
         deleteItemOpen(id) {
             this.deleteItemVisible = true
@@ -380,17 +391,37 @@ export default {
                 })))
                 console.log("匹配department");
                 this.currentPageChange()
-                console.log(this.dataListNew );
+                // console.log(this.dataListNew);
                 return
             }
 
             this.dataListNew = JSON.parse(JSON.stringify(this.dataListAll))
             this.currentPageChange()
         },
-        currentPageChange(){
+        currentPageChange() {
             this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
             this.dataListShowTrans();
-            console.log(this.dataListFilter);
+            // console.log(this.dataListFilter);
+        },
+        async addRegistrant() {
+            let addRegMsg = await this.$http.post("/registrant/", this.addRegistrantObj)
+            console.log("要新建的信息", this.addRegistrantObj);
+            if (addRegMsg.status == 200) {
+                this.$message({ message: '增加成功', type: 'success' });
+                this.addDialogVisible = false
+                this.addRegistrantObj = {
+                    "name": "",
+                    "major": "",
+                    "phone_number": "",
+                    "email": "",
+                    "department": 1,
+                    "expectation": "",
+                    "sex": 0
+                }
+                await this.refreshDate()
+            } else {
+                this.$message({ message: '增加失败, code: ' + addRegMsg.status + ", " + addRegMsg.statusText, type: 'error' });
+            }
         }
     },
     async mounted() {
@@ -399,7 +430,7 @@ export default {
         this.dataListNew = this.dataListAll
         this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
         this.dataListShowTrans();
-        console.log(this.dataListShow, this.dataListNew, this.dataListAll);
+        // console.log(this.dataListShow, this.dataListNew, this.dataListAll);
     },
     watch: {
         currentPage: {
@@ -468,12 +499,15 @@ export default {
 .registrant {
     width: calc(100% - 5px);
 }
-.main-top-input{
+
+.main-top-input {
     width: 200px;
     margin-top: 10px;
     margin-right: 10px;
 }
-.main-top-select{
-    margin-top: 10px;margin-right: 10px;
+
+.main-top-select {
+    margin-top: 10px;
+    margin-right: 10px;
 }
 </style>
