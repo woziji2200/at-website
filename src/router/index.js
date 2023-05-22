@@ -7,6 +7,7 @@ import indexPage from '../views/index/indexPage/indexPage.vue'
 import aboutPage from '../views/index/aboutPage/aboutPage.vue'
 import historyPage from '../views/index/historyPage/historyPage.vue'
 import signUpPage from '../views/index/signUpPage/signUpPage.vue'
+import memberPage from '../views/index/memberPage/memberPage.vue'
 
 import admin from '../views/admin/admin.vue'
 import loginPage from '../views/admin/loginPage/loginPage.vue'
@@ -45,6 +46,11 @@ const routes = [
                 path: '/index/signUp',
                 name: 'signUpPage',
                 component: signUpPage
+            },
+            {
+                path: '/index/member',
+                name: 'memberPage',
+                component: memberPage
             },
 
         ],

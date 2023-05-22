@@ -336,11 +336,12 @@ export default {
             this.tableLoading = false
         },
         async changeProfile() {
-            this.dialogVisible = false
             let changeProfileStatus = await this.$http.post("/registrant/", this.newItemObj)
             if (changeProfileStatus.status == 200) {
                 await this.refreshDate();
                 this.$message({ message: '修改成功', type: 'success' });
+                this.dialogVisible = false
+
             } else {
                 this.$message({ message: '修改失败, code: ' + changeProfileStatus.status + ", " + changeProfileStatus.statusText, type: 'error' });
             }
