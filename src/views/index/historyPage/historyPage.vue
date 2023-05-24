@@ -1,6 +1,7 @@
 <template>
     <div class="shell" id="shell">
-    <div class="history1" v-if="!flag">
+      <div class="background-white" v-if="!flag"></div>
+      <div class="history1" v-if="!flag">
         <Turntable />
     </div>
     <div class="history2" v-if="flag">
@@ -18,7 +19,8 @@
         </div>
       </div>
 </div>
-<button class="unflod" @click="flag=!flag">展开</button>
+<button class="unflod" @click="flag=!flag" v-if="!flag">展开</button>
+<button class="flod" @click="flag=!flag" v-if="flag">收起</button>
 </div>
   </template>
   
@@ -135,6 +137,14 @@
   </script>
   
   <style scoped>
+    .background-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
   .control{
     display: flex;
     flex-wrap: wrap;
@@ -155,8 +165,15 @@
     position: absolute;
     width: 10vw;
     height: 5vh;
-    left: 45vw;
+    left:  44.5vw;
+    top: 77vh;
+}
+.flod{
+    position: sticky;
     bottom: 5vh;
+    width: 10vw;
+    height: 5vh;
+    left:  44.5vw;
 }
 .years{
     display: flex;
@@ -207,6 +224,8 @@ position: relative;
 }
 .history1{
     position: absolute;
+    left: -10vw;
+    top: 18vh;
 }
 .rightPart{
     position: absolute;
