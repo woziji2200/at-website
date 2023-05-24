@@ -53,7 +53,7 @@
                      <div class="number" style="margin-left:95px;display:flex;align-items:center">
                          <span style="margin-right:30px">验证码:</span>
                          <div class="adress-border">
-                         <input type="text" placeholder="验证码将发至您的邮箱" class="adress-input">
+                         <input type="text" placeholder="验证码将发至您的邮箱" class="adress-input" >
                          <span style="color:#007AFF;font-size:1em;margin-right:10px;letter-spacing:5px;">获取验证码</span>
                          </div>
                      </div>
@@ -170,6 +170,15 @@ input::-webkit-input-placeholder {
        color: #999999 ;
        padding-left: 7px;
 }
+input:focus{
+    outline: none;
+    border: #0660c0 1.8px solid;
+
+}
+textarea:focus{
+    outline: none;
+    border:  #0660c0 1.8px solid;
+}
 .adress-border{
     display: flex;
     justify-content: space-between;
@@ -182,6 +191,13 @@ input::-webkit-input-placeholder {
 }
 .adress-input{
     border: none;
+}
+.adress-input:focus{
+    outline: none;
+   border: 0;
+}
+.adress-input:focus .adress-border{
+    border-color: #0660c0;
 }
 textarea{
     width: 808px;
