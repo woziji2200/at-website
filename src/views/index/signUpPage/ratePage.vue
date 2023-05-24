@@ -1,10 +1,12 @@
 <template>
-  <router-view></router-view>
+  <div>
+      ratePage
+  </div>
 </template>
 
 <script>
 export default {
-    name:'signUpPage',
+    name:"ratePage",
 }
 </script>
 
