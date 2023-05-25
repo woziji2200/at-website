@@ -1,19 +1,13 @@
 <template>
-    <div id="app">
-        signUpPage.vue
-    </div >
+  <router-view></router-view>
 </template>
+
 <script>
 export default {
-
-    data() {
-        return {
-
-        }
-    }
+    name:'signUpPage',
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
