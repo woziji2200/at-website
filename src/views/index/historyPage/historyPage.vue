@@ -1,93 +1,183 @@
 <template>
-    <div class="history">
-    <div class="leftPart">
-        <div>
-            <div class="years">
-                <button class="up" @click="up"></button>
-                <button class="down" @click="down"></button>
-                <div v-for="(year, index) in years" :key="index" :class="`year${year.year}`"  @click="rotatePointer(pointerAngle * index)">
-                <div class="number">{{ year.year }}</div>
-                <div class="line"></div>
-                </div>
-            </div>
-        </div>
+    <div class="shell" id="shell">
+      <div class="background-white" v-if="!flag"></div>
+      <div class="history1" v-if="!flag">
+        <Turntable />
     </div>
-    <div class="rightPart">
-        <div class="historyImg">
-            <img :src=years[0].historyImg alt="">            
+    <div class="history2" v-if="flag">
+      <div class="header">
+        <h2 class="title">艾特の历史作品</h2>
+        <h3 class="subtitle">TT IT</h3>
+      </div>
+      <div class="timeline">
+        <div v-for="(item, index) in years" :key="index" class="item" :data-text="item.text1">
+          <div class="content">
+            <img :src="item.image" alt="" class="img">
+            <h2 class="content-title">{{ item.year }}</h2>
+            <p class="content-desc">{{ item.text2 }}</p>
+          </div>
         </div>
-        <div class="workShow">
-            <h3>{{ years[0].workShow1 }}</h3>
-            <div>{{ years[0].text1 }}</div>
-            <h3>{{ years[0].workShow2 }}</h3>
-            <div>{{ years[0].text2 }}</div>
-        </div>
-    </div>
-    </div>
-</template>
-<script>
-export default {
-
+      </div>
+</div>
+<button class="unflod" @click="flag=!flag" v-if="!flag">展开</button>
+<button class="flod" @click="flag=!flag" v-if="flag">收起</button>
+</div>
+  </template>
+  
+  <script>
+  import Turntable from "@/components/Turntable.vue";
+  export default {
     data() {
-        return {
-            years:[
+      return {
+        flag:false,
+        years:[
                 {
-                    year:2022,
+                    title: "《你的孤独，虽败犹荣》",
+                    image: require("@/assets/img/07.jpg"),
+                    year:"2022",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
+                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
                 },
                 {
-                    year:2021,
+                    title: "《你的孤独，虽败犹荣》",
+                    image: require("@/assets/img/12.jpg"),
+                    year:"2021",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
+                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
                 },
                 {
-                    year:2020,
+                    title: "《你的孤独，虽败犹荣》",
+                    image: require("@/assets/img/13.jpg"),
+                    year:"2020",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
+                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
                 },
                 {
-                    year:2019,
+                    title: "《你的孤独，虽败犹荣》",
+                    image: require("@/assets/img/14.jpg"),
+                    year:"2019",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
+                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
                 },
                 {
-                    year:2018,
+                    title: "《你的孤独，虽败犹荣》",
+                    image: require("@/assets/img/21.jpg"),
+                    year:"2018",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
-                }
+                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
+                },
             ],
             pointerAngle: 0,
-        }
+      };
     },
-    // methods:{
-    //     rotatePointer(angle) {
-    //     this.pointerAngle=angle;
-    //     let rotationAngle = 0;
-    // }
+    mounted() {
+      this.activateFirstItem();
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+        rotatePointer(angle) {
+        this.pointerAngle=angle;
+        let rotationAngle = 0;
+    },
+      activateFirstItem() {
+        this.$nextTick(() => {
+          const firstItem = this.$el.querySelector(".item");
+          firstItem.classList.add("item--active");
+          this.setBackgroundImage(firstItem.querySelector(".img").getAttribute("src"));
+        });
+      },
+      setBackgroundImage(imageUrl) {
+        this.$el.style.backgroundImage = `url(${imageUrl})`;
+      },
+      handleScroll() {
+        const scrollPosition = window.scrollY;
+        const items = this.$el.querySelectorAll(".item");
+        items.forEach((item, index) => {
+          const itemTop = item.offsetTop;
+          const itemBottom = itemTop + item.offsetHeight;
+          if (index === items.length - 2 && scrollPosition > itemBottom - item.offsetHeight / 2) {
+            this.activateItem(item);
+          } else if (scrollPosition <= itemBottom - 10 && scrollPosition >= itemTop) {
+            this.setBackgroundImage(item.querySelector(".img").getAttribute("src"));
+            this.activateItem(item);
+          }
+        });
+      },
+      activateItem(item) {
+        const activeItem = this.$el.querySelector(".item--active");
+        if (activeItem) {
+          activeItem.classList.remove("item--active");
+        }
+        item.classList.add("item--active");
+      }
+    },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.handleScroll);
+    },
 
+    components: {
+    Turntable
+  },
+  };
+  </script>
+  
+  <style scoped>
+    .background-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+  .control{
+    display: flex;
+    flex-wrap: wrap;
+    top: -10vh;
+    left: 10vw;
+    width: 20vw;
+    position: absolute;
+  }
+  .up{
+    width: 20vw;
+    height: 20vw;
+  }
+  .down{
+    width: 20vw;
+    height: 20vw;
+  }
+  .unflod{
+    position: absolute;
+    width: 10vw;
+    height: 5vh;
+    left:  44.5vw;
+    top: 77vh;
 }
-</script>
-
-<style>
+.flod{
+    position: sticky;
+    bottom: 5vh;
+    width: 10vw;
+    height: 5vh;
+    left:  44.5vw;
+}
 .years{
     display: flex;
     position: relative;
-}
-.year2022:hover{
-    transform-origin: center;
-    transition-duration: 1s;
-    transform: rotate(0deg);
 }
 .number{
     width: 7vw;
@@ -130,8 +220,12 @@ export default {
     transform: rotate(60deg);
 }
 .history{
-display: flex;
 position: relative;
+}
+.history1{
+    position: absolute;
+    left: -10vw;
+    top: 18vh;
 }
 .rightPart{
     position: absolute;
@@ -145,4 +239,188 @@ position: relative;
 .workShow{
     top: 33vh;
 }
-</style>
+          * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .shell {
+            width: 100%;
+            position: relative;
+            padding: 80px 0;
+            transition: 0.3s ease 0s;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .shell:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(99, 99, 99, 0.8);
+            content: "";
+        }
+
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 46px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .timeline {
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .content-title {
+            font-weight: normal;
+            font-size: 66px;
+            margin: -10px 0 0 0;
+            transition: 0.4s;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .content-desc {
+            margin: 0;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 25px;
+        }
+
+        .timeline:before {
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            margin-left: -1px;
+            content: "";
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .item {
+            padding: 40px 0;
+            opacity: 0.3;
+            filter: blur(2px);
+            transition: 0.5s;
+            box-sizing: border-box;
+            width: calc(50% - 40px);
+            display: flex;
+            position: relative;
+            transform: translateY(-80px);
+        }
+
+        .item:before {
+            content: attr(data-text);
+            letter-spacing: 3px;
+            width: 100%;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            border-left: 2px solid rgba(255, 255, 255, 0.5);
+            top: 70%;
+            margin-top: -5px;
+            padding-left: 15px;
+            opacity: 0;
+            right: calc(-100% - 56px);
+            font: 900 20px '';
+            letter-spacing: 5px;
+        }
+
+        .item:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .item:nth-child(even):before {
+            right: auto;
+            text-align: right;
+            left: calc(-100% - 56px);
+            padding-left: 0;
+            border-left: none;
+            border-right: 2px solid rgba(255, 255, 255, 0.5);
+            padding-right: 15px;
+        }
+
+        .item--active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+        }
+
+        .item--active:before {
+            top: 50%;
+            transition: 0.3s all 0.2s;
+            opacity: 1;
+        }
+
+        .item--active .content-title {
+            margin: -50px 0 20px 0;
+        }
+
+        .img {
+            max-width: 100%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+            letter-spacing: 5px;
+            margin: 10px 0 0 0;
+            font-weight: normal;
+        }
+
+        .footer {
+            padding: 95px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #999;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .item {
+                align-self: baseline !important;
+                width: 100%;
+                padding: 0 30px 150px 80px;
+            }
+
+            .item:before {
+                left: 10px !important;
+                padding: 0 !important;
+                top: 50px;
+                text-align: center !important;
+                width: 60px;
+                border: none !important;
+            }
+
+            .item:last-child {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+        }
+  </style>
+  

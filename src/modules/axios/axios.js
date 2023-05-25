@@ -12,38 +12,43 @@ const request = axios.create({
 // });
 
 
-export const get = (url, params) => {
-    params = params || {};
-    return new Promise((resolve, reject) => {
+// export const get = (url, params) => {
+//     params = params || {};
+//     return new Promise((resolve, reject) => {
 
-        request.get(url, {
-            params
-        }).then(res => {
-                resolve(res)
-            })
-            .catch(err => {
-                reject(err)
-            })
+//         request.get(url, {
+//             params
+//         }).then(res => {
+//             resolve(res)
+//         })
+//             .catch(err => {
+//                 reject(err)
+//             })
 
-    })
-}
-export const post = (url, params) => {
-    params = params || {};
-    return new Promise((resolve, reject) => {
-        request.post(url, params)
-            .then(res => {
-                resolve(res)
-            })
-            .catch(err => {
-                reject(err)
-            })
-
-    })
-}
-let authUrl = ["/admin/login/", '/admin/', "/registrant/"]
+//     })
+// }
+export const get = async (url, params) => {
+    let params2 = params || {};
+    try {
+        const response = await request.get(url, { params: params2 });
+        return response
+    } catch (error) {
+        return error.response
+    }
+};
+export const post = async (url, params) => {
+    let params2 = params || {};
+    try {
+        const response = await request.post(url, params2);
+        return response
+    } catch (error) {
+        return error.response
+    }
+};
+let authUrl = ["/admin/login/", '/admin/', "/registrant/", "/registrant/delete/"]
 request.interceptors.request.use(
     async (config) => {
-        console.log(config);
+        // console.log(config);
         if (authUrl.indexOf(config.url) != -1) {
             console.log("需要验证的请求：");
             let auth = false;
@@ -68,7 +73,9 @@ request.interceptors.request.use(
                         let refreshMsg = await this.$http.post('/refresh/', {
                             "refresh": loginMsg.refresh
                         })
+                        // console.log(refreshMsg);
                         console.log("access过期但是refresh没有");
+                        
                         if (refreshMsg.status == 200) {
                             localStorage.setItem(JSON.stringify(refreshMsg.data))
                             console.log("login", JSON.parse(localStorage.getItem("login")));
@@ -82,7 +89,7 @@ request.interceptors.request.use(
 
             if (auth) { // 有权限
                 config.headers.Authorization = "Bearer " + JSON.parse(localStorage.getItem("login")).access
-                console.log(config);
+                // console.log(config);
                 return config
             } else {
                 // next("/admin/login") 

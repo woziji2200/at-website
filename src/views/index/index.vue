@@ -22,7 +22,10 @@ export default {
             }, {
                 'name': '爱特历史',
                 'path': '/index/history'
-            }, {
+            },  {
+                'name': '爱特成员',
+                'path': '/index/member'
+            },{
                 'name': '关于爱特',
                 'path': '/index/about'
             }]

@@ -7,6 +7,9 @@ import indexPage from '../views/index/indexPage/indexPage.vue'
 import aboutPage from '../views/index/aboutPage/aboutPage.vue'
 import historyPage from '../views/index/historyPage/historyPage.vue'
 import signUpPage from '../views/index/signUpPage/signUpPage.vue'
+import ratePage from '../views/index/signUpPage/ratePage.vue'
+import signPage from '../views/index/signUpPage/signPage.vue'
+import memberPage from '../views/index/memberPage/memberPage.vue'
 
 import admin from '../views/admin/admin.vue'
 import loginPage from '../views/admin/loginPage/loginPage.vue'
@@ -44,7 +47,30 @@ const routes = [
             {
                 path: '/index/signUp',
                 name: 'signUpPage',
-                component: signUpPage
+                component: signUpPage,
+                redirect:'/index/signUp/sign',
+                children:[
+                    {
+                        path:'/index/signUp/rate',
+                        name:'ratePage',
+                        component:ratePage
+                    },
+                    {
+                        path:'/index/signUp/sign',
+                        name:'signPage',
+                        component:signPage,
+                        children:[
+                            {
+                                path:''
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                path: '/index/member',
+                name: 'memberPage',
+                component: memberPage
             },
 
         ],
