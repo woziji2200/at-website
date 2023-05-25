@@ -1,6 +1,8 @@
 <template>
     <div class="turntable">
       <div class="turntable-containerBox">
+        <img src="@/assets/img/指针.png" alt="" class="point">
+        <div class="pointText">IT STDIO</div>
       <div class="turntable-container">
         <div
           v-for="(box, index) in boxes"
@@ -18,7 +20,7 @@
         <button @click="rotateLeft"></button>
       </div>
       <div class="info">
-        <img :src=boxes[currentIndex-1].image alt="">
+        <img :src=boxes[currentIndex-1].image alt="" class="infoImg">
         <h3>{{ boxes[currentIndex-1].workShow1 }}</h3>
         <div>{{ boxes[currentIndex-1].text1 }}</div>
         <h3>{{ boxes[currentIndex-1].workShow2 }}</h3>
@@ -34,7 +36,7 @@
         boxes: [
           { content: "盒子1",
             isBlue: false,
-            image: require("@/assets/img/07.jpg"),
+            image: require("@/assets/img/19.jpg"),
             year:"2022",
             workShow1:'作品展示',
             text1:'2022游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -128,21 +130,42 @@
   
   .turntable-containerBox{
     position: absolute;
-    width: 37vw;
-    height: 37vw;
-    border: 0.5vw solid black;
-    top: -21vh;
-    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+    top: -41vh;
+    left: -13vw;
+    overflow: hidden;
   }
 
   .turntable-container {
     position: absolute;
-    top: 30vh;
     left: -1vw;
-    width: 37vw;
-    margin: 20px;
+    width: 50vw;
+    height: 50vw;
+    border: 0.5vw solid #333333;
+    border-radius: 50%;
   }
   
+  .point{
+    position: absolute;
+    z-index: 10;
+    width: 12vw;
+    height: 7vh;
+    top: 48vh;
+    left: 20vw;
+  }
+  .pointText{
+    position: absolute;
+    width: 13vw;
+    height: 2vh;
+    font-size: 2vw;
+    font-family: Adobe Heiti Std;
+    font-weight: normal;
+    color: #333333;
+    line-height: 2vh;
+    top: 67vh;
+    left: 23vw;
+  }
   .box {
     position: absolute;
     top: 0;
@@ -154,52 +177,68 @@
     background-color: transparent;
     transition: transform 0.3s ease;
     text-align: right;
-    width: 37vw;
+    width: 50vw;
     height: 10vh;
     display: flex;
+    top: 46vh;
   }
   .box span{
     width: 7vw;
     height: 3vw;
-    font-size: 2vw;
-    font-family: Adobe Heiti Std;
+    font-size: 2.5vw;
+    font-family: Adobe Heiti Std R;
     font-weight: normal;
-    line-height: 3vw;
-    margin-left: 24vw;
+    line-height: 2.5vw;
+    margin-left: 35vw;
   }
   .box span.blue {
-    color: blue;
+    color: #0450AC;
+    font-size: 3vw;
+    transition: 0.5s;
   }
   .line{
     position: absolute;
-    background-color: black;
+    background-color: #333333;
     width: 3vw;
-    height: 1vh;
+    height: 0.3vw;
     border: 1px solid #333333;
     margin-top: -3vh;
-    margin-left: 7vw;
+    margin-left: 8vw;
 }
   .info {
+    width: 40vw;
+    height: 100vw;
     position: relative;
-    top: -22vh;
+    top: -30vh;
     left: 60vw;
   }
-  
+  .infoImg{
+    top: 5vh;
+    width: 40vw;
+    height: 25.2vw;
+  }
+  .info h3{
+    font-size: 1.5vw;
+  }
+  .info div{
+    font-size: 1vw;
+  }
   .buttons {
     position: absolute;
-    margin-top: -20vh;
-    margin-left: 20vw;
+    margin-top: -39vh;
+    margin-left: 30vw;
     display: flex;
     flex-wrap: wrap;
-    width: 37vw;
+    width: 50vw;
+    overflow: hidden;
   }
   
   .buttons button {
     background-color:transparent;
     border-style:none;
     margin-right: 10px;
-    width: 37vw;
-    height: 30vh;
+    width: 30vw;
+    height: 24vw;
   }
   </style>
   
