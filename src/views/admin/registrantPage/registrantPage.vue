@@ -21,6 +21,9 @@
                 <el-form-item label="手机号">
                     <el-input v-model="newItemObj.phone_number"></el-input>
                 </el-form-item>
+                <el-form-item label="邮箱">
+                    <el-input v-model="newItemObj.email"></el-input>
+                </el-form-item>
                 <el-form-item label="部门">
                     <el-select v-model="newItemObj.department">
                         <el-option label="APP开发" :value="1"></el-option>
@@ -70,6 +73,9 @@
                 <el-form-item label="手机号">
                     <el-input v-model="addRegistrantObj.phone_number"></el-input>
                 </el-form-item>
+                <el-form-item label="邮箱">
+                    <el-input v-model="addRegistrantObj.email"></el-input>
+                </el-form-item>
                 <el-form-item label="部门">
                     <el-select v-model="addRegistrantObj.department">
                         <el-option label="APP开发" :value="1"></el-option>
@@ -110,7 +116,7 @@
         </el-dialog>
 
         <div class="main-top">
-
+            <span class="main-top-title">管理报名信息</span>
             <el-select v-model="dataListFilter.department" class="main-top-select">
                 <el-option label="全部" :value="-10"></el-option>
                 <el-option label="APP开发" :value="1"></el-option>
@@ -122,7 +128,8 @@
             <el-input v-model="dataListFilter.name" class="main-top-input" placeholder="输入姓名搜索"></el-input>
             <div class="main-top-button">
                 <el-button-group>
-                    <el-button type="primary" icon="el-icon-circle-plus-outline" @click="addDialogVisible = true">增加</el-button>
+                    <el-button type="primary" icon="el-icon-circle-plus-outline"
+                        @click="addDialogVisible = true">增加</el-button>
                     <!-- <el-button type="primary" icon="el-icon-share">搜索</el-button> -->
                 </el-button-group>
             </div>
@@ -150,6 +157,9 @@
                             <el-form-item label="手机号">
                                 <span>{{ props.row.phone_number }}</span>
                             </el-form-item>
+                            <el-form-item label="邮箱">
+                                <span>{{ props.row.email }}</span>
+                            </el-form-item>
                             <el-form-item label="部门">
                                 <span>{{ props.row.department }}</span>
                             </el-form-item>
@@ -171,6 +181,8 @@
                 <el-table-column prop="major" label="专业" width="80">
                 </el-table-column>
                 <el-table-column prop="phone_number" label="手机号" width="120">
+                </el-table-column>
+                <el-table-column prop="email" label="邮箱" width="120">
                 </el-table-column>
                 <el-table-column prop="department" label="部门" width="90">
                 </el-table-column>
@@ -330,15 +342,21 @@ export default {
             }
             else {
                 this.$message({ message: '获取失败, code: ' + dataList.status + ", " + dataList.statusText, type: 'error' });
-
             }
 
             this.tableLoading = false
         },
         async changeProfile() {
+            this.newItemObj.department = this.newItemObj.department + ""
+            this.newItemObj.sex = this.newItemObj.sex + ""
+            this.newItemObj.status = this.newItemObj.status + ""
+            this.newItemObj.id += 0
             let changeProfileStatus = await this.$http.post("/registrant/", this.newItemObj)
             if (changeProfileStatus.status == 200) {
                 await this.refreshDate();
+                this.dataListFilt()
+                this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
+                this.dataListShowTrans();
                 this.$message({ message: '修改成功', type: 'success' });
                 this.dialogVisible = false
 
@@ -357,6 +375,10 @@ export default {
             })
             if (msg.status == 200) {
                 await this.refreshDate()
+                this.dataListFilt()
+                this.dataListNew = this.dataListAll
+                this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
+                this.dataListShowTrans();
                 this.$message({ message: '删除成功', type: 'success' });
             } else {
                 this.$message({ message: '删除失败, code: ' + msg.status + ", " + msg.statusText, type: 'error' });
@@ -405,6 +427,8 @@ export default {
             // console.log(this.dataListFilter);
         },
         async addRegistrant() {
+            this.addRegistrantObj.sex = this.addRegistrantObj.sex + ""
+            this.addRegistrantObj.department = this.addRegistrantObj.department + ""
             let addRegMsg = await this.$http.post("/registrant/", this.addRegistrantObj)
             console.log("要新建的信息", this.addRegistrantObj);
             if (addRegMsg.status == 200) {
@@ -420,6 +444,9 @@ export default {
                     "sex": 0
                 }
                 await this.refreshDate()
+                this.dataListFilt()
+                this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
+                this.dataListShowTrans();
             } else {
                 this.$message({ message: '增加失败, code: ' + addRegMsg.status + ", " + addRegMsg.statusText, type: 'error' });
             }
@@ -428,7 +455,6 @@ export default {
     async mounted() {
         await this.refreshDate()
         this.dataListFilt()
-        this.dataListNew = this.dataListAll
         this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
         this.dataListShowTrans();
         // console.log(this.dataListShow, this.dataListNew, this.dataListAll);
@@ -490,6 +516,8 @@ export default {
     display: flex;
     justify-content: right;
 }
+
+.main-top-title {}
 
 .main-top-button {
     margin-right: 40px;
