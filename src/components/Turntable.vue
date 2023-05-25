@@ -151,7 +151,7 @@
     z-index: 10;
     width: 12vw;
     height: 7vh;
-    top: 48vh;
+    top: 48%;
     left: 20vw;
   }
   .pointText{
@@ -163,7 +163,7 @@
     font-weight: normal;
     color: #333333;
     line-height: 2vh;
-    top: 67vh;
+    top: 67%;
     left: 23vw;
   }
   .box {
@@ -180,7 +180,7 @@
     width: 50vw;
     height: 10vh;
     display: flex;
-    top: 46vh;
+    top: 45%;
   }
   .box span{
     width: 7vw;
@@ -199,11 +199,11 @@
   .line{
     position: absolute;
     background-color: #333333;
-    width: 3vw;
-    height: 0.3vw;
+    width: 6%;
+    height: 5.3%;
     border: 1px solid #333333;
     margin-top: -3vh;
-    margin-left: 8vw;
+    margin-left: 16%;
 }
   .info {
     width: 40vw;
