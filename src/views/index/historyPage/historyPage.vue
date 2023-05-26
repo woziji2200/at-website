@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="shell" id="shell">
     <div class="history1" v-if="!flag">
         <Turntable />
@@ -404,4 +404,4 @@ position: relative;
             }
         }
   </style>
-  
+   -->

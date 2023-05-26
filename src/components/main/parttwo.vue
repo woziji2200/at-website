@@ -1,0 +1,265 @@
+<template>
+    <div class="drew">
+        <div class="textname">
+            <div class="text1">五大部门</div>
+            <div class="text2">五大部门</div>
+            <div class="text1">五大部门</div>
+        </div>
+        <div class="typ1"></div>
+        <div class="typm" :class="bk[0]">
+            <div class="coverere"></div>
+            <div class="name">
+                <div class="texts">程序开发</div>
+                <div class="underer"></div>
+            </div>
+        </div>
+        <div class="typ2"></div>
+        <div class="typ3"></div>
+        <div class="typm" :class="bk[1]">
+            <div class="coverere"></div>
+            <div class="name">
+                <div class="texts">Web开发</div>
+                <div class="underer"></div>
+            </div>
+        </div>
+        <div class="typ4"></div>
+        <div class="typ5"></div>
+        <div class="typm" :class="bk[2]">
+            <div class="coverere"></div>
+            <div class="name">
+                <div class="texts">UI设计</div>
+                <div class="underer"></div>
+            </div>
+        </div>
+        <div class="typ6"></div>
+        <div class="typ3"></div>
+        <div class="typm" :class="bk[3]">
+            <div class="coverere"></div>
+            <div class="name">
+                <div class="texts">游戏开发</div>
+                <div class="underer"></div>
+            </div>
+        </div>
+        <div class="typ4"></div>
+        <div class="typ1"></div>
+        <div class="typm" :class="bk[4]">
+            <div class="coverere"></div>
+            <div class="name">
+                <div class="texts">APP开发</div>
+                <div class="underer"></div>
+            </div>
+        </div>
+        <div class="typ2"></div>
+    </div>
+</template>
+<script>
+export default {
+
+    data() {
+        return {
+            bk: ["cxbk", "webbk", "uibk", "yxbk", "appbk"]
+        }
+    }
+}
+</script>
+
+<style scoped>
+.drew {
+    width: 1920px;
+    height: 1849px;
+    background-image: url(@/assets/img/index/partbk.png);
+    background-position: center;
+    box-shadow: inset 0px 8px 18px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin: 0 auto;
+    margin-top: -340px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 136px;
+    align-items: center;
+    position: relative;
+
+}
+
+.typ1 {
+    width: 311px;
+    height: 389px;
+    background: #FFFFFF;
+    box-shadow: 0px 18px 18px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin-bottom: 46px;
+}
+
+.typm {
+    width: 311px;
+    height: 629px;
+    background: #1A1A1A;
+    box-shadow: 0px 18px 18px 1px #707070;
+    border-radius: 80px 80px 80px 80px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.typ2 {
+    width: 311px;
+    height: 448px;
+    background: #FFFFFF;
+    box-shadow: 0px 18px 18px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin-top: 110px;
+}
+
+.typ3 {
+    width: 311px;
+    height: 600px;
+    background: #FFFFFF;
+    box-shadow: 0px 18px 18px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin-bottom: 46px;
+}
+
+.typ4 {
+    width: 311px;
+    height: 294px;
+    background: #FFFFFF;
+    box-shadow: 0px 18px 18px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin-top: 53px;
+}
+
+.typ5 {
+    width: 311px;
+    height: 389px;
+    background: #FFFFFF;
+    box-shadow: 0px 18px 18px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin-bottom: 44px;
+}
+
+.typ6 {
+    width: 311px;
+    height: 448px;
+    background: #FFFFFF;
+    box-shadow: 0px 18px 18px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 80px 80px 80px 80px;
+    opacity: 1;
+    margin-top: 111px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+}
+
+.texts {
+    width: 300px;
+    height: 60px;
+    font-size: 60px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 60px;
+    text-align: center;
+}
+
+.underer {
+    width: 117px;
+    height: 0px;
+    margin-top: 5px;
+    border: 6px solid #FFFFFF;
+    border-radius: 6px;
+}
+
+.cxbk {
+    background-image: url(@/assets/img/index/cx.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.webbk {
+    background-image: url(@/assets/img/index/web.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.uibk {
+    background-image: url(@/assets/img/index/ui.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.yxbk {
+    background-image: url(@/assets/img/index/yx.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.appbk {
+    background-image: url(@/assets/img/index/app.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.coverere {
+    width: 311px;
+    height: 628px;
+    background: #1A1A1A;
+    box-shadow: 0px 18px 18px 1px #707070;
+    border-radius: 80px 80px 80px 80px;
+    opacity: 0.4;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.textname {
+    width: 480px;
+    position: absolute;
+    top: 136px;
+    margin: 0 auto;
+}
+
+.text1 {
+    width: 480px;
+    height: 120px;
+    font-size: 120px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 120px;
+    -webkit-text-stroke: 4px #007AFF;
+    -webkit-text-fill-color: transparent;
+    margin-top: -10px;
+
+}
+.text2 {
+    width: 480px;
+    height: 120px;
+    font-size: 120px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #007AFF;
+    line-height: 120px;
+    margin-top: -10px;
+
+}
+</style>
