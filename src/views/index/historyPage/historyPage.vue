@@ -22,8 +22,8 @@
         </div>
       </div>
 </div>
-<button class="unflod" @click="flag=!flag" v-if="!flag"><span class="button-text"> 展开</span><span class="underLine"></span></button>
-<button class="flod" @click="flag=!flag" v-if="flag"><span class="button-text">收起</span><span class="underLine"></span></button>
+<button class="unfold" @click="flag=!flag" v-if="!flag"><span class="button-text"> 展开</span><span class="underLine"></span></button>
+<button class="fold" @click="flag=!flag" v-if="flag"><span class="button-text">收起</span><span class="underLine"></span></button>
 </div>
   </template>
   
@@ -92,6 +92,21 @@
       this.activateFirstItem();
       window.addEventListener("scroll", this.handleScroll);
     },
+    created() {
+    // 判断设备类型
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      this.flag = true; // 在手机端将flag设为true
+    }
+    // 使用窗口宽度进行判断
+    const mediaQuery = window.matchMedia('(max-width: 768px)');
+    this.flag = mediaQuery.matches; // 初始时根据媒体查询结果设置 flag 的初始值
+
+    // 监听媒体查询变化，并更新 flag 值
+    mediaQuery.addListener((mq) => {
+      this.flag = mq.matches;
+    });
+  },
     methods: {
         rotatePointer(angle) {
         this.pointerAngle=angle;
@@ -164,7 +179,7 @@
     width: 20vw;
     height: 20vw;
   }
-  .unflod{
+  .unfold{
     background: #007AFF;
     border: 1px transparent;
     border-radius: 1vw;
@@ -172,7 +187,7 @@
     width: 7vw;
     height: 4.5vh;
     left: 46vw;
-    top: 70vh;
+    top: 92.5vh;
 }
 .button-text {
   width: 7vw;
@@ -187,7 +202,7 @@
   transform: translate(-50%, -50%);
   top: 2.8vh;
 }
-.flod{
+.fold{
   background: #007AFF;
     border: 1px transparent;
     border-radius: 1vw;
@@ -197,7 +212,7 @@
     position: sticky;
     left: 46vw;
     top: 70vh;
-    bottom: 2vh;
+    bottom: 5vh;
 }
 
 .underLine{
@@ -243,7 +258,7 @@ position: relative;
 .history1{
     position: absolute;
     left: -10vw;
-    top: 18vh;
+    top: 39vh;
 }
 .rightPart{
     position: absolute;
@@ -445,5 +460,12 @@ position: relative;
     .timeline:before {
         left: 40px;
     }
+}
+@media (max-width: 768px) {
+  .history1,
+  .unfold,
+  .fold {
+    display: none;
+  }
 }
   </style>
