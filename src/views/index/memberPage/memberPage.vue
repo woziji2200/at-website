@@ -1,5 +1,8 @@
 <template>
     <div class="shell" id="shell">
+        <router-link class="back" to="/index">
+            <backPagebutton></backPagebutton>
+        </router-link>
         <!-- <div class="background-white"></div> -->
         <div class="history2">
             <div class="header">
@@ -43,7 +46,11 @@
 </template>
   
 <script>
+import backPagebutton from '@/components/sign/backPagebutton.vue';
 export default {
+    components: {
+        backPagebutton,
+    },
     data() {
         return {
             years: [
@@ -95,6 +102,44 @@ export default {
                             member2: [
                                 {
                                     name: "喵喵喵程序",
+                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                },
+                                {
+                                    name: "喵喵喵",
+                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                },
+                                {
+                                    name: "喵喵喵",
+                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                }]
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "喵喵喵UI",
+                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                },
+                                {
+                                    name: "喵喵喵",
+                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                },
+                                {
+                                    name: "喵喵喵",
+                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                }]
+                        },
+                        {
+                            department: "游戏",
+                            member2: [
+                                {
+                                    name: "喵喵喵游戏",
                                     image: require('@/assets/member/avatar/2022/huaji.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
@@ -600,10 +645,12 @@ export default {
     .item:last-child {
         padding-bottom: 40px;
     }
-    .content-main{
+
+    .content-main {
         flex-direction: column;
     }
-    .content-main-left{
+
+    .content-main-left {
         flex-direction: row !important;
     }
 }
@@ -613,11 +660,12 @@ export default {
         left: 40px;
     }
 }
-.content{
-}
+
+.content {}
+
 .content-main-right-profile-avatar {
-    width: 30%;
-    height: 30%;
+    width: 25%;
+    height: 25%;
     border-radius: 50%;
 }
 
@@ -630,6 +678,7 @@ export default {
 .content-main-right-profile-right {
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 .content-right-signature {}
@@ -646,6 +695,43 @@ export default {
 .content-main-left {
     display: flex;
     flex-direction: column;
+}
+
+.content-main-left-button button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid 1px white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.content-main-left-button button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.content-main-right-profile-right-name {
+    /* margin-left: 10px; */
+    color: white;
+    font-size: 20px;
+}
+
+.content-main-right-profile-right-signature {
+    /* margin-left: ; */
+    margin-top: 5px;
+    color: rgb(219, 219, 219);
+    font-size: 16px;
+}
+.back{
+    top: 20px;
+    left: 20px;
+    z-index: 99;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    text-decoration: none;
 }
 </style>
   

@@ -21,22 +21,22 @@ export default {
 }
 .backGround{
     background-color: #007AFF;
-    width: 6.1vw;
-    height: 2.4vw;
+    width: 90px;
+    height: 30px;
     text-align: center;
     box-shadow: 0px 3px 3px 0px rgba(112,112,112,0.16);
-    border-radius: 0.9vw;
+    border-radius: 12px;
 }
 .back-letter{
-    line-height: 2.4vw;
+    line-height: 30px;
     color: #FFFFFF;
     font-weight: bold;
 }
 .back-bottom{
     margin: auto;
-    margin-top: -5px;
-    width: 4.1vw;
-    height: 0.11vw;
+    margin-top: -3px;
+    width: 50px;
+    height: 1px;
     background-color: #FFFFFF;
 }
 </style>

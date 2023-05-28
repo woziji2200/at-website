@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div class="shell" id="shell">
       <div class="background-white" v-if="!flag"></div>
       <div class="history1" v-if="!flag">
@@ -447,4 +447,3 @@ position: relative;
     }
 }
   </style>
-   -->
