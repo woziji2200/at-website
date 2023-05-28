@@ -418,6 +418,7 @@ export default {
     opacity: 1;
     border: 2px solid #007AFF;
     border-radius: 1px;
+    background-color: #007AFF;
 }
 
 .work-text {
