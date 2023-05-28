@@ -7,6 +7,10 @@
                 <div class="about-hr"></div>
                 <div class="about-name">关于我们</div>
                 <div class="about-eng">About Us</div>
+                <router-link  to="index/about" class="about-but" >
+                    <div>了解更多</div>
+                    <div class="but-underl2"></div>
+                </router-link>
             </div>
             <div class="about-part">
                 <div class="about-blur"></div>
@@ -32,10 +36,10 @@
                 <div class="wrok-infos">
                     {{ workInfos }}
                 </div>
-                <div class="work-button">
+                <router-link  to="index/history" class="work-button">
                     <div>了解更多</div>
                     <div class="but-underl"></div>
-                </div>
+                </router-link>
             </div>
             <div class="work-text">
                 <div class="work-hr"></div>
@@ -61,10 +65,10 @@
                         团队精神是一只无形的手，<br>
                         推动每次项目的顺利完成。
                     </div>
-                    <div class="team-but">
+                    <router-link  to="index/member" class="team-but">
                         <div>了解更多</div>
                         <div class="but-underl2"></div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -110,11 +114,11 @@ export default {
         startIN() {
             this.Timer = setInterval(() => {
                 this.right();
-                console.log(1);
+                // console.log(1);
             }, 3000)
         }
     },
-    mounted(){
+    mounted() {
         this.startIN();
     },
     onUnmounted() {
@@ -176,7 +180,7 @@ export default {
 
 .about-text {
     width: 368px;
-    height: 209px;
+    height: 294px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,6 +218,7 @@ export default {
     color: #9DCCFF;
     line-height: 52px;
     letter-spacing: 20px;
+    margin-bottom: 20px;
 }
 
 .about-part {
@@ -411,6 +416,7 @@ export default {
     line-height: 40px;
     padding-top: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .but-underl {
@@ -562,6 +568,27 @@ export default {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.about-but {
+    width: 175px;
+    height: 60px;
+    background: #007AFF;
+    box-shadow: 0px 3px 3px 1px rgba(112, 112, 112, 0.16);
+    border-radius: 18px 18px 18px 18px;
+    opacity: 1;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 40px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .but-underl2 {

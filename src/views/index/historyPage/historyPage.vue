@@ -24,6 +24,8 @@
 </div>
 <button class="unfold" @click="flag=!flag" v-if="!flag"><span class="button-text"> 展开</span><span class="underLine"></span></button>
 <button class="fold" @click="flag=!flag" v-if="flag"><span class="button-text">收起</span><span class="underLine"></span></button>
+<button class="goToHomePage1" @click="goToHomePage" v-if="!flag"><span class="button-text">返回主页</span><span class="goToHomePageLine"></span></button>
+<button class="goToHomePage2" @click="goToHomePage" v-if="flag"><span class="button-text">返回主页</span><span class="goToHomePageLine"></span></button>
 </div>
   </template>
   
@@ -108,6 +110,9 @@
     });
   },
     methods: {
+      goToHomePage() {
+      this.$router.push('/index'); 
+    },
         rotatePointer(angle) {
         this.pointerAngle=angle;
         let rotationAngle = 0;
@@ -213,6 +218,37 @@
     left: 46vw;
     top: 70vh;
     bottom: 5vh;
+}
+
+.goToHomePage1{
+  background: #007AFF;
+    border: 1px transparent;
+    border-radius: 1vw;
+    position: absolute;
+    width: 8vw;
+    height: 4.5vh;
+    left: 90vw;
+    top: 92.5vh;
+    bottom: 5vh;
+}
+.goToHomePage2{
+  background: #007AFF;
+    border: 1px transparent;
+    border-radius: 1vw;
+    position: sticky;
+    width: 8vw;
+    height: 4.5vh;
+    left: 90vw;
+    bottom: 5vh;
+}
+
+.goToHomePageLine{
+  background: #FFFFFF;
+    height: 0.3vh;
+    width: 4vw;
+    position: absolute;
+    left: 2vw;
+    top: 3.6vh;
 }
 
 .underLine{
