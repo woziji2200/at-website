@@ -63,18 +63,18 @@ export default {
                             department: "APP",
                             member2: [
                                 {
-                                    name: "喵喵喵app",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名app",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -82,18 +82,18 @@ export default {
                             department: "Web",
                             member2: [
                                 {
-                                    name: "喵喵喵web",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名web",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -101,18 +101,18 @@ export default {
                             department: "程序",
                             member2: [
                                 {
-                                    name: "喵喵喵程序",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名程序",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -120,18 +120,18 @@ export default {
                             department: "UI",
                             member2: [
                                 {
-                                    name: "喵喵喵UI",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名UI",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -139,18 +139,18 @@ export default {
                             department: "游戏",
                             member2: [
                                 {
-                                    name: "喵喵喵游戏",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名游戏",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -165,18 +165,18 @@ export default {
                             department: "APP",
                             member2: [
                                 {
-                                    name: "喵喵喵app",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名app",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -184,18 +184,18 @@ export default {
                             department: "Web",
                             member2: [
                                 {
-                                    name: "喵喵喵web",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名web",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -203,18 +203,18 @@ export default {
                             department: "程序",
                             member2: [
                                 {
-                                    name: "喵喵喵程序",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名程序",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -229,18 +229,18 @@ export default {
                             department: "APP",
                             member2: [
                                 {
-                                    name: "喵喵喵app",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名app",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -248,18 +248,18 @@ export default {
                             department: "Web",
                             member2: [
                                 {
-                                    name: "喵喵喵web",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名web",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
@@ -267,18 +267,18 @@ export default {
                             department: "程序",
                             member2: [
                                 {
-                                    name: "喵喵喵程序",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名程序",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 },
                                 {
-                                    name: "喵喵喵",
-                                    image: require('@/assets/member/avatar/2022/huaji.jpg'),
+                                    name: "姓名",
+                                    image: require('@/assets/member/photo.jpg'),
                                     signature: '哈哈哈哈哈哈哈哈哈'
                                 }]
                         },
