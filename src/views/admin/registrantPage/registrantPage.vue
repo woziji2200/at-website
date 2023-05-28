@@ -38,11 +38,13 @@
                         <el-option label="已报名" :value="1"></el-option>
                         <el-option label="初审中" :value="2"></el-option>
                         <el-option label="面试中" :value="3"></el-option>
+                        <el-option label="笔试中" :value="4"></el-option>
                         <el-option label="成功录取" :value="5"></el-option>
-                        <el-option label="初审失败" :value="-1"></el-option>
-                        <el-option label="面试失败" :value="-2"></el-option>
-                        <el-option label="笔试失败" :value="-3"></el-option>
-                        <el-option label="未录取" :value="-5"></el-option>
+                        <el-option label="初审失败" :value="6"></el-option>
+                        <el-option label="面试失败" :value="7"></el-option>
+                        <el-option label="笔试失败" :value="8"></el-option>
+                        <el-option label="复试失败" :value="9"></el-option>
+                        <el-option label="未录取" :value="10"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="期望">
@@ -90,11 +92,13 @@
                         <el-option label="已报名" :value="1"></el-option>
                         <el-option label="初审中" :value="2"></el-option>
                         <el-option label="面试中" :value="3"></el-option>
+                        <el-option label="笔试中" :value="4"></el-option>
                         <el-option label="成功录取" :value="5"></el-option>
-                        <el-option label="初审失败" :value="-1"></el-option>
-                        <el-option label="面试失败" :value="-2"></el-option>
-                        <el-option label="笔试失败" :value="-3"></el-option>
-                        <el-option label="未录取" :value="-5"></el-option>
+                        <el-option label="初审失败" :value="6"></el-option>
+                        <el-option label="面试失败" :value="7"></el-option>
+                        <el-option label="笔试失败" :value="8"></el-option>
+                        <el-option label="复试失败" :value="9"></el-option>
+                        <el-option label="未录取" :value="10"></el-option>
                     </el-select>
                 </el-form-item>
                 <el-form-item label="期望">
@@ -115,24 +119,27 @@
             </span>
         </el-dialog>
 
-        <div class="main-top">
+        <div class="main-top2">
             <span class="main-top-title">管理报名信息</span>
-            <el-select v-model="dataListFilter.department" class="main-top-select">
-                <el-option label="全部" :value="-10"></el-option>
-                <el-option label="APP开发" :value="1"></el-option>
-                <el-option label="Web开发" :value="2"></el-option>
-                <el-option label="程序开发" :value="3"></el-option>
-                <el-option label="游戏开发" :value="4"></el-option>
-                <el-option label="UI设计" :value="5"></el-option>
-            </el-select>
-            <el-input v-model="dataListFilter.name" class="main-top-input" placeholder="输入姓名搜索"></el-input>
-            <div class="main-top-button">
-                <el-button-group>
-                    <el-button type="primary" icon="el-icon-circle-plus-outline"
-                        @click="addDialogVisible = true">增加</el-button>
-                    <!-- <el-button type="primary" icon="el-icon-share">搜索</el-button> -->
-                </el-button-group>
+            <div class="main-top">
+                <el-select v-model="dataListFilter.department" class="main-top-select">
+                    <el-option label="全部" :value="-10"></el-option>
+                    <el-option label="APP开发" :value="1"></el-option>
+                    <el-option label="Web开发" :value="2"></el-option>
+                    <el-option label="程序开发" :value="3"></el-option>
+                    <el-option label="游戏开发" :value="4"></el-option>
+                    <el-option label="UI设计" :value="5"></el-option>
+                </el-select>
+                <el-input v-model="dataListFilter.name" class="main-top-input" placeholder="输入姓名搜索"></el-input>
+                <div class="main-top-button">
+                    <el-button-group>
+                        <el-button type="primary" icon="el-icon-circle-plus-outline"
+                            @click="addDialogVisible = true">增加</el-button>
+                        <!-- <el-button type="primary" icon="el-icon-share">搜索</el-button> -->
+                    </el-button-group>
+                </div>
             </div>
+
         </div>
 
 
@@ -290,11 +297,13 @@ export default {
                 case "已报名": status = 1; break;
                 case "初审中": status = 2; break;
                 case "面试中": status = 3; break;
+                case "笔试中": status = 4; break;
                 case "成功录取": status = 5; break;
-                case "初审失败": status = -1; break;
-                case "面试失败": status = -2; break;
-                case "笔试失败": status = -3; break;
-                case "未录取": status = -5; break;
+                case "初审失败": status = 6; break;
+                case "面试失败": status = 7; break;
+                case "笔试失败": status = 8; break;
+                case "复试失败": status = 9; break;
+                case "未录取": status = 10; break;
             }
             this.newItemObj.status = status;
             // console.log(obj.sex,this.sexLists.indexOf(obj.sex+1));
@@ -315,11 +324,13 @@ export default {
                         case 1: status = "已报名"; break;
                         case 2: status = "初审中"; break;
                         case 3: status = "面试中"; break;
+                        case 4: status = "笔试中"; break;
                         case 5: status = "成功录取"; break;
-                        case -1: status = "初审失败"; break;
-                        case -2: status = "面试失败"; break;
-                        case -3: status = "笔试失败"; break;
-                        case -5: status = "未录取"; break;
+                        case 6: status = "初审失败"; break;
+                        case 7: status = "面试失败"; break;
+                        case 8: status = "笔试失败"; break;
+                        case 9: status = "复试失败"; break;
+                        case 10: status = "未录取"; break;
                     }
 
 
@@ -347,18 +358,21 @@ export default {
             this.tableLoading = false
         },
         async changeProfile() {
+            console.log(this.newItemObj);
             this.newItemObj.department = this.newItemObj.department + ""
             this.newItemObj.sex = this.newItemObj.sex + ""
             this.newItemObj.status = this.newItemObj.status + ""
             this.newItemObj.id += 0
+            console.log(this.newItemObj);
+            // this.newItemObj.status = this.statusToNewStatus(this.newItemObj.status)
             let changeProfileStatus = await this.$http.post("/registrant/", this.newItemObj)
+            this.dialogVisible = false
             if (changeProfileStatus.status == 200) {
                 await this.refreshDate();
                 this.dataListFilt()
                 this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
                 this.dataListShowTrans();
                 this.$message({ message: '修改成功', type: 'success' });
-                this.dialogVisible = false
 
             } else {
                 this.$message({ message: '修改失败, code: ' + changeProfileStatus.status + ", " + changeProfileStatus.statusText, type: 'error' });
@@ -429,11 +443,12 @@ export default {
         async addRegistrant() {
             this.addRegistrantObj.sex = this.addRegistrantObj.sex + ""
             this.addRegistrantObj.department = this.addRegistrantObj.department + ""
+            // this.addRegistrantObj.status = this.statusToNewStatus(this.addRegistrantObj.status)
+            this.addDialogVisible = false
             let addRegMsg = await this.$http.post("/registrant/", this.addRegistrantObj)
             console.log("要新建的信息", this.addRegistrantObj);
             if (addRegMsg.status == 200) {
                 this.$message({ message: '增加成功', type: 'success' });
-                this.addDialogVisible = false
                 this.addRegistrantObj = {
                     "name": "",
                     "major": "",
@@ -450,6 +465,10 @@ export default {
             } else {
                 this.$message({ message: '增加失败, code: ' + addRegMsg.status + ", " + addRegMsg.statusText, type: 'error' });
             }
+        },
+        statusToNewStatus(oldStatus) {
+            if (oldStatus >= 0) return oldStatus
+            else return -oldStatus + 5
         }
     },
     async mounted() {
@@ -457,6 +476,7 @@ export default {
         this.dataListFilt()
         this.dataListShow = this.dataListNew.slice((this.currentPage - 1) * 30, this.currentPage * 30)
         this.dataListShowTrans();
+        console.log(this.dataListAll);
         // console.log(this.dataListShow, this.dataListNew, this.dataListAll);
     },
     watch: {
@@ -511,13 +531,16 @@ export default {
 }
 
 .main-top {
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     display: flex;
     justify-content: right;
 }
 
-.main-top-title {}
+.main-top-title {
+    margin-left: 50px;
+    font-size: 18px;
+}
 
 .main-top-button {
     margin-right: 40px;
@@ -538,5 +561,10 @@ export default {
 .main-top-select {
     margin-top: 10px;
     margin-right: 10px;
+}
+.main-top2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 </style>
