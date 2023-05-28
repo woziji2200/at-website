@@ -92,7 +92,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .nav-part {
     width: 1920px;
     margin: 0 auto;
@@ -188,5 +188,6 @@ export default {
     border: 2px solid #007AFF;
     border-radius: 2px;
     top: 60px;
+    background-color: #007AFF;
 }
 </style>

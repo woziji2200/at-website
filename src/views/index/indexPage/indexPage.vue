@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div class="blink" :style="{'height':maxHT+'px'}">
         <div class="navs" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
         <nav-page> </nav-page>
         </div>
@@ -71,7 +71,7 @@ export default {
             fitin: 1,
             windowWidth: 0,
             windowHeight: 0,
-
+            maxHT:8466,
         }
     },
     methods: {
@@ -97,6 +97,8 @@ export default {
         this.windowHeight = document.body.clientHeight
         this.fitin = this.windowWidth / 1920;
         console.log(this.fitin)
+        console.log(this.maxHT)
+        this.maxHT = this.fitin*8550;
         window.onresize = () => {
             return (() => {
                 //窗口缩放自动获取页面宽高
@@ -105,6 +107,7 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
+                that.maxHT = that.fitin*8550;
                 console.log(that.fitin)
             })()
         }
@@ -124,6 +127,9 @@ export default {
 </script>
 
 <style scoped>
+.blink{
+    overflow-y: hidden;
+}
 .all {
     transform-origin: 0 0;
     margin: 0 auto;

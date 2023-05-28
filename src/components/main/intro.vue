@@ -11,13 +11,17 @@
             <div class="about-part">
                 <div class="about-blur"></div>
                 <div class="up-roll">
-                    <img class="roll-img" :src="infoRollImg">
-                    <div class="rolll"></div>
-                    <div class="rollr"></div>
+                    <div class="roll-container">
+                        <div class="roll-containin" :style="{ 'marginLeft': rollMarg + 'px' }">
+                            <img class="roll-img" v-for="items in infoRollImg" :src="items">
+                        </div>
+                    </div>
+                    <div class="rolll" @click="left()"></div>
+                    <div class="rollr" @click="right()"></div>
                 </div>
                 <div class="about-infos">
-                    <div class="infos-head">{{ infosHead }}</div>
-                    <div class="infos-info">{{ infosInfo }}</div>
+                    <div class="infos-head">{{ infosHead[index] }}</div>
+                    <div class="infos-info">{{ infosInfo[index] }}</div>
                 </div>
             </div>
         </div>
@@ -67,16 +71,62 @@
     </div>
 </template>
 <script>
+
 export default {
 
     data() {
         return {
-            infosHead: "团队文化01",
-            infosInfo: "爱特一直以凝聚和培养计算机人才为己任,发掘技术潜力,感受合作乐趣,让代码高效执行,让大家更进一步。",
-            infoRollImg: require("@/assets/img/index/aboutbk.jpg"),
-            workInfos: " 爱特工作室相信，只有不断提高要求，延迟满足感，持续的学习和成长，才有可能不断进步，因此，爱特每年都会有新的作品产生。"
+            index: 0,
+            rollMarg: 0,
+            infosHead: ["团队文化01", "关于爱特", "团队文化02", "团队文化03"],
+            infosInfo: ["爱特一直以凝聚和培养计算机人才为己任,发掘技术潜力,感受合作乐趣,让代码高效执行,让大家更进一步。",
+                "爱特工作室成立于2002年,是一个在中国海洋大学信息科学与工程学部领导主持下,以计算机技术人才培养,网络开发为特色的技术性团体。",
+                "用创意打磨精巧设计，用智慧实现炫酷交互;用热情呈现高效代码，以交流触碰灵感火花;以创造激发全新想象,用双手创造改变未来。",
+                "汇聚技术力量，解剖程序内核，研究代码本质，巧解应用难题。以逻辑洞察数据，以细节战胜漏洞。"
+            ],
+            infoRollImg: [require("@/assets/img/index/aboutbk.jpg"),
+            require("@/assets/img/index/aboutbk.jpg"),
+            require("@/assets/img/index/aboutbk.jpg"),
+            require("@/assets/img/index/aboutbk.jpg")],
+            workInfos: " 爱特工作室相信，只有不断提高要求，延迟满足感，持续的学习和成长，才有可能不断进步，因此，爱特每年都会有新的作品产生。",
+            Timer: "",
         }
-    }
+    },
+    methods: {
+        right() {
+            this.index++;
+            if (this.index == 4) {
+                this.index = 0;
+            };
+            this.rollMarg = -1087 * this.index;
+        },
+        left() {
+            this.index--;
+            if (this.index == -1) {
+                this.index = 3;
+            };
+            this.rollMarg = -1087 * this.index;
+        },
+        startIN() {
+            this.Timer = setInterval(() => {
+                this.right();
+                console.log(1);
+            }, 3000)
+        }
+    },
+    mounted(){
+        this.startIN();
+    },
+    onUnmounted() {
+        if (this.Timer)
+            clearInterval(this.Timer)
+        this.Timer = none;
+    },
+    beforeDestroy() {
+        if (this.Timer)
+            clearInterval(this.Timer)
+        this.Timer = none;
+    },
 }
 </script>
 
@@ -176,6 +226,10 @@ export default {
     flex-direction: column;
     padding-left: 5px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-blur {
@@ -187,6 +241,7 @@ export default {
     position: absolute;
     top: 0px;
     left: 0px;
+    z-index: -1;
 }
 
 .up-roll {
@@ -232,10 +287,24 @@ export default {
     margin-top: 16px;
 }
 
-.roll-img {
+.roll-container {
     position: absolute;
     top: 0px;
-    left: 0px;
+    width: 1087px;
+    height: 439px;
+    box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.16);
+    border-radius: 80px 80px 0px 0px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.roll-containin {
+    width: 4348px;
+    height: 439px;
+    transition: 0.3s;
+}
+
+.roll-img {
     width: 1087px;
     height: 439px;
     box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.16);
@@ -259,6 +328,7 @@ export default {
     transform: rotate(180deg);
     cursor: pointer;
 }
+
 .rollr {
     width: 53px;
     height: 53px;
@@ -490,11 +560,13 @@ export default {
     flex-direction: column;
     cursor: pointer;
 }
+
 .but-underl2 {
     width: 57px;
     height: 0px;
     opacity: 1;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
+    background-color: #FFFFFF;
 }
 </style>

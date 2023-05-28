@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import { get , post} from '../modules/axios/axios'
 
+// import index from '../views/index/index.vue'
 import index from '../views/index/indexPage/indexPage.vue'
 import indexPage from '../views/index/indexPage/indexPage.vue'
 import aboutPage from '../views/index/aboutPage/aboutPage.vue'
@@ -28,7 +29,7 @@ const routes = [
         name: 'index',
         component: index,
         redirect: '/index',
-        children: [
+    },
             {
                 path: '/index',
                 name: 'indexPage',
@@ -73,10 +74,10 @@ const routes = [
                 component: memberPage
             },
 
-        ],
+        
 
 
-    },
+    
     {
         path: '/admin',
         name: 'admin',
