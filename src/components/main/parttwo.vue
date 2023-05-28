@@ -67,6 +67,7 @@ export default {
 .drew {
     width: 1920px;
     height: 1849px;
+    background-color: white;
     background-image: url(@/assets/img/index/partbk.png);
     background-position: center;
     box-shadow: inset 0px 8px 18px 1px rgba(0, 0, 0, 0.16);
@@ -80,6 +81,8 @@ export default {
     padding-top: 136px;
     align-items: center;
     position: relative;
+    overflow-y: hidden;
+
 
 }
 

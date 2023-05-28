@@ -74,14 +74,14 @@ export default {
 .nav-part {
     width: 1920px;
     margin: 0 auto;
-    height: 90px !important;
+    height: 90px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
     position: sticky;
-    top: 0px;
+    top: 1px;
     z-index: 20;
 }
 

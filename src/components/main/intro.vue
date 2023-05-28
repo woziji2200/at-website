@@ -85,6 +85,7 @@ export default {
     width: 1920px;
     margin: 0 auto;
     margin-top: -150px;
+    overflow: hidden;
 }
 
 .about {

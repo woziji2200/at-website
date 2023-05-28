@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div id="app">
         itMemberPage.vue
         <div id="waline"></div>
@@ -38,4 +38,4 @@ export default {
 .wl-power{
     display: none;
 }
-</style>
+</style> -->

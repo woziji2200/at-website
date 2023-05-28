@@ -22,12 +22,6 @@
         </div>
       </div>
 </div>
-<!-- <div class="button-wrapper">
-  <button class="fixed-ratio-button">
-    <span class="button-text">展开</span>
-    <span class="underLine"></span> -->
-  <!-- </button> -->
-<!-- </div> -->
 <button class="unflod" @click="flag=!flag" v-if="!flag"><span class="button-text"> 展开</span><span class="underLine"></span></button>
 <button class="flod" @click="flag=!flag" v-if="flag"><span class="button-text">收起</span><span class="underLine"></span></button>
 </div>
@@ -453,8 +447,4 @@ position: relative;
     }
 }
   </style>
-<<<<<<< HEAD
    -->
-=======
-  
->>>>>>> 03ead38e62238db1d980faaaf2d0c0607fbbe214
