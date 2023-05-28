@@ -2,7 +2,7 @@
     <div class="que-ans">
         <div class="q-a">
             <div class="headline">
-                <div class="line"></div>
+                <div class="line-qa"></div>
                 <div class="headlin-ch">问答区</div>
                 <div class="headlin-en">Q & A</div>
             </div>
@@ -63,13 +63,14 @@ export default {
     align-items: center;
 }
 
-.line {
+.line-qa {
     width: 108px;
     height: 0px;
     opacity: 1;
     border: 6px solid #007AFF;
     border-radius: 6px;
     margin-top: 70px;
+    background-color: #007AFF;
 }
 
 .headlin-ch {

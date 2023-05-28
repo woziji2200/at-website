@@ -1,12 +1,12 @@
 <template>
-    <div class="blink" :style="{'height':maxHT+'px'}">
+    <div class="blink" :style="{'height':maxHT+'px', 'width': windowWidth + 'px' }">
         <div class="navs" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
         <nav-page> </nav-page>
         </div>
         <div class="all" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
             <div class="part-main">
                 <div class="bk"></div>
-                <div class="info">
+                <div class="info-index">
                     <div class="info-bk"></div>
                     <div class="headline">爱特工作室</div>
                     <div class="engn">IT STUDIO</div>
@@ -26,13 +26,6 @@
             <intro></intro>
             <footer-q-a></footer-q-a>
         </div>
-        <!-- <div class="nav">
-            <div class="nav-link" v-for="i in links">
-                <span><router-link :to="i.path">{{ i.name }}</router-link></span>
-            </div>
-        </div>
-        index.vue
-        <router-view></router-view> -->
     </div>
 </template>
 <script >
@@ -98,7 +91,7 @@ export default {
         this.fitin = this.windowWidth / 1920;
         console.log(this.fitin)
         console.log(this.maxHT)
-        this.maxHT = this.fitin*8550;
+        this.maxHT = this.fitin*8600;
         window.onresize = () => {
             return (() => {
                 //窗口缩放自动获取页面宽高
@@ -107,7 +100,7 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
-                that.maxHT = that.fitin*8550;
+                that.maxHT = that.fitin*8470;
                 console.log(that.fitin)
             })()
         }
@@ -128,7 +121,7 @@ export default {
 
 <style scoped>
 .blink{
-    overflow-y: hidden;
+    overflow-y:hidden;
 }
 .all {
     transform-origin: 0 0;
@@ -163,7 +156,7 @@ export default {
     background-repeat: no-repeat;
 }
 
-.info {
+.info-index {
     position: relative;
     width: 837px;
     height: 533px;

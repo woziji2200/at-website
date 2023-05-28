@@ -190,6 +190,7 @@ export default {
     border: 6px solid #FFFFFF;
     border-radius: 6px;
     margin-left: -12px;
+    background-color: #FFFFFF;
 }
 
 .about-name {
@@ -437,6 +438,7 @@ export default {
     border: 6px solid #55A6FF;
     border-radius: 6px;
     margin-left: -15px;
+    background-color: #55A6FF;
 }
 
 .work-name {

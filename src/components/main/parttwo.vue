@@ -185,6 +185,7 @@ export default {
     margin-top: 5px;
     border: 6px solid #FFFFFF;
     border-radius: 6px;
+    background-color: #FFFFFF;
 }
 
 .cxbk {
