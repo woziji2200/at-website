@@ -21,28 +21,28 @@ export default {
             switch (n) {
                 case 0:
                     window.scrollTo({
-                        top: 1200,
+                        top: 1200*this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 1:
                     window.scrollTo({
-                        top: 3000,
+                        top: 3000*this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 2:
                     window.scrollTo({
-                        top: 4200,
+                        top: 4200*this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 3:
                     window.scrollTo({
-                        top: 5400,
+                        top: 5400*this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
@@ -65,6 +65,28 @@ export default {
             { flag: false, text: "历史作品" },
             { flag: false, text: "历史成员" }],
             posi: 95,
+            fitin: 1,
+            windowWidth: 0,
+            windowHeight: 0,
+
+        }
+    },
+    mounted() {
+        var that = this;
+        this.windowWidth = document.body.clientWidth
+        this.windowHeight = document.body.clientHeight
+        this.fitin = this.windowWidth / 1920;
+        console.log(this.fitin)
+        window.onresize = () => {
+            return (() => {
+                //窗口缩放自动获取页面宽高
+                window.fullWidth = document.documentElement.clientWidth;
+                window.fullHeight = document.documentElement.clientHeight;
+                that.windowWidth = window.fullWidth; //宽
+                that.windowHeight = window.fullHeight; //高
+                that.fitin = that.windowWidth / 1920;
+                console.log(that.fitin)
+            })()
         }
     },
 }
