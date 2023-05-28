@@ -64,7 +64,7 @@ export default {
             fitin: 1,
             windowWidth: 0,
             windowHeight: 0,
-            maxHT:8466,
+            maxHT:8480,
         }
     },
     methods: {
@@ -72,13 +72,13 @@ export default {
             switch (n) {
                 case 0:
                     window.scrollTo({
-                        top: 6500,
+                        top: 6500*this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 1:
-                //跳转
+                this.$router.replace( {path: "index/signUp"} );
                 case 2:
                 //跳转
             }
@@ -89,9 +89,9 @@ export default {
         this.windowWidth = document.body.clientWidth
         this.windowHeight = document.body.clientHeight
         this.fitin = this.windowWidth / 1920;
-        console.log(this.fitin)
-        console.log(this.maxHT)
-        this.maxHT = this.fitin*8600;
+        // console.log(this.fitin)
+        // console.log(this.maxHT)
+        this.maxHT = this.fitin*8480;
         window.onresize = () => {
             return (() => {
                 //窗口缩放自动获取页面宽高
@@ -100,21 +100,11 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
-                that.maxHT = that.fitin*8470;
-                console.log(that.fitin)
+                that.maxHT = that.fitin*8480;
+                // console.log(that.fitin)
             })()
         }
     },
-    // watch:{
-    //     windowHeight (val) {
-    //         let that = this;
-    //         console.log("实时屏幕高度：",val, that.windowHeight);
-    //     },
-    //     windowWidth (val) {
-    //         let that = this;
-    //         console.log("实时屏幕宽度：",val, that.windowWidth);
-    //     }
-    // }
 
 }
 </script>
@@ -122,6 +112,8 @@ export default {
 <style scoped>
 .blink{
     overflow-y:hidden;
+    position: relative;
+    top: 0;
 }
 .all {
     transform-origin: 0 0;
@@ -130,7 +122,7 @@ export default {
 }
 .navs{
     transform-origin: 0 0;
-    position: sticky;
+    position: fixed;
     top:0px;
     z-index: 20;
 }
