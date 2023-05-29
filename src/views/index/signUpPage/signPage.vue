@@ -155,7 +155,7 @@ export default {
       this.$http.post("/sign_up/verification_code/",postform).then((res)=>{
         console.log(res);
       }).catch((err)=>{
-        console.log("err",err);
+        console.log("err",err); 
       })
     },
       submit(){
@@ -189,6 +189,7 @@ export default {
   width: 1200px;
   /* background-color: aquamarine; */
   margin: auto;
+  margin-top: 15px;
 }
 .sign-background {
   position: relative;
@@ -196,6 +197,7 @@ export default {
 .back-img {
   /* position: absolute; */
   width: 100%;
+  height: 583px;
 }
 .sign-up {
   position: absolute;
@@ -232,13 +234,14 @@ div[class^="line"] {
   margin-bottom: 40px;
 }
 .line-first {
-  margin-top: 40px;
+  margin-top: 35px;
 }
 input {
   /* float: right; */
-  height: 35px;
+  height: 38px;
   padding-left: 15px;
-  border: #5da6f3 1.8px solid;
+  /* border: #5da6f3 1.8px solid; */
+ border: 1px solid #DCDFE6;
   border-radius: 4px;
 }
 input[type="radio"] {
@@ -250,7 +253,7 @@ input[type="radio"] {
   background-color: white;
 }
 input[type="radio"]:checked {
-  background-color: #007aff;
+  background-color:  #4192e9;
   border: white 5px solid;
 }
 label {
@@ -259,24 +262,25 @@ label {
 }
 input::-webkit-input-placeholder {
   /* placeholder颜色  */
-  color:  #bcbcbddc;
+  color:  #606266;
+  opacity: 0.45;
   /* padding-left: 7px; */
 }
 input:focus {
   outline: none;
-  border: #0660c0 1.8px solid;
+  border: #7bb7f7 1px solid;
 }
 textarea:focus {
   outline: none;
-  border: #0660c0 1.8px solid;
+  border: #7bb7f7 1px solid;
 }
 .adress-border {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 300px;
-  height: 35px;
-  border: #5da6f3 1.8px solid;
+  height: 38px;
+  border: 1px solid #DCDFE6;
   border-radius: 4px;
   background-color: white;
 }
@@ -287,24 +291,25 @@ textarea:focus {
   outline: none;
   border: 0;
 }
-.adress-input:focus .adress-border {
+/* .adress-input:focus .adress-border{
   border-color: #0660c0;
-}
+} */
 textarea {
   width: 793px;
   height: 100px;
   padding-left: 15px;
   padding-top: 9px;
-  border: #5da6f3 1.8px solid;
+ border: 1px solid #DCDFE6;
   border-radius: 4px;
 }
 textarea::-webkit-input-placeholder {
   /* placeholder颜色  */
-  color: #bcbcbddc;
-  font-size: 1.05em;
+  color:  #606266;
+  opacity: 0.45;
+  /* font-size: 1.05em; */
   /* padding-left: 9px; */
   /* padding-top: 9px; */
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 .submit {
   cursor: pointer;

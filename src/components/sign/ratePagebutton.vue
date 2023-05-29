@@ -2,7 +2,7 @@
   <div>
       <div class="backGround">
           <div class="back-letter">进度查询</div>
-          <div class="back-bottom"></div>
+          <!-- <div class="back-bottom"></div> -->
       </div>
       
   </div>
@@ -22,11 +22,11 @@ export default {
 }
 .backGround{
     background-color: #007AFF;
-    width: 6.1vw;
-    height: 2.4vw;
+    width: 90px;
+    height: 30px;
     text-align: center;
     box-shadow: 0px 3px 3px 0px rgba(112,112,112,0.16);
-    border-radius: 0.9vw;
+     border-radius: 12px;
 }
 .back-letter{
     line-height: 2.4vw;
