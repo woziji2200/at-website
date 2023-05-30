@@ -29,7 +29,7 @@ export default {
      border-radius: 12px;
 }
 .back-letter{
-    line-height: 2.4vw;
+   line-height: 30px;
     color: #FFFFFF;
     font-weight: bold;
 }

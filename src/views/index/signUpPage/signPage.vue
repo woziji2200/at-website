@@ -13,42 +13,41 @@
         <div class="join-bottom"></div>
         <div class="line-first">
           <div class="name" style="display: flex; align-items: center">
-            <span style="margin-right: 30px">姓名:</span>
-            <input type="text" v-model="nam" />
+            <span style="margin-right: 1.6vw">姓名:</span>
+            <input type="text" v-model="nam"  />
           </div>
           <div
             class="sex"
-            style="margin-left: 70px; display: flex; align-items: center"
+            style=" display: flex; align-items: center"
           >
-            <span style="margin-right: 30px">性别:</span>
+            <span style="margin-right: 1.6vw">性别:</span>
             <input type="radio" id="man" name="sex" value="0" checked="checked" v-model="sex" style="padding:0;cursor: pointer;"/>
-            <label style="margin-right: 20px; color: rgb(56, 55, 55)">男</label>
+            <label style="margin-right: 1.5vw; color: rgb(56, 55, 55)">男</label>
             <input type="radio" id="woman" name="sex" value="1" v-model="sex" style="padding:0;cursor: pointer;"/>
             <label style="color: rgb(56, 55, 55)">女</label>
           </div>
           <div
             class="grade"
-            style="margin-left: 50px; display: flex; align-items: center"
+            style=" display: flex; align-items: center"
           >
-            <span style="margin-right: 30px">年级专业:</span>
+            <span style="margin-right: 1.6vw">年级专业:</span>
             <input
               type="text"
               placeholder="例：23级计算机类"
               v-model="grade"
-              style="width: 188px"
             />
           </div>
         </div>
         <div class="line-second">
           <div class="phone" style="display: flex; align-items: center">
-            <span style="margin-right: 30px">电话号码:</span>
-            <input type="text" v-model="phone" style="width: 285px" />
+            <span style="margin-right: 1.6vw">电话号码:</span>
+            <input type="text" v-model="phone"  />
           </div>
           <div
             class="web"
-            style="margin-left: 70px; display: flex; align-items: center"
+            style=" display: flex; align-items: center"
           >
-            <span style="margin-right: 30px">意见部门:</span>
+            <span >意见部门:</span>
             <el-select v-model="value" placeholder="请选择你要加入的部门" >
               <el-option
                 v-for="item in options"
@@ -62,14 +61,14 @@
         </div>
         <div class="line-third">
           <div class="adress" style="display: flex; align-items: center">
-            <span style="margin-right: 30px">邮箱地址:</span>
-            <input type="text" v-model="address" style="width: 285px" />
+            <span style="margin-right: 1.6vw">邮箱地址:</span>
+            <input type="text" v-model="address"  />
           </div>
           <div
             class="number"
-            style="margin-left: 95px; display: flex; align-items: center"
+            style=" display: flex; align-items: center"
           >
-            <span style="margin-right: 30px">验证码:</span>
+            <span style="margin-right: 1.6vw">验证码:</span>
             <div class="adress-border">
               <input
                 type="text"
@@ -81,9 +80,9 @@
               @click="postNumber()"
                 style="
                   color: #007aff;
-                  font-size: 1em;
-                  margin-right: 10px;
-                  letter-spacing: 5px;
+                  font-size: 1.2vw;
+                  margin-right: 0.67vw;
+                  letter-spacing: 0.34vw;
                   cursor: pointer;
                 "
                 >获取验证码</span
@@ -93,7 +92,7 @@
         </div>
         <div class="line-forth">
           <div class="dream" style="display: flex; align-items: flex-start">
-            <span style="margin-right: 30px">你的期待:</span>
+            <span style="margin-right: 1.6vw">你的期待:</span>
             <textarea
               name=""
               id=""
@@ -147,6 +146,9 @@ export default {
     };
 
   },
+  created(){
+    this.getDepartment()
+  },
   methods:{
     postNumber(){
       let postform={
@@ -186,10 +188,10 @@ export default {
 .button-box {
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  width: 90vw;
   /* background-color: aquamarine; */
   margin: auto;
-  margin-top: 15px;
+  margin-top: 1vw;
 }
 .sign-background {
   position: relative;
@@ -197,78 +199,202 @@ export default {
 .back-img {
   /* position: absolute; */
   width: 100%;
-  height: 583px;
+  height: 92vh;
 }
 .sign-up {
   position: absolute;
   top: 3%;
-  left: 13%;
+  left: 14%;
   /* display: flex;
     justify-content: center; */
   /* background-color: rgb(56, 55, 55); */
-  width: 1000px;
-  height: 500px;
+  width: 70vw;
+  /* height: 500px; */
   /* margin: auto; */
   z-index: 100;
 }
 .join-us {
   color: #007aff;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 4vw;
   text-align: center;
 }
 .join-bottom {
-  width: 104px;
-  height: 3px;
+  width: 14vw;
+  height: 0.4vh;
   background-color: #007aff;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 0.67vw;
 }
 span {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.8vw;
   font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+    span{
+      font-size: 1.5em;
+    }
+    .back-img{
+      height: 580px;
+    }
 }
 div[class^="line"] {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 2.9vw;
+}
+.sex{
+  margin-left: 5vw;
+}
+.grade{
+  margin-left: 4.2vw;
+}
+.grade input{
+  width: 14vw;
+}
+.web{
+  margin-left: 5vw;
+}
+.web span{
+  margin-right: 1.6vw;
+}
+.phone input{
+  width: 21vw;
+}
+.number{
+  margin-left: 6.9vw;
+}
+.adress input{
+  width: 21vw;
+}
+@media only screen and (max-width: 767px) {
+    div[class^="line"] {
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 10px;
+       /* margin-left: 40px; */
+    }
+    .name{
+      margin-bottom: 10px;
+    }
+    .name input{
+      width: 350px;
+      height: 38px;
+      margin-left: 20px;
+    }
+    .sex{
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+    .sex input[type="radio"]{
+      width: 20px;
+      height: 38px;
+      height: 20px;
+      margin-left: 20px;
+    }
+    .sex input[type="radio"]:checked {
+      border:  white 4px solid;
+    }
+    .sex label{
+      font-size: 1.4em;
+    }
+    .grade{
+      margin-left: 0;
+      /* margin-bottom: 10px; */
+    }
+    .grade input{
+      margin-left: 20px;
+      width: 303px;
+      height: 38px;
+    }
+    .phone{
+      margin-bottom: 10px;
+    }
+    .phone input{
+      margin-left: 20px;
+      width: 303px;
+      height: 38px;
+    }
+    .web{
+      margin-left: 0;
+      /* margin-bottom: 10px; */
+    }
+    .web span{
+      margin-right: 32px;
+    }
+    .adress{
+      margin-bottom: 10px;
+    }
+    .adress input{
+      margin-left: 20px;
+      width: 303px;
+      height: 38px;
+    }
+    .number{
+      margin-left: 0;
+    }
+    .number input{
+      width: 200px;
+      height: 38px;
+    }
+    .number .adress-border{
+      margin-left: 20px;
+      width: 333px;
+      height: 38px;
+    }
+    .dream{
+      margin-bottom: 10px;
+    }
+    .dream span{
+      width: 150px;
+    }
+    .dream textarea{
+      margin-left: -25px;
+      width: 293px;
+      height: 80px;
+    }
 }
 .line-first {
-  margin-top: 35px;
+  margin-top: 2vw;
 }
 input {
   /* float: right; */
-  height: 38px;
-  padding-left: 15px;
+  width: 12vw;
+  height: 5.9vh;
+  padding-left: 1vw;
   /* border: #5da6f3 1.8px solid; */
  border: 1px solid #DCDFE6;
   border-radius: 4px;
 }
 input[type="radio"] {
   -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: 0.67vw;
   border-radius: 50%;
   background-color: white;
 }
 input[type="radio"]:checked {
   background-color:  #4192e9;
-  border: white 5px solid;
+  border: white 0.38vw solid;
 }
 label {
-  font-size: 1.3em;
+  font-size: 1.8vw;
   font-weight: bold;
 }
 input::-webkit-input-placeholder {
   /* placeholder颜色  */
   color:  #606266;
   opacity: 0.45;
+  font-size: 0.99vw;
   /* padding-left: 7px; */
 }
 input:focus {
   outline: none;
   border: #7bb7f7 1px solid;
+}
+input:hover{
+  border:#c8c8ca 1px solid ;
 }
 textarea:focus {
   outline: none;
@@ -278,8 +404,8 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
-  height: 38px;
+  width: 22vw;
+  height: 5.9vh;
   border: 1px solid #DCDFE6;
   border-radius: 4px;
   background-color: white;
@@ -291,22 +417,31 @@ textarea:focus {
   outline: none;
   border: 0;
 }
+.adress-input:hover{
+  border: none;
+}
+/* .adress-input:hover div {
+  border:#c8c8ca 1px solid ;
+} */
 /* .adress-input:focus .adress-border{
   border-color: #0660c0;
 } */
 textarea {
-  width: 793px;
+  width: 57.5vw;
   height: 100px;
   padding-left: 15px;
   padding-top: 9px;
  border: 1px solid #DCDFE6;
   border-radius: 4px;
 }
+textarea:hover{
+   border:#c8c8ca 1px solid
+}
 textarea::-webkit-input-placeholder {
   /* placeholder颜色  */
   color:  #606266;
   opacity: 0.45;
-  /* font-size: 1.05em; */
+  font-size: 0.99vw;
   /* padding-left: 9px; */
   /* padding-top: 9px; */
   /* letter-spacing: 2px; */
