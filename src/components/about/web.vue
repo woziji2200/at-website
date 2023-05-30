@@ -2,8 +2,11 @@
   <div class="show">
    <div class="mainTitle">Web开发</div>
    <div class="title">WEBBACED</div>
-   <div class="scroll">Web开发部门利用html, CSS, JavaScript为主要语言来对网站<br>表现层与结构层等前台部分做出完关构造，在实现设计师要带<br>给用户上的视觉冲击以外还能保证与后台交互实现网站对用户<br>功能，从而让网站突破实用性和吸引力。</div>
-   <div class="scroll1">Wed开发可以暂时理解成写网页，例如你现在浏览的网页，你<br>所能看到的部分（网页上的文字图片、各种动画效果）都是我<br>们的成员在Web开发部门学习后的作品。写网页，我们这里<br>需要用到三部分知识：Html、CSS、JavaScript。大家可以看<br>到没有涉及到C语言、Python等，因此对零基础的同学较为友<br>好。在进入社团前，我们期望你们预习基础的Html知识，掌<br>握基本的标签。在进入社团后，我们每周都会组织授课，按照<br>上述的顺序讲课，在课下我们会布置相关的联习。</div>
+  <div class="big">
+   <div class="scroll"><p>Web开发部门利用html, CSS, JavaScript为主要语言来对网站<br>表现层与结构层等前台部分做出完关构造，在实现设计师要带<br>给用户上的视觉冲击以外还能保证与后台交互实现网站对用户<br>功能，从而让网站突破实用性和吸引力。</p> </div>
+   <div class="scroll1"><p>Wed开发可以暂时理解成写网页，例如你现在浏览的网页，你<br>所能看到的部分（网页上的文字图片、各种动画效果）都是我<br>们的成员在Web开发部门学习后的作品。写网页，我们这里<br>需要用到三部分知识：Html、CSS、JavaScript。大家可以看<br>到没有涉及到C语言、Python等，因此对零基础的同学较为友<br>好。在进入社团前，我们期望你们预习基础的Html知识，掌<br>握基本的标签。在进入社团后，我们每周都会组织授课，按照<br>上述的顺序讲课，在课下我们会布置相关的联习。</p> </div>
+  </div>
+  
   <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/web.png" alt=""></div>
 
   </div>
@@ -22,7 +25,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (max-width: 768px) {
+    p {
+      line-height: 1.2rem;  /* 在页面宽度小于等于768px时调整文字之间的距离 */
+    }
+  }
+  
+.big{
+   height: 22vw;
+   overflow: auto;
 
+  }
 .image{
      position: absolute;
     bottom: -0.3vw;
@@ -46,10 +59,10 @@ margin-left: 5.1vw;
 font-size: 3.5vw;
 font-family: Adobe Heiti Std;padding-top: 3.8vw;
 font-weight: bold;
-color: #333333;width: 16vw;height:3.3951vw ;
+color: #333333;height:3.3951vw ;
 
 }
-.title{width: 16vw;
+.title{
 font-size: 2vw;
 margin-left: 5.1vw;margin-top: 2.15vw;
 font-weight: bold;
@@ -58,7 +71,6 @@ color: #333333;
 .show{
 
 background: rgb(225, 239, 254);
- 
   width: 61vw;margin-top: 1.45vw;
 height:38vw;
 border-radius: 3.85vw;

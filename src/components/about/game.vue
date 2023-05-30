@@ -2,8 +2,10 @@
   <div class="show">
    <div class="mainTitle">游戏开发</div>
    <div class="title">GAME DEVELOP</div>
-   <div class="scroll">爱特游戏部门是2018年新成立的部门。专注与2D游戏的开发。<br>游戏以游戏性为本，以社交性为辅，以商业性为底。他们用心<br>为自己的理想开辟道路。</div>
- <div class="scroll1">大一秋季学期期间会交给新生Unityde一些简单的使用，包括<br>场景实例搭建和脚本代码编写，让新生具备自主开发简单的小<br>游戏的能力。期间会有三次项目作业，难度逐步提升。大一春<br>季学期期间则分组安排进行团队项目开发，每组成员在一学期<br>内多人合作完成一个大型游戏项目的开发。</div>
+   <div class="big">
+   <div class="scroll"><p>爱特游戏部门是2018年新成立的部门。专注与2D游戏的开发。<br>游戏以游戏性为本，以社交性为辅，以商业性为底。他们用心<br>为自己的理想开辟道路。</p> </div>
+ <div class="scroll1"><p>大一秋季学期期间会交给新生Unityde一些简单的使用，包括<br>场景实例搭建和脚本代码编写，让新生具备自主开发简单的小<br>游戏的能力。期间会有三次项目作业，难度逐步提升。大一春<br>季学期期间则分组安排进行团队项目开发，每组成员在一学期<br>内多人合作完成一个大型游戏项目的开发。</p> </div>
+ </div>
  <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/game.png" alt=""></div>
   </div>
 </template>
@@ -21,6 +23,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (max-width: 768px) {
+    p {
+      line-height: 1.2rem;  /* 在页面宽度小于等于768px时调整文字之间的距离 */
+    }
+  }
+.big{
+  height: 22vw;
+   overflow: auto;
+
+  }
 .image{
    position: absolute;
     bottom: -1.8vw;
@@ -33,7 +45,7 @@ export default {
  margin-left: 5.1vw;
  font-size: 1vw;line-height:1.6vw ;
 }
-.scroll{
+.scroll{  
 width: 31.7vw;
  margin-top: 1.3vw;
  margin-left: 5.1vw;line-height: 1.6vw;
@@ -44,10 +56,10 @@ margin-left: 5.1vw;
 font-size: 3.5vw;
 font-family: Adobe Heiti Std;padding-top: 3.8vw;
 font-weight: bold;
-color: #333333;width: 16vw;height:3.3951vw ;
+color: #333333;height:3.3951vw ;
 
 }
-.title{width: 20vw;
+.title{
 font-size: 2vw;
 margin-left: 5.1vw;margin-top: 2.15vw;
 font-weight: bold;
