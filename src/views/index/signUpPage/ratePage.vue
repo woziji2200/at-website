@@ -49,12 +49,13 @@ a {
   width: 1200px;
   /* background-color: aquamarine; */
   margin: auto;
+  margin-top: 15px;
 }
 .rate-box{
   display: flex;
   justify-content: space-around;
   width: 1100px;
-  height: 600px;
+  height: 565px;
   /* background-color: aquamarine; */
   margin: auto;
   margin-top: 20px;

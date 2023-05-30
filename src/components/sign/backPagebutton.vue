@@ -2,7 +2,7 @@
   <div>
       <div class="backGround">
           <div class="back-letter">返回主页</div>
-          <div class="back-bottom"></div>
+          <!-- <div class="back-bottom"></div> -->
       </div>
   </div>
 </template>
@@ -34,9 +34,9 @@ export default {
 }
 .back-bottom{
     margin: auto;
-    margin-top: -3px;
-    width: 50px;
-    height: 1px;
+   margin-top: -5px;
+    width: 4.1vw;
+    height: 0.11vw;
     background-color: #FFFFFF;
 }
 </style>
