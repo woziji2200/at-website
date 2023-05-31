@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="button-box">
-      <router-link to="/index"><backPagebutton></backPagebutton></router-link>
+      <router-link to="/index"><backPagebutton class="b-button"></backPagebutton></router-link>
+    </div>
+    <div class="found">
+       <div class="number">请输入电话号码或邮箱</div>
+       <input type="text" v-model="phone">
+       <div class="submit" @click="submit()">查询</div>
     </div>
     <div class="rate-box">
       <div class="first-line">
@@ -23,8 +28,8 @@
         <p>03</p>
       </div>
       <div class="box-four" >
-        <span>录取</span>
-        <span style="margin-top:0">结果</span>
+        <span>录取结果</span>
+        <!-- <span style="margin-top:0">结果</span> -->
         <div><img src="@/assets/sign/图像 4.png" ></div>
         <p>04</p>
       </div>
@@ -40,6 +45,25 @@ export default {
   components: {
     backPagebutton,
   },
+  data(){
+    return{
+      phone:'',
+    };
+  },
+  methods:{
+    submit(){
+      let rateform={
+        string:this.phone,
+      };
+      this.$http.get("/v1/api/sign_up/",{
+        params:rateform,
+      }).then((res)=>{
+        console.log("res",res);
+      }).catch((err)=>{
+        console.log("err",err);
+      });
+    },
+  }
 };
 </script>
 
@@ -55,11 +79,59 @@ a {
   margin: auto;
   margin-top: 1vw;
 }
+.b-button{
+  transition: all 0.3s;
+}
+.b-button:hover{
+  transform: scale(1.1);
+}
+.found{
+  /* display: flex; */
+  width: 90vw;
+  margin: auto;
+  text-align: center;
+}
+.number{
+  font-size: 2vw;
+  font-weight: bold;
+  /* color: #7a7a7a; */
+}
+.found input{
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding-left: 0.8vw;
+  width: 15vw;
+  height: 2vw;
+  border-radius: 0.7vw;
+  border: rgb(182, 181, 181) 1.9px solid;
+}
+.found input:focus{
+  outline: none;
+}
+.submit {
+  cursor: pointer;
+  padding-left: 8px;
+  margin: auto;
+  width: 5vw;
+  height: 2vw;
+  background-color: #007aff;
+  border-radius:0.6vw;
+  color: white;
+  text-align: center;
+  line-height: 2vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+  letter-spacing: 0.5vw;
+  transition: all 0.3s;
+}
+.submit:hover{
+  transform: scale(1.1);
+}
 .rate-box{
   display: flex;
   justify-content: space-around;
   width: 90vw;
-  height:90vh;
+  /* height:90vh; */
   /* background-color: aquamarine; */
   margin: auto;
   margin-top: 1.2vw;
@@ -76,16 +148,16 @@ a {
 }
 div[class^="box"]{
   width: 15vw;
-  height: 34vw;
+  height: 30vw;
   border: #dbd8d8 1px solid;
   border-radius: 5vw;
 }
-.box-two{
+/* .box-two{
   margin-top: 80px;
 }
 .box-four{
   margin-top: 80px;
-}
+} */
 p{
   margin-left: 7vw;
   margin-top: 0.1vw;
@@ -106,12 +178,12 @@ span{
 }
 div[class^="box"] img{
   width: 15vw;
-  margin-top: 3.5vw;
+   margin-top: 0.4vw; 
 }
-.box-four div img{
-  margin-top: 8px;
-}
-@media only screen and (max-width: 767px) {
+/* .box-four div img{
+  margin-top: -8px;
+} */
+/* @media only screen and (max-width: 767px) {
     .rate-box{
       margin-top: 20px;
       width:70vw;
@@ -135,9 +207,9 @@ div[class^="box"] img{
     .box-four div img{
       margin-top: -2px;
     }
-    /* div[class^="box"]{
+    div[class^="box"]{
       width: 120px;
       height: 300px;
-    } */
-}
+    }
+} */
 </style>
