@@ -10,28 +10,32 @@
     </div>
     <div class="rate-box">
       <div class="first-line">
-      <div class="box-one">
-        <span>初审</span>
-        <div><img src="@/assets/sign/图像 6.png"></div>
-        <p>01</p>
+      <div class="box-one" :style="box1">
+        <span :style="span1">初审</span>
+        <div><img src="@/assets/sign/图像 6.png" v-if="ifImg1"></div>
+        <div><img src="@/assets/sign/图像 7.png" v-if="ifImg1==false"></div>
+        <p :style="p1">01</p>
       </div>
-      <div class="box-two">
-        <span>面试</span>
-        <div><img src="@/assets/sign/图像 5.png"></div>
-        <p>02</p>
+      <div class="box-two" :style="box2">
+        <span :style="span2">面试</span>
+        <div><img src="@/assets/sign/图像 5.png" v-if="ifImg2"></div>
+        <div><img src="@/assets/sign/图像 8.png" v-if="ifImg2==false"></div>
+        <p :style="p2">02</p>
       </div>
       </div>
       <div class="second-line">
-      <div class="box-three">
-        <span>笔试</span>
-        <div><img src="@/assets/sign/图像 2.png" ></div>
-        <p>03</p>
+      <div class="box-three" :style="box3">
+        <span :style="span3">笔试</span>
+        <div><img src="@/assets/sign/图像 2.png" v-if="ifImg3"></div>
+        <div><img src="@/assets/sign/图像 3.png" v-if="ifImg3==false"></div>
+        <p :style="p3">03</p>
       </div>
-      <div class="box-four" >
-        <span>录取结果</span>
+      <div class="box-four" :style="box4">
+        <span :style="span4">录取结果</span>
         <!-- <span style="margin-top:0">结果</span> -->
-        <div><img src="@/assets/sign/图像 4.png" ></div>
-        <p>04</p>
+        <div><img src="@/assets/sign/图像 4.png" v-if="ifImg4"></div>
+        <div><img src="@/assets/sign/图像 9.png" v-if="ifImg4==false"></div>
+        <p :style="p4">04</p>
       </div>
       </div>
     </div>
@@ -48,6 +52,22 @@ export default {
   data(){
     return{
       phone:'',
+      box1:'',
+      box2:"",
+      box3:'',
+      box4:'',
+      ifImg1:true,
+       ifImg2:true,
+       ifImg3:true,
+       ifImg4:true,
+      span1:'',
+      span2:'',
+      span3:'',
+      span4:'',
+      p1:'',
+      p2:'',
+      p3:'',
+      p4:'',
     };
   },
   methods:{
@@ -55,10 +75,43 @@ export default {
       let rateform={
         string:this.phone,
       };
-      this.$http.get("/v1/api/sign_up/",{
-        params:rateform,
-      }).then((res)=>{
+      this.$http.get("/v1/api/sign_up/",rateform,
+        ).then((res)=>{
         console.log("res",res);
+        if(res.data.data.status==3||res.data.data.status==7){
+          this.box1="border-color:#91c2f7;"
+          this.span1="color:#4CA2FF;"
+          this.ifImg1=false;
+          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+        }
+        else if(res.data.data.status==4||res.data.data.status==8||res.data.data.status==9||res.data.data.status==10){
+          this.box1="border-color:#91c2f7;"
+          this.span1="color:#4CA2FF;"
+          this.ifImg1=false;
+          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+          this.box2="border-color:#91c2f7;"
+          this.span2="color:#4CA2FF;"
+          this.ifImg2=false;
+          this.p2=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+        }
+        else if(res.data.data.status==5){
+          this.box1="border-color:#91c2f7;"
+          this.span1="color:#4CA2FF;"
+          this.ifImg1=false;
+          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+          this.box2="border-color:#91c2f7;"
+          this.span2="color:#4CA2FF;"
+          this.ifImg2=false;
+          this.p2=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+          this.box3="border-color:#91c2f7;"
+          this.span3="color:#4CA2FF;"
+          this.ifImg3=false;
+          this.p3=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+           this.box4="border-color:#91c2f7;"
+          this.span4="color:#4CA2FF;"
+          this.ifImg4=false;
+          this.p4=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+        }
       }).catch((err)=>{
         console.log("err",err);
       });
@@ -75,7 +128,7 @@ a {
   /* display: flex;
     justify-content: space-between; */
   width: 90vw;
-  /* background-color: aquamarine; */
+  /* background-color: #91c2f7; */
   margin: auto;
   margin-top: 1vw;
 }
@@ -160,7 +213,7 @@ div[class^="box"]{
 } */
 p{
   margin-left: 7vw;
-  margin-top: 0.1vw;
+  margin-top: 0.01vw;
   font-size:5vw;
   font-weight: bold;
   /* color: #807e7e; */
