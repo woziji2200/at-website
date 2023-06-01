@@ -19,10 +19,13 @@
 
                         <div class="content-main">
                             <div class="content-main-left">
-                                <span class="content-main-left-button" v-for="department in item.member">
-                                    <button @click="changeDepartment(item.year, department.department)">
-                                        {{ department.department }}
-                                    </button>
+                                <span :style="item.height" @mouseenter="openMenu(item)" @mouseleave="closeMenu(item)"
+                                    class="content-main-left-border">
+                                    <span class="content-main-left-button" v-for="department in item.member">
+                                        <button @click="changeDepartment(item.year, department.department)">
+                                            {{ department.department }}
+                                        </button>
+                                    </span>
                                 </span>
                             </div>
                             <div class="content-main-right">
@@ -58,6 +61,7 @@ export default {
                     year: 2022,
                     image: require("@/assets/img/12.jpg"),
                     show: [],
+                    height: "height: 40px;",
                     member: [
                         {
                             department: "APP",
@@ -160,6 +164,7 @@ export default {
                     year: 2021,
                     image: require("@/assets/img/12.jpg"),
                     show: [],
+                    height: "height: 40px;",
                     member: [
                         {
                             department: "APP",
@@ -224,6 +229,7 @@ export default {
                     year: 2020,
                     image: require("@/assets/img/12.jpg"),
                     show: [],
+                    height: "height: 40px;",
                     member: [
                         {
                             department: "APP",
@@ -295,18 +301,36 @@ export default {
         }
     },
     methods: {
+        openMenu(item) {
+            item.height = 'height: ' + (item.member.length * 40) + 'px';
+        },
+        closeMenu(item) {
+            item.height = 'height: 40px';
+        },
         changeDepartment(year_, department_) {
             for (let i in this.years) {
                 if (this.years[i].year == year_) {
-                    this.years[i].show = this.years[i].member.filter((item) => {
-                        if (item.department === department_) {
-                            return true;
+                    for (let j in this.years[i].member){
+                        if(this.years[i].member[j].department==department_){
+                            this.years[i].show = this.years[i].member[j]
+                            let member0 = JSON.stringify(this.years[i].member[0])
+                            this.years[i].member[0]=this.years[i].member[j]
+                            this.years[i].member[j]=JSON.parse(member0)
                         }
-                    })[0];
+                    }
+
+                    // this.years[i].show = this.years[i].member.filter((item) => {
+                    //     if (item.department === department_) {
+                    //         return true;
+                    //     }
+                    // })[0];
+
+                    return
                 }
             }
 
         },
+        
         activateFirstItem() {
             this.$nextTick(() => {
                 const firstItem = this.$el.querySelector(".item");
@@ -651,6 +675,8 @@ export default {
     }
 
     .content-main-left {
+        /* border: solid 1px white; */
+        margin-top: 10px;
         flex-direction: row !important;
     }
 }
@@ -688,6 +714,7 @@ export default {
 }
 
 .content-main-left-button {
+    /* margin-top: 10px; */
     display: flex;
     flex-direction: column;
 }
@@ -698,14 +725,17 @@ export default {
 }
 
 .content-main-left-button button {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: solid 1px white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    /* border: solid 1px white; */
+    border: none;
+    /* border-radius: 50%; */
+    width: 60px;
+    height: 40px;
     color: white;
-    margin-top: 10px;
+    /* margin-top: 3px; */
     transition: all 0.3s;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .content-main-left-button button:hover {
@@ -724,7 +754,8 @@ export default {
     color: rgb(219, 219, 219);
     font-size: 16px;
 }
-.back{
+
+.back {
     top: 20px;
     left: 20px;
     z-index: 99;
@@ -732,6 +763,15 @@ export default {
     width: 100px;
     height: 20px;
     text-decoration: none;
+}
+
+.content-main-left-border {
+    border: solid 1px white;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: all 0.3s;
 }
 </style>
   

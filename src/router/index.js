@@ -24,7 +24,7 @@ let Base64 = require('js-base64').Base64
 Vue.use(VueRouter)
 
 const routes = [
-    
+
     {
         path: '/',
         name: 'index',
@@ -39,18 +39,23 @@ const routes = [
     {
         path: '/index/about',
         name: 'aboutPage',
-        component: aboutPage
+        component: aboutPage,
+        meta: { title: '爱特工作室 - 关于我们' }
     },
     {
         path: '/index/history',
         name: 'historyPage',
-        component: historyPage
+        component: historyPage,
+        meta: { title: '爱特工作室 - 历史作品' }
+
     },
     {
         path: '/index/signUp',
         name: 'signUpPage',
         component: signUpPage,
         redirect: '/index/signUp/sign',
+        meta: { title: '爱特工作室 - 报名' },
+
         children: [
             {
                 path: '/index/signUp/rate',
@@ -72,7 +77,8 @@ const routes = [
     {
         path: '/index/member',
         name: 'memberPage',
-        component: memberPage
+        component: memberPage,
+        meta: { title: '爱特工作室 - 历史成员' }
     },
 
 
@@ -128,6 +134,7 @@ const router = new VueRouter({
     routes
 })
 router.beforeEach(async (to, from, next) => {
+    if(to.meta.title) document.title = to.meta.title
     if (to.meta.auth == true) {
         let auth = false;
         let loginMsg = JSON.parse(localStorage.getItem("login")) || {
