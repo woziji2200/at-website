@@ -339,6 +339,8 @@ export default {
             }
         },
         async refreshDate() {
+            
+
             this.tableLoading = true
             let dataList = await this.$http.get("/registrant/", {
                 "id": "",
@@ -346,7 +348,6 @@ export default {
                 "phone_number": "",
                 "department": ""
             })
-            // console.err("我超", dataList)
 
             if (dataList.status == 200) {
                 this.dataListAll = dataList.data.data

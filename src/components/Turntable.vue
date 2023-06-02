@@ -1,5 +1,5 @@
 <template>
-    <div class="turntable">
+    <div class="turntable" @wheel="handleWheel">
       <div class="turntable-containerBox">
         <img src="@/assets/img/指针.png" alt="" class="point">
         <div class="pointText">IT STDIO</div>
@@ -20,7 +20,9 @@
         <button @click="rotateLeft"></button>
       </div>
       <div class="info">
-        <img :src=boxes[currentIndex-1].image alt="" class="infoImg">
+        <transition name="fade">
+        <img :src="boxes[currentIndex-1].image" alt="" class="infoImg">
+        </transition>
         <h3>{{ boxes[currentIndex-1].workShow1 }}</h3>
         <div>{{ boxes[currentIndex-1].text1 }}</div>
         <h3>{{ boxes[currentIndex-1].workShow2 }}</h3>
@@ -89,7 +91,17 @@
         currentIndex: 3,
       };
     },
+
     methods: {
+      handleWheel(event) {
+      event.preventDefault(); // 阻止滚动事件的默认行为
+      const delta = event.deltaY || event.detail || event.wheelDelta;
+      if (delta > 0) {
+        this.rotateLeft();
+      } else if (delta < 0) {
+        this.rotateRight();
+      }
+    },
       rotateRight() {
         if (this.currentIndex>0) {
           this.rotateBoxes(30);
@@ -131,7 +143,7 @@
   .turntable-containerBox{
     position: absolute;
     width: 50vw;
-    height: 50vw;
+    height: 102vh;
     top: -41vh;
     left: -13vw;
     overflow: hidden;
@@ -151,7 +163,7 @@
     z-index: 10;
     width: 12vw;
     height: 7vh;
-    top: 48%;
+    top: 47%;
     left: 20vw;
   }
   .pointText{
@@ -240,5 +252,14 @@
     width: 30vw;
     height: 24vw;
   }
+  .fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
   </style>
   

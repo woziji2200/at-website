@@ -1,10 +1,8 @@
 <template>
-  <div>
       <div class="backGround">
           <div class="back-letter">返回主页</div>
           <!-- <div class="back-bottom"></div> -->
       </div>
-  </div>
 </template>
 <script>
 export default {

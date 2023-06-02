@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div class="button-box">
-      <router-link to="/index"><backPagebutton></backPagebutton></router-link>
+      <router-link to="/index"><backPagebutton class="b-button"></backPagebutton></router-link>
       <router-link to="/index/signUp/rate"
-        ><ratePagebutton></ratePagebutton
+        ><ratePagebutton class="r-button"></ratePagebutton
       ></router-link>
     </div>
     <div class="sign-background">
@@ -21,7 +21,7 @@
             style=" display: flex; align-items: center"
           >
             <span style="margin-right: 1.6vw">性别:</span>
-            <input type="radio" id="man" name="sex" value="0" checked="checked" v-model="sex" style="padding:0;cursor: pointer;"/>
+            <input type="radio" id="man" name="sex" value="0" checked="checked" v-model="sex" class="man" style="padding:0;cursor: pointer;"/>
             <label style="margin-right: 1.5vw; color: rgb(56, 55, 55)">男</label>
             <input type="radio" id="woman" name="sex" value="1" v-model="sex" style="padding:0;cursor: pointer;"/>
             <label style="color: rgb(56, 55, 55)">女</label>
@@ -47,7 +47,7 @@
             class="web"
             style=" display: flex; align-items: center"
           >
-            <span >意见部门:</span>
+            <span @click="getdepart()">意见部门:</span>
             <el-select v-model="value" placeholder="请选择你要加入的部门" >
               <el-option
                 v-for="item in options"
@@ -57,6 +57,7 @@
               >
               </el-option>
             </el-select>
+
           </div>
         </div>
         <div class="line-third">
@@ -120,22 +121,22 @@ export default {
   data() {
     return {
         options: [{
-          value: '选项1',
-          label: 'Web开发'
-        }, {
-          value: '选项2',
+          value: '1',
           label: 'APP开发'
         }, {
-          value: '选项3',
-          label: 'UI设计'
+          value: '2',
+          label: 'Web开发'
         }, {
-          value: '选项4',
+          value: '3',
+          label: '程序开发'
+        }, {
+          value: '4',
           label: '游戏开发'
         }, {
-          value: '选项5',
-          label: '程序开发'
+          value: '5',
+          label: 'UI设计'
         }],
-        value: '',
+        value:'',
         nam:'',
         sex:'0',
         grade:'',
@@ -144,21 +145,35 @@ export default {
         number:'',
         expection:''
     };
-
-  },
-  created(){
-    this.getDepartment()
   },
   methods:{
+    // getDepartment(){
+    //   this.$http.get("/v1/api/department/",{
+        
+    //   }).then((res)=>{
+    //     console.log("res",res);
+    //   }).catch((err)=>{
+    //     console.log("err",err);
+    //   })
+    // },
+    getdepart(){
+      console.log(this.value)
+    },
     postNumber(){
       let postform={
-        email:this.address
+        email:this.address,
       }
-      this.$http.post("/sign_up/verification_code/",postform).then((res)=>{
+      this.$http.post("/v1/api/sign_up/verification_code/",postform).then((res)=>{
         console.log(res);
+        if(res.data.code==44036){
+          this.open9();
+        }
+        else if(res.data.code==20000){
+          this.open11();
+        }
       }).catch((err)=>{
         console.log("err",err); 
-      })
+      });
     },
       submit(){
           let form={
@@ -167,14 +182,69 @@ export default {
               phone_number:this.phone,
               email:this.address,
               verification_code:this.number,
-              department:1,
+              department:this.value,
               expectation:this.expection,
               sex:this.sex,
           }
-          this.$http.post("/sign_up/",form).then((res)=>{
+          this.$http.post("/v1/api/sign_up/",form).then((res)=>{
               console.log(res);
+              console.log(form.department);
+              if(res.data.code==20000){
+                this.open6()
+              }
+              else if(res.data.code==43032){
+                this.open7()
+              }
+              else if(res.data.code==45031){
+                this.open10();
+              }
+              else{
+                this.open8()
+              }
           }).catch((err)=>{console.log("err",err);})
-      }
+      },
+       open6() {
+        this.$message({
+          showClose: true,
+          message: '提交成功',
+          type: 'success'
+        });
+      },
+       open7() {
+        this.$message({
+          showClose: true,
+          message: '该邮箱已注册',
+          type: 'warning'
+        });
+      },
+      open8() {
+        this.$message({
+          showClose: true,
+          message: '所填信息不完整或者有错误哦~',
+          type: 'error'
+        });
+      },
+      open9() {
+        this.$message({
+          showClose: true,
+          message: '请输入正确格式的邮箱哦~',
+          type: 'warning'
+        });
+      },
+      open10() {
+        this.$message({
+          showClose: true,
+          message: '邮箱验证码错误',
+          type: 'error'
+        });
+      },
+      open11() {
+        this.$message({
+          showClose: true,
+          message: '发送成功',
+          type: 'success'
+        });
+      },
   }
 };
 </script>
@@ -193,13 +263,26 @@ export default {
   margin: auto;
   margin-top: 1vw;
 }
+.b-button{
+  transition: all 0.3s;
+}
+.b-button:hover{
+  transform: scale(1.1);
+}
+.r-button{
+  transition: all 0.3s;
+}
+.r-button:hover{
+  transform: scale(1.1);
+}
 .sign-background {
   position: relative;
 }
 .back-img {
   /* position: absolute; */
   width: 100%;
-  height: 92vh;
+  height: 42.81vw;
+  height: 584.5px;
 }
 .sign-up {
   position: absolute;
@@ -267,6 +350,12 @@ div[class^="line"] {
 .adress input{
   width: 21vw;
 }
+.adress-border span{
+  transition: all 0.3s;
+}
+.adress-border span:active{
+  transform: scale(0.8);
+}
 @media only screen and (max-width: 767px) {
     div[class^="line"] {
        display: flex;
@@ -277,20 +366,26 @@ div[class^="line"] {
     .name{
       margin-bottom: 10px;
     }
+    .name span{
+      margin-left: 22px;
+    }
     .name input{
-      width: 350px;
+      width: 303px;
       height: 38px;
-      margin-left: 20px;
+      margin-left: 47px;
     }
     .sex{
       margin-left: 0;
       margin-bottom: 10px;
     }
+    .sex span{
+      margin-left: 22px;
+    }
     .sex input[type="radio"]{
       width: 20px;
       height: 38px;
       height: 20px;
-      margin-left: 20px;
+      margin-left: 97px;
     }
     .sex input[type="radio"]:checked {
       border:  white 4px solid;
@@ -333,13 +428,16 @@ div[class^="line"] {
     .number{
       margin-left: 0;
     }
+    .number span{
+      margin-left: 11px;
+    }
     .number input{
-      width: 200px;
+      width: 188px;
       height: 38px;
     }
     .number .adress-border{
-      margin-left: 20px;
-      width: 333px;
+      margin-left: 32px;
+      width: 310px;
       height: 38px;
     }
     .dream{
@@ -349,9 +447,13 @@ div[class^="line"] {
       width: 150px;
     }
     .dream textarea{
-      margin-left: -25px;
-      width: 293px;
+      margin-left: -27px;
+      width: 294px;
       height: 80px;
+    }
+    input::-webkit-input-placeholder{
+      padding-left: 10px;
+      /* font-size: 1.5em; */
     }
 }
 .line-first {
@@ -460,6 +562,11 @@ textarea::-webkit-input-placeholder {
   font-size: 1.2em;
   font-weight: bold;
   letter-spacing: 8px;
+  transition: all 0.2s;
+}
+.submit:hover{
+  transform: scale(1.1);
+  box-shadow: 0 1px 20px 0 rgb(194, 192, 192);
 }
 a {
   text-decoration: none;

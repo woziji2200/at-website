@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { get , post} from '../modules/axios/axios'
+import { get, post } from '../modules/axios/axios'
 
 // import index from '../views/index/index.vue'
 import index from '../views/index/indexPage/indexPage.vue'
@@ -24,60 +24,67 @@ let Base64 = require('js-base64').Base64
 Vue.use(VueRouter)
 
 const routes = [
+
     {
         path: '/',
         name: 'index',
         component: index,
         redirect: '/index',
     },
+    {
+        path: '/index',
+        name: 'indexPage',
+        component: indexPage,
+    },
+    {
+        path: '/index/about',
+        name: 'aboutPage',
+        component: aboutPage,
+        meta: { title: '爱特工作室 - 关于我们' }
+    },
+    {
+        path: '/index/history',
+        name: 'historyPage',
+        component: historyPage,
+        meta: { title: '爱特工作室 - 历史作品' }
+
+    },
+    {
+        path: '/index/signUp',
+        name: 'signUpPage',
+        component: signUpPage,
+        redirect: '/index/signUp/sign',
+        meta: { title: '爱特工作室 - 报名' },
+
+        children: [
             {
-                path: '/index',
-                name: 'indexPage',
-                component: indexPage,
+                path: '/index/signUp/rate',
+                name: 'ratePage',
+                component: ratePage
             },
             {
-                path: '/index/about',
-                name: 'aboutPage',
-                component: aboutPage
-            },
-            {
-                path: '/index/history',
-                name: 'historyPage',
-                component: historyPage
-            },
-            {
-                path: '/index/signUp',
-                name: 'signUpPage',
-                component: signUpPage,
-                redirect:'/index/signUp/sign',
-                children:[
+                path: '/index/signUp/sign',
+                name: 'signPage',
+                component: signPage,
+                children: [
                     {
-                        path:'/index/signUp/rate',
-                        name:'ratePage',
-                        component:ratePage
-                    },
-                    {
-                        path:'/index/signUp/sign',
-                        name:'signPage',
-                        component:signPage,
-                        children:[
-                            {
-                                path:''
-                            }
-                        ]
+                        path: ''
                     }
                 ]
-            },
-            {
-                path: '/index/member',
-                name: 'memberPage',
-                component: memberPage
-            },
+            }
+        ]
+    },
+    {
+        path: '/index/member',
+        name: 'memberPage',
+        component: memberPage,
+        meta: { title: '爱特工作室 - 历史成员' }
+    },
 
-        
 
 
-    
+
+
     {
         path: '/admin',
         name: 'admin',
@@ -127,6 +134,7 @@ const router = new VueRouter({
     routes
 })
 router.beforeEach(async (to, from, next) => {
+    if(to.meta.title) document.title = to.meta.title
     if (to.meta.auth == true) {
         let auth = false;
         let loginMsg = JSON.parse(localStorage.getItem("login")) || {
@@ -141,7 +149,7 @@ router.beforeEach(async (to, from, next) => {
             if (accessExp < timeNow) {
                 // access过期
                 console.log("access过期");
-                let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp*1000;
+                let refreshExp = JSON.parse(Base64.decode(loginMsg.refresh.split(".")[1])).exp * 1000;
                 if (refreshExp < timeNow) {
                     //refresh过期
                     console.log("refresh过期");
@@ -154,7 +162,7 @@ router.beforeEach(async (to, from, next) => {
                     console.log("access过期但是refresh没有");
                     if (refreshMsg.status == 200) {
                         // console.log(refreshMsg.data,111);
-                        localStorage.setItem("login",JSON.stringify(refreshMsg.data))
+                        localStorage.setItem("login", JSON.stringify(refreshMsg.data))
                         // console.log("login", JSON.parse(localStorage.getItem("login")));
                         auth = true
                     }

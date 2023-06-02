@@ -14,10 +14,10 @@
                     <i class="el-icon-tickets"></i>
                     <span slot="title">管理报名信息</span>
                 </el-menu-item>
-                <el-menu-item index="2" @click="openPage('/admin/itMember')">
+                <!-- <el-menu-item index="2" @click="openPage('/admin/itMember')">
                     <i class="el-icon-edit-outline"></i>
                     <span slot="title">管理历史项目</span>
-                </el-menu-item>
+                </el-menu-item> -->
                 <el-menu-item index="3" @click="openPage('/admin/comments')">
                     <i class="el-icon-message"></i>
                     <span slot="title">回复评论</span>
