@@ -1,12 +1,15 @@
 <template>
-  <div>
+<div class="father">
+  <!-- <img src="@/assets/sign/组 73.png" alt=""> -->
+  <div class="ratePage">
     <div class="button-box">
       <router-link to="/index"><backPagebutton class="b-button"></backPagebutton></router-link>
     </div>
     <div class="found">
        <div class="number">请输入电话号码或邮箱</div>
        <input type="text" v-model="phone">
-       <div class="submit" @click="submit()">查询</div>
+       <!-- <div class="submit" @click="submit()">查询</div> -->
+       <div class="submit" @click="submit()"><img src="@/assets/sign/右键头.png" alt=""></div>
     </div>
     <div class="rate-box">
       <div class="first-line">
@@ -40,6 +43,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -71,6 +75,57 @@ export default {
     };
   },
   methods:{
+    changeImg1(){
+          // this.box1="border-color:#91c2f7;"
+          this.span1="color:#4CA2FF;"
+          this.ifImg1=false;
+          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+    },
+    changeImg2(){
+          // this.box2="border-color:#91c2f7;"
+          this.span2="color:#4CA2FF;"
+          this.ifImg2=false;
+          this.p2=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+    },
+    changeImg3(){
+          // this.box3="border-color:#91c2f7;"
+          this.span3="color:#4CA2FF;"
+          this.ifImg3=false;
+          this.p3=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+    },
+    changeImg4(){
+          // this.box4="border-color:#91c2f7;"
+          this.span4="color:#4CA2FF;"
+          this.ifImg4=false;
+          this.p4=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+    },
+    back1(){
+          this.span1=" color: #AAAAAA ;"
+          this.ifImg1=true;
+          this.p1=" background-image: -webkit-linear-gradient(bottom, rgb(99, 98, 98), #7a7a7a, rgb(155, 155, 153)); "
+    },
+    back2(){
+       this.span2=" color: #AAAAAA ;"
+          this.ifImg2=true;
+          this.p2=" background-image: -webkit-linear-gradient(bottom, rgb(99, 98, 98), #7a7a7a, rgb(155, 155, 153)); "
+    },
+    back3(){
+       this.span3=" color: #AAAAAA ;"
+          this.ifImg3=true;
+          this.p3=" background-image: -webkit-linear-gradient(bottom, rgb(99, 98, 98), #7a7a7a, rgb(155, 155, 153)); "
+    },
+    back4(){
+       this.span4=" color: #AAAAAA ;"
+          this.ifImg4=true;
+          this.p4=" background-image: -webkit-linear-gradient(bottom, rgb(99, 98, 98), #7a7a7a, rgb(155, 155, 153)); "
+    },
+    open8() {
+        this.$message({
+          showClose: true,
+          message: '所填信息有错误哦~',
+          type: 'error'
+        });
+      },
     submit(){
       let rateform={
         string:this.phone,
@@ -78,39 +133,36 @@ export default {
       this.$http.get("/v1/api/sign_up/",rateform,
         ).then((res)=>{
         console.log("res",res);
+        if(res.data.code==40000){
+            this.open8();
+            this.back1();
+            this.back2();
+            this.back3();
+            this.back4();
+        }
         if(res.data.data.status==3||res.data.data.status==7){
-          this.box1="border-color:#91c2f7;"
-          this.span1="color:#4CA2FF;"
-          this.ifImg1=false;
-          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+          this.changeImg1();
+          this.back2();
+          this.back3();
+          this.back4();
         }
         else if(res.data.data.status==4||res.data.data.status==8||res.data.data.status==9||res.data.data.status==10){
-          this.box1="border-color:#91c2f7;"
-          this.span1="color:#4CA2FF;"
-          this.ifImg1=false;
-          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
-          this.box2="border-color:#91c2f7;"
-          this.span2="color:#4CA2FF;"
-          this.ifImg2=false;
-          this.p2=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+         this.changeImg1();
+         this.changeImg2();
+         this.back3();
+         this.back4();
         }
         else if(res.data.data.status==5){
-          this.box1="border-color:#91c2f7;"
-          this.span1="color:#4CA2FF;"
-          this.ifImg1=false;
-          this.p1=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
-          this.box2="border-color:#91c2f7;"
-          this.span2="color:#4CA2FF;"
-          this.ifImg2=false;
-          this.p2=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
-          this.box3="border-color:#91c2f7;"
-          this.span3="color:#4CA2FF;"
-          this.ifImg3=false;
-          this.p3=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
-           this.box4="border-color:#91c2f7;"
-          this.span4="color:#4CA2FF;"
-          this.ifImg4=false;
-          this.p4=" background-image: -webkit-linear-gradient(bottom,#3194ff, #429bfa, #4CA2FF); "
+          this.changeImg1();
+          this.changeImg2();
+          this.changeImg3();
+          this.changeImg4();
+        }
+        else{
+          this.back1();
+          this.back2();
+          this.back3();
+          this.back4();
         }
       }).catch((err)=>{
         console.log("err",err);
@@ -123,6 +175,10 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+}
+.ratePage{
+  background-image: url('@/assets/sign/组 73.png');
+  background-size: 100% 100%;
 }
 .button-box {
   /* display: flex;
@@ -139,29 +195,38 @@ a {
   transform: scale(1.1);
 }
 .found{
-  /* display: flex; */
-  width: 90vw;
-  margin: auto;
+  display: flex;
+  width: 60vw;
+  margin-left: 25vw;
   text-align: center;
 }
 .number{
   font-size: 2vw;
   font-weight: bold;
+  height: 5vw;
+  line-height: 5vw;
+  margin-right:3vw ;
+  color: #4CA2FF ;
   /* color: #7a7a7a; */
 }
 .found input{
   margin-top: 1vw;
   margin-bottom: 1vw;
-  padding-left: 0.8vw;
-  width: 15vw;
-  height: 2vw;
-  border-radius: 0.7vw;
-  border: rgb(182, 181, 181) 1.9px solid;
+  padding-left: 1.5vw;
+  width: 20vw;
+  height: 3vw;
+  border-radius: 3vw;
+  background-color: #9DCCFF;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5vw;
+  opacity: 0.8;
+  border: none;
 }
 .found input:focus{
   outline: none;
 }
-.submit {
+/* .submit {
   cursor: pointer;
   padding-left: 8px;
   margin: auto;
@@ -176,6 +241,23 @@ a {
   font-weight: bold;
   letter-spacing: 0.5vw;
   transition: all 0.3s;
+} */
+.submit{
+  margin-top: 1vw;
+  margin-left: 3vw;
+  position: relative;
+  width: 3vw;
+  height: 3vw;
+  background-color: #9DCCFF;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.submit img{
+  width: 1.5vw;
+  height: 1.3vw;
+  position: absolute;
+  left: 0.8vw;
+  top: 0.8vw;
 }
 .submit:hover{
   transform: scale(1.1);
@@ -202,15 +284,17 @@ a {
 div[class^="box"]{
   width: 15vw;
   height: 30vw;
-  border: #dbd8d8 1px solid;
-  border-radius: 5vw;
+  /* border: #dbd8d8 1px solid; */
+  border-radius: 3.5vw;
+  background-color: white;
+  box-shadow: 2px 2px 8px 0 rgb(194, 192, 192);
 }
-/* .box-two{
-  margin-top: 80px;
+.box-two{
+  margin-top: 60px;
 }
 .box-four{
-  margin-top: 80px;
-} */
+  margin-top: 60px;
+}
 p{
   margin-left: 7vw;
   margin-top: 0.01vw;

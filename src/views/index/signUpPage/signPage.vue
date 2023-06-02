@@ -165,7 +165,12 @@ export default {
       }
       this.$http.post("/v1/api/sign_up/verification_code/",postform).then((res)=>{
         console.log(res);
-        console.log(postform);
+        if(res.data.code==44036){
+          this.open9();
+        }
+        else if(res.data.code==20000){
+          this.open11();
+        }
       }).catch((err)=>{
         console.log("err",err); 
       });
@@ -189,6 +194,9 @@ export default {
               }
               else if(res.data.code==43032){
                 this.open7()
+              }
+              else if(res.data.code==45031){
+                this.open10();
               }
               else{
                 this.open8()
@@ -214,6 +222,27 @@ export default {
           showClose: true,
           message: '所填信息不完整或者有错误哦~',
           type: 'error'
+        });
+      },
+      open9() {
+        this.$message({
+          showClose: true,
+          message: '请输入正确格式的邮箱哦~',
+          type: 'warning'
+        });
+      },
+      open10() {
+        this.$message({
+          showClose: true,
+          message: '邮箱验证码错误',
+          type: 'error'
+        });
+      },
+      open11() {
+        this.$message({
+          showClose: true,
+          message: '发送成功',
+          type: 'success'
         });
       },
   }
@@ -320,6 +349,12 @@ div[class^="line"] {
 }
 .adress input{
   width: 21vw;
+}
+.adress-border span{
+  transition: all 0.3s;
+}
+.adress-border span:active{
+  transform: scale(0.8);
 }
 @media only screen and (max-width: 767px) {
     div[class^="line"] {
