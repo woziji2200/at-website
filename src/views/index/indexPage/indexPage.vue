@@ -42,22 +42,22 @@ export default {
     },
     data() {
         return {
-            // links: [{
-            //     'name': '首页',
-            //     'path': '/index'
-            // }, {
-            //     'name': '加入爱特',
-            //     'path': '/index/signUp'
-            // }, {
-            //     'name': '爱特历史',
-            //     'path': '/index/history'
-            // }, {
-            //     'name': '爱特成员',
-            //     'path': '/index/member'
-            // }, {
-            //     'name': '关于爱特',
-            //     'path': '/index/about'
-            // }],
+            links: [{
+                'name': '首页',
+                'path': '/index'
+            }, {
+                'name': '加入爱特',
+                'path': '/index/signUp'
+            }, {
+                'name': '爱特历史',
+                'path': '/index/history'
+            }, {
+                'name': '爱特成员',
+                'path': '/index/member'
+            }, {
+                'name': '关于爱特',
+                'path': '/index/about'
+            }],
             butss: [{ class: 'one', text: "问答区" },
             { class: 'two', text: "加入我们" },
             { class: 'one', text: "进度查询" }],

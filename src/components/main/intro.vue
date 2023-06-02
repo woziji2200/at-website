@@ -7,7 +7,7 @@
                 <div class="about-hr"></div>
                 <div class="about-name">关于我们</div>
                 <div class="about-eng">About Us</div>
-                <router-link  to="index/about" class="about-but" >
+                <router-link  target="_blank" to="/index/about" class="about-but" >
                     <div>了解更多</div>
                     <div class="but-underl2"></div>
                 </router-link>
@@ -36,7 +36,7 @@
                 <div class="wrok-infos">
                     {{ workInfos }}
                 </div>
-                <router-link  to="index/history" class="work-button">
+                <router-link  target="_blank" to="/index/history" class="work-button">
                     <div>了解更多</div>
                     <div class="but-underl"></div>
                 </router-link>
@@ -65,7 +65,7 @@
                         团队精神是一只无形的手，<br>
                         推动每次项目的顺利完成。
                     </div>
-                    <router-link  to="index/member" class="team-but">
+                    <router-link  target="_blank" to="/index/member" class="team-but">
                         <div>了解更多</div>
                         <div class="but-underl2"></div>
                     </router-link>

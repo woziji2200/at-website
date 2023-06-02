@@ -118,7 +118,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .turntable {
     position: relative;
     display: flex;

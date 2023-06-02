@@ -1,7 +1,7 @@
 import axios from "axios";
 let Base64 = require('js-base64').Base64
 const request = axios.create({
-    baseURL: 'http://backstage.daoxuan.cc',
+    // baseURL: 'http://backstage.daoxuan.cc',
 })
 // requset.interceptors.request.use(function (config) {
 //     // 在发送请求之前做些什么
@@ -27,7 +27,13 @@ const request = axios.create({
 
 //     })
 // }
-export const get = async (url, params) => {
+let backstageUrl = ['/login/', '/registrant/', '/registrant/delete/', '/refresh/']
+export const get = async (url2, params) => {
+    let url = ""
+    if (backstageUrl.indexOf(url2) != -1) url = "http://backstage.daoxuan.cc" + url2;
+    else url = "http://itstudio.daoxuan.cc" + url2
+    console.log(url);
+
     let params2 = params || {};
     try {
         const response = await request.get(url, { params: params2 });
@@ -36,7 +42,10 @@ export const get = async (url, params) => {
         return error.response
     }
 };
-export const post = async (url, params) => {
+export const post = async (url2, params) => {
+    let url = ""
+    if (backstageUrl.indexOf(url2) != -1) url = "http://backstage.daoxuan.cc" + url2;
+    else url = "http://itstudio.daoxuan.cc" + url2
     let params2 = params || {};
     try {
         const response = await request.post(url, params2);
@@ -45,7 +54,7 @@ export const post = async (url, params) => {
         return error.response
     }
 };
-let authUrl = ["/admin/login/", '/admin/', "/registrant/", "/registrant/delete/"]
+let authUrl = ["http://backstage.daoxuan.cc/admin/login/", 'http://backstage.daoxuan.cc/admin/', "http://backstage.daoxuan.cc/registrant/", "http://backstage.daoxuan.cc/registrant/delete/"]
 request.interceptors.request.use(
     async (config) => {
         // console.log(config);
@@ -75,7 +84,7 @@ request.interceptors.request.use(
                         })
                         // console.log(refreshMsg);
                         console.log("access过期但是refresh没有");
-                        
+
                         if (refreshMsg.status == 200) {
                             localStorage.setItem(JSON.stringify(refreshMsg.data))
                             console.log("login", JSON.parse(localStorage.getItem("login")));
