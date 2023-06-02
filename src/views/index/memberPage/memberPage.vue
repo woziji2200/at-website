@@ -30,8 +30,7 @@
                                     <img class="content-main-right-profile-avatar" :src="member.image" alt="" srcset="">
                                     <div class="content-main-right-profile-right">
                                         <span class="content-main-right-profile-right-name">{{ member.name }}</span>
-                                        <span class="content-main-right-profile-right-signature">{{ member.signature
-                                        }}</span>
+                                        <span class="content-main-right-profile-right-signature">{{ member.signature}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -63,95 +62,92 @@ export default {
                             department: "APP",
                             member2: [
                                 {
-                                    name: "姓名app",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "刘演森",
+                                    image: require('@/assets/member/avatar/2022/liuyansen.jpg'),
+                                    signature: '这个神秘人什么都没有留下。'
                                 },
-                                {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
-                                },
-                                {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
-                                }]
+                               ]
                         },
                         {
                             department: "Web",
                             member2: [
                                 {
-                                    name: "姓名web",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "张世卿",
+                                    image: require('@/assets/member/avatar/2022/zhangshiqing.jpg'),
+                                    signature:'关注永雏塔菲喵，关注永雏塔菲谢谢喵'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "冷越",
+                                    image: require('@/assets/member/avatar/2022/lengyue.jpg'),
+                                    signature: 'aaaa'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "廉嘉蕊",
+                                    image: require('@/assets/member/avatar/2022/lianjiarui.jpg'),
+                                    signature: '事了拂衣去，深藏功与名'
                                 }]
                         },
                         {
                             department: "程序",
                             member2: [
                                 {
-                                    name: "姓名程序",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "路修哲",
+                                    image: require('@/assets/member/avatar/2022/luxiuzhe.jpg'),
+                                    signature: '哪有什么身不由己，己不由心，身又怎能由己。'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "方诗颖",
+                                    image: require('@/assets/member/avatar/2022/fangshiying.jpg'),
+                                    signature: '吃饭！'
+
                                 },
-                                {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
-                                }]
+                               ]
                         },
                         {
                             department: "UI",
                             member2: [
                                 {
-                                    name: "姓名UI",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "马琪颖",
+                                    image: require('@/assets/member/avatar/2022/maqiying2.png'),
+                                    signature: '知足常乐~'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "陈静",
+                                    image: require('@/assets/member/avatar/2022/chenjing.jpg'),
+                                    signature: '感情…哈哈哈哈哈哈！感情才是这个世界上最可笑的东西！'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "曹瑜",
+                                    image: require('@/assets/member/avatar/2022/caoyu.jpeg'),
+                                    signature: '注意看，这个女孩叫小美'
                                 }]
                         },
                         {
                             department: "游戏",
                             member2: [
                                 {
-                                    name: "姓名游戏",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "潘熙阳",
+                                    image: require('@/assets/member/avatar/2022/panxiyang2.jpg'),
+                                    signature: '想冲天天'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "姚茂琪",
+                                    image: require('@/assets/member/avatar/2022/yaomaoqi.jpg'),
+                                    signature: '呃呃'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "岳一磊",
+                                    image: require('@/assets/member/avatar/2022/yueyilei.jpg'),
+                                    signature: '程序员终成大牛'
+                                },
+                                {   name: "王铭新",
+                                    image: require('@/assets/member/avatar/2022/wangmingxin.jpg'),
+                                    signature: '你说得对，但是'
+                                },
+                                {   name: "许其鸿",
+                                    image: require('@/assets/member/avatar/2022/xuqihong.jpg'),
+                                    signature: '卷不过卷不过'
+
                                 }]
                         },
                     ]
@@ -165,58 +161,135 @@ export default {
                             department: "APP",
                             member2: [
                                 {
-                                    name: "姓名app",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "刘彩鑫",
+                                    image: require('@/assets/member/avatar/2021/app1.jpeg'),
+                                    signature: '心之所向，无问西东'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "张泽峰",
+                                    image: require('@/assets/member/avatar/2021/app2.jpeg'),
+                                    signature: '没啥可说的'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "吴东升",
+                                    image: require('@/assets/member/avatar/2021/app3.jpeg'),
+                                    signature: '开摆！'
                                 }]
                         },
                         {
                             department: "Web",
                             member2: [
                                 {
-                                    name: "姓名web",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "张润宁",
+                                    image: require('@/assets/member/avatar/2021/web1.jpeg'),
+                                    signature: '禁止摆烂~'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "汪洋",
+                                    image: require('@/assets/member/avatar/2021/web2.jpg'),
+                                    signature: '咸鱼翻身||'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "符谷泰",
+                                    image: require('@/assets/member/avatar/2021/web3.jpeg'),
+                                    signature: 'bug别来了'
                                 }]
                         },
                         {
                             department: "程序",
                             member2: [
                                 {
-                                    name: "姓名程序",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "刘襄琪",
+                                    image: require('@/assets/member/avatar/2021/cx1.jpeg'),
+                                    signature: '阿巴阿巴阿巴'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "康家辉",
+                                    image: require('@/assets/member/avatar/2021/cx2.jpeg'),
+                                    signature: '人生苦短，我用Python'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
-                                }]
+                                    name: "唐玉硕",
+                                    image: require('@/assets/member/avatar/2021/cx3.jpg'),
+                                    signature: 'Programming makes heads bald.'
+                                },
+                                {
+                                    name: "甘海",
+                                    image: require('@/assets/member/avatar/2021/cx4.jpg'),
+                                    signature: '其作始也简，其将毕也必巨'
+                                },
+                                {
+                                    name: "黄乃煊",
+                                    image: require('@/assets/member/avatar/2021/cx5.jpeg'),
+                                    signature: 'Change the world by programmmmmm!'
+                                },
+                                {
+                                    name: "刘宇璨",
+                                    image: require('@/assets/member/avatar/2021/cx6.jpg'),
+                                    signature: '晚点再摆'
+                                },
+                                {
+                                    name: "孟广樾",
+                                    image: require('@/assets/member/avatar/2021/cx7.jpeg'),
+                                    signature: '好好学习，天天向上！'
+                                },
+                                {
+                                    name: "吴卓衡",
+                                    image: require('@/assets/member/avatar/2021/cx8.jpg'),
+                                    signature: 'Bug退散！！！'
+                                }
+                                ]
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "吴文楠",
+                                    image: require('@/assets/member/avatar/2021/ui1.jpeg'),
+                                    signature: '今天也是困困的一天'
+                                },
+                               
+                                ]
+                        },
+                        {
+                            department: "游戏",
+                            member2: [
+                                {
+                                    name: "刘宇宙",
+                                    image: require('@/assets/member/avatar/2021/game1.jpg'),
+                                    signature: '你说得对，但是《鬼泣5》是由卡普空自主研发的一款全新动作类冒险游戏。游戏发生在一个被称作「红墓市」的幻想世界，在这里，被斯巴达选中的人将被授予「魔人」，导引恶魔之力。你将扮演一位名为「恶魔猎人」的神秘角色，在自由的旅行中邂逅性格各异、能力独特的同伴们，和他们一起击败强敌，阻止魔树侵袭的同时，逐步发掘「V」的真相。'
+                                },
+                                {
+                                    name: "戴立桓",
+                                    image: require('@/assets/member/avatar/2021/game2.jpeg'),
+                                    signature: '游戏爱好者，不过是手残'
+                                },
+                                {
+                                    name: "安戈新",
+                                    image: require('@/assets/member/avatar/2021/game3.jpg'),
+                                    signature: '能躺着就不坐着'
+                                },
+                                {
+                                    name: "陈嘉鹏",
+                                    image: require('@/assets/member/avatar/2021/game4.jpeg'),
+                                    signature: '此广告位长期招租'
+                                },
+                                {
+                                    name: "彭程",
+                                    image: require('@/assets/member/avatar/2020/game2.jpeg'),
+                                    signature: '智商在线，没有解决不掉的问题'
+                                },
+                                {
+                                    name: "杨飏",
+                                    image: require('@/assets/member/avatar/2021/game6.jpg'),
+                                    signature: '客观是高枕无忧之人的挡箭牌'
+                                },
+                                {
+                                    name: "邹雨潼",
+                                    image: require('@/assets/member/avatar/2021/game7.png'),
+                                    signature: '好好学习'
+                                },
+                                ]
                         },
                     ]
                 },
@@ -229,58 +302,85 @@ export default {
                             department: "APP",
                             member2: [
                                 {
-                                    name: "姓名app",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "黄博斌",
+                                    image: require('@/assets/member/avatar/2020/app1.jpg'),
+                                    signature: '心有猛虎，细嗅蔷薇'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "王梓懿",
+                                    image: require('@/assets/member/avatar/2020/app2.jpg'),
+                                    signature: '过去可知不可空，未来可控不可知————Claude Shannon'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "张凯",
+                                    image: require('@/assets/member/avatar/2020/app3.jpg'),
+                                    signature: '万物皆可卷积'
                                 }]
                         },
                         {
                             department: "Web",
                             member2: [
                                 {
-                                    name: "姓名web",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "陈江栋",
+                                    image: require('@/assets/member/avatar/2020/web1.jpg'),
+                                    signature: '禁止低头'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "陈李焘",
+                                    image: require('@/assets/member/avatar/2020/web2.jpeg'),
+                                    signature: 'debug冲冲冲'
                                 },
-                                {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
-                                }]
+                               ]
                         },
                         {
                             department: "程序",
                             member2: [
                                 {
-                                    name: "姓名程序",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "刘召",
+                                    image: require('@/assets/member/avatar/2020/cx1.jpg'),
+                                    signature: '诸棣僧降件焦诸陀摩棣僧钵薤嚰焦劫陀焦伏所蜜嚰咒寂闇喃钵曪愍寂摩曪喃功焦膊诸膊僧锗憩锗呵嚰劫僧燕愍尊闇焦般件即焦慧叶祗膊须焦降薤燕呐嚰者斯潮心罘嚰空焦碍心所伏波如阿如'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
+                                    name: "姚梦迪",
+                                    image: require('@/assets/member/avatar/2020/cx2.jpg'),
+                                    signature: '别垂头丧气，显矮'
                                 },
                                 {
-                                    name: "姓名",
-                                    image: require('@/assets/member/photo.jpg'),
-                                    signature: '哈哈哈哈哈哈哈哈哈'
-                                }]
+                                    name: "杨泽晨",
+                                    image: require('@/assets/member/avatar/2020/cx3.jpg'),
+                                    signature: '要做人民的先生，先做人民的学生。————毛泽东'
+                                },
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "吴慧敏",
+                                    image: require('@/assets/member/avatar/2020/ui1.jpg'),
+                                    signature: '我们有一部实际存在的普世之法，其目的正是为了避免完全的功利主义。'
+                                },
+                               ]
+                        },
+                        {
+                            department: "游戏",
+                            member2: [
+                                {
+                                    name: "李昱辉",
+                                    image: require('@/assets/member/avatar/2020/game1.jpg'),
+                                    signature: '收获很大，必可活用于下一次……'
+                                },
+                                {
+                                    name: "颜慧敏",
+                                    image: require('@/assets/member/avatar/2020/game2.jpeg'),
+                                    signature: '……'
+                                },
+                                {
+                                    name: "尹嘉豪",
+                                    image: require('@/assets/member/avatar/2020/game3.jpg'),
+                                    signature: '功不唐捐'
+                                },
+                               ]
                         },
                     ]
                 }
@@ -347,6 +447,7 @@ export default {
 </script>
   
 <style scoped>
+
 .background-white {
     position: absolute;
     top: 0;
@@ -681,7 +782,9 @@ export default {
     margin-left: 10px;
 }
 
-.content-right-signature {}
+/* .content-right-signature {
+   
+} */
 
 .content-main {
     display: flex;
@@ -722,7 +825,7 @@ export default {
     /* margin-left: ; */
     margin-top: 5px;
     color: rgb(219, 219, 219);
-    font-size: 16px;
+    font-size: 14px;
 }
 .back{
     top: 20px;
