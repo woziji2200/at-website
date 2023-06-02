@@ -80,7 +80,7 @@ export default {
                 case 1:
                 this.$router.replace( {path: "index/signUp"} );
                 case 2:
-                //跳转
+                this.$router.replace( {path: "index/signUp/rate"} );
             }
         }
     },
@@ -91,7 +91,7 @@ export default {
         this.fitin = this.windowWidth / 1920;
         // console.log(this.fitin)
         // console.log(this.maxHT)
-        this.maxHT = this.fitin*8480;
+        this.maxHT = this.fitin*8400;
         window.onresize = () => {
             return (() => {
                 //窗口缩放自动获取页面宽高
@@ -100,7 +100,7 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
-                that.maxHT = that.fitin*8480;
+                that.maxHT = that.fitin*8400;
                 // console.log(that.fitin)
             })()
         }

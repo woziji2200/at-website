@@ -1,5 +1,5 @@
 <template>
-    <div class="nav-part">
+    <div class="nav-part" :class="flag == true ? 'height':' '">
         <div class="left-part">
             <li v-for="(items, key) in  leftPart " :class="items.flag == true ? 'show' : 'disshow'" @click="change(key)">{{
                 items.text }}</li>
@@ -21,28 +21,28 @@ export default {
             switch (n) {
                 case 0:
                     window.scrollTo({
-                        top: 1200*this.fitin,
+                        top: 1200 * this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 1:
                     window.scrollTo({
-                        top: 3000*this.fitin,
+                        top: 3000 * this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 2:
                     window.scrollTo({
-                        top: 4200*this.fitin,
+                        top: 4200 * this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 3:
                     window.scrollTo({
-                        top: 5400*this.fitin,
+                        top: 5400 * this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
@@ -56,7 +56,22 @@ export default {
                 left: 0,
                 behavior: "smooth"
             });
-        }
+        },
+        scrolling() {
+            // 滚动条距文档顶部的距离
+            let scrollTop =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop;
+            console.log(scrollTop)
+            if (scrollTop >= 690) {
+                console.log("header 到了最顶部")
+                this.flag=true;
+            }
+            else{
+                this.flag=false;
+            }
+        },
     },
     data() {
         return {
@@ -68,7 +83,7 @@ export default {
             fitin: 1,
             windowWidth: 0,
             windowHeight: 0,
-
+            flag:false,
         }
     },
     mounted() {
@@ -85,9 +100,13 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
-                console.log(that.fitin)
+                // console.log(that.fitin)
             })()
         }
+        window.addEventListener("scroll", this.scrolling);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.scrolling);
     },
 }
 </script>
@@ -189,5 +208,8 @@ export default {
     border-radius: 2px;
     top: 60px;
     background-color: #007AFF;
+}
+.height{
+    background-color: #FFFFFF;
 }
 </style>

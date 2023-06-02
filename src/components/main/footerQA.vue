@@ -6,7 +6,9 @@
                 <div class="headlin-ch">问答区</div>
                 <div class="headlin-en">Q & A</div>
             </div>
-            <div class="main"></div>
+            <div class="main">
+                <div id="waline" class="waline"></div>
+            </div>
         </div>
         <div class="footer">
             <div class="icon" @click="top()"></div>
@@ -19,8 +21,9 @@
     </div>
 </template>
 <script>
+import { init } from '@waline/client/full';
+// import '@waline/client/dist/waline.css';
 export default {
-
     data() {
         return {
 
@@ -34,6 +37,15 @@ export default {
                 behavior: "smooth"
             });
         }
+    },
+    mounted() {
+        init({
+            el: '#waline',
+            serverURL: "https://at-website-waline.vercel.app/",
+            emoji: ["//unpkg.com/@waline/emojis@1.1.0/bilibili"],
+            search: false,
+            avatar: "hide",
+        });
     },
 }
 </script>
@@ -118,7 +130,7 @@ export default {
 
 .icon {
     width: 183px;
-    height:198px;
+    height: 198px;
     background-image: url(@/assets/img/index/icon.png);
     background-position: center;
     margin-top: 200px;
@@ -128,7 +140,7 @@ export default {
 
 .footer-part {
     width: 1920px;
-    height:400px;
+    height: 400px;
     background-image: url(@/assets/img/index/footer.png);
     background-position: center -20px;
     background-size: 140%;
@@ -159,5 +171,12 @@ export default {
     font-weight: bold;
     color: #FFFFFF;
     line-height: 30px;
+}
+.wl-panel{
+    width: 757px!important;
+    height: 825px!important;
+    background: #FFFFFF!important;
+    border-radius: 80px 80px 80px 80px!important;
+    opacity: 1;
 }
 </style>
