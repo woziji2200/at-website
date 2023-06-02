@@ -348,9 +348,15 @@ console.log(this.transformValue)
 
       if (component) {
         component.classList.add('active');
+        component.style.opacity = '0'; // 设置初始透明度为 0
+
+  // 使用 CSS 过渡效果实现淡入动画
+  component.style.transition = 'opacity 0.5s';
+  requestAnimationFrame(function() {
+    component.style.opacity = '1';
+     component.style.transition ='opacity 2s' // 将透明度逐渐过渡到 1
+  });
       }
-
-
     },
       changeData() {
       this.transformValue=""
@@ -388,7 +394,7 @@ console.log(this.transformValue)
 </script>
 
 <style scoped>
-@media (min-width:100px) and (max-width: 490px) {
+@media (min-width:100px) and (max-width: 500px) {
   .first{
         margin-top: 0.6vw;
     margin-left: 5vw;
@@ -639,7 +645,7 @@ margin: 0 auto ;
       display: block;
     }
   }
-  @media (min-width:491px)  {
+  @media (min-width:501px)  {
   .first{
      margin-top: 2.6vw;
      margin-left: 5.4vw;

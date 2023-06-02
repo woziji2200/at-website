@@ -23,12 +23,76 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-@media (max-width: 768px) {
+@media (min-width: 100px) and (max-width: 500px) {
+    .big{
+ height: 55vh;
+   overflow: auto;
+  }
+.image{
+     position: absolute;
+    bottom: -0.3vw;
+    right: -4.5vw;
+    width: 36vw;
+}
+.scroll1{
+  width: 31.7vw;
+ margin-top: 0.9vw;font-weight: bold;
+ margin-left: 5.1vw;
+ font-size: 1vw;line-height:1.6vw ;
+}
+.scroll{
+width: 31.7vw;
+ margin-top: 1.3vw;
+ margin-left: 5.1vw;line-height: 1.6vw;
+ font-size: 1vw;font-weight: bold;
+}
+.mainTitle{
+margin-left: 5.1vw;
+font-size: 3.5vw;
+font-family: Adobe Heiti Std;padding-top: 3.8vw;
+font-weight: bold;
+color: #333333;height:3.3951vw ;
+
+}
+.title{
+font-size: 2vw;
+margin-left: 5.1vw;margin-top: 2.15vw;
+font-weight: bold;
+color: #333333;
+}
+.show{
+margin-top: 1.45vw;
+
+background: rgb(228, 247, 231);
+border-radius: 3.85vw;
+}
+  .show {
+    width: 61vw;
+    height: 70vh;
+    margin: 1.45vw auto 0 auto;
+  }
+
+  .mainTitle,
+  .title,
+  .big,
+  .scroll,
+  .scroll1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .image {
+    display: none;
+  }
+  p {
+      line-height: 1.2rem;  /* 在页面宽度小于等于768px时调整文字之间的距离 */
+    }
+}
+@media (min-width: 501px) and (max-width: 768px) {
     p {
       line-height: 1.2rem;  /* 在页面宽度小于等于768px时调整文字之间的距离 */
     }
-  }
-.big{
+    .big{
   height: 22vw;
    overflow: auto;
 
@@ -71,4 +135,51 @@ height:38vw;
 background: rgb(228, 247, 231);
 border-radius: 3.85vw;
 }
+  }
+ @media (min-width: 769px)  {
+    
+    .big{
+  height: 22vw;
+   overflow: auto;
+
+  }
+.image{
+   position: absolute;
+    bottom: -1.8vw;
+    right: -7vw;
+    width: 40.5vw;
+}
+.scroll1{
+  width: 31.7vw;
+ margin-top: 0.9vw;font-weight: bold;
+ margin-left: 5.1vw;
+ font-size: 1vw;line-height:1.6vw ;
+}
+.scroll{  
+width: 31.7vw;
+ margin-top: 1.3vw;
+ margin-left: 5.1vw;line-height: 1.6vw;
+ font-size: 1vw;font-weight: bold;
+}
+.mainTitle{
+margin-left: 5.1vw;
+font-size: 3.5vw;
+font-family: Adobe Heiti Std;padding-top: 3.8vw;
+font-weight: bold;
+color: #333333;height:3.3951vw ;
+
+}
+.title{
+font-size: 2vw;
+margin-left: 5.1vw;margin-top: 2.15vw;
+font-weight: bold;
+color: #333333;
+}
+.show{
+width: 61vw;margin-top: 1.45vw;
+height:38vw;
+background: rgb(228, 247, 231);
+border-radius: 3.85vw;
+}
+ }
 </style>
