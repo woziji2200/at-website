@@ -55,7 +55,7 @@ const routes = [
         component: signUpPage,
         redirect: '/index/signUp/sign',
         meta: { title: '爱特工作室 - 报名' },
-
+        // redirect: "/index/signUp/rate",
         children: [
             {
                 path: '/index/signUp/rate',
@@ -134,7 +134,7 @@ const router = new VueRouter({
     routes
 })
 router.beforeEach(async (to, from, next) => {
-    if(to.meta.title) document.title = to.meta.title
+    if (to.meta.title) document.title = to.meta.title
     if (to.meta.auth == true) {
         let auth = false;
         let loginMsg = JSON.parse(localStorage.getItem("login")) || {

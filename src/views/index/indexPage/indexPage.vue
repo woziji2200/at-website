@@ -1,7 +1,7 @@
 <template>
-    <div class="blink" :style="{'height':maxHT+'px', 'width': windowWidth + 'px' }">
+    <div class="blink" :style="{ 'height': maxHT + 'px', 'width': windowWidth + 'px' }">
         <div class="navs" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
-        <nav-page> </nav-page>
+            <nav-page> </nav-page>
         </div>
         <div class="all" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
             <div class="part-main">
@@ -64,7 +64,7 @@ export default {
             fitin: 1,
             windowWidth: 0,
             windowHeight: 0,
-            maxHT:8480,
+            maxHT: 8480,
         }
     },
     methods: {
@@ -72,15 +72,17 @@ export default {
             switch (n) {
                 case 0:
                     window.scrollTo({
-                        top: 6500*this.fitin,
+                        top: 6500 * this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
                     break;
                 case 1:
-                this.$router.replace( {path: "index/signUp"} );
+                    this.$router.replace({ path: "index/signUp" });
+                    break;
                 case 2:
-                this.$router.replace( {path: "index/signUp/rate"} );
+                    this.$router.replace({ path: "index/signUp/rate" });
+                    break;
             }
         }
     },
@@ -91,7 +93,7 @@ export default {
         this.fitin = this.windowWidth / 1920;
         // console.log(this.fitin)
         // console.log(this.maxHT)
-        this.maxHT = this.fitin*8400;
+        this.maxHT = this.fitin * 8400;
         window.onresize = () => {
             return (() => {
                 //窗口缩放自动获取页面宽高
@@ -100,7 +102,7 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
-                that.maxHT = that.fitin*8400;
+                that.maxHT = that.fitin * 8400;
                 // console.log(that.fitin)
             })()
         }
@@ -110,20 +112,22 @@ export default {
 </script>
 
 <style scoped>
-.blink{
-    overflow-y:hidden;
+.blink {
+    overflow-y: hidden;
     position: relative;
     top: 0;
 }
+
 .all {
     transform-origin: 0 0;
     margin: 0 auto;
     margin-top: -90px;
 }
-.navs{
+
+.navs {
     transform-origin: 0 0;
     position: fixed;
-    top:0px;
+    top: 0px;
     z-index: 20;
 }
 
@@ -133,7 +137,7 @@ export default {
     width: 1920px;
     height: 1280px;
     margin: 0 auto;
-    padding-top:107px;
+    padding-top: 107px;
 }
 
 .bk {
