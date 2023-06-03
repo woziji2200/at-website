@@ -148,6 +148,10 @@ export default {
                                     image: require('@/assets/member/avatar/2022/wangmingxin.jpg'),
                                     signature: '你说得对，但是'
                                 },
+                                {   name: "时晓天",
+                                    image: require('@/assets/member/avatar/2022/shixiaotian.jpg'),
+                                    signature: '这个人很懒，什么都没有留下'
+                                },
                                 {   name: "许其鸿",
                                     image: require('@/assets/member/avatar/2022/xuqihong.jpg'),
                                     signature: '卷不过卷不过'
@@ -158,7 +162,7 @@ export default {
                 },
                 {
                     year: 2021,
-                    image: require("@/assets/img/12.jpg"),
+                    image: require("@/assets/img/13.jpg"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -300,7 +304,7 @@ export default {
                 },
                 {
                     year: 2020,
-                    image: require("@/assets/img/12.jpg"),
+                    image: require("@/assets/img/14.jpg"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -315,7 +319,7 @@ export default {
                                 {
                                     name: "王梓懿",
                                     image: require('@/assets/member/avatar/2020/app2.jpg'),
-                                    signature: '过去可知不可空，未来可控不可知————Claude Shannon'
+                                    signature: '过去可知不可空，未来可控不可知——Claude Shannon'
                                 },
                                 {
                                     name: "张凯",
@@ -389,10 +393,713 @@ export default {
                                ]
                         },
                     ]
-                }
-            ],
-        };
+                },
+                {
+                    year: 2019,
+                    image: require("@/assets/img/15.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                        {
+                            department: "APP",
+                            member2: [
+                                {
+                                    name: "赵艳然",
+                                    image: require('@/assets/member/avatar/2019/app11.jpg'),
+                                    signature: '努力成长'
+                                },
+                                {
+                                    name: "岳宇轩",
+                                    image: require('@/assets/member/avatar/2019/app22.jpg'),
+                                    signature: '我们的工作是搬运知识和技能。'
+                                },
+                                {
+                                    name: "钱思航",
+                                    image: require('@/assets/member/avatar/2019/app33.jpg'),
+                                    signature: '广告位招租'
+                                }]
+                        },
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "高可欣",
+                                    image: require('@/assets/member/avatar/2019/web11.jpg'),
+                                    signature: '-interesting'
+                                },                              
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "帅翔宇",
+                                    image: require('@/assets/member/avatar/2019/cx11.jpg'),
+                                    signature: '生而不有，为而不恃，长而不宰'
+                                },
+                                {
+                                    name: "戴俞成",
+                                    image: require('@/assets/member/avatar/2019/cx2.jpg'),
+                                    signature: 'undefined'
+                                },
+                                {
+                                    name: "程传奇",
+                                    image: require('@/assets/member/avatar/2019/cx33.jpg'),
+                                    signature: '“不必每天早睡早起，但要注意锻炼身体”'
+                                },
+                                {
+                                    name: "花如壮",
+                                    image: require('@/assets/member/avatar/2019/cx4.jpg'),
+                                    signature: '要么孤独，要么庸俗'
+                                },
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "陈熠欣",
+                                    image: require('@/assets/member/avatar/2019/ui1.jpg'),
+                                    signature: '感恩的心 感谢有你'
+                                },
+                                {
+                                    name: "林子靖",
+                                    image: require('@/assets/member/avatar/2019/ui2.jpg'),
+                                    signature: '“虽千万人吾往矣。”'
+                                },
+                                {
+                                    name: "刘思佳",
+                                    image: require('@/assets/member/avatar/2019/ui3.jpeg'),
+                                    signature: '……'
+                                },
+                                {
+                                    name: "许胤韬",
+                                    image: require('@/assets/member/avatar/2019/ui44.jpg'),
+                                    signature: '雄鹿粉丝互删一下'
+                                },
+                                {
+                                    name: "付翔宇",
+                                    image: require('@/assets/member/avatar/2019/ui5.jpg'),
+                                    signature: '宁静致远'
+                                },
+                                {
+                                    name: "葛畅",
+                                    image: require('@/assets/member/avatar/2019/ui6.jpg'),
+                                    signature: '好好学习不要摸鱼'
+                                },
+                                {
+                                    name: "浦绍英",
+                                    image: require('@/assets/member/avatar/2019/ui77.jpg'),
+                                    signature: '弃捐勿复道，努力加餐饭。'
+                                },
+                               ]
+                        },
+                        {
+                            department: "游戏",
+                            member2: [
+                                {
+                                    name: "陈子骞",
+                                    image: require('@/assets/member/avatar/2019/game1.jpg'),
+                                    signature: '整点新玩具'
+                                },
+                                {
+                                    name: "张浩宇",
+                                    image: require('@/assets/member/avatar/2019/game22.jpg'),
+                                    signature: '兴趣是第一动力。'
+                                },
+                               
+                               ]
+                        },
+                    ]
+                },
+                {
+                    year: 2018,
+                    image: require("@/assets/img/16.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                        {
+                            department: "APP",
+                            member2: [
+                                {
+                                    name: "田同晓",
+                                    image: require('@/assets/member/avatar/2018/app1.jpg'),
+                                    signature: 'deadline是第一生产力'
+                                },
+                                {
+                                    name: "马良吉",
+                                    image: require('@/assets/member/avatar/2018/app2.jpg'),
+                                    signature: '你比你想象的更强大'
+                                },
+                                {
+                                    name: "曾广豪",
+                                    image: require('@/assets/member/avatar/2018/app3.jpg'),
+                                    signature: '干就完事了'
+                                },
+                                {
+                                    name: "任浩辰",
+                                    image: require('@/assets/member/avatar/2018/app4.jpg'),
+                                    signature: 'Talk is cheap,show me the code.'
+                                },]
+                        },
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "赵有为",
+                                    image: require('@/assets/member/avatar/2018/web1.jpg'),
+                                    signature: 'Gu?Gu...Gu!'
+                                },
+                                {
+                                    name: "沈世纪",
+                                    image: require('@/assets/member/avatar/2018/web2.jpg'),
+                                    signature: '。。。咕咕咕？'
+                                },
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "蔡宇翔",
+                                    image: require('@/assets/member/avatar/2018/cx1.jpg'),
+                                    signature: '学计算机不coding，死路一条'
+                                },
+                                {
+                                    name: "刘阳",
+                                    image: require('@/assets/member/avatar/2018/cx2.jpg'),
+                                    signature: '编(de)程(bug)'
+                                },
+                                {
+                                    name: "慈浩艺",
+                                    image: require('@/assets/member/avatar/2018/cx3.jpg'),
+                                    signature: 'bug的数量可能与你的勤奋程度成正相关。'
+                                },
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "诸彦甫",
+                                    image: require('@/assets/member/avatar/2018/ui1.jpeg'),
+                                    signature: '……'
+                                },
+                               ]
+                        },
+                        {
+                            department: "游戏",
+                            member2: [
+                                {
+                                    name: "陈祺龙",
+                                    image: require('@/assets/member/avatar/2018/game1.jpg'),
+                                    signature: '缘，妙不可言。'
+                                },
+                                {
+                                    name: "张云涛",
+                                    image: require('@/assets/member/avatar/2018/game2.jpg'),
+                                    signature: 'Coding is not about typing, is about thinking.'
+                                },
+                               
+                               ]
+                        },
+                    ]
+                },
+                {
+                    year: 2017,
+                    image: require("@/assets/img/17.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                        {
+                            department: "APP",
+                            member2: [
+                                {
+                                    name: "李林宇",
+                                    image: require('@/assets/member/avatar/2017/app1.jpg'),
+                                    signature: '现在是过去的未来，亦是未来的过去。'
+                                },
+                                {
+                                    name: "戈晓洋",
+                                    image: require('@/assets/member/avatar/2017/app2.jpg'),
+                                    signature: '带我，发出萌新的声音'
+                                },
+                                ]
+                        },
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "陈玉沅",
+                                    image: require('@/assets/member/avatar/2017/web1.jpg'),
+                                    signature: '面向百度编程'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "谭坚铭",
+                                    image: require('@/assets/member/avatar/2017/cx1.png'),
+                                    signature: '既且，且往观乎？'
+                                },
+                                {
+                                    name: "陈开拓",
+                                    image: require('@/assets/member/avatar/2017/cx2.png'),
+                                    signature: '睡觉是第一生产力'
+                                },
+                                {
+                                    name: "谢哲勇",
+                                    image: require('@/assets/member/avatar/2017/cx3.png'),
+                                    signature: '行到水穷处，坐看云起时'
+                                },
+                                {
+                                    name: "陈尊龙",
+                                    image: require('@/assets/member/avatar/2017/cx4.jpg'),
+                                    signature: '健忘是头秃的前兆——谁说的来着'
+                                },
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "浦泽元",
+                                    image: require('@/assets/member/avatar/2017/ui1.png'),
+                                    signature: 'less is more 少即是多'
+                                },
+                               ]
+                        },
+                        {
+                            department: "游戏",
+                            member2: [
+                                {
+                                    name: "李隆岩",
+                                    image: require('@/assets/member/avatar/2018/game1.jpg'),
+                                    signature: '我们每天度过的称之为日常的生活，其实是一个个奇迹的连续也说不定。'
+                                },
+                              
+                               ]
+                        },
+                    ]
+                },
+                {
+                    year: 2016,
+                    image: require("@/assets/img/18.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                        {
+                            department: "APP",
+                            member2: [
+                                {
+                                    name: "王湘懿",
+                                    image: require('@/assets/member/avatar/2016/app1.jpg'),
+                                    signature: '腐妹子一只，蛇精病一枚'
+                                },
+                                {
+                                    name: "邓懿康",
+                                    image: require('@/assets/member/avatar/2016/app2.jpg'),
+                                    signature: '梦想是做个技术宅'
+                                },
+                                ]
+                        },
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "官欣仪",
+                                    image: require('@/assets/member/avatar/2016/web1.jpg'),
+                                    signature: '扣脚宅√LLer√经常女装√'
+                                },
+                                {
+                                    name: "李凌宇",
+                                    image: require('@/assets/member/avatar/2016/web2.jpg'),
+                                    signature: '诶，这里有点缺氧'
+                                },
+                                {
+                                    name: "李楚娇",
+                                    image: require('@/assets/member/avatar/2016/web3.jpg'),
+                                    signature: '热爱生活，热爱技术'
+                                },
+                                {
+                                    name: "钱怡辰",
+                                    image: require('@/assets/member/avatar/2016/web4.jpg'),
+                                    signature: '日常敲代码吃东西'
+                                },
+                                {
+                                    name: "刘凡莉",
+                                    image: require('@/assets/member/avatar/2016/web5.jpg'),
+                                    signature: '人生总会熬出来的'
+                                },
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "宿天宇",
+                                    image: require('@/assets/member/avatar/2016/cx1.jpg'),
+                                    signature: 'No pain, no gain'
+                                },
+                                {
+                                    name: "梁颖芳",
+                                    image: require('@/assets/member/avatar/2016/cx2.jpg'),
+                                    signature: '给缺氧的那位递个氧气瓶'
+                                },
+                                {
+                                    name: "方政",
+                                    image: require('@/assets/member/avatar/2016/cx3.jpg'),
+                                    signature: '只有流过血的手指才能弹出世间的绝唱.'
+                                },
+                                {
+                                    name: "叶伊凡",
+                                    image: require('@/assets/member/avatar/2016/cx4.jpg'),
+                                    signature: '请称赞我，高贵冷艳'
+                                },
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "于聪颖",
+                                    image: require('@/assets/member/avatar/2016/ui1.jpg'),
+                                    signature: '性别女，爱好各种adobe家的软件，但不擅长'
+                                },
+                                {
+                                    name: "翟书言",
+                                    image: require('@/assets/member/avatar/2016/ui2.jpg'),
+                                    signature: '哇这个人为什么这么酷'
+                                },
+                                {
+                                    name: "李宜璟",
+                                    image: require('@/assets/member/avatar/2016/ui3.jpg'),
+                                    signature: '这个人很懒，神马都没留下…'
+                                },
+                                {
+                                    name: "廖舒祺",
+                                    image: require('@/assets/member/avatar/2016/ui4.jpg'),
+                                    signature: '额，活泼好动，爱看电影，做运动，旅游，喜欢设计…'
+                                },
+                               ]
+                        },
+                       
+                    ]
+                },
+                {
+                    year: 2015,
+                    image: require("@/assets/img/19.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                       
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "李策",
+                                    image: require('@/assets/member/avatar/2015/web1.jpg'),
+                                    signature: '我不是一个伟大的程序员，我只是一个具有良好习惯的优秀程序员-KentBeck'
+                                },
+                                {
+                                    name: "陶赟",
+                                    image: require('@/assets/member/avatar/2015/web2.jpg'),
+                                    signature: '大部分情况下，构建程序的过程本质上是对规范调试的过程。——FredBrooks'
+                                },
+                                {
+                                    name: "雷镇宇",
+                                    image: require('@/assets/member/avatar/2015/web3.jpg'),
+                                    signature: '不听不听，王八念经'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "张钦贤",
+                                    image: require('@/assets/member/avatar/2015/cx1.jpg'),
+                                    signature: '我就是我，是颜色不一样的烟火'
+                                },
+                               
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "周尊康",
+                                    image: require('@/assets/member/avatar/2015/ui1.jpg'),
+                                    signature: '直到最后一个用户死去，软件才算完成。——佚名'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "系统维护",
+                            member2: [
+                                {
+                                    name: "陈默涵",
+                                    image: require('@/assets/member/avatar/2015/xt1.jpg'),
+                                    signature: '计算机科学领域的所有问题都可以通过其他方式间接解决。—David Wheeler'
+                                },
+                               
+                               ]
+                        },
+                       
+                    ]
+                },
+                {
+                    year: 2014,
+                    image: require("@/assets/img/20.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                       
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "张竣凯",
+                                    image: require('@/assets/member/avatar/2014/web1.jpg'),
+                                    signature: '质量、速度、廉价，选择其中两个'
+                                },
+                              
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "申一鸣",
+                                    image: require('@/assets/member/avatar/2014/cx1.jpg'),
+                                    signature: '好代码本身就是最好的文档—Steve McConnell'
+                                },
+                                {
+                                    name: "李春林",
+                                    image: require('@/assets/member/avatar/2014/cx2.jpg'),
+                                    signature: '过早的优化是罪恶之源。——Donald Knuth'
+                                },
+                                {
+                                    name: "王恺鹏",
+                                    image: require('@/assets/member/avatar/2014/cx3.jpg'),
+                                    signature: '—切奇怪的现象都是有原因的——佚名'
+                                },
+                                {
+                                    name: "郑作武",
+                                    image: require('@/assets/member/avatar/2014/cx4.jpg'),
+                                    signature: '“设计是一个发现问题、而不是发现解决方案的过程”——LeslieChicoine'
+                                },
+                                {
+                                    name: "王晓瑞",
+                                    image: require('@/assets/member/avatar/2014/cx5.jpg'),
+                                    signature: '诚信自由平等爱国文明诚信民主诚信民主诚信自由敬业爱国富强友善平等友善公正'
+                                },
+                                ]      
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "成亚男",
+                                    image: require('@/assets/member/avatar/2014/ui1.jpg'),
+                                    signature: '设计中最难的部分.......是阻止功能。——佚名'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "系统维护",
+                            member2: [
+                                {
+                                    name: "蒙煜明",
+                                    image: require('@/assets/member/avatar/2014/xt1.jpg'),
+                                    signature: '如果你是房间里最聪明的人，那么你走错房间了。——佚名'
+                                },
+                               
+                               ]
+                        },
+                       
+                    ]
+                },
+                {
+                    year: 2013,
+                    image: require("@/assets/img/21.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                       
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "何珺",
+                                    image: require('@/assets/member/avatar/2013/web1.jpg'),
+                                    signature: '测试是来表明bug的存在而不是不存在”———EdsgerDijkstra'
+                                },
+                                {
+                                    name: "刘祯昆",
+                                    image: require('@/assets/member/avatar/2013/web2.jpg'),
+                                    signature: '你要么要软件质量，要么要指针算法;两者不可兼得。—Bertrand Meyer'
+                                },
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "徐永亮",
+                                    image: require('@/assets/member/avatar/2013/cx1.jpg'),
+                                    signature: '优秀的代码是它自己最好的文档——Steve McConnell'
+                                },
+                                {
+                                    name: "杨旭",
+                                    image: require('@/assets/member/avatar/2013/cx2.jpg'),
+                                    signature: '优秀的判断力来自经验，但经验来自于错误的判断。——Fred Brooks'
+                                },
+                                {
+                                    name: "张静",
+                                    image: require('@/assets/member/avatar/2013/cx3.jpg'),
+                                    signature: '简单不先于复杂，而是在复杂之后”——Alan Perlis'
+                                },
+                               
+                                ]      
+                        },
+                        
+                        {
+                            department: "系统维护",
+                            member2: [
+                                {
+                                    name: "刘天峰",
+                                    image: require('@/assets/member/avatar/2013/xt1.jpg'),
+                                    signature: '软件在能够复用前必须先能用。——Ralph Johnson'
+                                },
+                                {
+                                    name: "陶孟旭",
+                                    image: require('@/assets/member/avatar/2013/xt2.jpg'),
+                                    signature: '最便宜，最快和最可靠的组件是不存在的。——佚名'
+                                },
+                               ]
+                        },
+                       
+                    ]
+                },
+                {
+                    year: 2012,
+                    image: require("@/assets/img/22.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                       
+                        {
+                            department: "Web",
+                            member2: [
+                                {
+                                    name: "林皇",
+                                    image: require('@/assets/member/avatar/2012/web1.jpg'),
+                                    signature: '一个人在教会电脑之前，别说他真正理解这个东西了。'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "程序",
+                            member2: [
+                                {
+                                    name: "凌霄",
+                                    image: require('@/assets/member/avatar/2012/cx1.jpg'),
+                                    signature: '当你试图解决—个你不理解的问题时，复杂化就产成了。———Andy Boothe'
+                                },
+                                {
+                                    name: "李一诺",
+                                    image: require('@/assets/member/avatar/2012/cx2.jpg'),
+                                    signature: '控制复杂性是计算机编程的本质。—— Brian Kernighan'
+                                },
+                                {
+                                    name: "李昱坤",
+                                    image: require('@/assets/member/avatar/2012/cx3.jpg'),
+                                    signature: '用几个小时来制定计划，可以节省几周的编程时间。——佚名'
+                                },
+                                {
+                                    name: "刘嘉爱",
+                                    image: require('@/assets/member/avatar/2012/cx4.jpg'),
+                                    signature: '当你选择了一种语言，意味着你还选择了一组技术、一个社区。JoshuaBloch'
+                                },
+                               
+                                ]      
+                        },
+                        
+                        {
+                            department: "系统维护",
+                            member2: [
+                                {
+                                    name: "李思源",
+                                    image: require('@/assets/member/avatar/2012/xt1.jpg'),
+                                    signature: '没有什么代码的执行速度比空代码更快。————Merb 核心原则'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "罗聿聪",
+                                    image: require('@/assets/member/avatar/2012/ui1.jpg'),
+                                    signature: '它在我的机器上可以很好运行!——大部分程序员'
+                                },
+                                {
+                                    name: "肖宇恬",
+                                    image: require('@/assets/member/avatar/2012/ui2.jpg'),
+                                    signature: '复制粘贴是一个设计错误。一-David Parnas'
+                                },
+                               
+                               ]
+                        },
+                       
+                    ]
+                },
+                {
+                    year: 2011,
+                    image: require("@/assets/img/11.jpg"),
+                    show: [],
+                    height: "height: 40px;",
+                    member: [
+                       
+                       
+                        {
+                            department: "系统维护",
+                            member2: [
+                                {
+                                    name: "曹刚",
+                                    image: require('@/assets/member/avatar/2011/xt1.jpg'),
+                                    signature: '这不是一个 bug，这只是一个未列出来的特性。——匿名'
+                                },
+                               
+                               ]
+                        },
+                        {
+                            department: "UI",
+                            member2: [
+                                {
+                                    name: "张兆业",
+                                    image: require('@/assets/member/avatar/2011/ui1.jpg'),
+                                    signature: '我不是一个伟大的程序员，我只是一个具有良好习惯的优秀程序员-Kent Beck'
+                                },
+                               
+                               ]
+                        },
+                       
+                    ]
+                },
+            ]
+        }
     },
+
     mounted() {
         this.activateFirstItem();
         window.addEventListener("scroll", this.handleScroll);
