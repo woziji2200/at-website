@@ -112,7 +112,7 @@ export default {
                             member2: [
                                 {
                                     name: "马琪颖",
-                                    image: require('@/assets/member/avatar/2022/maqiying2.png'),
+                                    image: require('@/assets/member/avatar/2022/maqiying3.jpg'),
                                     signature: '知足常乐~'
                                 },
                                 {
