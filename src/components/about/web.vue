@@ -62,7 +62,7 @@ margin-left: 5.1vw;margin-top: 2.15vw;
 font-weight: bold;
 color: #333333;
 }
-.show{
+.show{overflow: hidden;
 width: 61vw;margin-top: 1.45vw;
 height:38vw;
 background: rgb(225, 239, 254);

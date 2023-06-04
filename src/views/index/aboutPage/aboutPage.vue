@@ -103,8 +103,8 @@ console.log(this.transformValue)
                               this.transformValue5= this.angle1
           this.flag='component2'
         }  else if(this.flag=='component5'&&componentId=='component3'){
-                this.angle -= 216
-             this.angle1+=216
+                this.angle += 144
+             this.angle1-=144
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -113,8 +113,8 @@ console.log(this.transformValue)
                               this.transformValue5= this.angle1
           this.flag='component3'
         }  else if(this.flag=='component5'&&componentId=='component4'){
-              this.angle -= 288
-             this.angle1+=288
+              this.angle += 72
+             this.angle1-=72
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -147,8 +147,8 @@ console.log(this.transformValue)
           this.flag='component3'
         }  
         else if(this.flag=='component1'&&componentId=='component4'){
-                  this.angle -= 216
-             this.angle1+=216
+                    this.angle += 144
+             this.angle1-=144
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -158,8 +158,8 @@ console.log(this.transformValue)
           this.flag='component4'
         }  
         else if(this.flag=='component1'&&componentId=='component5'){
-              this.angle -= 288
-             this.angle1+=288
+                  this.angle += 72
+             this.angle1-=72
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -193,8 +193,8 @@ console.log(this.transformValue)
         }  
         else if(this.flag=='component2'&&componentId=='component5'){
       
-                                    this.angle -= 216
-             this.angle1+=216
+            this.angle += 144
+             this.angle1-=144
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -204,8 +204,8 @@ console.log(this.transformValue)
           this.flag='component5'
         }  
         else if(this.flag=='component2'&&componentId=='component1'){
-                               this.angle -= 288
-             this.angle1+=288
+                           this.angle += 72
+             this.angle1-=72
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -239,8 +239,8 @@ console.log(this.transformValue)
           this.flag='component5'
         }  
         else if(this.flag=='component3'&&componentId=='component1'){
-                             this.angle -= 216
-             this.angle1+=216
+                        this.angle += 144
+             this.angle1-=144
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -250,8 +250,8 @@ console.log(this.transformValue)
           this.flag='component1'
         }  
         else if(this.flag=='component3'&&componentId=='component2'){
-                              this.angle -= 288
-             this.angle1+=288
+                            this.angle += 72
+             this.angle1-=72
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -284,8 +284,8 @@ console.log(this.transformValue)
           this.flag='component1'
         }  
         else if(this.flag=='component4'&&componentId=='component2'){
-                   this.angle -= 216
-             this.angle1+=216
+                this.angle += 144
+             this.angle1-=144
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
@@ -295,9 +295,8 @@ console.log(this.transformValue)
           this.flag='component2'
         }  
         else if(this.flag=='component4'&&componentId=='component3'){
-       
-                                 this.angle -= 288
-             this.angle1+=288
+       this.angle += 72
+             this.angle1-=72
      this.transformValue=this.angle
           this.transformValue1= this.angle1
                this.transformValue2= this.angle1
