@@ -62,7 +62,7 @@ font-weight: bold;
 color: #333333;
 }
 .show{
-margin-top: 1.45vw;
+margin-top: 1.45vw;overflow: hidden;
 
 background: rgb(223, 220, 235);
 border-radius: 3.85vw;

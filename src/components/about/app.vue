@@ -67,7 +67,7 @@ background: rgb(253, 228, 230);
 border-radius: 3.85vw;
 }
   .show {
-    width: 61vw;
+    width: 61vw;overflow: hidden;
     height: 70vh;
       margin: 1.45vw auto 0 auto;
   }
