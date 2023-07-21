@@ -77,6 +77,7 @@ export default {
             p2: '',
             p3: '',
             p4: '',
+            isSubmit:false
         };
     },
     methods: {
@@ -131,11 +132,25 @@ export default {
                 type: 'error'
             });
         },
-        submit() {
+        async submit() {
+            if(this.isSubmit)return
+            else this.isSubmit = true
+            let emailExp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g
+            let phoneExp = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/g
+            if (!(emailExp.test(this.phone) || phoneExp.test(this.phone))) {
+                this.$message({
+                    showClose: true,
+                    message: '所填信息有错误哦~',
+                    type: 'error'
+                });
+                this.isSubmit = false
+                return
+            }
+
             let rateform = {
                 string: this.phone,
             };
-            this.$http.get("/v1/api/sign_up/", rateform,
+            await this.$http.get("/v1/api/sign_up/", rateform,
             ).then((res) => {
                 console.log("res", res);
                 if (res.data.code == 40000) {
@@ -145,38 +160,55 @@ export default {
                     this.back3();
                     this.back4();
                 }
-                this.$message({
-                        showClose: true,
-                        message: '查询成功',
-                        type: 'success'
-                    });
+
                 if (res.data.data.status == 3 || res.data.data.status == 7) {
                     this.changeImg1();
                     this.back2();
                     this.back3();
                     this.back4();
+                    this.$message({
+                        showClose: true,
+                        message: '查询成功',
+                        type: 'success'
+                    });
                 }
                 else if (res.data.data.status == 4 || res.data.data.status == 8 || res.data.data.status == 9 || res.data.data.status == 10) {
                     this.changeImg1();
                     this.changeImg2();
                     this.back3();
                     this.back4();
+                    this.$message({
+                        showClose: true,
+                        message: '查询成功',
+                        type: 'success'
+                    });
                 }
                 else if (res.data.data.status == 5) {
                     this.changeImg1();
                     this.changeImg2();
                     this.changeImg3();
                     this.changeImg4();
+                    this.$message({
+                        showClose: true,
+                        message: '查询成功',
+                        type: 'success'
+                    });
                 }
                 else {
                     this.back1();
                     this.back2();
                     this.back3();
                     this.back4();
+                    this.$message({
+                        showClose: true,
+                        message: '查询成功',
+                        type: 'success'
+                    });
                 }
             }).catch((err) => {
                 console.log("err", err);
             });
+            this.isSubmit = false
         },
     }
 };
@@ -432,4 +464,5 @@ div[class^="box"] img {
         height: 14px;
         margin-left: 1px;
     }
-}</style>
+}
+</style>

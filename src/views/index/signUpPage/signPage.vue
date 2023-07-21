@@ -61,7 +61,7 @@
                   margin-right: 0.67vw;
                   letter-spacing: 0.34vw;
                   cursor: pointer;
-                ">获取验证码</span>
+                ">{{ content }}</span>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,12 @@ export default {
             phone: '',
             address: '',
             number: '',
-            expection: ''
+            expection: '',
+            isSendEmail: false,
+            isSubmit: false,
+            content: '获取验证码',
+            totalTime: 60,
+            canClick: true
         };
     },
     methods: {
@@ -127,23 +132,71 @@ export default {
         getdepart() {
             console.log(this.value)
         },
-        postNumber() {
+        async postNumber() {
+            if (this.isSendEmail) return
+            else this.isSendEmail = true
+            if (!this.canClick) return
+            this.canClick = false
+            if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g.test(this.address)) {
+                this.$message({
+                    showClose: true,
+                    message: '请输入正确的邮箱格式',
+                    type: 'error'
+                });
+                return
+            }
             let postform = {
                 email: this.address,
             }
-            this.$http.post("/v1/api/sign_up/verification_code/", postform).then((res) => {
+            await this.$http.post("/v1/api/sign_up/verification_code/", postform).then((res) => {
                 console.log(res);
                 if (res.data.code == 44036) {
                     this.open9();
-                }
-                else if (res.data.code == 20000) {
+                } else if (res.data.code == 20000) {
+                    console.log("发送成功");
+
+
                     this.open11();
+                    this.content = this.totalTime + 's'
+                    let clock = window.setInterval(() => {
+                        this.totalTime--
+                        this.content = this.totalTime + 's'
+                        if (this.totalTime < 0) {
+                            window.clearInterval(clock)
+                            this.content = '获取验证码'
+                            this.totalTime = 60
+                            this.canClick = true
+                        }
+                    }, 1000)
+                } else if (res.data.code == 43032) {
+                    this.$message({
+                        showClose: true,
+                        message: '该邮箱已存在',
+                        type: 'error'
+                    });
+                } else if (res.data.code == 44033) {
+                    this.$message({
+                        showClose: true,
+                        message: '请勿频繁发送验证码',
+                        type: 'error'
+                    });
                 }
             }).catch((err) => {
                 console.log("err", err);
             });
+            this.isSendEmail = false
         },
-        submit() {
+        async submit() {
+            if (this.isSubmit) return
+            else this.isSubmit = true
+            if (!(this.grade && this.nam && this.phone && this.address && this.number && this.value && this.expection)) {
+                this.$message({
+                    showClose: true,
+                    message: '请填写完所有信息~',
+                    type: 'error'
+                });
+                return
+            }
             let form = {
                 name: this.nam,
                 major: this.grade,
@@ -154,7 +207,7 @@ export default {
                 expectation: this.expection,
                 sex: this.sex,
             }
-            this.$http.post("/v1/api/sign_up/", form).then((res) => {
+            await this.$http.post("/v1/api/sign_up/", form).then((res) => {
                 console.log(res);
                 console.log(form.department);
                 if (res.data.code == 20000) {
@@ -170,6 +223,7 @@ export default {
                     this.open8()
                 }
             }).catch((err) => { console.log("err", err); })
+            this.isSubmit = false
         },
         open6() {
             this.$message({
@@ -301,10 +355,11 @@ span {
     .back-img {
         height: 580px;
     }
-    .sign-up{
+
+    .sign-up {
         top: 5%;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
         width: 90vw;
     }
 }
@@ -360,6 +415,11 @@ div[class^="line"] {
         flex-direction: column;
         margin-bottom: 10px;
         /* margin-left: 40px; */
+    }
+
+    .adress-border span {
+        font-size: 0.8vw;
+        /* width: 30%; */
     }
 
     .name {
@@ -630,4 +690,5 @@ a {
     height: 100%;
     z-index: -1;
     object-fit: cover;
-}</style>
+}
+</style>

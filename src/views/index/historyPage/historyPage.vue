@@ -22,8 +22,8 @@
         </div>
       </div>
 </div>
-<button class="unfold" @click="flag=!flag" v-if="!flag"><span class="button-text"> 展开</span><span class="underLine"></span></button>
-<button class="fold" @click="flag=!flag" v-if="flag"><span class="button-text">收起</span><span class="underLine"></span></button>
+<!-- <button class="unfold" @click="flag=!flag" v-if="!flag"><span class="button-text"> 展开</span><span class="underLine"></span></button> -->
+<!-- <button class="fold" @click="flag=!flag" v-if="flag"><span class="button-text">收起</span><span class="underLine"></span></button> -->
 <button class="goToHomePage1" @click="goToHomePage" v-if="!flag"><span class="button-text">返回主页</span><span class="goToHomePageLine"></span></button>
 <button class="goToHomePage2" @click="goToHomePage" v-if="flag"><span class="button-text">返回主页</span><span class="goToHomePageLine"></span></button>
 </div>

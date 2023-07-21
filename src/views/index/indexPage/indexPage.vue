@@ -33,6 +33,8 @@ import navPage from '@/components/main/nav.vue'
 import partTwo from '@/components/main/parttwo.vue'
 import intro from '@/components/main/intro.vue'
 import footerQA from '@/components/main/footerQA.vue'
+import '@waline/client/dist/waline.css';
+
 export default {
     components: {
         navPage,
