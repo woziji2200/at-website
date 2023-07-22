@@ -38,7 +38,8 @@
         years:[
                 {
                     title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/19.jpg"),
+                    image: require("@/assets/img/2022.png"),
+                    backgroundImage:require("@/assets/img/22.png"),
                     year:"2022",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -48,7 +49,8 @@
                 },
                 {
                     title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/12.jpg"),
+                    image: require("@/assets/img/2021.png"),
+                    backgroundImage:require("@/assets/img/21.png"),
                     year:"2021",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -58,7 +60,8 @@
                 },
                 {
                     title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/13.jpg"),
+                    image: require("@/assets/img/2020.png"),
+                    backgroundImage:require("@/assets/img/20.png"),
                     year:"2020",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -68,7 +71,8 @@
                 },
                 {
                     title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/14.jpg"),
+                    image: require("@/assets/img/2019.png"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2019",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -78,7 +82,8 @@
                 },
                 {
                     title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/21.jpg"),
+                    image: require("@/assets/img/2019.png"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2018",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -117,7 +122,7 @@
         this.pointerAngle=angle;
         let rotationAngle = 0;
     },
-      activateFirstItem() {
+    activateFirstItem() {
         this.$nextTick(() => {
           const firstItem = this.$el.querySelector(".item");
           firstItem.classList.add("item--active");
@@ -128,19 +133,19 @@
         this.$el.style.backgroundImage = `url(${imageUrl})`;
       },
       handleScroll() {
-        const scrollPosition = window.scrollY;
-        const items = this.$el.querySelectorAll(".item");
-        items.forEach((item, index) => {
-          const itemTop = item.offsetTop;
-          const itemBottom = itemTop + item.offsetHeight;
-          if (index === items.length - 2 && scrollPosition > itemBottom - item.offsetHeight / 2) {
-            this.activateItem(item);
-          } else if (scrollPosition <= itemBottom - 10 && scrollPosition >= itemTop) {
-            this.setBackgroundImage(item.querySelector(".img").getAttribute("src"));
-            this.activateItem(item);
-          }
-        });
-      },
+      const scrollPosition = window.scrollY;
+      const items = this.$el.querySelectorAll(".item");
+      items.forEach((item, index) => {
+        const itemTop = item.offsetTop;
+        const itemBottom = itemTop + item.offsetHeight;
+        if (index === items.length - 2 && scrollPosition > itemBottom - item.offsetHeight / 2) {
+          this.activateItem(item);
+        } else if (scrollPosition <= itemBottom - 10 && scrollPosition >= itemTop) {
+          this.setBackgroundImage(this.years[index].backgroundImage); // Update background image
+          this.activateItem(item);
+        }
+      });
+    },
       activateItem(item) {
         const activeItem = this.$el.querySelector(".item--active");
         if (activeItem) {
@@ -320,7 +325,7 @@ position: relative;
     transition: 0.3s ease 0s;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("@/assets/img/19.jpg");
+    background-image: url("@/assets/img/19及以前.png");
 }
 
 .shell:before {
