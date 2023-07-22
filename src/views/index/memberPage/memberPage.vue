@@ -58,7 +58,7 @@ export default {
             years: [
                 {
                     year: 2022,
-                    image: require("@/assets/img/12.jpg"),
+                    image: require("@/assets/img/2022.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -162,7 +162,7 @@ export default {
                 },
                 {
                     year: 2021,
-                    image: require("@/assets/img/13.jpg"),
+                    image: require("@/assets/img/2021.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -304,7 +304,7 @@ export default {
                 },
                 {
                     year: 2020,
-                    image: require("@/assets/img/14.jpg"),
+                    image: require("@/assets/img/2020.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -396,7 +396,7 @@ export default {
                 },
                 {
                     year: 2019,
-                    image: require("@/assets/img/15.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -514,7 +514,7 @@ export default {
                 },
                 {
                     year: 2018,
-                    image: require("@/assets/img/16.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -607,7 +607,7 @@ export default {
                 },
                 {
                     year: 2017,
-                    image: require("@/assets/img/17.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -687,7 +687,7 @@ export default {
                 },
                 {
                     year: 2016,
-                    image: require("@/assets/img/18.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -791,7 +791,7 @@ export default {
                 },
                 {
                     year: 2015,
-                    image: require("@/assets/img/19.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -855,7 +855,7 @@ export default {
                 },
                 {
                     year: 2014,
-                    image: require("@/assets/img/20.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -928,7 +928,7 @@ export default {
                 },
                 {
                     year: 2013,
-                    image: require("@/assets/img/21.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -990,7 +990,7 @@ export default {
                 },
                 {
                     year: 2012,
-                    image: require("@/assets/img/22.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -1065,7 +1065,7 @@ export default {
                 },
                 {
                     year: 2011,
-                    image: require("@/assets/img/11.jpg"),
+                    image: require("@/assets/img/2019.png"),
                     show: [],
                     height: "height: 40px;",
                     member: [
