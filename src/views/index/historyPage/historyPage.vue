@@ -39,7 +39,7 @@
                 {
                     title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2022.png"),
-                    backgroundImage:require("@/assets/img/22.png"),
+                    backgroundImage:require("@/assets/img/22.jpg"),
                     year:"2022",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -50,7 +50,7 @@
                 {
                     title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2021.png"),
-                    backgroundImage:require("@/assets/img/21.png"),
+                    backgroundImage:require("@/assets/img/21.jpg"),
                     year:"2021",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -61,7 +61,7 @@
                 {
                     title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2020.png"),
-                    backgroundImage:require("@/assets/img/20.png"),
+                    backgroundImage:require("@/assets/img/20.jpg"),
                     year:"2020",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -72,7 +72,7 @@
                 {
                     title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    backgroundImage:require("@/assets/img/19.jpg"),
                     year:"2019",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -83,7 +83,7 @@
                 {
                     title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    backgroundImage:require("@/assets/img/19.jpg"),
                     year:"2018",
                     workShow1:'作品展示',
                     text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
@@ -325,7 +325,7 @@ position: relative;
     transition: 0.3s ease 0s;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("@/assets/img/19及以前.png");
+    background-image: url("@/assets/img/19.jpg");
 }
 
 .shell:before {
