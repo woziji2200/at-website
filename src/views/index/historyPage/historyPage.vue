@@ -10,7 +10,7 @@
         <h3 class="subtitle">TT IT</h3>
       </div>
       <div class="timeline">
-        <div v-for="(item, index) in years" :key="index" class="item" :data-text="item.text1">
+        <div v-for="(item, index) in years" :key="index" class="item" :data-text="item.text0">
           <div class="content">
             <img :src="item.image" alt="" class="img">
             <h2 class="content-title">{{ item.year }}</h2>
@@ -18,6 +18,10 @@
             <p class="content-desc">{{ item.text1 }}</p>
             <h3 class="content-desc2">{{ item.workShow2 }}</h3>
             <p class="content-desc">{{ item.text2 }}</p>
+            <h3 class="content-desc2">{{ item.workShow3 }}</h3>
+            <p class="content-desc">{{ item.text3 }}</p>
+            <h3 class="content-desc2">{{ item.workShow4 }}</h3>
+            <p class="content-desc">{{ item.text4 }}</p>
           </div>
         </div>
       </div>
@@ -37,59 +41,94 @@
         flag:false,
         years:[
                 {
-                    title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/2022.png"),
-                    backgroundImage:require("@/assets/img/22.jpg"),
+                    image: require("@/assets/img/2022《大地之歌》.png"),
+                    backgroundImage:require("@/assets/img/22.png"),
                     year:"2022",
-                    workShow1:'作品展示',
-                    text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-                    workShow2:'作品展示',
-                    text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
-                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
+                    text0:'艾特历史作品',
+                    workShow1:'制作新游戏',
+                    text1:'游戏部门独立完成一款横板闯关类游戏《大地之歌》',
+                    workShow2:'莱博电商平台',
+                    text2:'由爱特成员为校友企业制作电商购物网站' ,
+                    workShow3:'工程学院网站',
+                    text3:'为工程学院中英海洋能研究基地制作展示网站',
+                    workShow4:'物联网数据平台',
+                    text4:'为校外企业制作物联网数据实时展示平台' ,
                 },
                 {
-                    title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/2021.png"),
-                    backgroundImage:require("@/assets/img/21.jpg"),
+                    image: require("@/assets/img/校团委.jpg"),
+                    backgroundImage:require("@/assets/img/21.png"),
                     year:"2021",
-                    workShow1:'作品展示',
-                    text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-                    workShow2:'作品展示',
-                    text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
-                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
+                    text0:'艾特历史作品',
+                    workShow1:'校团委网站',
+                    text1:'由爱特制作的中国海洋大学网站成功上线运行',
+                    workShow2:'',
+                    text2:'' ,
                 },
                 {
-                    title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2020.png"),
-                    backgroundImage:require("@/assets/img/20.jpg"),
+                    backgroundImage:require("@/assets/img/20.png"),
                     year:"2020",
+                    text0:'艾特历史作品',
                     workShow1:'作品展示',
-                    text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
+                    text1:'艾特历史作品',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
-                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
                 },
                 {
-                    title: "《你的孤独，虽败犹荣》",
-                    image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    image: require("@/assets/img/dlbb.png"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2019",
+                    text0:'艾特历史作品',
                     workShow1:'作品展示',
-                    text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-                    workShow2:'作品展示',
-                    text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
-                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
+                    text1:'19年游戏部合作完成了一个可联网、能存档的俯视角射击游戏。',
+                    workShow2:'部门合作作品',
+                    text2:'Ul与web开发、APP、程序合作。设计了爱特读书及爱特读书APP、爱特展示网、IT日程APP。' ,
                 },
                 {
-                    title: "《你的孤独，虽败犹荣》",
                     image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2018",
-                    workShow1:'作品展示',
-                    text1:'游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-                    workShow2:'作品展示',
-                    text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
-                    description: "如果你停止，就是谷底。如果你还在继续，就是上坡。这是我听过关于人生低谷最好的阐述。"
+                    text0:'艾特历史作品',
+                    workShow1:'开拓展示网',
+                    text1:'开拓爱特展示网，成功上线运行',
+                    workShow2:'新网站上线',
+                    text2:'制作众创空间预约系统，成功上线运行' ,
+                },
+                {
+                    image: require("@/assets/img/2019.png"),
+                    backgroundImage:require("@/assets/img/19.png"),
+                    year:"2017",
+                    text0:'艾特历史作品',
+                    workShow1:'开拓信院网站',
+                    text1:'开拓信息科学与工程学院网站，成功上线运行',
+                },
+                {
+                    image: require("@/assets/img/jjwz.png"),
+                    backgroundImage:require("@/assets/img/19.png"),
+                    year:"2016",
+                    text0:'艾特历史作品',
+                    workShow1:'上线教育网站',
+                    text1:'爱特为中国海洋大学国际教育学院制作的新版展示网上线运行',
+                    workShow2:'上线网站',
+                    text2:'由爱特制作的中国海洋大学计算机系网站成功上线' ,
+                },
+                {
+                    image: require("@/assets/img/QQ截图20220623151316.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
+                    year:"2015",
+                    text0:'艾特历史作品',
+                    workShow1:'新网站上线',
+                    text1:'中国海洋大学海洋技术系网站成功上线运行',
+                    workShow2:'制作展示页',
+                    text2:'为中国海洋大学iGEM比赛团队制作静态展示页面' ,
+                },
+                {
+                    image: require("@/assets/img/信息.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
+                    year:"2014",
+                    text0:'艾特历史作品',
+                    workShow1:'新网站上线',
+                    text1:'开拓信息科学与工程学院网站，成功上线运行',
                 },
             ],
             pointerAngle: 0,
@@ -321,11 +360,11 @@ position: relative;
 .shell {
     width: 100%;
     position: relative;
-    padding: 80px 0;
+    padding: 30px 0;
     transition: 0.3s ease 0s;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("@/assets/img/19.jpg");
+    background-image: url("@/assets/img/19.png");
 }
 
 .shell:before {
