@@ -13,7 +13,7 @@
 export default {
     methods: {
         openComments() {
-            window.open("https://at-website-waline.vercel.app/ui/login")
+            window.open("https://it.funny233.xyz/ui/login")
         }
     },    
     mounted() {
