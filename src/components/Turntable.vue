@@ -2,7 +2,7 @@
     <div class="turntable" @wheel="handleWheel">
       <div class="turntable-containerBox">
         <img src="@/assets/img/指针.png" alt="" class="point">
-        <div class="pointText">IT STDIO</div>
+        <div class="pointText">IT STUDIO</div>
       <div class="turntable-container">
         <div
           v-for="(box, index) in boxes"
@@ -38,53 +38,109 @@
         boxes: [
           { content: "盒子1",
             isBlue: false,
-            image: require("@/assets/img/2022.png"),
+            image: require("@/assets/img/2022《大地之歌》.png"),
+            backgroundImage:require("@/assets/img/22.png"),
             year:"2022",
-            workShow1:'作品展示',
-            text1:'2022游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-            workShow2:'作品展示',
-            text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
+            text0:'艾特历史作品',
+            workShow1:'制作新游戏',
+            text1:'游戏部门独立完成一款横板闯关类游戏《大地之歌》',
+            workShow2:'莱博电商平台',
+            text2:'由爱特成员为校友企业制作电商购物网站' ,
+            workShow3:'工程学院网站',
+            text3:'为工程学院中英海洋能研究基地制作展示网站',
+            workShow4:'物联网数据平台',
+            text4:'为校外企业制作物联网数据实时展示平台' ,
             style: { transform: "rotate(-60deg)" } 
           },
           { content: "盒子2", 
           isBlue: false,
-          image: require("@/assets/img/2021.png"),
+          image: require("@/assets/img/校团委.jpg"),
+          backgroundImage:require("@/assets/img/21.png"),
           year:"2021",
-          workShow1:'作品展示',
-          text1:'2021游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-          workShow2:'作品展示',
-          text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' , 
+          text0:'艾特历史作品',
+          workShow1:'校团委网站',
+          text1:'由爱特制作的中国海洋大学网站成功上线运行',
           style: { transform: "rotate(-30deg)" } 
         },
           { content: "盒子3", 
           isBlue: true,                    
           image: require("@/assets/img/2020.png"),
+          backgroundImage:require("@/assets/img/20.png"),
           year:"2020",
+          text0:'艾特历史作品',
           workShow1:'作品展示',
-          text1:'2020游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
+          text1:'艾特历史作品',
           workShow2:'作品展示',
           text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
           style: { transform: "rotate(0deg)" } 
         },
           { content: "盒子4", 
           isBlue: false,
-          image: require("@/assets/img/2019.png"),
+          image: require("@/assets/img/dlbb.png"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2019",
+          text0:'艾特历史作品',
           workShow1:'作品展示',
-          text1:'2019游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-          workShow2:'作品展示',
-          text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' , 
+          text1:'19年游戏部合作完成了一个可联网、能存档的俯视角射击游戏。',
+          workShow2:'部门合作作品',
+          text2:'Ul与web开发、APP、程序合作。设计了爱特读书及爱特读书APP、爱特展示网、IT日程APP。' ,
           style: { transform: "rotate(30deg)" } 
         },
           { content: "盒子5", 
           isBlue: false,
           image: require("@/assets/img/2019.png"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2018",
-          workShow1:'作品展示',
-          text1:'2018游戏部门独立完成了一款PC端的2.5D游戏《幽灵骑士》',
-          workShow2:'作品展示',
-          text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' , 
+          text0:'艾特历史作品',
+          workShow1:'开拓展示网',
+          text1:'开拓爱特展示网，成功上线运行',
+          workShow2:'新网站上线',
+          text2:'制作众创空间预约系统，成功上线运行' ,
           style: { transform: "rotate(60deg)" } 
+        },
+        { content: "盒子6", 
+          isBlue: false,
+          image: require("@/assets/img/2019.png"),
+          backgroundImage:require("@/assets/img/19.png"),
+          year:"2017",
+          text0:'艾特历史作品',
+          workShow1:'开拓信院网站',
+          text1:'开拓信息科学与工程学院网站，成功上线运行',
+          style: { transform: "rotate(90deg)" } 
+        },
+        { content: "盒子7", 
+          isBlue: false,
+          image: require("@/assets/img/jjwz.png"),
+          backgroundImage:require("@/assets/img/19.png"),
+          year:"2016",
+          text0:'艾特历史作品',
+          workShow1:'上线教育网站',
+          text1:'爱特为中国海洋大学国际教育学院制作的新版展示网上线运行',
+          workShow2:'上线网站',
+          text2:'由爱特制作的中国海洋大学计算机系网站成功上线' ,
+          style: { transform: "rotate(120deg)" } 
+        },
+        { content: "盒子8", 
+          isBlue: false,
+          image: require("@/assets/img/QQ截图20220623151316.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
+          year:"2015",
+          text0:'艾特历史作品',
+          workShow1:'新网站上线',
+          text1:'中国海洋大学海洋技术系网站成功上线运行',
+          workShow2:'制作展示页',
+          text2:'为中国海洋大学iGEM比赛团队制作静态展示页面' ,
+          style: { transform: "rotate(150deg)" } 
+        },
+        { content: "盒子9", 
+          isBlue: false,
+          image: require("@/assets/img/信息.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
+          year:"2014",
+          text0:'艾特历史作品',
+          workShow1:'新网站上线',
+          text1:'开拓信息科学与工程学院网站，成功上线运行',
+          style: { transform: "rotate(180deg)" } 
         },
           // ... 盒子3到盒子12的配置
         ],
@@ -109,7 +165,7 @@
         }
       },
       rotateLeft() {
-        if (this.currentIndex<5) {
+        if (this.currentIndex<9) {
           this.rotateBoxes(-30);
           this.currentIndex++;
         }
