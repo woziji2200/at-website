@@ -364,6 +364,7 @@ position: relative;
     transition: 0.3s ease 0s;
     background-attachment: fixed;
     background-size: cover;
+    background-position:center;
     background-image: url("@/assets/img/19.png");
 }
 
