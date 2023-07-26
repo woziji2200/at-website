@@ -73,12 +73,18 @@ export default {
                         {
                             department: "APP",
                             member2: [
+                                
                                 {
-                                    name: "刘演森",
-                                    image: require('@/assets/member/avatar/2022/liuyansen.jpg'),
-                                    signature: '这个神秘人什么都没有留下。'
+                                    name: "王建享",
+                                    image: require('@/assets/member/avatar/2022/wjx.png'),
+                                    signature: '欢迎加入APP部'
                                 },
-                               ]
+                                {
+                                    name: "王佳俊",
+                                    image: require('@/assets/member/avatar/2022/wjj.jpg'),
+                                    signature: '吃面'
+                                },
+                            ],    
                         },
                         {
                             department: "Web",
@@ -91,13 +97,24 @@ export default {
                                 {
                                     name: "冷越",
                                     image: require('@/assets/member/avatar/2022/lengyue.jpg'),
-                                    signature: 'aaaa'
+                                    signature: '在潮湿里种水仙吧'
+                                },
+                                {
+                                    name: "卢育彬",
+                                    image: require('@/assets/member/avatar/2022/lyb.jpg'),
+                                    signature: '生活索然无味 尸体cos人类'
                                 },
                                 {
                                     name: "廉嘉蕊",
                                     image: require('@/assets/member/avatar/2022/lianjiarui.jpg'),
                                     signature: '事了拂衣去，深藏功与名'
-                                }]
+                                },
+                                {
+                                    name: "李伯辉",
+                                    image: require('@/assets/member/avatar/2022/lbh.jpg'),
+                                    signature: '坤粉一万年'
+                                },
+                            ]
                         },
                         {
                             department: "程序",
@@ -111,6 +128,11 @@ export default {
                                     name: "方诗颖",
                                     image: require('@/assets/member/avatar/2022/fangshiying.jpg'),
                                     signature: '吃饭！'
+                                },
+                                {
+                                    name: "雷祥宁",
+                                    image: require('@/assets/member/avatar/2022/lxn.jpg'),
+                                    signature: '迟早猝死'
 
                                 },
                                ]
@@ -118,6 +140,11 @@ export default {
                         {
                             department: "UI",
                             member2: [
+                                {
+                                    name: "董芯汝",
+                                    image: require('@/assets/member/avatar/2022/dongxinru.jpg'),
+                                    signature: 'This is Mr.White.',
+                                },                               
                                 {
                                     name: "马琪颖",
                                     image: require('@/assets/member/avatar/2022/maqiying3.jpg'),
@@ -138,9 +165,19 @@ export default {
                             department: "游戏",
                             member2: [
                                 {
+                                    name:"梁芷菁",
+                                    image: require('@/assets/member/avatar/2022/lzj.jpg'),
+                                    signature: '能以知识描绘，亦可以爱描绘，唯独不能用奇迹来描绘'
+                                },
+                                {
                                     name: "潘熙阳",
                                     image: require('@/assets/member/avatar/2022/panxiyang2.jpg'),
                                     signature: '想冲天天'
+                                },
+                                {
+                                    name: "金鑫溢",
+                                    image: require('@/assets/member/avatar/2022/jxy2.jpg'),
+                                    signature: '指鹿为马不负韶华'
                                 },
                                 {
                                     name: "姚茂琪",
