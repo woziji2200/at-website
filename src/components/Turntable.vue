@@ -199,7 +199,7 @@
   .turntable-containerBox{
     position: absolute;
     width: 59vw;
-    height: 116vh;
+    height: 110vh;
     top: -49vh;
     left: -13vw;
     overflow: hidden;
@@ -220,13 +220,13 @@
     z-index: 10;
     width: 12vw;
     height: 9vh;
-    top: 47%;
+    top: 51%;
     left: 20vw;
   }
 
   .logo{
     position: absolute;
-    top: 66%;
+    top: 75%;
     left: 23.5vw;
     width: 2vw;
     height: 2vw;
@@ -241,7 +241,7 @@
     font-weight: normal;
     color: #333333;
     line-height: 2vh;
-    top: 67%;
+    top: 75.8%;
     left: 26vw;
   }
   .box {
