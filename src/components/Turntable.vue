@@ -2,7 +2,7 @@
     <div class="turntable" @wheel="handleWheel">
       <div class="turntable-containerBox">
         <img src="@/assets/img/指针.png" alt="" class="point">
-        <div class="pointText">IT STUDIO</div>
+        <img src="@/assets/img/logo1.png" class="logo"><div class="pointText">IT STUDIO</div>
       <div class="turntable-container">
         <div
           v-for="(box, index) in boxes"
@@ -198,19 +198,20 @@
   
   .turntable-containerBox{
     position: absolute;
-    width: 50vw;
-    height: 102vh;
-    top: -41vh;
+    width: 59vw;
+    height: 116vh;
+    top: -49vh;
     left: -13vw;
     overflow: hidden;
   }
 
   .turntable-container {
+    top: 1vh;
     position: absolute;
     left: -1vw;
-    width: 50vw;
-    height: 50vw;
-    border: 0.5vw solid #333333;
+    width: 58vw;
+    height: 58vw;
+    border: 0.6vw solid #333333;
     border-radius: 50%;
   }
   
@@ -218,9 +219,18 @@
     position: absolute;
     z-index: 10;
     width: 12vw;
-    height: 7vh;
+    height: 9vh;
     top: 47%;
     left: 20vw;
+  }
+
+  .logo{
+    position: absolute;
+    top: 66%;
+    left: 23.5vw;
+    width: 2vw;
+    height: 2vw;
+    background-image: url('@/assets/img/QQ截图20220623151316.jpg');
   }
   .pointText{
     position: absolute;
@@ -232,9 +242,12 @@
     color: #333333;
     line-height: 2vh;
     top: 67%;
-    left: 23vw;
+    left: 26vw;
   }
   .box {
+    overflow: hidden;
+    font-weight:bolder;
+    color: #666666;
     position: absolute;
     top: 0;
     left: 0;
@@ -245,8 +258,8 @@
     background-color: transparent;
     transition: transform 0.3s ease;
     text-align: right;
-    width: 50vw;
-    height: 10vh;
+    width: 58.1vw;
+    height: 11.5vh;
     display: flex;
     top: 45%;
   }
@@ -257,7 +270,7 @@
     font-family: Adobe Heiti Std R;
     font-weight: normal;
     line-height: 2.5vw;
-    margin-left: 35vw;
+    margin-left: 39vw;
   }
   .box span.blue {
     color: #0450AC;
@@ -267,11 +280,11 @@
   .line{
     position: absolute;
     background-color: #333333;
-    width: 6%;
-    height: 5.3%;
+    width: 9%;
+    height: 8%;
     border: 1px solid #333333;
     margin-top: -3vh;
-    margin-left: 16%;
+    margin-left: 15%;
 }
   .info {
     width: 40vw;
