@@ -39,7 +39,7 @@
           { content: "盒子1",
             isBlue: false,
             image: require("@/assets/img/2022《大地之歌》.png"),
-            backgroundImage:require("@/assets/img/22.jpg"),
+            backgroundImage:require("@/assets/img/22.png"),
             year:"2022",
             text0:'艾特历史作品',
             workShow1:'制作新游戏',
@@ -55,7 +55,7 @@
           { content: "盒子2", 
           isBlue: false,
           image: require("@/assets/img/校团委.jpg"),
-          backgroundImage:require("@/assets/img/21.jpg"),
+          backgroundImage:require("@/assets/img/21.png"),
           year:"2021",
           text0:'艾特历史作品',
           workShow1:'校团委网站',
@@ -65,7 +65,7 @@
           { content: "盒子3", 
           isBlue: true,                    
           image: require("@/assets/img/2020.png"),
-          backgroundImage:require("@/assets/img/20.jpg"),
+          backgroundImage:require("@/assets/img/20.png"),
           year:"2020",
           text0:'艾特历史作品',
           workShow1:'作品展示',
@@ -77,7 +77,7 @@
           { content: "盒子4", 
           isBlue: false,
           image: require("@/assets/img/dlbb.png"),
-          backgroundImage:require("@/assets/img/19.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2019",
           text0:'艾特历史作品',
           workShow1:'作品展示',
@@ -89,7 +89,7 @@
           { content: "盒子5", 
           isBlue: false,
           image: require("@/assets/img/2019.png"),
-          backgroundImage:require("@/assets/img/19.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2018",
           text0:'艾特历史作品',
           workShow1:'开拓展示网',
@@ -101,7 +101,7 @@
         { content: "盒子6", 
           isBlue: false,
           image: require("@/assets/img/2019.png"),
-          backgroundImage:require("@/assets/img/19.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2017",
           text0:'艾特历史作品',
           workShow1:'开拓信院网站',
@@ -111,7 +111,7 @@
         { content: "盒子7", 
           isBlue: false,
           image: require("@/assets/img/jjwz.png"),
-          backgroundImage:require("@/assets/img/19.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2016",
           text0:'艾特历史作品',
           workShow1:'上线教育网站',
@@ -123,7 +123,7 @@
         { content: "盒子8", 
           isBlue: false,
           image: require("@/assets/img/QQ截图20220623151316.jpg"),
-          backgroundImage:require("@/assets/img/19.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2015",
           text0:'艾特历史作品',
           workShow1:'新网站上线',
@@ -135,7 +135,7 @@
         { content: "盒子9", 
           isBlue: false,
           image: require("@/assets/img/信息.jpg"),
-          backgroundImage:require("@/assets/img/19.jpg"),
+          backgroundImage:require("@/assets/img/19.png"),
           year:"2014",
           text0:'艾特历史作品',
           workShow1:'新网站上线',
@@ -187,6 +187,14 @@
   </script>
   
   <style scoped>
+  .backgroundImg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: -49vh;
+    left: -13vw;
+  }
   .turntable {
     position: relative;
     display: flex;
