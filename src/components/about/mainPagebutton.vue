@@ -1,10 +1,10 @@
 <template>
-<router-link to="/index" class="route" >
+<div @click="goback()" class="route" >
     <div class="pageButton" >
         <div class="text" >返回主页</div> 
         <div class="whiteLine" ></div>
     </div >
-    </router-link>
+</div>
 </template>
 <script>
 export default {
@@ -12,6 +12,12 @@ export default {
     data() {
         return {
 
+        }
+    },
+    methods:{
+        goback(){
+            this.$router.go(-1)
+            // history.go(-1)
         }
     }
 }

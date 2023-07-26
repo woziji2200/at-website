@@ -155,7 +155,7 @@
   },
     methods: {
       goToHomePage() {
-      this.$router.push('/index'); 
+        this.$router.go (-1)
     },
         rotatePointer(angle) {
         this.pointerAngle=angle;

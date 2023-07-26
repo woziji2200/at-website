@@ -80,10 +80,10 @@ export default {
                     });
                     break;
                 case 1:
-                    this.$router.replace({ path: "index/signUp" });
+                    this.$router.push({ path: "index/signUp" });
                     break;
                 case 2:
-                    this.$router.replace({ path: "index/signUp/rate" });
+                    this.$router.push({ path: "index/signUp/rate" });
                     break;
             }
         },
@@ -92,6 +92,7 @@ export default {
         }
     },
     mounted() {
+        document.title='爱特工作室'
         var that = this;
         this.windowWidth = document.body.clientWidth
         this.windowHeight = document.body.clientHeight

@@ -1,8 +1,8 @@
 <template>
     <div class="shell" id="shell">
-        <router-link class="back" to="/index">
+        <div class="back" @click="gotoUrl()">
             <backPagebutton></backPagebutton>
-        </router-link>
+        </div>
         <!-- <div class="background-white"></div> -->
         <div class="history2">
             <div class="header">
@@ -1116,6 +1116,9 @@ export default {
         }
     },
     methods: {
+        gotoUrl(){
+            this.$router.go(-1)
+        },
         openMenu(item) {
             item.height = 'height: ' + ((item.member.length+1) * 40) + 'px';
         },
