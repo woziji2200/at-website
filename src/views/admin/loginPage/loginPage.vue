@@ -20,8 +20,11 @@ export default {
             console.log(a.headers["set-cookie"]);
         },
         async login() {
-            if (!this.isLogin) {
-                this.isLogin = true
+            console.log(this.nowLogin);
+            if(this.nowLogin) return
+
+            this.nowLogin = true
+            try {
                 let loginMsg = await this.$http.post("/login/", {
                     "username": this.username,
                     "password": this.password,
@@ -38,19 +41,20 @@ export default {
                     setTimeout(() => {
                         this.$router.push({ "path": "/admin/registrant/" })
                     }, 2000)
-
+                    this.nowLogin = false;
                 } else {
+                    // console.log(123123123);
+                    this.nowLogin = false;
                     this.$message({
-                        message: '登录失败，错误码' + loginMsg.response.status,
-                        type: 'warning'
+                        message: '登录失败，错误码' + loginMsg.status,
+                        type: 'error'
                     });
                     this.nowLogin = false;
                 }
-                
+            } catch {
+
             }
-
-
-
+            this.nowLogin = false;
         }
     },
     data() {

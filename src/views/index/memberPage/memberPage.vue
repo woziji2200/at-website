@@ -21,7 +21,12 @@
                             <div class="content-main-left">
                                 <span :style="item.height" @mouseenter="openMenu(item)" @mouseleave="closeMenu(item)"
                                     class="content-main-left-border">
-                                    <span class="content-main-left-button" v-for="department in item.member">
+                                    <span class="content-main-left-button" v-for="(department,index) in item.member">
+                                        <button class="content-main-left-button-1" v-if="index==0">
+                                            {{ item.show.department }}
+                                            <i class="content-main-left-button-i el-icon-arrow-down"></i>
+                                            <i class="content-main-left-button-i2 el-icon-right"></i>
+                                        </button>
                                         <button @click="changeDepartment(item.year, department.department)">
                                             {{ department.department }}
                                         </button>
@@ -41,6 +46,9 @@
                         </div>
 
                     </div>
+                </div>
+                <div style="height: 300px;width: 1px;">
+
                 </div>
             </div>
         </div>
@@ -1109,7 +1117,7 @@ export default {
     },
     methods: {
         openMenu(item) {
-            item.height = 'height: ' + (item.member.length * 40) + 'px';
+            item.height = 'height: ' + ((item.member.length+1) * 40) + 'px';
         },
         closeMenu(item) {
             item.height = 'height: 40px';
@@ -1120,9 +1128,9 @@ export default {
                     for (let j in this.years[i].member){
                         if(this.years[i].member[j].department==department_){
                             this.years[i].show = this.years[i].member[j]
-                            let member0 = JSON.stringify(this.years[i].member[0])
-                            this.years[i].member[0]=this.years[i].member[j]
-                            this.years[i].member[j]=JSON.parse(member0)
+                            // let member0 = JSON.stringify(this.years[i].member[0])
+                            // this.years[i].member[0]=this.years[i].member[j]
+                            // this.years[i].member[j]=JSON.parse(member0)
                         }
                     }
 
@@ -1528,7 +1536,41 @@ export default {
     display: flex;
     flex-direction: column;
 }
+.content-main-left-button-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-main-left-button-i2{
+    position: absolute;
+    margin-top: 24px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.content-main-left-button-i{
+    margin-top: 3px;
+    animation: button-i 1.5s infinite;
+    transition: all 0.3s;
+}
+@keyframes button-i {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(6px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.content-main-left-button-1:hover .content-main-left-button-i{
+    opacity: 0;
+}
+.content-main-left-button-1:hover{
+    background-color: transparent !important;
 
+}
 .content-main-left {
     display: flex;
     flex-direction: column;
@@ -1544,8 +1586,9 @@ export default {
     color: white;
     /* margin-top: 3px; */
     transition: all 0.3s;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 600;
+    white-space: pre-line;
 }
 
 .content-main-left-button button:hover {
@@ -1582,6 +1625,15 @@ export default {
     border-radius: 40px;
     overflow: hidden;
     transition: all 0.3s;
+    /* padding-left: 6px;
+    padding-right: 6px; */
+
+}
+.content-main-left-border:hover .content-main-left-button-i{
+    opacity: 0;
+}
+.content-main-left-border:hover .content-main-left-button-i2{
+    opacity: 1;
 }
 </style>
   
