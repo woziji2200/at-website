@@ -1,6 +1,6 @@
 <template>
     <div class="shell" id="shell">
-      <div class="background-white" v-if="!flag"></div>
+      <img src="@/assets/img/背景图.png" class="background-white" v-if="!flag">
       <div class="history1" v-if="!flag">
         <Turntable />
     </div>
@@ -42,7 +42,7 @@
         years:[
                 {
                     image: require("@/assets/img/2022《大地之歌》.png"),
-                    backgroundImage:require("@/assets/img/22.jpg"),
+                    backgroundImage:require("@/assets/img/22.png"),
                     year:"2022",
                     text0:'艾特历史作品',
                     workShow1:'制作新游戏',
@@ -56,7 +56,7 @@
                 },
                 {
                     image: require("@/assets/img/校团委.jpg"),
-                    backgroundImage:require("@/assets/img/21.jpg"),
+                    backgroundImage:require("@/assets/img/21.png"),
                     year:"2021",
                     text0:'艾特历史作品',
                     workShow1:'校团委网站',
@@ -66,7 +66,7 @@
                 },
                 {
                     image: require("@/assets/img/2020.png"),
-                    backgroundImage:require("@/assets/img/20.jpg"),
+                    backgroundImage:require("@/assets/img/20.png"),
                     year:"2020",
                     text0:'艾特历史作品',
                     workShow1:'作品展示',
@@ -76,7 +76,7 @@
                 },
                 {
                     image: require("@/assets/img/dlbb.png"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2019",
                     text0:'艾特历史作品',
                     workShow1:'作品展示',
@@ -86,7 +86,7 @@
                 },
                 {
                     image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2018",
                     text0:'艾特历史作品',
                     workShow1:'开拓展示网',
@@ -96,7 +96,7 @@
                 },
                 {
                     image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2017",
                     text0:'艾特历史作品',
                     workShow1:'开拓信院网站',
@@ -104,7 +104,7 @@
                 },
                 {
                     image: require("@/assets/img/jjwz.png"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2016",
                     text0:'艾特历史作品',
                     workShow1:'上线教育网站',
@@ -114,7 +114,7 @@
                 },
                 {
                     image: require("@/assets/img/QQ截图20220623151316.jpg"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2015",
                     text0:'艾特历史作品',
                     workShow1:'新网站上线',
@@ -124,7 +124,7 @@
                 },
                 {
                     image: require("@/assets/img/信息.jpg"),
-                    backgroundImage:require("@/assets/img/19.jpg"),
+                    backgroundImage:require("@/assets/img/19.png"),
                     year:"2014",
                     text0:'艾特历史作品',
                     workShow1:'新网站上线',
@@ -155,7 +155,7 @@
   },
     methods: {
       goToHomePage() {
-        this.$router.go (-1)
+      this.$router.push('/index'); 
     },
         rotatePointer(angle) {
         this.pointerAngle=angle;
@@ -208,9 +208,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
+    width: 100vw;
+    height: 100vh;
   }
   .control{
     display: flex;
@@ -360,12 +359,12 @@ position: relative;
 .shell {
     width: 100%;
     position: relative;
-    padding: 30px 0;
+    padding: 13vh 0;
     transition: 0.3s ease 0s;
     background-attachment: fixed;
     background-size: cover;
     background-position:center;
-    background-image: url("@/assets/img/19.jpg");
+    background-image: url("@/assets/img/19.png");
 }
 
 .shell:before {
