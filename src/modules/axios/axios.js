@@ -46,9 +46,9 @@ export const get = async (url2, params) => {
 };
 export const post = async (url2, params) => {
     let url = ""
-    if (backstageUrl.indexOf(url2) != -1) url = "http://backstage.daoxuan.cc" + url2;
+    if (backstageUrl.indexOf(url2) != -1) url = "https://backstage.daoxuan.cc" + url2;
     else if(commentsUrl.indexOf(url2) != -1) url = "https://it.funny233.xyz" +url2;
-    else url = "http://itstudio.daoxuan.cc" + url2
+    else url = "https://itstudio.daoxuan.cc" + url2
     let params2 = params || {};
     try {
         const response = await request.post(url, params2);
@@ -57,7 +57,7 @@ export const post = async (url2, params) => {
         return error.response
     }
 };
-let authUrl = ["http://backstage.daoxuan.cc/admin/login/", 'http://backstage.daoxuan.cc/admin/', "http://backstage.daoxuan.cc/registrant/", "http://backstage.daoxuan.cc/registrant/delete/"]
+let authUrl = ["https://backstage.daoxuan.cc/admin/login/", 'https://backstage.daoxuan.cc/admin/', "https://backstage.daoxuan.cc/registrant/", "https://backstage.daoxuan.cc/registrant/delete/"]
 request.interceptors.request.use(
     async (config) => {
         // console.log(config);

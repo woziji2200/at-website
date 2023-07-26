@@ -22,3 +22,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 dist.zip
+dist (2).zip
