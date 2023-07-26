@@ -31,9 +31,9 @@ let backstageUrl = ['/login/', '/registrant/', '/registrant/delete/', '/refresh/
 let commentsUrl = ['/api/comment/', '/api/comment?type=count/', '/api/comment?type=recent/', ]
 export const get = async (url2, params) => {
     let url = ""
-    if (backstageUrl.indexOf(url2) != -1) url = "http://backstage.daoxuan.cc" + url2;
+    if (backstageUrl.indexOf(url2) != -1) url = "https://backstage.daoxuan.cc" + url2;
     else if(commentsUrl.indexOf(url2) != -1) url = "https://it.funny233.xyz" +url2;
-    else url = "http://itstudio.daoxuan.cc" + url2
+    else url = "https://itstudio.daoxuan.cc" + url2
     console.log(url);
 
     let params2 = params || {};
