@@ -114,6 +114,11 @@ export default {
                                     image: require('@/assets/member/avatar/2022/lbh.jpg'),
                                     signature: '坤粉一万年'
                                 },
+                                {
+                                    name: "雷志良",
+                                    image: require('@/assets/member/avatar/2022/leizhiliang.jpg'),
+                                    signature: 'CSGO，启动'
+                                }
                             ]
                         },
                         {
@@ -254,7 +259,7 @@ export default {
                             member2: [
                                 {
                                     name: "刘襄琪",
-                                    image: require('@/assets/member/avatar/2021/cx1.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/cx1.png'),
                                     signature: '阿巴阿巴阿巴'
                                 },
                                 {
