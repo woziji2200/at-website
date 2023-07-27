@@ -3,8 +3,8 @@
    <div class="mainTitle">UI设计</div>
    <div class="title">DESIGN</div>
    <div class="big">
-   <div class="scroll"><p>UI设计部门主要使用Photoshop、Illustrator等软件,对网页、<br>APP等界面进行设计，并负责各类视频制作、剪辑、特效制作<br>的工作。</p> </div>
- <div class="scroll1"><p>UI设计是什么？这或许是每一个萌新都好奇的问题。（不会就<br>百——）通俗来讲，UI就是决定APP界面、网页等长啥样的部<br>门，重在【设计】（包括人机交互、操作逻辑、界面美观的整<br>体设计）。那就不得不说设计师们与Adobe全家桶等不得不说 <br>的故事了。（想听吗？想听就来！报！名！）来UI部门，你可<br>以畅游在Adobe的海洋，你可以体会格式塔心理的美学，你可以c<br>以感受设计之道......（反正来就vans加入我们吧！）</p> </div>
+   <div class="scroll"><p>UI设计部门主要使用Photoshop、Illustrator等软件,对网页、APP等界面进行设计，并负责各类视频制作、剪辑、特效制作的工作。</p> </div>
+ <div class="scroll1"><p>UI设计是什么？这或许是每一个萌新都好奇的问题。（不会就百——）通俗来讲，UI就是决定APP界面、网页等长啥样的部门，重在【设计】（包括人机交互、操作逻辑、界面美观的整体设计）。那就不得不说设计师们与Adobe全家桶等不得不说 的故事了。（想听吗？想听就来！报！名！）来UI部门，你可以畅游在Adobe的海洋，你可以体会格式塔心理的美学，你可以c以感受设计之道......（反正来就vans加入我们吧！）</p> </div>
 </div>  
 <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/ui.png" alt=""></div>
   </div>

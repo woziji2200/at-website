@@ -32,7 +32,7 @@
                     </div>
                     <div class="main-qa1-q-question">
                         <textarea v-model="sendComment.comment" maxlength="100" name="" id="" cols="30" rows="10"
-                            placeholder="提点建议..."></textarea>
+                            placeholder="问题详细描述..."></textarea>
                     </div>
                     <div class="main-qa1-q-length">{{ commentLength }} / 100</div>
                     <div class="main-qa1-q-send" @click="send()" :disabled="isSend">
@@ -56,8 +56,10 @@
                             <div class="main-qa-list-1-ask">
                                 <img :src="i.avatar" alt="">
                                 <div class="main-qa-list-1-ask-title">
-                                    <span class="main-qa-list-1-ask-title-1">{{ i.nick }}：</span>
-                                    <span class="main-qa-list-1-ask-title-2">{{ i.orig.split('|')[0] }}</span>
+                                    <span class="main-qa-list-1-ask-title-2"><b>{{ i.nick }}：</b>{{ i.orig.split('|')[0] }}</span>
+                                    <br>
+                                    <span class="main-qa-list-1-ask-title-2" style="font-size: 20px; margin-left: 40px;">{{ i.orig.split('|')[1] }}</span>
+                                    <!-- <span class="main-qa-list-1-ask-title-2">{{ i.orig.split('|')[0] }}</span> -->
                                 </div>
                                 <div class="main-qa-list-1-ask-svg" :style="i.style" @click="showComments(i)">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -587,15 +589,17 @@ export default {
     width: calc(80% - 60px);
     background-color: white;
     border-radius: 30px;
-    height: 60px;
-    display: flex;
+    /* height: 60px; */
+    /* display: flex; */
     align-items: center;
     margin-left: 10px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 24px;
     color: #4CA2FF;
-    font-weight: 600;
+    /* font-weight: 600; */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .main-qa-list-1-ask-title-1 {
@@ -603,7 +607,7 @@ export default {
 }
 
 .main-qa-list-1-ask-title-2 {
-    white-space: nowrap;
+    /* white-space: nowrap; */
     text-overflow: ellipsis;
     overflow: hidden;
 }
