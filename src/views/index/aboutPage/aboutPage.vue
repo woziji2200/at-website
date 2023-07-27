@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+      <img src="@/assets/img/背景图.png" class="background1">
+      <img src="@/assets/img/背景图2.jpg" class="background2">
         <div >
      <mainPagebutton style="margin-top:4.88%;margin-left:3.65%;"></mainPagebutton>
     <div id="position">
@@ -394,6 +396,17 @@ console.log(this.transformValue)
 
 <style scoped>
 @media (min-width:100px) and (max-width: 500px) {
+  .background1{
+    display: none;
+  }
+  
+  .background2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
   .first{
         margin-top: 0.6vw;
     margin-left: 5vw;
@@ -645,6 +658,16 @@ margin: 0 auto ;
     }
   }
   @media (min-width:501px)  {
+      .background2{
+    display: none;
+  }
+    .background1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
   .first{
      margin-top: 2.6vw;
      margin-left: 5.4vw;
