@@ -68,7 +68,7 @@ export default {
     width: 1920px;
     height: 1849px;
     background-color: white;
-    background-image: url(@/assets/img/index/partbk.png);
+    background-image: url(@/assets/img/index/partbk.webp);
     background-position: center;
     box-shadow: inset 0px 8px 18px 1px rgba(0, 0, 0, 0.16);
     border-radius: 80px 80px 80px 80px;
@@ -189,35 +189,35 @@ export default {
 }
 
 .cxbk {
-    background-image: url(@/assets/img/index/cx.png);
+    background-image: url(@/assets/img/index/cx.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .webbk {
-    background-image: url(@/assets/img/index/web.png);
+    background-image: url(@/assets/img/index/web.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .uibk {
-    background-image: url(@/assets/img/index/ui.png);
+    background-image: url(@/assets/img/index/ui.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .yxbk {
-    background-image: url(@/assets/img/index/yx.png);
+    background-image: url(@/assets/img/index/yx.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .appbk {
-    background-image: url(@/assets/img/index/app.png);
+    background-image: url(@/assets/img/index/app.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;

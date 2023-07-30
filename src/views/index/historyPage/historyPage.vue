@@ -1,6 +1,6 @@
 <template>
     <div class="shell" id="shell">
-      <img src="@/assets/img/背景图.png" class="background-white" v-if="!flag">
+      <img src="@/assets/img/背景图.webp" class="background-white" v-if="!flag">
       <div class="history1" v-if="!flag">
         <Turntable />
     </div>
@@ -41,8 +41,8 @@
         flag:false,
         years:[
                 {
-                    image: require("@/assets/img/2022《大地之歌》.png"),
-                    backgroundImage:require("@/assets/img/22.png"),
+                    image: require("@/assets/img/2022《大地之歌》.webp"),
+                    backgroundImage:require("@/assets/img/22.webp"),
                     year:"2022",
                     text0:'艾特历史作品',
                     workShow1:'制作新游戏',
@@ -55,8 +55,8 @@
                     text4:'为校外企业制作物联网数据实时展示平台' ,
                 },
                 {
-                    image: require("@/assets/img/校团委.jpg"),
-                    backgroundImage:require("@/assets/img/21.png"),
+                    image: require("@/assets/img/校团委.webp"),
+                    backgroundImage:require("@/assets/img/21.webp"),
                     year:"2021",
                     text0:'艾特历史作品',
                     workShow1:'校团委网站',
@@ -65,8 +65,8 @@
                     text2:'' ,
                 },
                 {
-                    image: require("@/assets/img/2020.png"),
-                    backgroundImage:require("@/assets/img/20.png"),
+                    image: require("@/assets/img/2020.webp"),
+                    backgroundImage:require("@/assets/img/20.webp"),
                     year:"2020",
                     text0:'艾特历史作品',
                     workShow1:'作品展示',
@@ -75,8 +75,8 @@
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
                 },
                 {
-                    image: require("@/assets/img/dlbb.png"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    image: require("@/assets/img/dlbb.webp"),
+                    backgroundImage:require("@/assets/img/19.webp"),
                     year:"2019",
                     text0:'艾特历史作品',
                     workShow1:'作品展示',
@@ -85,8 +85,8 @@
                     text2:'Ul与web开发、APP、程序合作。设计了爱特读书及爱特读书APP、爱特展示网、IT日程APP。' ,
                 },
                 {
-                    image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    image: require("@/assets/img/2019.webp"),
+                    backgroundImage:require("@/assets/img/19.webp"),
                     year:"2018",
                     text0:'艾特历史作品',
                     workShow1:'开拓展示网',
@@ -95,16 +95,16 @@
                     text2:'制作众创空间预约系统，成功上线运行' ,
                 },
                 {
-                    image: require("@/assets/img/2019.png"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    image: require("@/assets/img/2019.webp"),
+                    backgroundImage:require("@/assets/img/19.webp"),
                     year:"2017",
                     text0:'艾特历史作品',
                     workShow1:'开拓信院网站',
                     text1:'开拓信息科学与工程学院网站，成功上线运行',
                 },
                 {
-                    image: require("@/assets/img/jjwz.png"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    image: require("@/assets/img/jjwz.webp"),
+                    backgroundImage:require("@/assets/img/19.webp"),
                     year:"2016",
                     text0:'艾特历史作品',
                     workShow1:'上线教育网站',
@@ -113,8 +113,8 @@
                     text2:'由爱特制作的中国海洋大学计算机系网站成功上线' ,
                 },
                 {
-                    image: require("@/assets/img/QQ截图20220623151316.jpg"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    image: require("@/assets/img/QQ截图20220623151316.webp"),
+                    backgroundImage:require("@/assets/img/19.webp"),
                     year:"2015",
                     text0:'艾特历史作品',
                     workShow1:'新网站上线',
@@ -123,8 +123,8 @@
                     text2:'为中国海洋大学iGEM比赛团队制作静态展示页面' ,
                 },
                 {
-                    image: require("@/assets/img/信息.jpg"),
-                    backgroundImage:require("@/assets/img/19.png"),
+                    image: require("@/assets/img/信息.webp"),
+                    backgroundImage:require("@/assets/img/19.webp"),
                     year:"2014",
                     text0:'艾特历史作品',
                     workShow1:'新网站上线',
@@ -364,7 +364,7 @@ position: relative;
     background-attachment: fixed;
     background-size: cover;
     background-position:center;
-    background-image: url("@/assets/img/19.png");
+    background-image: url("@/assets/img/19.webp");
 }
 
 .shell:before {

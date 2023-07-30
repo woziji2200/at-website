@@ -6,7 +6,7 @@
    <div class="scroll"><p>爱特游戏部门是2018年新成立的部门。专注与2D游戏的开发。游戏以游戏性为本，以社交性为辅，以商业性为底。他们用心为自己的理想开辟道路。</p> </div>
  <div class="scroll1"><p>大一秋季学期期间会交给新生Unity的一些简单的使用，包括场景实例搭建和脚本代码编写，让新生具备自主开发简单的小游戏的能力。期间会有三次项目作业，难度逐步提升。大一春季学期期间则分组安排进行团队项目开发，每组成员在一学期内多人合作完成一个大型游戏项目的开发。</p> </div>
  </div>
- <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/game.png" alt=""></div>
+ <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/game.webp" alt=""></div>
   </div>
 </template>
 

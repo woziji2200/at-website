@@ -9,7 +9,7 @@
             </router-link>
         </div>
         <div class="sign-background">
-            <img src="@/assets/sign/报名页背景.png" class="back-img" />
+            <img src="@/assets/sign/报名页背景.webp" class="back-img" />
             <div class="sign-up">
                 <div class="join-us">JOIN US!</div>
                 <div class="join-bottom"></div>

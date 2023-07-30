@@ -152,7 +152,7 @@ export default {
     position: absolute;
     top: 0;
     z-index: -10;
-    background-image: url(@/assets/img/index/bk1.png);
+    background-image: url(@/assets/img/index/bk1.webp);
     background-size: 1920px 1280px;
     background-position: center;
     background-repeat: no-repeat;
@@ -179,7 +179,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(@/assets/img/index/bk1.png);
+    background-image: url(@/assets/img/index/bk1.webp);
     background-size: 100%;
     background-position: -28.1% -16%;
     background-repeat: no-repeat;

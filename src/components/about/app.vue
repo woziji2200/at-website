@@ -6,7 +6,7 @@
    <div class="scroll"><p>爱特工作室APP应用部门是在移动端高速发展下，于2017年成立的部门。Android应用开发基于Java等语言，负责编写应用客户端界面，完成客户端与服务端的信息应用开发部门扩展了社团的变量，使工作室的技术力量多样化。</p> </div>
   <div class="scroll1"><p>APP部门主要负责移动APP和微信小程序的设计与制作，在一年的学习你将动手实现5个不同类型的APP，拥有自主设计开发APP的能力，加入我们让我们一起设计一款属于你自己的APP吧。</p> </div>
 </div>
-<div class="image"><img style="width:100%;height:100%;" src="@/assets/about/app.png" alt=""></div>
+<div class="image"><img style="width:100%;height:100%;" src="@/assets/about/app.webp" alt=""></div>
   </div>
 </template>
 

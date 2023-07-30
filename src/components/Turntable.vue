@@ -1,8 +1,8 @@
 <template>
     <div class="turntable" @wheel="handleWheel">
       <div class="turntable-containerBox">
-        <img src="@/assets/img/指针.png" alt="" class="point">
-        <img src="@/assets/img/logo1.png" class="logo"><div class="pointText">IT STUDIO</div>
+        <img src="@/assets/img/指针.webp" alt="" class="point">
+        <img src="@/assets/img/logo1.webp" class="logo"><div class="pointText">IT STUDIO</div>
       <div class="turntable-container">
         <div
           v-for="(box, index) in boxes"
@@ -38,8 +38,8 @@
         boxes: [
           { content: "盒子1",
             isBlue: false,
-            image: require("@/assets/img/2022《大地之歌》.png"),
-            backgroundImage:require("@/assets/img/22.png"),
+            image: require("@/assets/img/2022《大地之歌》.webp"),
+            backgroundImage:require("@/assets/img/22.webp"),
             year:"2022",
             text0:'艾特历史作品',
             workShow1:'制作新游戏',
@@ -54,8 +54,8 @@
           },
           { content: "盒子2", 
           isBlue: false,
-          image: require("@/assets/img/校团委.jpg"),
-          backgroundImage:require("@/assets/img/21.png"),
+          image: require("@/assets/img/校团委.webp"),
+          backgroundImage:require("@/assets/img/21.webp"),
           year:"2021",
           text0:'艾特历史作品',
           workShow1:'校团委网站',
@@ -64,8 +64,8 @@
         },
           { content: "盒子3", 
           isBlue: true,                    
-          image: require("@/assets/img/2020.png"),
-          backgroundImage:require("@/assets/img/20.png"),
+          image: require("@/assets/img/2020.webp"),
+          backgroundImage:require("@/assets/img/20.webp"),
           year:"2020",
           text0:'艾特历史作品',
           workShow1:'作品展示',
@@ -76,8 +76,8 @@
         },
           { content: "盒子4", 
           isBlue: false,
-          image: require("@/assets/img/dlbb.png"),
-          backgroundImage:require("@/assets/img/19.png"),
+          image: require("@/assets/img/dlbb.webp"),
+          backgroundImage:require("@/assets/img/19.webp"),
           year:"2019",
           text0:'艾特历史作品',
           workShow1:'作品展示',
@@ -88,8 +88,8 @@
         },
           { content: "盒子5", 
           isBlue: false,
-          image: require("@/assets/img/2019.png"),
-          backgroundImage:require("@/assets/img/19.png"),
+          image: require("@/assets/img/2019.webp"),
+          backgroundImage:require("@/assets/img/19.webp"),
           year:"2018",
           text0:'艾特历史作品',
           workShow1:'开拓展示网',
@@ -100,8 +100,8 @@
         },
         { content: "盒子6", 
           isBlue: false,
-          image: require("@/assets/img/2019.png"),
-          backgroundImage:require("@/assets/img/19.png"),
+          image: require("@/assets/img/2019.webp"),
+          backgroundImage:require("@/assets/img/19.webp"),
           year:"2017",
           text0:'艾特历史作品',
           workShow1:'开拓信院网站',
@@ -110,8 +110,8 @@
         },
         { content: "盒子7", 
           isBlue: false,
-          image: require("@/assets/img/jjwz.png"),
-          backgroundImage:require("@/assets/img/19.png"),
+          image: require("@/assets/img/jjwz.webp"),
+          backgroundImage:require("@/assets/img/19.webp"),
           year:"2016",
           text0:'艾特历史作品',
           workShow1:'上线教育网站',
@@ -122,8 +122,8 @@
         },
         { content: "盒子8", 
           isBlue: false,
-          image: require("@/assets/img/QQ截图20220623151316.jpg"),
-          backgroundImage:require("@/assets/img/19.png"),
+          image: require("@/assets/img/QQ截图20220623151316.webp"),
+          backgroundImage:require("@/assets/img/19.webp"),
           year:"2015",
           text0:'艾特历史作品',
           workShow1:'新网站上线',
@@ -134,8 +134,8 @@
         },
         { content: "盒子9", 
           isBlue: false,
-          image: require("@/assets/img/信息.jpg"),
-          backgroundImage:require("@/assets/img/19.png"),
+          image: require("@/assets/img/信息.webp"),
+          backgroundImage:require("@/assets/img/19.webp"),
           year:"2014",
           text0:'艾特历史作品',
           workShow1:'新网站上线',
@@ -238,7 +238,7 @@
     left: 23.5vw;
     width: 2vw;
     height: 2vw;
-    background-image: url('@/assets/img/QQ截图20220623151316.jpg');
+    background-image: url('@/assets/img/QQ截图20220623151316.webp');
   }
   .pointText{
     position: absolute;

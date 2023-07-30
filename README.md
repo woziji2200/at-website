@@ -19,7 +19,7 @@ at-website
 │  └─ index.html                   
 ├─ src                             
 │  ├─ assets                       静态资源图片什么的全放在这里
-│  │  └─ logo.png                  
+│  │  └─ logo.webp                  
 │  ├─ components                   
 │  │  └─ HelloWorld.vue            自定义的组件在这里
 │  ├─ router                       
