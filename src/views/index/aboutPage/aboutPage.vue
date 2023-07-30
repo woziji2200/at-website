@@ -3,7 +3,7 @@
       <img src="@/assets/img/背景图.png" class="background1">
       <img src="@/assets/img/背景图2.jpg" class="background2">
         <div >
-     <mainPagebutton style="margin-top:4.88%;margin-left:3.65%;"></mainPagebutton>
+     <mainPagebutton style="position: relative;;z-index: 10;margin-top:4.88%;margin-left:3.65%;"></mainPagebutton>
     <div id="position">
     <web id="component1" class="component"> </web>
                 <ui id="component2" class="component"></ui>
@@ -398,6 +398,7 @@ console.log(this.transformValue)
 @media (min-width:100px) and (max-width: 500px) {
   .background1{
     display: none;
+    z-index: -10;
   }
   
   .background2 {
@@ -406,6 +407,7 @@ console.log(this.transformValue)
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: -10;
   }
   .first{
         margin-top: 0.6vw;
@@ -660,6 +662,7 @@ margin: 0 auto ;
   @media (min-width:501px)  {
       .background2{
     display: none;
+    z-index: -10;
   }
     .background1 {
     position: absolute;

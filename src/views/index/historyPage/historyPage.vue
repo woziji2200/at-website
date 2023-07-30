@@ -155,7 +155,7 @@
   },
     methods: {
       goToHomePage() {
-      this.$router.push('/index'); 
+      this.$router.go(-1) 
     },
         rotatePointer(angle) {
         this.pointerAngle=angle;
@@ -398,6 +398,7 @@ position: relative;
     flex-direction: column;
     max-width: 700px;
     position: relative;
+    padding-bottom: 400px;
 }
 .content-title {
     font-weight: normal;

@@ -1152,6 +1152,8 @@ export default {
 
     mounted() {
         this.activateFirstItem();
+        document.body.scrollTop=0;
+        window.scrollTo(0,0);
         window.addEventListener("scroll", this.handleScroll);
         for (let i in this.years) {
             this.years[i].show = this.years[i].member[0]
