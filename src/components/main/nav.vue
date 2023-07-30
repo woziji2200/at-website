@@ -4,7 +4,7 @@
             <li v-for="(items, key) in  leftPart " :class="items.flag == true ? 'show' : 'disshow'" @click="change(key)">{{
                 items.text }}</li>
             <div class="under-line" :style="{ 'left': posi + 'px' }"></div>
-            <li class="join-qq">加入QQ群</li>
+            <a style="text-decoration: none;" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=KxNfhfe7biaEpzqtTXjVQow96HFEO4MM&jump_from=webapi&authKey=ikIe6Oar5HaiRQQoY7Fa4OxzQhn9a17rvFfV6XldbhaTz5Le1dWUILFteuKPdfDU"><li class="join-qq">加入QQ群</li></a>
         </div>
         <div class="right-part" @click="top()">IT STUDIO</div>
     </div>
