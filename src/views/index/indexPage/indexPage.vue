@@ -1,5 +1,6 @@
 <template>
-    <div class="blink" :style="{ 'height': maxHT + 'px', 'width': windowWidth + 'px' }">
+    <!-- 'height': maxHT + 'px', -->
+    <div class="blink" :style="{'height': maxHT+100 + 'px',  'width': windowWidth + 'px' }">
         <div class="navs" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
             <nav-page> </nav-page>
         </div>
@@ -141,7 +142,7 @@ export default {
     /* width: 100vw;
     height:128vh; */
     width: 1920px;
-    height: 1280px;
+    height: 1380px;
     margin: 0 auto;
     padding-top: 107px;
 }
@@ -160,8 +161,8 @@ export default {
 
 .info-index {
     position: relative;
-    width: 837px;
-    height: 533px;
+    width: 887px;
+    height: 603px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 40px 40px 40px 40px;
     opacity: 1;
@@ -214,9 +215,9 @@ export default {
 }
 
 .info-text {
-    width: 680px;
+    width: 780px;
     height: 97px;
-    font-size: 18px;
+    font-size: 24px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
     font-weight: bold;
     color: #007AFF;
@@ -245,8 +246,12 @@ export default {
     color: #007AFF;
     text-align: center;
     line-height: 108px;
+    transition: all 0.2s;
 }
-
+.one:hover{
+    color: #fff;
+    background: #007AFF;
+}
 .two {
     width: 310px;
     height: 108px;
@@ -257,6 +262,14 @@ export default {
     font-weight: bold;
     color: #FFFFFF;
     text-align: center;
+    transition: all 0.2s;
     line-height: 108px;
+}
+.two:hover{
+    color: #007AFF;
+    background-color: #fff;
+}
+*{
+    user-select:none;
 }
 </style>

@@ -95,7 +95,7 @@
             <div class="icon" @click="top()"></div>
             <div class="footer-part">
                 <div class="footer-headline">IT STUDIO</div>
-                <div class="footer-text"> 中国海洋大学 | 信息科学与工程学院B505 | @ITStudio All Rights Reserved | 备案号:鲁ICP备18019527号-2
+                <div class="footer-text"> 中国海洋大学 | 信息科学与工程学院B505 | @ITStudio All Rights Reserved | 备案号:桂ICP备2022004639号-2
                 </div>
             </div>
         </div>

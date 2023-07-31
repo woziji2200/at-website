@@ -103,7 +103,8 @@ export default {
     box-shadow: 0px 18px 18px 1px #707070;
     border-radius: 80px 80px 80px 80px;
     position: relative;
-    cursor: pointer;
+    transition: all 0.3s;
+    /* cursor: pointer; */
 }
 
 
@@ -166,8 +167,19 @@ export default {
     flex-direction: column;
     position: relative;
     z-index: 5;
+    transition: all 0.3s;
 }
-
+.typm:hover{
+    transform: translateY(-60px);
+    /* margin-top: -60px; */
+}
+.name:hover .texts{
+    transform:scale(110%);
+}
+.name:hover .underer{
+    margin-top: 30px;
+    transform: scaleX(110%);
+}
 .texts {
     width: 300px;
     height: 60px;
@@ -177,15 +189,19 @@ export default {
     color: #FFFFFF;
     line-height: 60px;
     text-align: center;
+    transition: all 0.3s;
 }
+
 
 .underer {
     width: 117px;
     height: 0px;
-    margin-top: 5px;
+    margin-top: 15px;
     border: 6px solid #FFFFFF;
     border-radius: 6px;
     background-color: #FFFFFF;
+    transition: all 0.3s;
+
 }
 
 .cxbk {

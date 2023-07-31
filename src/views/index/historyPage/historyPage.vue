@@ -6,7 +6,7 @@
     </div>
     <div class="history2" v-if="flag">
       <div class="header">
-        <h2 class="title">艾特の历史作品</h2>
+        <h2 class="title">爱特の历史作品</h2>
         <h3 class="subtitle">TT IT</h3>
       </div>
       <div class="timeline">
@@ -44,7 +44,7 @@
                     image: require("@/assets/img/2022《大地之歌》.webp"),
                     backgroundImage:require("@/assets/img/22.webp"),
                     year:"2022",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'制作新游戏',
                     text1:'游戏部门独立完成一款横板闯关类游戏《大地之歌》',
                     workShow2:'莱博电商平台',
@@ -58,7 +58,7 @@
                     image: require("@/assets/img/校团委.webp"),
                     backgroundImage:require("@/assets/img/21.webp"),
                     year:"2021",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'校团委网站',
                     text1:'由爱特制作的中国海洋大学网站成功上线运行',
                     workShow2:'',
@@ -68,9 +68,9 @@
                     image: require("@/assets/img/2020.webp"),
                     backgroundImage:require("@/assets/img/20.webp"),
                     year:"2020",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'作品展示',
-                    text1:'艾特历史作品',
+                    text1:'爱特历史作品',
                     workShow2:'作品展示',
                     text2:'程序、APP与UI合作完成了爱特展示网、海迅APP等作品。' ,
                 },
@@ -78,7 +78,7 @@
                     image: require("@/assets/img/dlbb.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2019",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'作品展示',
                     text1:'19年游戏部合作完成了一个可联网、能存档的俯视角射击游戏。',
                     workShow2:'部门合作作品',
@@ -88,7 +88,7 @@
                     image: require("@/assets/img/2019.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2018",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'开拓展示网',
                     text1:'开拓爱特展示网，成功上线运行',
                     workShow2:'新网站上线',
@@ -98,7 +98,7 @@
                     image: require("@/assets/img/2019.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2017",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'开拓信院网站',
                     text1:'开拓信息科学与工程学院网站，成功上线运行',
                 },
@@ -106,7 +106,7 @@
                     image: require("@/assets/img/jjwz.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2016",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'上线教育网站',
                     text1:'爱特为中国海洋大学国际教育学院制作的新版展示网上线运行',
                     workShow2:'上线网站',
@@ -116,7 +116,7 @@
                     image: require("@/assets/img/QQ截图20220623151316.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2015",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'新网站上线',
                     text1:'中国海洋大学海洋技术系网站成功上线运行',
                     workShow2:'制作展示页',
@@ -126,7 +126,7 @@
                     image: require("@/assets/img/信息.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2014",
-                    text0:'艾特历史作品',
+                    text0:'爱特历史作品',
                     workShow1:'新网站上线',
                     text1:'开拓信息科学与工程学院网站，成功上线运行',
                 },

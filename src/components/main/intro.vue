@@ -53,7 +53,7 @@
             <div class="about-text">
                 <div class="about-hr"></div>
                 <div class="about-name">历史成员</div>
-                <div class="about-eng">Our team</div>
+                <div class="about-eng">Our Team</div>
             </div>
             <div class="team-part">
                 <div class="left-img"></div>

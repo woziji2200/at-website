@@ -20,6 +20,7 @@ export default {
             this.posi = 95 + n * 162;
             switch (n) {
                 case 0:
+                    // document.getElementsByClassName('text2')[0].scrollIntoView({behavior: 'smooth'});
                     window.scrollTo({
                         top: 1200 * this.fitin,
                         left: 0,
@@ -28,10 +29,12 @@ export default {
                     break;
                 case 1:
                     window.scrollTo({
-                        top: 3000 * this.fitin,
+                        top: 2900 * this.fitin,
                         left: 0,
                         behavior: "smooth"
                     });
+                    // document.getElementsByClassName('about')[0].scrollIntoView({behavior: 'smooth'});
+
                     break;
                 case 2:
                     window.scrollTo({
@@ -39,6 +42,8 @@ export default {
                         left: 0,
                         behavior: "smooth"
                     });
+                    // document.getElementsByClassName('work')[0].scrollIntoView({behavior: 'smooth'});
+
                     break;
                 case 3:
                     window.scrollTo({
@@ -46,6 +51,8 @@ export default {
                         left: 0,
                         behavior: "smooth"
                     });
+                    // document.getElementsByClassName('team')[0].scrollIntoView({behavior: 'smooth'});
+
                     break;
             }
 
@@ -112,6 +119,9 @@ export default {
 </script>
 
 <style scoped>
+html{
+    scroll-behavior: smooth !important;
+}
 .nav-part {
     width: 1920px;
     margin: 0 auto;
@@ -124,6 +134,7 @@ export default {
     position: sticky;
     top: 1px;
     z-index: 20;
+    transition: all 0.4s;
 }
 
 .left-part {
