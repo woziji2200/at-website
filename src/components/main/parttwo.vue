@@ -94,7 +94,7 @@ export default {
     width: 1920px;
     height: 1849px;
     background-color: white;
-    background-image: url(@/assets/img/index/partbk.png);
+    background-image: url(@/assets/img/index/partbk.webp);
     background-position: center;
     box-shadow: inset 0px 8px 18px 1px rgba(0, 0, 0, 0.16);
     border-radius: 80px 80px 80px 80px;
@@ -129,7 +129,8 @@ export default {
     box-shadow: 0px 18px 18px 1px #707070;
     border-radius: 80px 80px 80px 80px;
     position: relative;
-    cursor: pointer;
+    transition: all 0.3s;
+    /* cursor: pointer; */
 }
 
 
@@ -192,8 +193,19 @@ export default {
     flex-direction: column;
     position: relative;
     z-index: 5;
+    transition: all 0.3s;
 }
-
+.typm:hover{
+    transform: translateY(-60px);
+    /* margin-top: -60px; */
+}
+.name:hover .texts{
+    transform:scale(110%);
+}
+.name:hover .underer{
+    margin-top: 30px;
+    transform: scaleX(110%);
+}
 .texts {
     width: 300px;
     height: 60px;
@@ -203,47 +215,51 @@ export default {
     color: #FFFFFF;
     line-height: 60px;
     text-align: center;
+    transition: all 0.3s;
 }
+
 
 .underer {
     width: 117px;
     height: 0px;
-    margin-top: 5px;
+    margin-top: 15px;
     border: 6px solid #FFFFFF;
     border-radius: 6px;
     background-color: #FFFFFF;
+    transition: all 0.3s;
+
 }
 
 .cxbk {
-    background-image: url(@/assets/img/index/cx.png);
+    background-image: url(@/assets/img/index/cx.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .webbk {
-    background-image: url(@/assets/img/index/web.png);
+    background-image: url(@/assets/img/index/web.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .uibk {
-    background-image: url(@/assets/img/index/ui.png);
+    background-image: url(@/assets/img/index/ui.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .yxbk {
-    background-image: url(@/assets/img/index/yx.png);
+    background-image: url(@/assets/img/index/yx.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .appbk {
-    background-image: url(@/assets/img/index/app.png);
+    background-image: url(@/assets/img/index/app.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;

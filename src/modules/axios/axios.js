@@ -27,7 +27,7 @@ const request = axios.create({
 
 //     })
 // }
-let backstageUrl = ['/login/', '/registrant/', '/registrant/delete/', '/refresh/']
+let backstageUrl = ['/login/', '/registrant/', '/registrant/delete/', '/refresh/','/registrant/remark/']
 let commentsUrl = ['/api/comment/', '/api/comment?type=count/', '/api/comment?type=recent/', ]
 export const get = async (url2, params) => {
     let url = ""
@@ -57,7 +57,7 @@ export const post = async (url2, params) => {
         return error.response
     }
 };
-let authUrl = ["https://backstage.daoxuan.cc/admin/login/", 'https://backstage.daoxuan.cc/admin/', "https://backstage.daoxuan.cc/registrant/", "https://backstage.daoxuan.cc/registrant/delete/"]
+let authUrl = ["https://backstage.daoxuan.cc/admin/login/", 'https://backstage.daoxuan.cc/admin/', "https://backstage.daoxuan.cc/registrant/", "https://backstage.daoxuan.cc/registrant/delete/",'https://backstage.daoxuan.cc/registrant/remark/']
 request.interceptors.request.use(
     async (config) => {
         // console.log(config);

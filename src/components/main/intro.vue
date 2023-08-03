@@ -53,7 +53,7 @@
             <div class="about-text">
                 <div class="about-hr"></div>
                 <div class="about-name">历史成员</div>
-                <div class="about-eng">Our team</div>
+                <div class="about-eng">Our Team</div>
             </div>
             <div class="team-part">
                 <div class="left-img"></div>
@@ -88,10 +88,10 @@ export default {
                 "用创意打磨精巧设计，用智慧实现炫酷交互;用热情呈现高效代码，以交流触碰灵感火花;以创造激发全新想象,用双手创造改变未来。",
                 "汇聚技术力量，解剖程序内核，研究代码本质，巧解应用难题。以逻辑洞察数据，以细节战胜漏洞。"
             ],
-            infoRollImg: [require("@/assets/img/index/aboutbk.jpg"),
-            require("@/assets/img/index/aboutbk.jpg"),
-            require("@/assets/img/index/aboutbk.jpg"),
-            require("@/assets/img/index/aboutbk.jpg")],
+            infoRollImg: [require("@/assets/img/index/aboutbk.webp"),
+            require("@/assets/img/index/aboutbk.webp"),
+            require("@/assets/img/index/aboutbk.webp"),
+            require("@/assets/img/index/aboutbk.webp")],
             workInfos: " 爱特工作室相信，只有不断提高要求，延迟满足感，持续的学习和成长，才有可能不断进步，因此，爱特每年都会有新的作品产生。",
             Timer: "",
         }
@@ -159,7 +159,7 @@ export default {
 .about-bk {
     width: 1920px;
     height: 1080px;
-    background-image: url(@/assets/img/index/aboutbk.jpg);
+    background-image: url(@/assets/img/index/aboutbk.webp);
     background-position: -300px -20px;
     background-repeat: no-repeat;
     background-size: 120%;
@@ -325,7 +325,7 @@ export default {
     width: 53px;
     height: 53px;
     background-color: white;
-    background-image: url(@/assets/img/index/arrow.png);
+    background-image: url(@/assets/img/index/arrow.webp);
     background-position: center;
     background-size: 30%;
     background-repeat: no-repeat;
@@ -342,7 +342,7 @@ export default {
     width: 53px;
     height: 53px;
     background-color: white;
-    background-image: url(@/assets/img/index/arrow.png);
+    background-image: url(@/assets/img/index/arrow.webp);
     background-position: center;
     background-size: 30%;
     background-repeat: no-repeat;
@@ -358,7 +358,7 @@ export default {
     width: 2014px;
     height: 1344px;
     border-radius: 0px 0px 0px 0px;
-    background-image: url(@/assets/img/index/histoty.png);
+    background-image: url(@/assets/img/index/histoty.webp);
     background-position: -580px center;
     background-size: 135% 125%;
     background-repeat: no-repeat;
@@ -383,7 +383,7 @@ export default {
     width: 1064px;
     height: 543px;
     background: #FFFFFF;
-    background-image: url(@/assets/img/index/work.png);
+    background-image: url(@/assets/img/index/work.webp);
     background-position: center;
     border-radius: 80px 80px 80px;
     margin-top: 42px;
@@ -487,7 +487,7 @@ export default {
 .team-bk {
     width: 1920px;
     height: 1080px;
-    background-image: url(@/assets/img/index/bk1.png);
+    background-image: url(@/assets/img/index/bk1.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -532,7 +532,7 @@ export default {
     position: absolute;
     top: 120px;
     left: 56px;
-    background-image: url(@/assets/img/index/team.png);
+    background-image: url(@/assets/img/index/team.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;

@@ -95,7 +95,7 @@
             <div class="icon" @click="top()"></div>
             <div class="footer-part">
                 <div class="footer-headline">IT STUDIO</div>
-                <div class="footer-text"> 中国海洋大学 | 信息科学与工程学院B505 | @ITStudio All Rights Reserved | 备案号:鲁ICP备18019527号-2
+                <div class="footer-text"> 中国海洋大学 | 信息科学与工程学院B505 | @ITStudio All Rights Reserved | 备案号:桂ICP备2022004639号-2
                 </div>
             </div>
         </div>
@@ -283,7 +283,7 @@ export default {
 .que-ans {
     width: 1920px;
     height: 2081px;
-    background-image: url(@/assets/img/index/partbk.png);
+    background-image: url(@/assets/img/index/partbk.webp);
     background-size: cover;
     box-shadow: inset 0px 3px 6px 1px rgba(0, 0, 0, 0.16);
     opacity: 1;
@@ -361,7 +361,7 @@ export default {
 .icon {
     width: 183px;
     height: 198px;
-    background-image: url(@/assets/img/index/icon.png);
+    background-image: url(@/assets/img/index/icon.webp);
     background-position: center;
     margin-top: 200px;
     margin-bottom: 47px;
@@ -371,7 +371,7 @@ export default {
 .footer-part {
     width: 1920px;
     height: 400px;
-    background-image: url(@/assets/img/index/footer.png);
+    background-image: url(@/assets/img/index/footer.webp);
     background-position: center -20px;
     background-size: 140%;
     background-repeat: no-repeat;

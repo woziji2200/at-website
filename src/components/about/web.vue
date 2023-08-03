@@ -7,7 +7,7 @@
    <div class="scroll1"><p>Web开发可以暂时理解成写网页，例如你现在浏览的网页，你所能看到的部分（网页上的文字图片、各种动画效果）都是我们的成员在Web开发部门学习后的作品。写网页，我们这里需要用到三部分知识：Html、CSS、JavaScript。大家可以看到没有涉及到C语言、Python等，因此对零基础的同学较为友好。在进入社团前，我们期望你们预习基础的Html知识，掌握基本的标签。在进入社团后，我们每周都会组织授课，按照上述的顺序讲课，在课下我们会布置相关的联习。</p> </div>
   </div>
   
-  <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/web.png" alt=""></div>
+  <div class="image"><img style="width:100%;height:100%;" src="@/assets/about/web.webp" alt=""></div>
 
   </div>
 </template>

@@ -35,6 +35,7 @@
                 </el-form-item>
                 <el-form-item label="状态">
                     <el-select v-model="newItemObj.status">
+                        <el-option label="未处理" :value="0"></el-option>
                         <el-option label="已报名" :value="1"></el-option>
                         <el-option label="初审中" :value="2"></el-option>
                         <el-option label="面试中" :value="3"></el-option>
@@ -119,6 +120,18 @@
             </span>
         </el-dialog>
 
+
+        <el-dialog title="提示" :visible.sync="remarkDialogVisible" width="50%" @close="cancleRemark()">
+            <span>编辑备注</span>
+            <br><br>
+            <el-input type="textarea" :rows="10" v-model="remark"></el-input>
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="cancleRemark()">取 消</el-button>
+                <el-button type="primary" @click="changeRemark()">确 定</el-button>
+            </span>
+        </el-dialog>
+
+
         <div class="main-top2">
             <span class="main-top-title">管理报名信息</span>
             <div class="main-top">
@@ -129,6 +142,20 @@
                     <el-option label="程序开发" :value="3"></el-option>
                     <el-option label="游戏开发" :value="4"></el-option>
                     <el-option label="UI设计" :value="5"></el-option>
+                </el-select>
+                <el-select v-model="dataListFilter.status" class="main-top-select">
+                    <el-option label="全部" :value="-1"></el-option>
+                    <el-option label="未处理" :value="0"></el-option>
+                    <el-option label="已报名" :value="1"></el-option>
+                    <el-option label="初审中" :value="2"></el-option>
+                    <el-option label="面试中" :value="3"></el-option>
+                    <el-option label="笔试中" :value="4"></el-option>
+                    <el-option label="成功录取" :value="5"></el-option>
+                    <el-option label="初审失败" :value="6"></el-option>
+                    <el-option label="面试失败" :value="7"></el-option>
+                    <el-option label="笔试失败" :value="8"></el-option>
+                    <el-option label="复试失败" :value="9"></el-option>
+                    <el-option label="未录取" :value="10"></el-option>
                 </el-select>
                 <el-input v-model="dataListFilter.name" class="main-top-input" placeholder="输入姓名搜索"></el-input>
                 <div class="main-top-button">
@@ -200,9 +227,11 @@
                 <el-table-column fixed="right" label="操作">
                     <template slot-scope="scope">
                         <el-button type="text" @click="openDialog(scope.row)" size="small">编辑</el-button>
+                        <el-button type="text" @click="openRemark(scope.row.id)" size="small">备注</el-button>
                         <el-button type="text" @click="deleteItemOpen(scope.row.id)" size="small">删除</el-button>
                     </template>
                 </el-table-column>
+                
             </el-table>
         </div>
 
@@ -218,6 +247,8 @@ export default {
 
     data() {
         return {
+            remark:"",
+            remarkId:0,
             departmentLists: ["APP开发", "Web开发", "程序开发", "游戏开发", "UI设计"],
             sexLists: ["男", "女", "保密"],
             statusLists: [],
@@ -257,6 +288,7 @@ export default {
                 name: "",
                 id: -10,
                 department: -10,
+                status: -1
             },
             dialogVisible: false,
             newItemObj: {
@@ -279,6 +311,7 @@ export default {
                 "sex": 0
             },
             addDialogVisible: false,
+            remarkDialogVisible:false,
             currentPage: 1,
             tableLoading: true,
             deleteItemVisible: false,
@@ -286,6 +319,31 @@ export default {
         }
     },
     methods: {
+        async openRemark(id){
+            this.remarkDialogVisible=true
+            let remark = await this.$http.get("/registrant/remark/",{id})
+            this.remark=remark.data.content;
+            this.remarkId=id
+        },
+        async changeRemark(){
+            let msg = await this.$http.post("/registrant/remark/",{
+                id:this.remarkId,
+                content:this.remark
+            })
+            console.log(msg);
+            if(msg.status == 200){
+                this.$message.success("编辑成功")
+                this.remarkDialogVisible=false
+                this.remarkId=0
+                this.remark=""
+            }else{
+                this.$message.error(msg.data.code+": "+msg.data.msg)
+            }
+        },
+        cancleRemark(){
+            this.remarkDialogVisible=false
+            this.remark=""
+        },
         openDialog(obj) {
             this.dialogVisible = true
             this.newItemObj = JSON.parse(JSON.stringify(obj))
@@ -293,7 +351,7 @@ export default {
             this.newItemObj.sex = this.sexLists.indexOf(obj.sex);
             let status;
             switch (this.newItemObj.status) {
-                case "尚未提交": status = 0; break;
+                case "未处理": status = 0; break;
                 case "已报名": status = 1; break;
                 case "初审中": status = 2; break;
                 case "面试中": status = 3; break;
@@ -320,7 +378,7 @@ export default {
                     this.dataListShow[i].sex = this.sexLists[this.dataListShow[i].sex]
                     let status;
                     switch (this.dataListShow[i].status) {
-                        case 0: status = "尚未提交"; break;
+                        case 0: status = "未处理"; break;
                         case 1: status = "已报名"; break;
                         case 2: status = "初审中"; break;
                         case 3: status = "面试中"; break;
@@ -339,7 +397,7 @@ export default {
             }
         },
         async refreshDate() {
-            
+
 
             this.tableLoading = true
             let dataList = await this.$http.get("/registrant/", {
@@ -406,34 +464,37 @@ export default {
             this.deleteItemId = id
         },
         dataListFilt() {
+            let dataListNew2 = JSON.parse(JSON.stringify(this.dataListAll))
             if (this.dataListFilter.id != -10) {
-                this.dataListNew = JSON.parse(JSON.stringify(this.dataListAll.filter((i) => {
+                dataListNew2 = JSON.parse(JSON.stringify(dataListNew2.filter((i) => {
                     if (i.id == this.dataListFilter.id) return true
                 })))
-                this.currentPageChange()
                 console.log("匹配id");
-                return
+
+            }
+            if (this.dataListFilter.status != -1) {
+                dataListNew2 = JSON.parse(JSON.stringify(dataListNew2.filter((i) => {
+                    if (i.status == this.dataListFilter.status) return true
+                })))
+                console.log("匹配status");
+
             }
             if (this.dataListFilter.name != "") {
-                this.dataListNew = JSON.parse(JSON.stringify(this.dataListAll.filter((i) => {
-                    if (i.name == this.dataListFilter.name) return true
+                dataListNew2 = JSON.parse(JSON.stringify(dataListNew2.filter((i) => {
+                    if (i.name.includes(this.dataListFilter.name)) return true
                 })))
                 console.log("匹配name");
-                this.currentPageChange()
 
-                return
             }
             if (this.dataListFilter.department != -10) {
-                this.dataListNew = JSON.parse(JSON.stringify(this.dataListAll.filter((i) => {
+                dataListNew2 = JSON.parse(JSON.stringify(dataListNew2.filter((i) => {
                     if (i.department == this.dataListFilter.department) return true
                 })))
                 console.log("匹配department");
-                this.currentPageChange()
                 // console.log(this.dataListNew);
-                return
             }
 
-            this.dataListNew = JSON.parse(JSON.stringify(this.dataListAll))
+            this.dataListNew = JSON.parse(JSON.stringify(dataListNew2))
             this.currentPageChange()
         },
         currentPageChange() {
@@ -563,7 +624,8 @@ export default {
     margin-top: 10px;
     margin-right: 10px;
 }
-.main-top2{
+
+.main-top2 {
     display: flex;
     justify-content: space-between;
     align-items: center;

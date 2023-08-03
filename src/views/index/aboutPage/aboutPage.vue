@@ -1,9 +1,9 @@
 <template>
     <div id="app">
-      <img src="@/assets/img/背景图.png" class="background1">
-      <img src="@/assets/img/背景图2.jpg" class="background2">
+      <img src="@/assets/img/背景图.webp" class="background1">
+      <img src="@/assets/img/背景图2.webp" class="background2">
         <div >
-     <mainPagebutton style="margin-top:4.88%;margin-left:3.65%;"></mainPagebutton>
+     <mainPagebutton style="position: relative;;z-index: 10;margin-top:4.88%;margin-left:3.65%;"></mainPagebutton>
     <div id="position">
     <web id="component1" class="component"> </web>
                 <ui id="component2" class="component"></ui>
@@ -319,7 +319,7 @@ console.log(this.transformValue)
    
        console.log() 
        for (var i = 0; i < buttons.length; i++) { 
-       buttons[i].style.backgroundImage = 'url(' + require('@/assets/about/' + (i + 1) + '.png') + ')';
+       buttons[i].style.backgroundImage = 'url(' + require('@/assets/about/' + (i + 1) + '.webp') + ')';
        }
    
 
@@ -328,21 +328,21 @@ console.log(this.transformValue)
         //    console.log(button)
         //    //这里button失效了
         // if (button) {
-        //   button.style.backgroundImage ='url(' + require('@/assets/about/' + componentId + '.png') + ')' ;
+        //   button.style.backgroundImage ='url(' + require('@/assets/about/' + componentId + '.webp') + ')' ;
         // }
     if(componentId=='component1'){
-               buttons[0].style.backgroundImage = 'url(' + require('@/assets/about/component1.png') + ')';
+               buttons[0].style.backgroundImage = 'url(' + require('@/assets/about/component1.webp') + ')';
       }
       else if (componentId=='component2'){
-             buttons[1].style.backgroundImage = 'url(' + require('@/assets/about/component2.png') + ')';
+             buttons[1].style.backgroundImage = 'url(' + require('@/assets/about/component2.webp') + ')';
       }
       else if (componentId=='component3'){
-          buttons[2].style.backgroundImage = 'url(' + require('@/assets/about/component3.png') + ')';
+          buttons[2].style.backgroundImage = 'url(' + require('@/assets/about/component3.webp') + ')';
       } else if (componentId=='component4'){
-              buttons[3].style.backgroundImage = 'url(' + require('@/assets/about/component4.png') + ')';
+              buttons[3].style.backgroundImage = 'url(' + require('@/assets/about/component4.webp') + ')';
       }
       else{
-   buttons[4].style.backgroundImage = 'url(' + require('@/assets/about/component5.png') + ')';
+   buttons[4].style.backgroundImage = 'url(' + require('@/assets/about/component5.webp') + ')';
 
       }
         var component = document.getElementById(componentId);
@@ -398,6 +398,7 @@ console.log(this.transformValue)
 @media (min-width:100px) and (max-width: 500px) {
   .background1{
     display: none;
+    z-index: -10;
   }
   
   .background2 {
@@ -406,6 +407,7 @@ console.log(this.transformValue)
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: -10;
   }
   .first{
         margin-top: 0.6vw;
@@ -585,7 +587,7 @@ transform: rotate(360deg) translate(100px) rotate(-360deg);
 
 }
 .web{  cursor: pointer;
-  background: url('@/assets/about/1.png') 0px 0px no-repeat;
+  background: url('@/assets/about/1.webp') 0px 0px no-repeat;
    background-size: 100%;
    top: -2.78vw;
     width: 14.9vw;  
@@ -598,7 +600,7 @@ transform: rotate(360deg) translate(100px) rotate(-360deg);
 }
 .ui{
   
-   background: url('@/assets/about/2.png') -1px -1px no-repeat;
+   background: url('@/assets/about/2.webp') -1px -1px no-repeat;
   background-size: 100%;
        top: -2.68vw;
     width: 11.9vw;
@@ -609,7 +611,7 @@ transform: rotate(360deg) translate(100px) rotate(-360deg);
     position: absolute;
 }
 .app{
-background: url('@/assets/about/3.png') -1px -1px no-repeat;
+background: url('@/assets/about/3.webp') -1px -1px no-repeat;
      background-size: 100%;
     top: 7.6vw;
     width: 14vw;
@@ -620,7 +622,7 @@ background: url('@/assets/about/3.png') -1px -1px no-repeat;
     font-size: 1.55vw;
     position: absolute;
 }
-.program{background: url('@/assets/about/4.png') -1px -1px no-repeat;
+.program{background: url('@/assets/about/4.webp') -1px -1px no-repeat;
  background-size: 100%;
     top: 7.2vw;
     width: 12.2vw;
@@ -631,7 +633,7 @@ background: url('@/assets/about/3.png') -1px -1px no-repeat;
     font-size: 1.55vw;
    
 }
-.game{background: url('@/assets/about/component5.png') 0px 0px no-repeat;
+.game{background: url('@/assets/about/component5.webp') 0px 0px no-repeat;
     background-size: 100%;
     top: -2.7vw;
     width: 11.93vw;
@@ -660,6 +662,7 @@ margin: 0 auto ;
   @media (min-width:501px)  {
       .background2{
     display: none;
+    z-index: -10;
   }
     .background1 {
     position: absolute;
@@ -846,7 +849,7 @@ transform: rotate(360deg) translate(100px) rotate(-360deg);
 
 }
 .web{  cursor: pointer;
-  background: url('@/assets/about/1.png') 0px 0px no-repeat;
+  background: url('@/assets/about/1.webp') 0px 0px no-repeat;
    background-size: 100%;
    top: -2.78vw;
     width: 14.9vw;  
@@ -859,7 +862,7 @@ transform: rotate(360deg) translate(100px) rotate(-360deg);
 }
 .ui{
   
-   background: url('@/assets/about/2.png') -1px -1px no-repeat;
+   background: url('@/assets/about/2.webp') -1px -1px no-repeat;
   background-size: 100%;
        top: -2.68vw;
     width: 11.9vw;
@@ -870,7 +873,7 @@ transform: rotate(360deg) translate(100px) rotate(-360deg);
     position: absolute;
 }
 .app{
-background: url('@/assets/about/3.png') -1px -1px no-repeat;
+background: url('@/assets/about/3.webp') -1px -1px no-repeat;
      background-size: 100%;
     top: 7.6vw;
     width: 14vw;
@@ -881,7 +884,7 @@ background: url('@/assets/about/3.png') -1px -1px no-repeat;
     font-size: 1.55vw;
     position: absolute;
 }
-.program{background: url('@/assets/about/4.png') -1px -1px no-repeat;
+.program{background: url('@/assets/about/4.webp') -1px -1px no-repeat;
  background-size: 100%;
     top: 7.2vw;
     width: 12.2vw;
@@ -892,7 +895,7 @@ background: url('@/assets/about/3.png') -1px -1px no-repeat;
     font-size: 1.55vw;
    
 }
-.game{background: url('@/assets/about/component5.png') 0px 0px no-repeat;
+.game{background: url('@/assets/about/component5.webp') 0px 0px no-repeat;
     background-size: 100%;
     top: -2.7vw;
     width: 11.93vw;

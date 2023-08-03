@@ -1,6 +1,6 @@
 <template>
     <div class="father">
-        <!-- <img src="@/assets/sign/组 73.png" alt=""> -->
+        <!-- <img src="@/assets/sign/组 73.webp" alt=""> -->
         <div class="ratePage">
             <div class="button-box">
                 <router-link to="/index">
@@ -12,7 +12,7 @@
                 <div class="found2">
                     <input type="text" v-model="phone">
                     <!-- <div class="submit" @click="submit()">查询</div> -->
-                    <div class="submit" @click="submit()"><img src="@/assets/sign/右键头.png" alt=""></div>
+                    <div class="submit" @click="submit()"><img src="@/assets/sign/右键头.webp" alt=""></div>
 
                 </div>
             </div>
@@ -20,29 +20,29 @@
                 <div class="first-line">
                     <div class="box-one" :style="box1">
                         <span :style="span1">初审</span>
-                        <div><img src="@/assets/sign/图像 6.png" v-if="ifImg1"></div>
-                        <div><img src="@/assets/sign/图像 7.png" v-if="ifImg1 == false"></div>
+                        <div><img src="@/assets/sign/图像 6.webp" v-if="ifImg1"></div>
+                        <div><img src="@/assets/sign/图像 7.webp" v-if="ifImg1 == false"></div>
                         <p :style="p1">01</p>
                     </div>
                     <div class="box-two" :style="box2">
                         <span :style="span2">面试</span>
-                        <div><img src="@/assets/sign/图像 5.png" v-if="ifImg2"></div>
-                        <div><img src="@/assets/sign/图像 8.png" v-if="ifImg2 == false"></div>
+                        <div><img src="@/assets/sign/图像 5.webp" v-if="ifImg2"></div>
+                        <div><img src="@/assets/sign/图像 8.webp" v-if="ifImg2 == false"></div>
                         <p :style="p2">02</p>
                     </div>
                 </div>
                 <div class="second-line">
                     <div class="box-three" :style="box3">
                         <span :style="span3">笔试</span>
-                        <div><img src="@/assets/sign/图像 2.png" v-if="ifImg3"></div>
-                        <div><img src="@/assets/sign/图像 3.png" v-if="ifImg3 == false"></div>
+                        <div><img src="@/assets/sign/图像 2.webp" v-if="ifImg3"></div>
+                        <div><img src="@/assets/sign/图像 3.webp" v-if="ifImg3 == false"></div>
                         <p :style="p3">03</p>
                     </div>
                     <div class="box-four" :style="box4">
                         <span :style="span4">录取结果</span>
                         <!-- <span style="margin-top:0">结果</span> -->
-                        <div><img src="@/assets/sign/图像 4.png" v-if="ifImg4"></div>
-                        <div><img src="@/assets/sign/图像 9.png" v-if="ifImg4 == false"></div>
+                        <div><img src="@/assets/sign/图像 4.webp" v-if="ifImg4"></div>
+                        <div><img src="@/assets/sign/图像 9.webp" v-if="ifImg4 == false"></div>
                         <p :style="p4">04</p>
                     </div>
                 </div>
@@ -220,7 +220,7 @@ a {
 }
 
 .ratePage {
-    background-image: url('@/assets/sign/组 73.png');
+    background-image: url('@/assets/sign/组 73.webp');
     background-size: 100% 100%;
 }
 

@@ -66,7 +66,7 @@ export default {
             years: [
                 {
                     year: 2022,
-                    image: require("@/assets/img/2022.png"),
+                    image: require("@/assets/img/2022.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -76,12 +76,12 @@ export default {
                                 
                                 {
                                     name: "王建享",
-                                    image: require('@/assets/member/avatar/2022/wjx.png'),
+                                    image: require('@/assets/member/avatar/2022/wjx.webp'),
                                     signature: '欢迎加入APP部'
                                 },
                                 {
                                     name: "王佳俊",
-                                    image: require('@/assets/member/avatar/2022/wjj.jpg'),
+                                    image: require('@/assets/member/avatar/2022/wjj.webp'),
                                     signature: '吃面'
                                 },
                             ],    
@@ -91,32 +91,32 @@ export default {
                             member2: [
                                 {
                                     name: "张世卿",
-                                    image: require('@/assets/member/avatar/2022/zhangshiqing.jpg'),
+                                    image: require('@/assets/member/avatar/2022/zhangshiqing.webp'),
                                     signature:'关注永雏塔菲喵，关注永雏塔菲谢谢喵'
                                 },
                                 {
                                     name: "冷越",
-                                    image: require('@/assets/member/avatar/2022/lengyue.jpg'),
+                                    image: require('@/assets/member/avatar/2022/lengyue.webp'),
                                     signature: '在潮湿里种水仙吧'
                                 },
                                 {
                                     name: "卢育彬",
-                                    image: require('@/assets/member/avatar/2022/lyb.jpg'),
+                                    image: require('@/assets/member/avatar/2022/lyb.webp'),
                                     signature: '生活索然无味 尸体cos人类'
                                 },
                                 {
                                     name: "廉嘉蕊",
-                                    image: require('@/assets/member/avatar/2022/lianjiarui.jpg'),
+                                    image: require('@/assets/member/avatar/2022/lianjiarui.webp'),
                                     signature: '事了拂衣去，深藏功与名'
                                 },
                                 {
                                     name: "李伯辉",
-                                    image: require('@/assets/member/avatar/2022/lbh.jpg'),
+                                    image: require('@/assets/member/avatar/2022/lbh.webp'),
                                     signature: '坤粉一万年'
                                 },
                                 {
                                     name: "雷志良",
-                                    image: require('@/assets/member/avatar/2022/leizhiliang.jpg'),
+                                    image: require('@/assets/member/avatar/2022/leizhiliang.webp'),
                                     signature: 'CSGO，启动'
                                 }
                             ]
@@ -126,17 +126,17 @@ export default {
                             member2: [
                                 {
                                     name: "路修哲",
-                                    image: require('@/assets/member/avatar/2022/luxiuzhe.jpg'),
+                                    image: require('@/assets/member/avatar/2022/luxiuzhe.webp'),
                                     signature: '哪有什么身不由己，己不由心，身又怎能由己。'
                                 },
                                 {
                                     name: "方诗颖",
-                                    image: require('@/assets/member/avatar/2022/fangshiying.jpg'),
+                                    image: require('@/assets/member/avatar/2022/fangshiying.webp'),
                                     signature: '吃饭！'
                                 },
                                 {
                                     name: "雷祥宁",
-                                    image: require('@/assets/member/avatar/2022/lxn.jpg'),
+                                    image: require('@/assets/member/avatar/2022/lxn.webp'),
                                     signature: '迟早猝死'
 
                                 },
@@ -147,22 +147,22 @@ export default {
                             member2: [
                                 {
                                     name: "董芯汝",
-                                    image: require('@/assets/member/avatar/2022/dongxinru.jpg'),
+                                    image: require('@/assets/member/avatar/2022/dongxinru.webp'),
                                     signature: 'This is Mr.White.',
                                 },                               
                                 {
                                     name: "马琪颖",
-                                    image: require('@/assets/member/avatar/2022/maqiying3.jpg'),
+                                    image: require('@/assets/member/avatar/2022/maqiying3.webp'),
                                     signature: '知足常乐~'
                                 },
                                 {
                                     name: "陈静",
-                                    image: require('@/assets/member/avatar/2022/chenjing.jpg'),
+                                    image: require('@/assets/member/avatar/2022/chenjing.webp'),
                                     signature: '感情…哈哈哈哈哈哈！感情才是这个世界上最可笑的东西！'
                                 },
                                 {
                                     name: "曹瑜",
-                                    image: require('@/assets/member/avatar/2022/caoyu.jpeg'),
+                                    image: require('@/assets/member/avatar/2022/caoyu.webp'),
                                     signature: '注意看，这个女孩叫小美'
                                 }]
                         },
@@ -171,39 +171,39 @@ export default {
                             member2: [
                                 {
                                     name:"梁芷菁",
-                                    image: require('@/assets/member/avatar/2022/lzj.jpg'),
+                                    image: require('@/assets/member/avatar/2022/lzj.webp'),
                                     signature: '能以知识描绘，亦可以爱描绘，唯独不能用奇迹来描绘'
                                 },
                                 {
                                     name: "潘熙阳",
-                                    image: require('@/assets/member/avatar/2022/panxiyang2.jpg'),
+                                    image: require('@/assets/member/avatar/2022/panxiyang2.webp'),
                                     signature: '想冲天天'
                                 },
                                 {
                                     name: "金鑫溢",
-                                    image: require('@/assets/member/avatar/2022/jxy2.jpg'),
+                                    image: require('@/assets/member/avatar/2022/jxy2.webp'),
                                     signature: '指鹿为马不负韶华'
                                 },
                                 {
                                     name: "姚茂琪",
-                                    image: require('@/assets/member/avatar/2022/yaomaoqi.jpg'),
+                                    image: require('@/assets/member/avatar/2022/yaomaoqi.webp'),
                                     signature: '呃呃'
                                 },
                                 {
                                     name: "岳一磊",
-                                    image: require('@/assets/member/avatar/2022/yueyilei.jpg'),
+                                    image: require('@/assets/member/avatar/2022/yueyilei.webp'),
                                     signature: '程序员终成大牛'
                                 },
                                 {   name: "王铭新",
-                                    image: require('@/assets/member/avatar/2022/wangmingxin.jpg'),
+                                    image: require('@/assets/member/avatar/2022/wangmingxin.webp'),
                                     signature: '你说得对，但是'
                                 },
                                 {   name: "时晓天",
-                                    image: require('@/assets/member/avatar/2022/shixiaotian.jpg'),
+                                    image: require('@/assets/member/avatar/2022/shixiaotian.webp'),
                                     signature: '这个人很懒，什么都没有留下'
                                 },
                                 {   name: "许其鸿",
-                                    image: require('@/assets/member/avatar/2022/xuqihong.jpg'),
+                                    image: require('@/assets/member/avatar/2022/xuqihong.webp'),
                                     signature: '卷不过卷不过'
 
                                 }]
@@ -212,7 +212,7 @@ export default {
                 },
                 {
                     year: 2021,
-                    image: require("@/assets/img/2021.png"),
+                    image: require("@/assets/img/2021.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -221,17 +221,17 @@ export default {
                             member2: [
                                 {
                                     name: "刘彩鑫",
-                                    image: require('@/assets/member/avatar/2021/app1.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/app1.webp'),
                                     signature: '心之所向，无问西东'
                                 },
                                 {
                                     name: "张泽峰",
-                                    image: require('@/assets/member/avatar/2021/app2.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/app2.webp'),
                                     signature: '没啥可说的'
                                 },
                                 {
                                     name: "吴东升",
-                                    image: require('@/assets/member/avatar/2021/app3.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/app3.webp'),
                                     signature: '开摆！'
                                 }]
                         },
@@ -240,17 +240,17 @@ export default {
                             member2: [
                                 {
                                     name: "张润宁",
-                                    image: require('@/assets/member/avatar/2021/web1.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/web1.webp'),
                                     signature: '禁止摆烂~'
                                 },
                                 {
                                     name: "汪洋",
-                                    image: require('@/assets/member/avatar/2021/web2.jpg'),
+                                    image: require('@/assets/member/avatar/2021/web2.webp'),
                                     signature: '咸鱼翻身||'
                                 },
                                 {
                                     name: "符谷泰",
-                                    image: require('@/assets/member/avatar/2021/web3.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/web3.webp'),
                                     signature: 'bug别来了'
                                 }]
                         },
@@ -259,42 +259,42 @@ export default {
                             member2: [
                                 {
                                     name: "刘襄琪",
-                                    image: require('@/assets/member/avatar/2021/cx1.png'),
+                                    image: require('@/assets/member/avatar/2021/cx1.webp'),
                                     signature: '阿巴阿巴阿巴'
                                 },
                                 {
                                     name: "康家辉",
-                                    image: require('@/assets/member/avatar/2021/cx2.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/cx2.webp'),
                                     signature: '人生苦短，我用Python'
                                 },
                                 {
                                     name: "唐玉硕",
-                                    image: require('@/assets/member/avatar/2021/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2021/cx3.webp'),
                                     signature: 'Programming makes heads bald.'
                                 },
                                 {
                                     name: "甘海",
-                                    image: require('@/assets/member/avatar/2021/cx4.jpg'),
+                                    image: require('@/assets/member/avatar/2021/cx4.webp'),
                                     signature: '其作始也简，其将毕也必巨'
                                 },
                                 {
                                     name: "黄乃煊",
-                                    image: require('@/assets/member/avatar/2021/cx5.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/cx5.webp'),
                                     signature: 'Change the world by programmmmmm!'
                                 },
                                 {
                                     name: "刘宇璨",
-                                    image: require('@/assets/member/avatar/2021/cx6.jpg'),
+                                    image: require('@/assets/member/avatar/2021/cx6.webp'),
                                     signature: '晚点再摆'
                                 },
                                 {
                                     name: "孟广樾",
-                                    image: require('@/assets/member/avatar/2021/cx7.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/cx7.webp'),
                                     signature: '好好学习，天天向上！'
                                 },
                                 {
                                     name: "吴卓衡",
-                                    image: require('@/assets/member/avatar/2021/cx8.jpg'),
+                                    image: require('@/assets/member/avatar/2021/cx8.webp'),
                                     signature: 'Bug退散！！！'
                                 }
                                 ]
@@ -304,7 +304,7 @@ export default {
                             member2: [
                                 {
                                     name: "吴文楠",
-                                    image: require('@/assets/member/avatar/2021/ui1.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/ui1.webp'),
                                     signature: '今天也是困困的一天'
                                 },
                                
@@ -315,37 +315,37 @@ export default {
                             member2: [
                                 {
                                     name: "刘宇宙",
-                                    image: require('@/assets/member/avatar/2021/game1.jpg'),
+                                    image: require('@/assets/member/avatar/2021/game1.webp'),
                                     signature: '你说得对，但是《鬼泣5》是由卡普空自主研发的一款全新动作类冒险游戏。游戏发生在一个被称作「红墓市」的幻想世界，在这里，被斯巴达选中的人将被授予「魔人」，导引恶魔之力。你将扮演一位名为「恶魔猎人」的神秘角色，在自由的旅行中邂逅性格各异、能力独特的同伴们，和他们一起击败强敌，阻止魔树侵袭的同时，逐步发掘「V」的真相。'
                                 },
                                 {
                                     name: "戴立桓",
-                                    image: require('@/assets/member/avatar/2021/game2.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/game2.webp'),
                                     signature: '游戏爱好者，不过是手残'
                                 },
                                 {
                                     name: "安戈新",
-                                    image: require('@/assets/member/avatar/2021/game3.jpg'),
+                                    image: require('@/assets/member/avatar/2021/game3.webp'),
                                     signature: '能躺着就不坐着'
                                 },
                                 {
                                     name: "陈嘉鹏",
-                                    image: require('@/assets/member/avatar/2021/game4.jpeg'),
+                                    image: require('@/assets/member/avatar/2021/game4.webp'),
                                     signature: '此广告位长期招租'
                                 },
                                 {
                                     name: "彭程",
-                                    image: require('@/assets/member/avatar/2020/game2.jpeg'),
+                                    image: require('@/assets/member/avatar/2020/game2.webp'),
                                     signature: '智商在线，没有解决不掉的问题'
                                 },
                                 {
                                     name: "杨飏",
-                                    image: require('@/assets/member/avatar/2021/game6.jpg'),
+                                    image: require('@/assets/member/avatar/2021/game6.webp'),
                                     signature: '客观是高枕无忧之人的挡箭牌'
                                 },
                                 {
                                     name: "邹雨潼",
-                                    image: require('@/assets/member/avatar/2021/game7.png'),
+                                    image: require('@/assets/member/avatar/2021/game7.webp'),
                                     signature: '好好学习'
                                 },
                                 ]
@@ -354,7 +354,7 @@ export default {
                 },
                 {
                     year: 2020,
-                    image: require("@/assets/img/2020.png"),
+                    image: require("@/assets/img/2020.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -363,17 +363,17 @@ export default {
                             member2: [
                                 {
                                     name: "黄博斌",
-                                    image: require('@/assets/member/avatar/2020/app1.jpg'),
+                                    image: require('@/assets/member/avatar/2020/app1.webp'),
                                     signature: '心有猛虎，细嗅蔷薇'
                                 },
                                 {
                                     name: "王梓懿",
-                                    image: require('@/assets/member/avatar/2020/app2.jpg'),
+                                    image: require('@/assets/member/avatar/2020/app2.webp'),
                                     signature: '过去可知不可空，未来可控不可知——Claude Shannon'
                                 },
                                 {
                                     name: "张凯",
-                                    image: require('@/assets/member/avatar/2020/app3.jpg'),
+                                    image: require('@/assets/member/avatar/2020/app3.webp'),
                                     signature: '万物皆可卷积'
                                 }]
                         },
@@ -382,12 +382,12 @@ export default {
                             member2: [
                                 {
                                     name: "陈江栋",
-                                    image: require('@/assets/member/avatar/2020/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2020/web1.webp'),
                                     signature: '禁止低头'
                                 },
                                 {
                                     name: "陈李焘",
-                                    image: require('@/assets/member/avatar/2020/web2.jpeg'),
+                                    image: require('@/assets/member/avatar/2020/web2.webp'),
                                     signature: 'debug冲冲冲'
                                 },
                                ]
@@ -397,17 +397,17 @@ export default {
                             member2: [
                                 {
                                     name: "刘召",
-                                    image: require('@/assets/member/avatar/2020/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2020/cx1.webp'),
                                     signature: '诸棣僧降件焦诸陀摩棣僧钵薤嚰焦劫陀焦伏所蜜嚰咒寂闇喃钵曪愍寂摩曪喃功焦膊诸膊僧锗憩锗呵嚰劫僧燕愍尊闇焦般件即焦慧叶祗膊须焦降薤燕呐嚰者斯潮心罘嚰空焦碍心所伏波如阿如'
                                 },
                                 {
                                     name: "姚梦迪",
-                                    image: require('@/assets/member/avatar/2020/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2020/cx2.webp'),
                                     signature: '别垂头丧气，显矮'
                                 },
                                 {
                                     name: "杨泽晨",
-                                    image: require('@/assets/member/avatar/2020/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2020/cx3.webp'),
                                     signature: '要做人民的先生，先做人民的学生。————毛泽东'
                                 },
                                 ]      
@@ -417,7 +417,7 @@ export default {
                             member2: [
                                 {
                                     name: "吴慧敏",
-                                    image: require('@/assets/member/avatar/2020/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2020/ui1.webp'),
                                     signature: '我们有一部实际存在的普世之法，其目的正是为了避免完全的功利主义。'
                                 },
                                ]
@@ -427,17 +427,17 @@ export default {
                             member2: [
                                 {
                                     name: "李昱辉",
-                                    image: require('@/assets/member/avatar/2020/game1.jpg'),
+                                    image: require('@/assets/member/avatar/2020/game1.webp'),
                                     signature: '收获很大，必可活用于下一次……'
                                 },
                                 {
                                     name: "颜慧敏",
-                                    image: require('@/assets/member/avatar/2020/game2.jpeg'),
+                                    image: require('@/assets/member/avatar/2020/game2.webp'),
                                     signature: '……'
                                 },
                                 {
                                     name: "尹嘉豪",
-                                    image: require('@/assets/member/avatar/2020/game3.jpg'),
+                                    image: require('@/assets/member/avatar/2020/game3.webp'),
                                     signature: '功不唐捐'
                                 },
                                ]
@@ -446,7 +446,7 @@ export default {
                 },
                 {
                     year: 2019,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -455,17 +455,17 @@ export default {
                             member2: [
                                 {
                                     name: "赵艳然",
-                                    image: require('@/assets/member/avatar/2019/app11.jpg'),
+                                    image: require('@/assets/member/avatar/2019/app11.webp'),
                                     signature: '努力成长'
                                 },
                                 {
                                     name: "岳宇轩",
-                                    image: require('@/assets/member/avatar/2019/app22.jpg'),
+                                    image: require('@/assets/member/avatar/2019/app22.webp'),
                                     signature: '我们的工作是搬运知识和技能。'
                                 },
                                 {
                                     name: "钱思航",
-                                    image: require('@/assets/member/avatar/2019/app33.jpg'),
+                                    image: require('@/assets/member/avatar/2019/app33.webp'),
                                     signature: '广告位招租'
                                 }]
                         },
@@ -474,7 +474,7 @@ export default {
                             member2: [
                                 {
                                     name: "高可欣",
-                                    image: require('@/assets/member/avatar/2019/web11.jpg'),
+                                    image: require('@/assets/member/avatar/2019/web11.webp'),
                                     signature: '-interesting'
                                 },                              
                                ]
@@ -484,22 +484,22 @@ export default {
                             member2: [
                                 {
                                     name: "帅翔宇",
-                                    image: require('@/assets/member/avatar/2019/cx11.jpg'),
+                                    image: require('@/assets/member/avatar/2019/cx11.webp'),
                                     signature: '生而不有，为而不恃，长而不宰'
                                 },
                                 {
                                     name: "戴俞成",
-                                    image: require('@/assets/member/avatar/2019/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2019/cx2.webp'),
                                     signature: 'undefined'
                                 },
                                 {
                                     name: "程传奇",
-                                    image: require('@/assets/member/avatar/2019/cx33.jpg'),
+                                    image: require('@/assets/member/avatar/2019/cx33.webp'),
                                     signature: '“不必每天早睡早起，但要注意锻炼身体”'
                                 },
                                 {
                                     name: "花如壮",
-                                    image: require('@/assets/member/avatar/2019/cx4.jpg'),
+                                    image: require('@/assets/member/avatar/2019/cx4.webp'),
                                     signature: '要么孤独，要么庸俗'
                                 },
                                 ]      
@@ -509,37 +509,37 @@ export default {
                             member2: [
                                 {
                                     name: "陈熠欣",
-                                    image: require('@/assets/member/avatar/2019/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2019/ui1.webp'),
                                     signature: '感恩的心 感谢有你'
                                 },
                                 {
                                     name: "林子靖",
-                                    image: require('@/assets/member/avatar/2019/ui2.jpg'),
+                                    image: require('@/assets/member/avatar/2019/ui2.webp'),
                                     signature: '“虽千万人吾往矣。”'
                                 },
                                 {
                                     name: "刘思佳",
-                                    image: require('@/assets/member/avatar/2019/ui3.jpeg'),
+                                    image: require('@/assets/member/avatar/2019/ui3.webp'),
                                     signature: '……'
                                 },
                                 {
                                     name: "许胤韬",
-                                    image: require('@/assets/member/avatar/2019/ui44.jpg'),
+                                    image: require('@/assets/member/avatar/2019/ui44.webp'),
                                     signature: '雄鹿粉丝互删一下'
                                 },
                                 {
                                     name: "付翔宇",
-                                    image: require('@/assets/member/avatar/2019/ui5.jpg'),
+                                    image: require('@/assets/member/avatar/2019/ui5.webp'),
                                     signature: '宁静致远'
                                 },
                                 {
                                     name: "葛畅",
-                                    image: require('@/assets/member/avatar/2019/ui6.jpg'),
+                                    image: require('@/assets/member/avatar/2019/ui6.webp'),
                                     signature: '好好学习不要摸鱼'
                                 },
                                 {
                                     name: "浦绍英",
-                                    image: require('@/assets/member/avatar/2019/ui77.jpg'),
+                                    image: require('@/assets/member/avatar/2019/ui77.webp'),
                                     signature: '弃捐勿复道，努力加餐饭。'
                                 },
                                ]
@@ -549,12 +549,12 @@ export default {
                             member2: [
                                 {
                                     name: "陈子骞",
-                                    image: require('@/assets/member/avatar/2019/game1.jpg'),
+                                    image: require('@/assets/member/avatar/2019/game1.webp'),
                                     signature: '整点新玩具'
                                 },
                                 {
                                     name: "张浩宇",
-                                    image: require('@/assets/member/avatar/2019/game22.jpg'),
+                                    image: require('@/assets/member/avatar/2019/game22.webp'),
                                     signature: '兴趣是第一动力。'
                                 },
                                
@@ -564,7 +564,7 @@ export default {
                 },
                 {
                     year: 2018,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -573,22 +573,22 @@ export default {
                             member2: [
                                 {
                                     name: "田同晓",
-                                    image: require('@/assets/member/avatar/2018/app1.jpg'),
+                                    image: require('@/assets/member/avatar/2018/app1.webp'),
                                     signature: 'deadline是第一生产力'
                                 },
                                 {
                                     name: "马良吉",
-                                    image: require('@/assets/member/avatar/2018/app2.jpg'),
+                                    image: require('@/assets/member/avatar/2018/app2.webp'),
                                     signature: '你比你想象的更强大'
                                 },
                                 {
                                     name: "曾广豪",
-                                    image: require('@/assets/member/avatar/2018/app3.jpg'),
+                                    image: require('@/assets/member/avatar/2018/app3.webp'),
                                     signature: '干就完事了'
                                 },
                                 {
                                     name: "任浩辰",
-                                    image: require('@/assets/member/avatar/2018/app4.jpg'),
+                                    image: require('@/assets/member/avatar/2018/app4.webp'),
                                     signature: 'Talk is cheap,show me the code.'
                                 },]
                         },
@@ -597,12 +597,12 @@ export default {
                             member2: [
                                 {
                                     name: "赵有为",
-                                    image: require('@/assets/member/avatar/2018/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2018/web1.webp'),
                                     signature: 'Gu?Gu...Gu!'
                                 },
                                 {
                                     name: "沈世纪",
-                                    image: require('@/assets/member/avatar/2018/web2.jpg'),
+                                    image: require('@/assets/member/avatar/2018/web2.webp'),
                                     signature: '。。。咕咕咕？'
                                 },
                                ]
@@ -612,17 +612,17 @@ export default {
                             member2: [
                                 {
                                     name: "蔡宇翔",
-                                    image: require('@/assets/member/avatar/2018/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2018/cx1.webp'),
                                     signature: '学计算机不coding，死路一条'
                                 },
                                 {
                                     name: "刘阳",
-                                    image: require('@/assets/member/avatar/2018/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2018/cx2.webp'),
                                     signature: '编(de)程(bug)'
                                 },
                                 {
                                     name: "慈浩艺",
-                                    image: require('@/assets/member/avatar/2018/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2018/cx3.webp'),
                                     signature: 'bug的数量可能与你的勤奋程度成正相关。'
                                 },
                                 ]      
@@ -632,7 +632,7 @@ export default {
                             member2: [
                                 {
                                     name: "诸彦甫",
-                                    image: require('@/assets/member/avatar/2018/ui1.jpeg'),
+                                    image: require('@/assets/member/avatar/2018/ui1.webp'),
                                     signature: '……'
                                 },
                                ]
@@ -642,12 +642,12 @@ export default {
                             member2: [
                                 {
                                     name: "陈祺龙",
-                                    image: require('@/assets/member/avatar/2018/game1.jpg'),
+                                    image: require('@/assets/member/avatar/2018/game1.webp'),
                                     signature: '缘，妙不可言。'
                                 },
                                 {
                                     name: "张云涛",
-                                    image: require('@/assets/member/avatar/2018/game2.jpg'),
+                                    image: require('@/assets/member/avatar/2018/game2.webp'),
                                     signature: 'Coding is not about typing, is about thinking.'
                                 },
                                
@@ -657,7 +657,7 @@ export default {
                 },
                 {
                     year: 2017,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -666,12 +666,12 @@ export default {
                             member2: [
                                 {
                                     name: "李林宇",
-                                    image: require('@/assets/member/avatar/2017/app1.jpg'),
+                                    image: require('@/assets/member/avatar/2017/app1.webp'),
                                     signature: '现在是过去的未来，亦是未来的过去。'
                                 },
                                 {
                                     name: "戈晓洋",
-                                    image: require('@/assets/member/avatar/2017/app2.jpg'),
+                                    image: require('@/assets/member/avatar/2017/app2.webp'),
                                     signature: '带我，发出萌新的声音'
                                 },
                                 ]
@@ -681,7 +681,7 @@ export default {
                             member2: [
                                 {
                                     name: "陈玉沅",
-                                    image: require('@/assets/member/avatar/2017/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2017/web1.webp'),
                                     signature: '面向百度编程'
                                 },
                                
@@ -692,22 +692,22 @@ export default {
                             member2: [
                                 {
                                     name: "谭坚铭",
-                                    image: require('@/assets/member/avatar/2017/cx1.png'),
+                                    image: require('@/assets/member/avatar/2017/cx1.webp'),
                                     signature: '既且，且往观乎？'
                                 },
                                 {
                                     name: "陈开拓",
-                                    image: require('@/assets/member/avatar/2017/cx2.png'),
+                                    image: require('@/assets/member/avatar/2017/cx2.webp'),
                                     signature: '睡觉是第一生产力'
                                 },
                                 {
                                     name: "谢哲勇",
-                                    image: require('@/assets/member/avatar/2017/cx3.png'),
+                                    image: require('@/assets/member/avatar/2017/cx3.webp'),
                                     signature: '行到水穷处，坐看云起时'
                                 },
                                 {
                                     name: "陈尊龙",
-                                    image: require('@/assets/member/avatar/2017/cx4.jpg'),
+                                    image: require('@/assets/member/avatar/2017/cx4.webp'),
                                     signature: '健忘是头秃的前兆——谁说的来着'
                                 },
                                 ]      
@@ -717,7 +717,7 @@ export default {
                             member2: [
                                 {
                                     name: "浦泽元",
-                                    image: require('@/assets/member/avatar/2017/ui1.png'),
+                                    image: require('@/assets/member/avatar/2017/ui1.webp'),
                                     signature: 'less is more 少即是多'
                                 },
                                ]
@@ -727,7 +727,7 @@ export default {
                             member2: [
                                 {
                                     name: "李隆岩",
-                                    image: require('@/assets/member/avatar/2018/game1.jpg'),
+                                    image: require('@/assets/member/avatar/2018/game1.webp'),
                                     signature: '我们每天度过的称之为日常的生活，其实是一个个奇迹的连续也说不定。'
                                 },
                               
@@ -737,7 +737,7 @@ export default {
                 },
                 {
                     year: 2016,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -746,12 +746,12 @@ export default {
                             member2: [
                                 {
                                     name: "王湘懿",
-                                    image: require('@/assets/member/avatar/2016/app1.jpg'),
+                                    image: require('@/assets/member/avatar/2016/app1.webp'),
                                     signature: '腐妹子一只，蛇精病一枚'
                                 },
                                 {
                                     name: "邓懿康",
-                                    image: require('@/assets/member/avatar/2016/app2.jpg'),
+                                    image: require('@/assets/member/avatar/2016/app2.webp'),
                                     signature: '梦想是做个技术宅'
                                 },
                                 ]
@@ -761,27 +761,27 @@ export default {
                             member2: [
                                 {
                                     name: "官欣仪",
-                                    image: require('@/assets/member/avatar/2016/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2016/web1.webp'),
                                     signature: '扣脚宅√LLer√经常女装√'
                                 },
                                 {
                                     name: "李凌宇",
-                                    image: require('@/assets/member/avatar/2016/web2.jpg'),
+                                    image: require('@/assets/member/avatar/2016/web2.webp'),
                                     signature: '诶，这里有点缺氧'
                                 },
                                 {
                                     name: "李楚娇",
-                                    image: require('@/assets/member/avatar/2016/web3.jpg'),
+                                    image: require('@/assets/member/avatar/2016/web3.webp'),
                                     signature: '热爱生活，热爱技术'
                                 },
                                 {
                                     name: "钱怡辰",
-                                    image: require('@/assets/member/avatar/2016/web4.jpg'),
+                                    image: require('@/assets/member/avatar/2016/web4.webp'),
                                     signature: '日常敲代码吃东西'
                                 },
                                 {
                                     name: "刘凡莉",
-                                    image: require('@/assets/member/avatar/2016/web5.jpg'),
+                                    image: require('@/assets/member/avatar/2016/web5.webp'),
                                     signature: '人生总会熬出来的'
                                 },
                                ]
@@ -791,22 +791,22 @@ export default {
                             member2: [
                                 {
                                     name: "宿天宇",
-                                    image: require('@/assets/member/avatar/2016/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2016/cx1.webp'),
                                     signature: 'No pain, no gain'
                                 },
                                 {
                                     name: "梁颖芳",
-                                    image: require('@/assets/member/avatar/2016/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2016/cx2.webp'),
                                     signature: '给缺氧的那位递个氧气瓶'
                                 },
                                 {
                                     name: "方政",
-                                    image: require('@/assets/member/avatar/2016/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2016/cx3.webp'),
                                     signature: '只有流过血的手指才能弹出世间的绝唱.'
                                 },
                                 {
                                     name: "叶伊凡",
-                                    image: require('@/assets/member/avatar/2016/cx4.jpg'),
+                                    image: require('@/assets/member/avatar/2016/cx4.webp'),
                                     signature: '请称赞我，高贵冷艳'
                                 },
                                 ]      
@@ -816,22 +816,22 @@ export default {
                             member2: [
                                 {
                                     name: "于聪颖",
-                                    image: require('@/assets/member/avatar/2016/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2016/ui1.webp'),
                                     signature: '性别女，爱好各种adobe家的软件，但不擅长'
                                 },
                                 {
                                     name: "翟书言",
-                                    image: require('@/assets/member/avatar/2016/ui2.jpg'),
+                                    image: require('@/assets/member/avatar/2016/ui2.webp'),
                                     signature: '哇这个人为什么这么酷'
                                 },
                                 {
                                     name: "李宜璟",
-                                    image: require('@/assets/member/avatar/2016/ui3.jpg'),
+                                    image: require('@/assets/member/avatar/2016/ui3.webp'),
                                     signature: '这个人很懒，神马都没留下…'
                                 },
                                 {
                                     name: "廖舒祺",
-                                    image: require('@/assets/member/avatar/2016/ui4.jpg'),
+                                    image: require('@/assets/member/avatar/2016/ui4.webp'),
                                     signature: '额，活泼好动，爱看电影，做运动，旅游，喜欢设计…'
                                 },
                                ]
@@ -841,7 +841,7 @@ export default {
                 },
                 {
                     year: 2015,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -851,17 +851,17 @@ export default {
                             member2: [
                                 {
                                     name: "李策",
-                                    image: require('@/assets/member/avatar/2015/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2015/web1.webp'),
                                     signature: '我不是一个伟大的程序员，我只是一个具有良好习惯的优秀程序员-KentBeck'
                                 },
                                 {
                                     name: "陶赟",
-                                    image: require('@/assets/member/avatar/2015/web2.jpg'),
+                                    image: require('@/assets/member/avatar/2015/web2.webp'),
                                     signature: '大部分情况下，构建程序的过程本质上是对规范调试的过程。——FredBrooks'
                                 },
                                 {
                                     name: "雷镇宇",
-                                    image: require('@/assets/member/avatar/2015/web3.jpg'),
+                                    image: require('@/assets/member/avatar/2015/web3.webp'),
                                     signature: '不听不听，王八念经'
                                 },
                                
@@ -872,7 +872,7 @@ export default {
                             member2: [
                                 {
                                     name: "张钦贤",
-                                    image: require('@/assets/member/avatar/2015/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2015/cx1.webp'),
                                     signature: '我就是我，是颜色不一样的烟火'
                                 },
                                
@@ -883,7 +883,7 @@ export default {
                             member2: [
                                 {
                                     name: "周尊康",
-                                    image: require('@/assets/member/avatar/2015/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2015/ui1.webp'),
                                     signature: '直到最后一个用户死去，软件才算完成。——佚名'
                                 },
                                
@@ -894,7 +894,7 @@ export default {
                             member2: [
                                 {
                                     name: "陈默涵",
-                                    image: require('@/assets/member/avatar/2015/xt1.jpg'),
+                                    image: require('@/assets/member/avatar/2015/xt1.webp'),
                                     signature: '计算机科学领域的所有问题都可以通过其他方式间接解决。—David Wheeler'
                                 },
                                
@@ -905,7 +905,7 @@ export default {
                 },
                 {
                     year: 2014,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -915,7 +915,7 @@ export default {
                             member2: [
                                 {
                                     name: "张竣凯",
-                                    image: require('@/assets/member/avatar/2014/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2014/web1.webp'),
                                     signature: '质量、速度、廉价，选择其中两个'
                                 },
                               
@@ -926,27 +926,27 @@ export default {
                             member2: [
                                 {
                                     name: "申一鸣",
-                                    image: require('@/assets/member/avatar/2014/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2014/cx1.webp'),
                                     signature: '好代码本身就是最好的文档—Steve McConnell'
                                 },
                                 {
                                     name: "李春林",
-                                    image: require('@/assets/member/avatar/2014/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2014/cx2.webp'),
                                     signature: '过早的优化是罪恶之源。——Donald Knuth'
                                 },
                                 {
                                     name: "王恺鹏",
-                                    image: require('@/assets/member/avatar/2014/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2014/cx3.webp'),
                                     signature: '—切奇怪的现象都是有原因的——佚名'
                                 },
                                 {
                                     name: "郑作武",
-                                    image: require('@/assets/member/avatar/2014/cx4.jpg'),
+                                    image: require('@/assets/member/avatar/2014/cx4.webp'),
                                     signature: '“设计是一个发现问题、而不是发现解决方案的过程”——LeslieChicoine'
                                 },
                                 {
                                     name: "王晓瑞",
-                                    image: require('@/assets/member/avatar/2014/cx5.jpg'),
+                                    image: require('@/assets/member/avatar/2014/cx5.webp'),
                                     signature: '诚信自由平等爱国文明诚信民主诚信民主诚信自由敬业爱国富强友善平等友善公正'
                                 },
                                 ]      
@@ -956,7 +956,7 @@ export default {
                             member2: [
                                 {
                                     name: "成亚男",
-                                    image: require('@/assets/member/avatar/2014/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2014/ui1.webp'),
                                     signature: '设计中最难的部分.......是阻止功能。——佚名'
                                 },
                                
@@ -967,7 +967,7 @@ export default {
                             member2: [
                                 {
                                     name: "蒙煜明",
-                                    image: require('@/assets/member/avatar/2014/xt1.jpg'),
+                                    image: require('@/assets/member/avatar/2014/xt1.webp'),
                                     signature: '如果你是房间里最聪明的人，那么你走错房间了。——佚名'
                                 },
                                
@@ -978,7 +978,7 @@ export default {
                 },
                 {
                     year: 2013,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -988,12 +988,12 @@ export default {
                             member2: [
                                 {
                                     name: "何珺",
-                                    image: require('@/assets/member/avatar/2013/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2013/web1.webp'),
                                     signature: '测试是来表明bug的存在而不是不存在”———EdsgerDijkstra'
                                 },
                                 {
                                     name: "刘祯昆",
-                                    image: require('@/assets/member/avatar/2013/web2.jpg'),
+                                    image: require('@/assets/member/avatar/2013/web2.webp'),
                                     signature: '你要么要软件质量，要么要指针算法;两者不可兼得。—Bertrand Meyer'
                                 },
                                ]
@@ -1003,17 +1003,17 @@ export default {
                             member2: [
                                 {
                                     name: "徐永亮",
-                                    image: require('@/assets/member/avatar/2013/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2013/cx1.webp'),
                                     signature: '优秀的代码是它自己最好的文档——Steve McConnell'
                                 },
                                 {
                                     name: "杨旭",
-                                    image: require('@/assets/member/avatar/2013/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2013/cx2.webp'),
                                     signature: '优秀的判断力来自经验，但经验来自于错误的判断。——Fred Brooks'
                                 },
                                 {
                                     name: "张静",
-                                    image: require('@/assets/member/avatar/2013/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2013/cx3.webp'),
                                     signature: '简单不先于复杂，而是在复杂之后”——Alan Perlis'
                                 },
                                
@@ -1025,12 +1025,12 @@ export default {
                             member2: [
                                 {
                                     name: "刘天峰",
-                                    image: require('@/assets/member/avatar/2013/xt1.jpg'),
+                                    image: require('@/assets/member/avatar/2013/xt1.webp'),
                                     signature: '软件在能够复用前必须先能用。——Ralph Johnson'
                                 },
                                 {
                                     name: "陶孟旭",
-                                    image: require('@/assets/member/avatar/2013/xt2.jpg'),
+                                    image: require('@/assets/member/avatar/2013/xt2.webp'),
                                     signature: '最便宜，最快和最可靠的组件是不存在的。——佚名'
                                 },
                                ]
@@ -1040,7 +1040,7 @@ export default {
                 },
                 {
                     year: 2012,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -1050,7 +1050,7 @@ export default {
                             member2: [
                                 {
                                     name: "林皇",
-                                    image: require('@/assets/member/avatar/2012/web1.jpg'),
+                                    image: require('@/assets/member/avatar/2012/web1.webp'),
                                     signature: '一个人在教会电脑之前，别说他真正理解这个东西了。'
                                 },
                                
@@ -1061,22 +1061,22 @@ export default {
                             member2: [
                                 {
                                     name: "凌霄",
-                                    image: require('@/assets/member/avatar/2012/cx1.jpg'),
+                                    image: require('@/assets/member/avatar/2012/cx1.webp'),
                                     signature: '当你试图解决—个你不理解的问题时，复杂化就产成了。———Andy Boothe'
                                 },
                                 {
                                     name: "李一诺",
-                                    image: require('@/assets/member/avatar/2012/cx2.jpg'),
+                                    image: require('@/assets/member/avatar/2012/cx2.webp'),
                                     signature: '控制复杂性是计算机编程的本质。—— Brian Kernighan'
                                 },
                                 {
                                     name: "李昱坤",
-                                    image: require('@/assets/member/avatar/2012/cx3.jpg'),
+                                    image: require('@/assets/member/avatar/2012/cx3.webp'),
                                     signature: '用几个小时来制定计划，可以节省几周的编程时间。——佚名'
                                 },
                                 {
                                     name: "刘嘉爱",
-                                    image: require('@/assets/member/avatar/2012/cx4.jpg'),
+                                    image: require('@/assets/member/avatar/2012/cx4.webp'),
                                     signature: '当你选择了一种语言，意味着你还选择了一组技术、一个社区。JoshuaBloch'
                                 },
                                
@@ -1088,7 +1088,7 @@ export default {
                             member2: [
                                 {
                                     name: "李思源",
-                                    image: require('@/assets/member/avatar/2012/xt1.jpg'),
+                                    image: require('@/assets/member/avatar/2012/xt1.webp'),
                                     signature: '没有什么代码的执行速度比空代码更快。————Merb 核心原则'
                                 },
                                
@@ -1099,12 +1099,12 @@ export default {
                             member2: [
                                 {
                                     name: "罗聿聪",
-                                    image: require('@/assets/member/avatar/2012/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2012/ui1.webp'),
                                     signature: '它在我的机器上可以很好运行!——大部分程序员'
                                 },
                                 {
                                     name: "肖宇恬",
-                                    image: require('@/assets/member/avatar/2012/ui2.jpg'),
+                                    image: require('@/assets/member/avatar/2012/ui2.webp'),
                                     signature: '复制粘贴是一个设计错误。一-David Parnas'
                                 },
                                
@@ -1115,7 +1115,7 @@ export default {
                 },
                 {
                     year: 2011,
-                    image: require("@/assets/img/2019.png"),
+                    image: require("@/assets/img/2019.webp"),
                     show: [],
                     height: "height: 40px;",
                     member: [
@@ -1126,7 +1126,7 @@ export default {
                             member2: [
                                 {
                                     name: "曹刚",
-                                    image: require('@/assets/member/avatar/2011/xt1.jpg'),
+                                    image: require('@/assets/member/avatar/2011/xt1.webp'),
                                     signature: '这不是一个 bug，这只是一个未列出来的特性。——匿名'
                                 },
                                
@@ -1137,7 +1137,7 @@ export default {
                             member2: [
                                 {
                                     name: "张兆业",
-                                    image: require('@/assets/member/avatar/2011/ui1.jpg'),
+                                    image: require('@/assets/member/avatar/2011/ui1.webp'),
                                     signature: '我不是一个伟大的程序员，我只是一个具有良好习惯的优秀程序员-Kent Beck'
                                 },
                                
@@ -1152,6 +1152,8 @@ export default {
 
     mounted() {
         this.activateFirstItem();
+        document.body.scrollTop=0;
+        window.scrollTo(0,0);
         window.addEventListener("scroll", this.handleScroll);
         for (let i in this.years) {
             this.years[i].show = this.years[i].member[0]

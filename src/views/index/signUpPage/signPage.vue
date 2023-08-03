@@ -9,7 +9,7 @@
             </router-link>
         </div>
         <div class="sign-background">
-            <img src="@/assets/sign/报名页背景.png" class="back-img" />
+            <img src="@/assets/sign/报名页背景.webp" class="back-img" />
             <div class="sign-up">
                 <div class="join-us">JOIN US!</div>
                 <div class="join-bottom"></div>
@@ -68,8 +68,8 @@
                 <div class="line-forth">
                     <div class="dream" style="display: flex; align-items: flex-start">
                         <span style="margin-right: 1.6vw">你的期待:</span>
-                        <textarea name="" id="" cols="30" rows="10" placeholder="为什么想加入爱特?你想在爱特学到什么?（最多200字）"
-                            v-model="expection"></textarea>
+                        <textarea name="" maxlength="100" id="" cols="30" rows="10"
+                            placeholder="为什么想加入爱特?你想在爱特学到什么?（最多200字）" v-model="expection"></textarea>
                     </div>
                 </div>
                 <div class="submit" @click="submit()">提交</div>
@@ -148,43 +148,49 @@ export default {
             let postform = {
                 email: this.address,
             }
-            await this.$http.post("/v1/api/sign_up/verification_code/", postform).then((res) => {
-                console.log(res);
-                if (res.data.code == 44036) {
-                    this.open9();
-                } else if (res.data.code == 20000) {
-                    console.log("发送成功");
+            let res = await this.$http.post("/v1/api/sign_up/verification_code/", postform)
+            console.log(res);
+            if (res.data.code == 44036) {
+                this.open9();
+            } else if (res.data.code == 20000) {
+                console.log("发送成功");
 
 
-                    this.open11();
+                this.open11();
+                this.content = this.totalTime + 's'
+                let clock = window.setInterval(() => {
+                    this.totalTime--
                     this.content = this.totalTime + 's'
-                    let clock = window.setInterval(() => {
-                        this.totalTime--
-                        this.content = this.totalTime + 's'
-                        if (this.totalTime < 0) {
-                            window.clearInterval(clock)
-                            this.content = '获取验证码'
-                            this.totalTime = 60
-                            this.canClick = true
-                        }
-                    }, 1000)
-                } else if (res.data.code == 43032) {
-                    this.$message({
-                        showClose: true,
-                        message: '该邮箱已存在',
-                        type: 'error'
-                    });
-                } else if (res.data.code == 44033) {
-                    this.$message({
-                        showClose: true,
-                        message: '请勿频繁发送验证码',
-                        type: 'error'
-                    });
-                }
-            }).catch((err) => {
-                console.log("err", err);
+                    if (this.totalTime < 0) {
+                        window.clearInterval(clock)
+                        this.content = '获取验证码'
+                        this.totalTime = 60
+                        this.canClick = true
+                    }
+                }, 1000)
                 this.isSendEmail = false
-            });
+
+            } else if (res.data.code == 43032) {
+                this.$message({
+                    showClose: true,
+                    message: '该邮箱已存在',
+                    type: 'error'
+                });
+            } else if (res.data.code == 44033) {
+                this.$message({
+                    showClose: true,
+                    message: '请勿频繁发送验证码',
+                    type: 'error'
+                });
+            } else {
+                this.$message({
+                    showClose: true,
+                    message: res.data.msg,
+                    type: 'error'
+                });
+            }
+            this.isSendEmail = false
+
             this.isSendEmail = false
         },
         async submit() {
