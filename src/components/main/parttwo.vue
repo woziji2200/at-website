@@ -1,9 +1,9 @@
 <template>
-    <div class="drew">
-        <div class="textname">
-            <div class="text1">五大部门</div>
-            <div class="text2">五大部门</div>
-            <div class="text1">五大部门</div>
+    <div class="drew" >
+        <div class="textname" ref="fivepa">
+            <div class="text1" :class="changeFlag ? 'out1':''">五大部门</div>
+            <div class="text2" >五大部门</div>
+            <div class="text1" :class="changeFlag ? 'out3':''">五大部门</div>
         </div>
         <div class="typ1"></div>
         <div class="typm" :class="bk[0]">
@@ -57,9 +57,35 @@ export default {
 
     data() {
         return {
-            bk: ["cxbk", "webbk", "uibk", "yxbk", "appbk"]
+            bk: ["cxbk", "webbk", "uibk", "yxbk", "appbk"],
+            changeFlag:false,
         }
-    }
+    },
+    methods:{
+        scrolling() {
+            // 滚动条距文档顶部的距离
+            let scrollTop =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop;
+            // console.log(scrollTop)
+            var element2 = this.$refs.fivepa;
+            var rect2 = element2.getBoundingClientRect();
+            if (scrollTop >= rect2.top  ) {
+                // console.log("header 到了最顶部")
+                this.changeFlag=true;
+            }
+            else {
+                this.changeFlag=false;
+            }
+        },
+    },
+    mounted() {
+        window.addEventListener("scroll", this.scrolling);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.scrolling);
+    },
 }
 </script>
 
@@ -237,12 +263,14 @@ export default {
 
 .textname {
     width: 480px;
-    position: absolute;
     top: 136px;
+    position: absolute;
+
     margin: 0 auto;
 }
 
 .text1 {
+    position: absolute;
     width: 480px;
     height: 120px;
     font-size: 120px;
@@ -252,10 +280,12 @@ export default {
     line-height: 120px;
     -webkit-text-stroke: 4px #007AFF;
     -webkit-text-fill-color: transparent;
-    margin-top: -10px;
+    margin-top: 100px;
+    transition: 1.2s linear;
 
 }
 .text2 {
+    position: absolute;
     width: 480px;
     height: 120px;
     font-size: 120px;
@@ -263,7 +293,12 @@ export default {
     font-weight: bold;
     color: #007AFF;
     line-height: 120px;
+    margin-top: 100px;
+}
+.out1{
     margin-top: -10px;
-
+}
+.out3{
+    margin-top: 210px;
 }
 </style>

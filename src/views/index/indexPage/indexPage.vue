@@ -24,7 +24,7 @@
             </div>
             <part-two></part-two>
             <intro></intro>
-            <footer-q-a></footer-q-a>
+            <footer-q-a ref="qaa"></footer-q-a>
         </div>
     </div>
 </template>
@@ -33,6 +33,7 @@ import navPage from '@/components/main/nav.vue'
 import partTwo from '@/components/main/parttwo.vue'
 import intro from '@/components/main/intro.vue'
 import footerQA from '@/components/main/footerQA.vue'
+import { ref } from 'vue';
 import '@waline/client/dist/waline.css';
 
 export default {
@@ -66,15 +67,18 @@ export default {
             fitin: 1,
             windowWidth: 0,
             windowHeight: 0,
-            maxHT: 8480,
+            maxHT: 8350,
         }
     },
     methods: {
         but(n) {
             switch (n) {
                 case 0:
+                    var element = this.$refs.qaa.$el;
+                    var rect = element.getBoundingClientRect();
+                    var distance = rect.top + window.pageYOffset;
                     window.scrollTo({
-                        top: 6500 * this.fitin,
+                        top: distance,
                         left: 0,
                         behavior: "smooth"
                     });
@@ -87,19 +91,19 @@ export default {
                     break;
             }
         },
-        async getComments(){
+        async getComments() {
             let comments = await this.$http.get()
         }
     },
     mounted() {
-        document.title='爱特工作室'
+        document.title = '爱特工作室'
         var that = this;
         this.windowWidth = document.body.clientWidth
         this.windowHeight = document.body.clientHeight
         this.fitin = this.windowWidth / 1920;
         // console.log(this.fitin)
         // console.log(this.maxHT)
-        this.maxHT = this.fitin * 8400;
+        this.maxHT = this.fitin * 8350;
         window.onresize = () => {
             return (() => {
                 //窗口缩放自动获取页面宽高
@@ -108,11 +112,12 @@ export default {
                 that.windowWidth = window.fullWidth; //宽
                 that.windowHeight = window.fullHeight; //高
                 that.fitin = that.windowWidth / 1920;
-                that.maxHT = that.fitin * 8400;
+                that.maxHT = that.fitin * 8350;
                 // console.log(that.fitin)
             })()
         }
     },
+
 
 }
 </script>
@@ -256,6 +261,32 @@ export default {
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
     font-weight: bold;
     color: #FFFFFF;
+    text-align: center;
+    line-height: 108px;
+}
+
+.one:hover {
+    width: 310px;
+    height: 108px;
+    background: #007AFF;
+    border-radius: 40px 40px 40px 40px;
+    font-size: 51px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 108px;
+}
+
+.two:hover {
+    width: 310px;
+    height: 108px;
+    background: #FFFFFF;
+    border-radius: 40px 40px 40px 40px;
+    font-size: 51px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #007AFF;
     text-align: center;
     line-height: 108px;
 }
