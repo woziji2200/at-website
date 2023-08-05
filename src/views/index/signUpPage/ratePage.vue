@@ -1,6 +1,6 @@
 <template>
     <div class="father">
-        <!-- <img src="@/assets/sign/组 73.webp" alt=""> -->
+        <!-- <img src="@/assets/sign/zu 73.webp" alt=""> -->
         <div class="ratePage">
             <div class="button-box">
                 <router-link to="/index">
@@ -12,7 +12,9 @@
                 <div class="found2">
                     <input type="text" v-model="phone">
                     <!-- <div class="submit" @click="submit()">查询</div> -->
-                    <div class="submit" @click="submit()"><img src="@/assets/sign/右键头.webp" alt=""></div>
+                    <div class="submit" @click="submit()">
+                        <!-- <img src="@/assets/sign/rightarrow.webp" alt=""> -->
+                    </div>
 
                 </div>
             </div>
@@ -20,29 +22,29 @@
                 <div class="first-line">
                     <div class="box-one" :style="box1">
                         <span :style="span1">初审</span>
-                        <div><img src="@/assets/sign/图像 6.webp" v-if="ifImg1"></div>
-                        <div><img src="@/assets/sign/图像 7.webp" v-if="ifImg1 == false"></div>
+                        <div><img src="@/assets/sign/picture 6.webp" v-if="ifImg1"></div>
+                        <div><img src="@/assets/sign/picture 7.webp" v-if="ifImg1 == false"></div>
                         <p :style="p1">01</p>
                     </div>
                     <div class="box-two" :style="box2">
                         <span :style="span2">面试</span>
-                        <div><img src="@/assets/sign/图像 5.webp" v-if="ifImg2"></div>
-                        <div><img src="@/assets/sign/图像 8.webp" v-if="ifImg2 == false"></div>
+                        <div><img src="@/assets/sign/picture 5.webp" v-if="ifImg2"></div>
+                        <div><img src="@/assets/sign/picture 8.webp" v-if="ifImg2 == false"></div>
                         <p :style="p2">02</p>
                     </div>
                 </div>
                 <div class="second-line">
                     <div class="box-three" :style="box3">
                         <span :style="span3">笔试</span>
-                        <div><img src="@/assets/sign/图像 2.webp" v-if="ifImg3"></div>
-                        <div><img src="@/assets/sign/图像 3.webp" v-if="ifImg3 == false"></div>
+                        <div><img src="@/assets/sign/picture 2.webp" v-if="ifImg3"></div>
+                        <div><img src="@/assets/sign/picture 3.webp" v-if="ifImg3 == false"></div>
                         <p :style="p3">03</p>
                     </div>
                     <div class="box-four" :style="box4">
                         <span :style="span4">录取结果</span>
                         <!-- <span style="margin-top:0">结果</span> -->
-                        <div><img src="@/assets/sign/图像 4.webp" v-if="ifImg4"></div>
-                        <div><img src="@/assets/sign/图像 9.webp" v-if="ifImg4 == false"></div>
+                        <div><img src="@/assets/sign/picture 4.webp" v-if="ifImg4"></div>
+                        <div><img src="@/assets/sign/picture 9.webp" v-if="ifImg4 == false"></div>
                         <p :style="p4">04</p>
                     </div>
                 </div>
@@ -77,7 +79,7 @@ export default {
             p2: '',
             p3: '',
             p4: '',
-            isSubmit:false
+            isSubmit: false
         };
     },
     methods: {
@@ -133,14 +135,14 @@ export default {
             });
         },
         async submit() {
-            if(this.isSubmit)return
+            if (this.isSubmit) return
             else this.isSubmit = true
             let emailExp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/g
             let phoneExp = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/g
             if (!(emailExp.test(this.phone) || phoneExp.test(this.phone))) {
                 this.$message({
                     showClose: true,
-                    message: '所填信息有错误哦~',
+                    message: '所填信息有错误或未查询到相关信息哦~',
                     type: 'error'
                 });
                 this.isSubmit = false
@@ -160,50 +162,68 @@ export default {
                     this.back3();
                     this.back4();
                 }
-
+                let status
+                switch (res.data.data.status) {
+                    case 0: status = "已报名，正在处理中"; break;
+                    case 1: status = "已报名，正在处理中"; break;
+                    case 2: status = "正在初审中"; break;
+                    case 3: status = "面试中"; break;
+                    case 4: status = "笔试中"; break;
+                    case 5: status = "恭喜您，已成功录取"; break;
+                    case 6: status = "很遗憾，您初审未通过"; break;
+                    case 7: status = "很遗憾，您面试未通过"; break;
+                    case 8: status = "很遗憾，您笔试未通过"; break;
+                    case 9: status = "很遗憾，您复试未通过"; break;
+                    case 10: status = "很遗憾，您未被录取"; break;
+                }
+                this.$message({
+                    showClose: true,
+                    message: status,
+                    type: 'success'
+                });
                 if (res.data.data.status == 3 || res.data.data.status == 7) {
                     this.changeImg1();
                     this.back2();
                     this.back3();
                     this.back4();
-                    this.$message({
-                        showClose: true,
-                        message: '查询成功',
-                        type: 'success'
-                    });
+                    // this.$message({
+                    //     showClose: true,
+                    //     message: '查询成功',
+                    //     type: 'success'
+                    // });
                 }
                 else if (res.data.data.status == 4 || res.data.data.status == 8 || res.data.data.status == 9 || res.data.data.status == 10) {
                     this.changeImg1();
                     this.changeImg2();
                     this.back3();
                     this.back4();
-                    this.$message({
-                        showClose: true,
-                        message: '查询成功',
-                        type: 'success'
-                    });
+                    // this.$message({
+                    //     showClose: true,
+                    //     message: '查询成功',
+                    //     type: 'success'
+                    // });
                 }
                 else if (res.data.data.status == 5) {
                     this.changeImg1();
                     this.changeImg2();
                     this.changeImg3();
                     this.changeImg4();
-                    this.$message({
-                        showClose: true,
-                        message: '查询成功',
-                        type: 'success'
-                    });
+                    // this.$message({
+                    //     showClose: true,
+                    //     message: '查询成功',
+                    //     type: 'success'
+                    // });
                 }
                 else {
                     this.back1();
                     this.back2();
                     this.back3();
                     this.back4();
-                    this.$message({
-                        showClose: true,
-                        message: '查询成功',
-                        type: 'success'
-                    });
+                    // this.$message({
+                    //     showClose: true,
+                    //     message: '查询成功',
+                    //     type: 'success'
+                    // });
                 }
             }).catch((err) => {
                 console.log("err", err);
@@ -220,7 +240,7 @@ a {
 }
 
 .ratePage {
-    background-image: url('@/assets/sign/组 73.webp');
+    background-image: url('@/assets/sign/zu 73.webp');
     background-size: 100% 100%;
 }
 
@@ -308,6 +328,10 @@ a {
     background-color: #9DCCFF;
     border-radius: 50%;
     transition: all 0.3s;
+    background-image: url(@/assets/sign/rightarrow.webp);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .submit img {
@@ -434,21 +458,25 @@ div[class^="box"] img {
     }
 
     .found {
+        margin-top: 20px;
         width: 80vw;
         flex-direction: column;
     }
 
     .number {
-        font-size: 18px;
+        font-size: 22px;
     }
 
     .found2 {
         justify-content: center;
+        margin-top: 10px;
     }
 
     .found2 input {
         width: 60%;
         height: 25px;
+        font-size: 10px;
+        padding-left: 10px;
     }
 
     .submit {
@@ -462,7 +490,8 @@ div[class^="box"] img {
     .submit img {
         width: 14px;
         height: 14px;
-        margin-left: 1px;
+        object-fit:fill;
+        /* margin-left: 1px; */
     }
 }
 </style>

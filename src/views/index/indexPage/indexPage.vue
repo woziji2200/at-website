@@ -1,6 +1,6 @@
 <template>
     <!-- 'height': maxHT + 'px', -->
-    <div class="blink" :style="{'height': maxHT+100 + 'px',  'width': windowWidth + 'px' }">
+    <div class="blink" :style="{'height': maxHT+160 + 'px',  'width': windowWidth + 'px' }">
         <div class="navs" :style="{ 'transform': ' scale(' + fitin + ')', 'width': windowWidth + 'px' }">
             <nav-page> </nav-page>
         </div>
@@ -128,7 +128,7 @@ export default {
 .all {
     transform-origin: 0 0;
     margin: 0 auto;
-    margin-top: -90px;
+    /* margin-top: -90px; */
 }
 
 .navs {
@@ -188,7 +188,7 @@ export default {
 }
 
 .headline {
-    width: 600px;
+    width: 620px;
     height: 158px;
     font-size: 120px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;

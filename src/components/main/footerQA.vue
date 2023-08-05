@@ -394,7 +394,7 @@ export default {
 }
 
 .footer-text {
-    width: 1205px;
+    width: 1305px;
     height: 31px;
     font-size: 24px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;

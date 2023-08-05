@@ -252,14 +252,14 @@ export default {
 }
 
 .textname {
-    width: 480px;
+    width: 100%;
     position: absolute;
     top: 136px;
     margin: 0 auto;
 }
 
 .text1 {
-    width: 480px;
+    width: 100%;
     height: 120px;
     font-size: 120px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
@@ -269,10 +269,10 @@ export default {
     -webkit-text-stroke: 4px #007AFF;
     -webkit-text-fill-color: transparent;
     margin-top: -10px;
-
+    text-align: center;
 }
 .text2 {
-    width: 480px;
+    width: 100%;
     height: 120px;
     font-size: 120px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
@@ -280,6 +280,7 @@ export default {
     color: #007AFF;
     line-height: 120px;
     margin-top: -10px;
+    text-align: center;
 
 }
 </style>

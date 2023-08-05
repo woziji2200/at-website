@@ -1,7 +1,7 @@
 <template>
     <div class="turntable" @wheel="handleWheel">
       <div class="turntable-containerBox">
-        <img src="@/assets/img/指针.webp" alt="" class="point">
+        <img src="@/assets/img/zhizhen.webp" alt="" class="point">
         <img src="@/assets/img/logo1.webp" class="logo"><div class="pointText">IT STUDIO</div>
       <div class="turntable-container">
         <div
@@ -38,7 +38,7 @@
         boxes: [
           { content: "盒子1",
             isBlue: false,
-            image: require("@/assets/img/2022《大地之歌》.webp"),
+            image: require("@/assets/img/2022ddzg.webp"),
             backgroundImage:require("@/assets/img/22.webp"),
             year:"2022",
             text0:'爱特历史作品',
@@ -54,7 +54,7 @@
           },
           { content: "盒子2", 
           isBlue: false,
-          image: require("@/assets/img/校团委.webp"),
+          image: require("@/assets/img/xtw.webp"),
           backgroundImage:require("@/assets/img/21.webp"),
           year:"2021",
           text0:'爱特历史作品',
@@ -122,7 +122,7 @@
         },
         { content: "盒子8", 
           isBlue: false,
-          image: require("@/assets/img/QQ截图20220623151316.webp"),
+          image: require("@/assets/img/20220623151316.webp"),
           backgroundImage:require("@/assets/img/19.webp"),
           year:"2015",
           text0:'爱特历史作品',
@@ -134,7 +134,7 @@
         },
         { content: "盒子9", 
           isBlue: false,
-          image: require("@/assets/img/信息.webp"),
+          image: require("@/assets/img/xinxi.webp"),
           backgroundImage:require("@/assets/img/19.webp"),
           year:"2014",
           text0:'爱特历史作品',
@@ -238,7 +238,7 @@
     left: 23.5vw;
     width: 2vw;
     height: 2vw;
-    /* background-image: url('@/assets/img/QQ截图20220623151316.webp'); */
+    /* background-image: url('@/assets/img/20220623151316.webp'); */
   }
   .pointText{
     position: absolute;

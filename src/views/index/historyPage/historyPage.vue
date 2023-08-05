@@ -1,6 +1,6 @@
 <template>
     <div class="shell" id="shell">
-      <img src="@/assets/img/背景图.webp" class="background-white" v-if="!flag">
+      <img src="@/assets/img/bg.webp" class="background-white" v-if="!flag">
       <div class="history1" v-if="!flag">
         <Turntable />
     </div>
@@ -41,7 +41,7 @@
         flag:false,
         years:[
                 {
-                    image: require("@/assets/img/2022《大地之歌》.webp"),
+                    image: require("@/assets/img/2022ddzg.webp"),
                     backgroundImage:require("@/assets/img/22.webp"),
                     year:"2022",
                     text0:'爱特历史作品',
@@ -55,7 +55,7 @@
                     text4:'为校外企业制作物联网数据实时展示平台' ,
                 },
                 {
-                    image: require("@/assets/img/校团委.webp"),
+                    image: require("@/assets/img/xtw.webp"),
                     backgroundImage:require("@/assets/img/21.webp"),
                     year:"2021",
                     text0:'爱特历史作品',
@@ -113,7 +113,7 @@
                     text2:'由爱特制作的中国海洋大学计算机系网站成功上线' ,
                 },
                 {
-                    image: require("@/assets/img/QQ截图20220623151316.webp"),
+                    image: require("@/assets/img/20220623151316.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2015",
                     text0:'爱特历史作品',
@@ -123,7 +123,7 @@
                     text2:'为中国海洋大学iGEM比赛团队制作静态展示页面' ,
                 },
                 {
-                    image: require("@/assets/img/信息.webp"),
+                    image: require("@/assets/img/xinxi.webp"),
                     backgroundImage:require("@/assets/img/19.webp"),
                     year:"2014",
                     text0:'爱特历史作品',
@@ -238,17 +238,12 @@
     top: 92.5vh;
 }
 .button-text {
-  width: 7vw;
-  height: 6vh;
-  font-size: 1.4vw;
+  width: 100px;
+  font-size: 12px;
     font-family: Microsoft YaHei;
     font-weight: bold;
     color: #FFFFFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 2.8vh;
+margin-bottom: 5px;
 }
 .fold{
   background: #007AFF;
@@ -279,19 +274,20 @@
     border: 1px transparent;
     border-radius: 1vw;
     position: sticky;
-    width: 8vw;
-    height: 4.5vh;
-    left: 90vw;
-    bottom: 5vh;
+    width: 70px;
+    height: 34px;
+    left: calc(100vw - 50px);
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .goToHomePageLine{
   background: #FFFFFF;
-    height: 0.3vh;
-    width: 4vw;
-    position: absolute;
-    left: 2vw;
-    top: 3.6vh;
+    height: 2px;
+    width: 60%;
 }
 
 .underLine{

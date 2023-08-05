@@ -82,16 +82,16 @@ export default {
         return {
             index: 0,
             rollMarg: 0,
-            infosHead: ["团队文化01", "关于爱特", "团队文化02", "团队文化03"],
+            infosHead: ["团队文化（一）", "关于爱特", "团队文化（二）", "团队文化（三）"],
             infosInfo: ["爱特一直以凝聚和培养计算机人才为己任,发掘技术潜力,感受合作乐趣,让代码高效执行,让大家更进一步。",
                 "爱特工作室成立于2002年,是一个在中国海洋大学信息科学与工程学部领导主持下,以计算机技术人才培养,网络开发为特色的技术性团体。",
                 "用创意打磨精巧设计，用智慧实现炫酷交互;用热情呈现高效代码，以交流触碰灵感火花;以创造激发全新想象,用双手创造改变未来。",
                 "汇聚技术力量，解剖程序内核，研究代码本质，巧解应用难题。以逻辑洞察数据，以细节战胜漏洞。"
             ],
             infoRollImg: [require("@/assets/img/index/aboutbk.webp"),
-            require("@/assets/img/index/aboutbk.webp"),
-            require("@/assets/img/index/aboutbk.webp"),
-            require("@/assets/img/index/aboutbk.webp")],
+            require("@/assets/img/index/about1.png"),
+            require("@/assets/img/index/about2.png"),
+            require("@/assets/img/index/about3.png")],
             workInfos: " 爱特工作室相信，只有不断提高要求，延迟满足感，持续的学习和成长，才有可能不断进步，因此，爱特每年都会有新的作品产生。",
             Timer: "",
         }
@@ -201,7 +201,7 @@ export default {
 }
 
 .about-name {
-    width: 390px;
+    width: 420px;
     height: 106px;
     font-size: 80px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
@@ -210,6 +210,7 @@ export default {
     line-height: 106px;
     letter-spacing: 16px;
     margin-top: 50px;
+    margin-left: 15px;
 }
 
 .about-eng {
@@ -273,7 +274,7 @@ export default {
 }
 
 .infos-head {
-    width: 158px;
+    width: 278px;
     height: 40px;
     font-size: 30px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
@@ -291,7 +292,7 @@ export default {
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
     font-weight: bold;
     color: #FFFFFF;
-    line-height: 24px;
+    line-height: 30px;
     margin-left: 40px;
     margin-top: 16px;
 }
@@ -319,6 +320,9 @@ export default {
     box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.16);
     border-radius: 80px 80px 0px 0px;
     opacity: 1;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat center; */
+    object-fit: cover;
 }
 
 .rolll {
@@ -452,7 +456,7 @@ export default {
 
 .work-name {
     width: 390px;
-    height: 106px;
+    height: 126px;
     font-size: 80px;
     font-family: Microsoft YaHei-Bold, Microsoft YaHei;
     font-weight: bold;

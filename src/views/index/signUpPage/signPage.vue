@@ -9,37 +9,62 @@
             </router-link>
         </div>
         <div class="sign-background">
-            <img src="@/assets/sign/报名页背景.webp" class="back-img" />
+            <img src="@/assets/sign/baomingye.webp" class="back-img" />
             <div class="sign-up">
                 <div class="join-us">JOIN US!</div>
                 <div class="join-bottom"></div>
+
+                <!-- <el-row>
+                    <el-col :span="24">
+                        <el-form>
+                            <el-row>
+                                <el-col :span="12">
+                                    <el-form-item label="姓名" style="width: 40%;">
+                                        <el-input v-model="nam"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                                <el-col :span="12">
+                                    <el-form-item label="姓名" style="width: 40%;">
+                                        <el-input v-model="nam"></el-input>
+                                    </el-form-item>
+                                </el-col>
+                            </el-row>
+
+                        </el-form>
+                    </el-col>
+                </el-row> -->
+
+
+
+
+
                 <div class="line-first">
-                    <div class="name" style="display: flex; align-items: center">
+                    <div class="name line" style="display: flex; align-items: center">
                         <span style="margin-right: 1.6vw">姓名:</span>
-                        <input type="text" v-model="nam" />
+                        <input id="name" type="text" v-model="nam" />
                     </div>
-                    <div class="sex" style=" display: flex; align-items: center">
+                    <div class="sex line" style=" display: flex; align-items: center">
                         <span style="margin-right: 1.6vw">性别:</span>
                         <input type="radio" id="man" name="sex" value="0" checked="checked" v-model="sex" class="man"
                             style="padding:0;cursor: pointer;" />
-                        <label style="margin-right: 1.5vw; color: rgb(56, 55, 55)">男</label>
+                        <label for="man" class="label1" style="margin-right: 1.5vw; color: rgb(56, 55, 55)">男</label>
                         <input type="radio" id="woman" name="sex" value="1" v-model="sex"
                             style="padding:0;cursor: pointer;" />
-                        <label style="color: rgb(56, 55, 55)">女</label>
+                        <label for="woman" class="label1" style="color: rgb(56, 55, 55)">女</label>
                     </div>
-                    <div class="grade" style=" display: flex; align-items: center">
+                    <div class="grade line" style=" display: flex; align-items: center">
                         <span style="margin-right: 1.6vw">年级专业:</span>
                         <input type="text" placeholder="例：23级计算机类" v-model="grade" />
                     </div>
                 </div>
                 <div class="line-second">
-                    <div class="phone" style="display: flex; align-items: center">
+                    <div class="phone line" style="display: flex; align-items: center">
                         <span style="margin-right: 1.6vw">电话号码:</span>
                         <input type="text" v-model="phone" />
                     </div>
-                    <div class="web" style=" display: flex; align-items: center">
-                        <span @click="getdepart()">意见部门:</span>
-                        <el-select v-model="value" placeholder="请选择你要加入的部门">
+                    <div class="web line" style=" display: flex; align-items: center">
+                        <span @click="getdepart()">意向部门:</span>
+                        <el-select class="el-select" v-model="value" placeholder="请选择你要加入的部门">
                             <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
                             </el-option>
                         </el-select>
@@ -47,26 +72,28 @@
                     </div>
                 </div>
                 <div class="line-third">
-                    <div class="adress" style="display: flex; align-items: center">
+                    <div class="adress line" style="display: flex; align-items: center">
                         <span style="margin-right: 1.6vw">邮箱地址:</span>
                         <input type="text" v-model="address" />
                     </div>
-                    <div class="number" style=" display: flex; align-items: center">
+                    <div class="number line" style=" display: flex; align-items: center">
                         <span style="margin-right: 1.6vw">验证码:</span>
                         <div class="adress-border">
                             <input type="text" placeholder="验证码将发至您的邮箱" v-model="number" class="adress-input" />
-                            <span @click="postNumber()" style="
-                  color: #007aff;
-                  font-size: 1.2vw;
-                  margin-right: 0.67vw;
-                  letter-spacing: 0.34vw;
-                  cursor: pointer;
-                ">{{ content }}</span>
+                            <span class="send" @click="postNumber()" style="
+                                color: #007aff;
+                                /* font-size: 5px; */
+                                margin-right: 5px;
+                                /* letter-spacing: 0.34vw; */
+                                cursor: pointer;
+                            ">
+                                {{ content }}
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div class="line-forth">
-                    <div class="dream" style="display: flex; align-items: flex-start">
+                <div class="line-forth line">
+                    <div class="dream" style="display: flex; align-items: space-between">
                         <span style="margin-right: 1.6vw">你的期待:</span>
                         <textarea name="" maxlength="100" id="" cols="30" rows="10"
                             placeholder="为什么想加入爱特?你想在爱特学到什么?（最多200字）" v-model="expection"></textarea>
@@ -114,7 +141,7 @@ export default {
             expection: '',
             isSendEmail: false,
             isSubmit: false,
-            content: '获取验证码',
+            content: '发送',
             totalTime: 60,
             canClick: true
         };
@@ -163,7 +190,7 @@ export default {
                     this.content = this.totalTime + 's'
                     if (this.totalTime < 0) {
                         window.clearInterval(clock)
-                        this.content = '获取验证码'
+                        this.content = '发送'
                         this.totalTime = 60
                         this.canClick = true
                     }
@@ -336,7 +363,7 @@ export default {
 .join-us {
     color: #007aff;
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 36px;
     text-align: center;
 }
 
@@ -356,15 +383,16 @@ span {
 
 @media only screen and (max-width: 767px) {
     span {
-        font-size: 1.5em;
+        font-size: 16px;
     }
 
     .back-img {
-        height: 580px;
+        height: 100% !important;
+        margin-top: 10px !important;
     }
 
     .sign-up {
-        top: 5%;
+        top: 20px;
         left: 50%;
         transform: translate(-50%, 0);
         width: 90vw;
@@ -415,7 +443,10 @@ div[class^="line"] {
 .adress-border span:active {
     transform: scale(0.8);
 }
-
+.send{
+    font-size: 5px !important;
+    margin-right: 10px;
+}
 @media only screen and (max-width: 767px) {
     div[class^="line"] {
         display: flex;
@@ -423,7 +454,11 @@ div[class^="line"] {
         margin-bottom: 10px;
         /* margin-left: 40px; */
     }
-
+    .send{
+        font-size: 12px !important;
+        white-space: nowrap;
+        margin-right: 8px;
+    }
     .adress-border span {
         font-size: 0.8vw;
         /* width: 30%; */
@@ -438,10 +473,7 @@ div[class^="line"] {
     }
 
     .name input {
-        /* width: 303px; */
-        width: 70%;
         height: 38px;
-        margin-left: 47px;
     }
 
     .sex {
@@ -455,7 +487,7 @@ div[class^="line"] {
 
     .sex input[type="radio"] {
         width: 20px;
-        height: 38px;
+        /* height: 38px; */
         height: 20px;
         margin-left: 97px;
     }
@@ -465,7 +497,7 @@ div[class^="line"] {
     }
 
     .sex label {
-        font-size: 1.4em;
+        font-size: 18px
     }
 
     .grade {
@@ -550,8 +582,57 @@ div[class^="line"] {
     }
 
     input::-webkit-input-placeholder {
-        padding-left: 10px;
+        padding-left: 0px !important;
         /* font-size: 1.5em; */
+    }
+    .line-first span,.line-second span,.line-third span{
+        width: 20% !important;
+        white-space: nowrap !important;
+        text-align: left;
+        margin-left: 8px;
+    }
+    .line{
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100%;
+        position: relative !important;
+    }
+    .line-first input[type=text],.line-second input[type=text],.line-third input[type=text]{
+        width: 80% !important;
+        padding-left: 10px;
+    }
+    .adress-border{
+        width: 80% !important;
+    }
+    .web .el-select{
+        width: calc(80% + 10px) !important;
+    }
+
+    .dream span{
+        margin-left: 8px !important;
+    }
+    .dream textarea{
+        width: calc(80% + 10px) !important;
+        padding: 7px !important;
+    }
+    input[type="radio"]{
+        width: 20px !important;
+        height: 20px !important;
+        margin-left: -10px !important;
+    }
+    .label1{
+        margin-left: -60px !important;
+    }
+    /* .line-second span{
+        width: 20% !important;
+        white-space: nowrap !important;
+    }
+    .line-third span{
+        width: 20% !important;
+        white-space: nowrap !important;
+    } */
+    #name{
+        width: 67% !important;
     }
 }
 
@@ -592,7 +673,7 @@ input::-webkit-input-placeholder {
     /* placeholder颜色  */
     color: #606266;
     opacity: 0.45;
-    font-size: 0.99vw;
+    font-size: 14px;
     /* padding-left: 7px; */
 }
 
@@ -657,7 +738,8 @@ textarea::-webkit-input-placeholder {
     /* placeholder颜色  */
     color: #606266;
     opacity: 0.45;
-    font-size: 0.99vw;
+    font-size: 14px;
+    font-family: '微软雅黑';
     /* padding-left: 9px; */
     /* padding-top: 9px; */
     /* letter-spacing: 2px; */
@@ -674,7 +756,7 @@ textarea::-webkit-input-placeholder {
     color: white;
     text-align: center;
     line-height: 40px;
-    font-size: 1.2em;
+    font-size: 20px;
     font-weight: bold;
     letter-spacing: 8px;
     transition: all 0.2s;
