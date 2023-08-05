@@ -70,9 +70,9 @@ export default {
                 window.pageYOffset ||
                 document.documentElement.scrollTop ||
                 document.body.scrollTop;
-            console.log(scrollTop)
+            // console.log(scrollTop)
             if (scrollTop >= 690) {
-                console.log("header 到了最顶部")
+                // console.log("header 到了最顶部")
                 this.flag=true;
             }
             else{
