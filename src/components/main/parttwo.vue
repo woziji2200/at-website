@@ -277,14 +277,20 @@ export default {
     left: 0px;
 }
 
-.textname {
+/* .textname {
     width: 100%;
     position: absolute;
 
     margin: 0 auto;
+} */
+.textname {
+    width: 480px;
+    position: absolute;
+    top: 136px;
+    position: absolute;
+    margin: 0 auto;
 }
-
-.text1 {
+/* .text1 {
     width: 100%;
     height: 120px;
     font-size: 120px;
@@ -297,8 +303,35 @@ export default {
     margin-top: 100px;
     text-align: center;    transition: 1.2s linear;
 
+} */
+.text1 {
+    position: absolute;
+    /* width: 480px; */
+    width: 100%;
+    height: 120px;
+    font-size: 120px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 120px;
+    -webkit-text-stroke: 4px #007AFF;
+    -webkit-text-fill-color: transparent;
+    margin-top: -10px;
+    margin-top: 100px;
+    transition: 0.5s;
 }
+/* .text2 {
+    width: 100%;
+    height: 120px;
+    font-size: 120px;
+    font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+    font-weight: bold;
+    color: #007AFF;
+    line-height: 120px;
+    margin-top: 100px;
+} */
 .text2 {
+    position: absolute;
     width: 100%;
     height: 120px;
     font-size: 120px;
