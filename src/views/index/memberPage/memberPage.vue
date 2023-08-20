@@ -21,8 +21,8 @@
                             <div class="content-main-left">
                                 <span :style="item.height" @mouseenter="openMenu(item)" @mouseleave="closeMenu(item)"
                                     class="content-main-left-border">
-                                    <span class="content-main-left-button" v-for="(department,index) in item.member">
-                                        <button class="content-main-left-button-1" v-if="index==0">
+                                    <span class="content-main-left-button" v-for="(department, index) in item.member">
+                                        <button class="content-main-left-button-1" v-if="index == 0">
                                             {{ item.show.department }}
                                             <i class="content-main-left-button-i el-icon-arrow-down"></i>
                                             <i class="content-main-left-button-i2 el-icon-right"></i>
@@ -38,7 +38,8 @@
                                     <img class="content-main-right-profile-avatar" :src="member.image" alt="" srcset="">
                                     <div class="content-main-right-profile-right">
                                         <span class="content-main-right-profile-right-name">{{ member.name }}</span>
-                                        <span class="content-main-right-profile-right-signature">{{ member.signature}}</span>
+                                        <span class="content-main-right-profile-right-signature">{{
+                                            member.signature }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -73,7 +74,7 @@ export default {
                         {
                             department: "APP",
                             member2: [
-                                
+
                                 {
                                     name: "王建享",
                                     image: require('@/assets/member/avatar/2022/wjx.webp'),
@@ -84,7 +85,7 @@ export default {
                                     image: require('@/assets/member/avatar/2022/wjj.webp'),
                                     signature: '吃面'
                                 },
-                            ],    
+                            ],
                         },
                         {
                             department: "Web",
@@ -92,7 +93,7 @@ export default {
                                 {
                                     name: "张世卿",
                                     image: require('@/assets/member/avatar/2022/zhangshiqing.webp'),
-                                    signature:'关注永雏塔菲喵，关注永雏塔菲谢谢喵'
+                                    signature: '关注永雏塔菲喵，关注永雏塔菲谢谢喵'
                                 },
                                 {
                                     name: "冷越",
@@ -140,7 +141,7 @@ export default {
                                     signature: '迟早猝死'
 
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "UI",
@@ -149,7 +150,7 @@ export default {
                                     name: "董芯汝",
                                     image: require('@/assets/member/avatar/2022/dongxinru.webp'),
                                     signature: 'This is Mr.White.',
-                                },                               
+                                },
                                 {
                                     name: "马琪颖",
                                     image: require('@/assets/member/avatar/2022/maqiying3.webp'),
@@ -164,13 +165,18 @@ export default {
                                     name: "曹瑜",
                                     image: require('@/assets/member/avatar/2022/caoyu.webp'),
                                     signature: '注意看，这个女孩叫小美'
+                                },
+                                {
+                                    name: "韦万蓓",
+                                    image: require('@/assets/member/avatar/2022/wwb.webp'),
+                                    signature: '来摆摆手，再嫣然晃个头，无限春光献祖国。'
                                 }]
                         },
                         {
                             department: "游戏",
                             member2: [
                                 {
-                                    name:"梁芷菁",
+                                    name: "梁芷菁",
                                     image: require('@/assets/member/avatar/2022/lzj.webp'),
                                     signature: '能以知识描绘，亦可以爱描绘，唯独不能用奇迹来描绘'
                                 },
@@ -194,19 +200,28 @@ export default {
                                     image: require('@/assets/member/avatar/2022/yueyilei.webp'),
                                     signature: '程序员终成大牛'
                                 },
-                                {   name: "王铭新",
+                                {
+                                    name: "王铭新",
                                     image: require('@/assets/member/avatar/2022/wangmingxin.webp'),
                                     signature: '你说得对，但是'
                                 },
-                                {   name: "时晓天",
+                                {
+                                    name: "时晓天",
                                     image: require('@/assets/member/avatar/2022/shixiaotian.webp'),
                                     signature: '这个人很懒，什么都没有留下'
                                 },
-                                {   name: "许其鸿",
+                                {
+                                    name: "许其鸿",
                                     image: require('@/assets/member/avatar/2022/xuqihong.webp'),
                                     signature: '卷不过卷不过'
 
-                                }]
+                                },
+                                {
+                                    name: "陈子荣",
+                                    image: require("@/assets/member/avatar/2022/czr.webp"),
+                                    signature: "我不是二次元"
+                                }
+                            ]
                         },
                     ]
                 },
@@ -297,7 +312,7 @@ export default {
                                     image: require('@/assets/member/avatar/2021/cx8.webp'),
                                     signature: 'Bug退散！！！'
                                 }
-                                ]
+                            ]
                         },
                         {
                             department: "UI",
@@ -307,8 +322,8 @@ export default {
                                     image: require('@/assets/member/avatar/2021/ui1.webp'),
                                     signature: '今天也是困困的一天'
                                 },
-                               
-                                ]
+
+                            ]
                         },
                         {
                             department: "游戏",
@@ -348,7 +363,7 @@ export default {
                                     image: require('@/assets/member/avatar/2021/game7.webp'),
                                     signature: '好好学习'
                                 },
-                                ]
+                            ]
                         },
                     ]
                 },
@@ -390,7 +405,7 @@ export default {
                                     image: require('@/assets/member/avatar/2020/web2.webp'),
                                     signature: 'debug冲冲冲'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "程序",
@@ -410,7 +425,7 @@ export default {
                                     image: require('@/assets/member/avatar/2020/cx3.webp'),
                                     signature: '要做人民的先生，先做人民的学生。————毛泽东'
                                 },
-                                ]      
+                            ]
                         },
                         {
                             department: "UI",
@@ -420,7 +435,7 @@ export default {
                                     image: require('@/assets/member/avatar/2020/ui1.webp'),
                                     signature: '我们有一部实际存在的普世之法，其目的正是为了避免完全的功利主义。'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "游戏",
@@ -440,7 +455,7 @@ export default {
                                     image: require('@/assets/member/avatar/2020/game3.webp'),
                                     signature: '功不唐捐'
                                 },
-                               ]
+                            ]
                         },
                     ]
                 },
@@ -476,8 +491,8 @@ export default {
                                     name: "高可欣",
                                     image: require('@/assets/member/avatar/2019/web11.webp'),
                                     signature: '-interesting'
-                                },                              
-                               ]
+                                },
+                            ]
                         },
                         {
                             department: "程序",
@@ -502,7 +517,7 @@ export default {
                                     image: require('@/assets/member/avatar/2019/cx4.webp'),
                                     signature: '要么孤独，要么庸俗'
                                 },
-                                ]      
+                            ]
                         },
                         {
                             department: "UI",
@@ -542,7 +557,7 @@ export default {
                                     image: require('@/assets/member/avatar/2019/ui77.webp'),
                                     signature: '弃捐勿复道，努力加餐饭。'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "游戏",
@@ -557,8 +572,8 @@ export default {
                                     image: require('@/assets/member/avatar/2019/game22.webp'),
                                     signature: '兴趣是第一动力。'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                     ]
                 },
@@ -605,7 +620,7 @@ export default {
                                     image: require('@/assets/member/avatar/2018/web2.webp'),
                                     signature: '。。。咕咕咕？'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "程序",
@@ -625,7 +640,7 @@ export default {
                                     image: require('@/assets/member/avatar/2018/cx3.webp'),
                                     signature: 'bug的数量可能与你的勤奋程度成正相关。'
                                 },
-                                ]      
+                            ]
                         },
                         {
                             department: "UI",
@@ -635,7 +650,7 @@ export default {
                                     image: require('@/assets/member/avatar/2018/ui1.webp'),
                                     signature: '……'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "游戏",
@@ -650,8 +665,8 @@ export default {
                                     image: require('@/assets/member/avatar/2018/game2.webp'),
                                     signature: 'Coding is not about typing, is about thinking.'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                     ]
                 },
@@ -674,7 +689,7 @@ export default {
                                     image: require('@/assets/member/avatar/2017/app2.webp'),
                                     signature: '带我，发出萌新的声音'
                                 },
-                                ]
+                            ]
                         },
                         {
                             department: "Web",
@@ -684,8 +699,8 @@ export default {
                                     image: require('@/assets/member/avatar/2017/web1.webp'),
                                     signature: '面向百度编程'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "程序",
@@ -710,7 +725,7 @@ export default {
                                     image: require('@/assets/member/avatar/2017/cx4.webp'),
                                     signature: '健忘是头秃的前兆——谁说的来着'
                                 },
-                                ]      
+                            ]
                         },
                         {
                             department: "UI",
@@ -720,7 +735,7 @@ export default {
                                     image: require('@/assets/member/avatar/2017/ui1.webp'),
                                     signature: 'less is more 少即是多'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "游戏",
@@ -730,8 +745,8 @@ export default {
                                     image: require('@/assets/member/avatar/2018/game1.webp'),
                                     signature: '我们每天度过的称之为日常的生活，其实是一个个奇迹的连续也说不定。'
                                 },
-                              
-                               ]
+
+                            ]
                         },
                     ]
                 },
@@ -754,7 +769,7 @@ export default {
                                     image: require('@/assets/member/avatar/2016/app2.webp'),
                                     signature: '梦想是做个技术宅'
                                 },
-                                ]
+                            ]
                         },
                         {
                             department: "Web",
@@ -784,7 +799,7 @@ export default {
                                     image: require('@/assets/member/avatar/2016/web5.webp'),
                                     signature: '人生总会熬出来的'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "程序",
@@ -809,7 +824,7 @@ export default {
                                     image: require('@/assets/member/avatar/2016/cx4.webp'),
                                     signature: '请称赞我，高贵冷艳'
                                 },
-                                ]      
+                            ]
                         },
                         {
                             department: "UI",
@@ -834,9 +849,9 @@ export default {
                                     image: require('@/assets/member/avatar/2016/ui4.webp'),
                                     signature: '额，活泼好动，爱看电影，做运动，旅游，喜欢设计…'
                                 },
-                               ]
+                            ]
                         },
-                       
+
                     ]
                 },
                 {
@@ -845,7 +860,7 @@ export default {
                     show: [],
                     height: "height: 40px;",
                     member: [
-                       
+
                         {
                             department: "Web",
                             member2: [
@@ -864,8 +879,8 @@ export default {
                                     image: require('@/assets/member/avatar/2015/web3.webp'),
                                     signature: '不听不听，王八念经'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "程序",
@@ -875,8 +890,8 @@ export default {
                                     image: require('@/assets/member/avatar/2015/cx1.webp'),
                                     signature: '我就是我，是颜色不一样的烟火'
                                 },
-                               
-                                ]      
+
+                            ]
                         },
                         {
                             department: "UI",
@@ -886,8 +901,8 @@ export default {
                                     image: require('@/assets/member/avatar/2015/ui1.webp'),
                                     signature: '直到最后一个用户死去，软件才算完成。——佚名'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "系统维护",
@@ -897,10 +912,10 @@ export default {
                                     image: require('@/assets/member/avatar/2015/xt1.webp'),
                                     signature: '计算机科学领域的所有问题都可以通过其他方式间接解决。—David Wheeler'
                                 },
-                               
-                               ]
+
+                            ]
                         },
-                       
+
                     ]
                 },
                 {
@@ -909,7 +924,7 @@ export default {
                     show: [],
                     height: "height: 40px;",
                     member: [
-                       
+
                         {
                             department: "Web",
                             member2: [
@@ -918,8 +933,8 @@ export default {
                                     image: require('@/assets/member/avatar/2014/web1.webp'),
                                     signature: '质量、速度、廉价，选择其中两个'
                                 },
-                              
-                               ]
+
+                            ]
                         },
                         {
                             department: "程序",
@@ -949,7 +964,7 @@ export default {
                                     image: require('@/assets/member/avatar/2014/cx5.webp'),
                                     signature: '诚信自由平等爱国文明诚信民主诚信民主诚信自由敬业爱国富强友善平等友善公正'
                                 },
-                                ]      
+                            ]
                         },
                         {
                             department: "UI",
@@ -959,8 +974,8 @@ export default {
                                     image: require('@/assets/member/avatar/2014/ui1.webp'),
                                     signature: '设计中最难的部分.......是阻止功能。——佚名'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "系统维护",
@@ -970,10 +985,10 @@ export default {
                                     image: require('@/assets/member/avatar/2014/xt1.webp'),
                                     signature: '如果你是房间里最聪明的人，那么你走错房间了。——佚名'
                                 },
-                               
-                               ]
+
+                            ]
                         },
-                       
+
                     ]
                 },
                 {
@@ -982,7 +997,7 @@ export default {
                     show: [],
                     height: "height: 40px;",
                     member: [
-                       
+
                         {
                             department: "Web",
                             member2: [
@@ -996,7 +1011,7 @@ export default {
                                     image: require('@/assets/member/avatar/2013/web2.webp'),
                                     signature: '你要么要软件质量，要么要指针算法;两者不可兼得。—Bertrand Meyer'
                                 },
-                               ]
+                            ]
                         },
                         {
                             department: "程序",
@@ -1016,10 +1031,10 @@ export default {
                                     image: require('@/assets/member/avatar/2013/cx3.webp'),
                                     signature: '简单不先于复杂，而是在复杂之后”——Alan Perlis'
                                 },
-                               
-                                ]      
+
+                            ]
                         },
-                        
+
                         {
                             department: "系统维护",
                             member2: [
@@ -1033,9 +1048,9 @@ export default {
                                     image: require('@/assets/member/avatar/2013/xt2.webp'),
                                     signature: '最便宜，最快和最可靠的组件是不存在的。——佚名'
                                 },
-                               ]
+                            ]
                         },
-                       
+
                     ]
                 },
                 {
@@ -1044,7 +1059,7 @@ export default {
                     show: [],
                     height: "height: 40px;",
                     member: [
-                       
+
                         {
                             department: "Web",
                             member2: [
@@ -1053,8 +1068,8 @@ export default {
                                     image: require('@/assets/member/avatar/2012/web1.webp'),
                                     signature: '一个人在教会电脑之前，别说他真正理解这个东西了。'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "程序",
@@ -1079,10 +1094,10 @@ export default {
                                     image: require('@/assets/member/avatar/2012/cx4.webp'),
                                     signature: '当你选择了一种语言，意味着你还选择了一组技术、一个社区。JoshuaBloch'
                                 },
-                               
-                                ]      
+
+                            ]
                         },
-                        
+
                         {
                             department: "系统维护",
                             member2: [
@@ -1091,8 +1106,8 @@ export default {
                                     image: require('@/assets/member/avatar/2012/xt1.webp'),
                                     signature: '没有什么代码的执行速度比空代码更快。————Merb 核心原则'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "UI",
@@ -1107,10 +1122,10 @@ export default {
                                     image: require('@/assets/member/avatar/2012/ui2.webp'),
                                     signature: '复制粘贴是一个设计错误。一-David Parnas'
                                 },
-                               
-                               ]
+
+                            ]
                         },
-                       
+
                     ]
                 },
                 {
@@ -1119,8 +1134,8 @@ export default {
                     show: [],
                     height: "height: 40px;",
                     member: [
-                       
-                       
+
+
                         {
                             department: "系统维护",
                             member2: [
@@ -1129,8 +1144,8 @@ export default {
                                     image: require('@/assets/member/avatar/2011/xt1.webp'),
                                     signature: '这不是一个 bug，这只是一个未列出来的特性。——匿名'
                                 },
-                               
-                               ]
+
+                            ]
                         },
                         {
                             department: "UI",
@@ -1140,10 +1155,10 @@ export default {
                                     image: require('@/assets/member/avatar/2011/ui1.webp'),
                                     signature: '我不是一个伟大的程序员，我只是一个具有良好习惯的优秀程序员-Kent Beck'
                                 },
-                               
-                               ]
+
+                            ]
                         },
-                       
+
                     ]
                 },
             ]
@@ -1152,19 +1167,19 @@ export default {
 
     mounted() {
         this.activateFirstItem();
-        document.body.scrollTop=0;
-        window.scrollTo(0,0);
+        document.body.scrollTop = 0;
+        window.scrollTo(0, 0);
         window.addEventListener("scroll", this.handleScroll);
         for (let i in this.years) {
             this.years[i].show = this.years[i].member[0]
         }
     },
     methods: {
-        gotoUrl(){
+        gotoUrl() {
             this.$router.go(-1)
         },
         openMenu(item) {
-            item.height = 'height: ' + ((item.member.length+1) * 40) + 'px';
+            item.height = 'height: ' + ((item.member.length + 1) * 40) + 'px';
         },
         closeMenu(item) {
             item.height = 'height: 40px';
@@ -1172,8 +1187,8 @@ export default {
         changeDepartment(year_, department_) {
             for (let i in this.years) {
                 if (this.years[i].year == year_) {
-                    for (let j in this.years[i].member){
-                        if(this.years[i].member[j].department==department_){
+                    for (let j in this.years[i].member) {
+                        if (this.years[i].member[j].department == department_) {
                             this.years[i].show = this.years[i].member[j]
                             // let member0 = JSON.stringify(this.years[i].member[0])
                             // this.years[i].member[0]=this.years[i].member[j]
@@ -1192,7 +1207,7 @@ export default {
             }
 
         },
-        
+
         activateFirstItem() {
             this.$nextTick(() => {
                 const firstItem = this.$el.querySelector(".item");
@@ -1233,7 +1248,6 @@ export default {
 </script>
   
 <style scoped>
-
 .background-white {
     position: absolute;
     top: 0;
@@ -1583,41 +1597,50 @@ export default {
     display: flex;
     flex-direction: column;
 }
-.content-main-left-button-1{
+
+.content-main-left-button-1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.content-main-left-button-i2{
+
+.content-main-left-button-i2 {
     position: absolute;
     margin-top: 24px;
     opacity: 0;
     transition: all 0.3s;
 }
-.content-main-left-button-i{
+
+.content-main-left-button-i {
     margin-top: 3px;
     animation: button-i 1.5s infinite;
     transition: all 0.3s;
 }
+
 @keyframes button-i {
-    0%{
+    0% {
         transform: translateY(0px);
     }
-    50%{
+
+    50% {
         transform: translateY(6px);
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
     }
 }
-.content-main-left-button-1:hover .content-main-left-button-i{
+
+.content-main-left-button-1:hover .content-main-left-button-i {
     opacity: 0;
 }
-.content-main-left-button-1:hover{
+
+.content-main-left-button-1:hover {
     background-color: transparent !important;
 
 }
+
 .content-main-left {
     display: flex;
     flex-direction: column;
@@ -1676,11 +1699,12 @@ export default {
     padding-right: 6px; */
 
 }
-.content-main-left-border:hover .content-main-left-button-i{
+
+.content-main-left-border:hover .content-main-left-button-i {
     opacity: 0;
 }
-.content-main-left-border:hover .content-main-left-button-i2{
+
+.content-main-left-border:hover .content-main-left-button-i2 {
     opacity: 1;
-}
-</style>
+}</style>
   
